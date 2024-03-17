@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
-      <div>Test</div>
+      <div>This is Test PR Branch</div>
     </div>
   );
 }
