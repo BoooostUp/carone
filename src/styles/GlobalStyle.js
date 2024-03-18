@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: "Pretendard", "Noto Sans", "sans-serif";
     word-break: keep-all;
-    font-size: 10px;
+    font-size: 62.5%;
   }
 
   html, body, div, span, applet, object, iframe,
