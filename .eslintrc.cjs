@@ -45,7 +45,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.js'],
+      files: ['**/*.js', '**/*.jsx'],
       rules: {
         'import/order': [
           'warn',
