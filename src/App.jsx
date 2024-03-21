@@ -1,5 +1,7 @@
-import GlobalStyle from './styles/GlobalStyle';
+import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import Router from './Router';
+import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <div>This is Test PR Branch</div>
+        <RouterProvider router={Router} />
       </ThemeProvider>
     </div>
   );
