@@ -1,7 +1,10 @@
-import React from 'react';
+import styled from 'styled-components';
 
 const Root = () => {
-  return <div>This is the root main page</div>;
+  return <Container />;
 };
 
+const Container = styled.div`
+  position: relative;
+`;
 export default Root;
