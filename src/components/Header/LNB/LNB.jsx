@@ -32,8 +32,18 @@ const Lnb = {
     gap: 3rem;
     width: 100%;
     padding: 2rem;
-    background-color: ${({ theme, company }) => theme.color[company]};
-    opacity: 70%;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      background-color: ${({ theme, company }) => theme.color[company]};
+    }
   `,
   IntroduceContainer: styled.div`
     display: flex;
@@ -48,6 +58,8 @@ const Lnb = {
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT14};
     line-height: 1.8;
+    position: relative;
+    z-index: 1;
 
     &:hover {
       text-decoration: underline;
