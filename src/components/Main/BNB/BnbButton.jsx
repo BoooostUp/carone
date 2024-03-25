@@ -2,9 +2,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { css } from 'styled-components';
 
-//TODO : 버튼 맵핑
-//TODO : 버튼 컴포넌트 관리
-
 const BnbButton = ({ variant = 'home', status, ...props }) => {
   const { children } = props;
   return (
