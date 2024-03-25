@@ -69,13 +69,13 @@ const S = {
   `,
 
   CompanyName: styled.h2`
-    ${({ theme }) => theme.font.FONT28B}
+    ${({ theme }) => theme.font.FONT36B}
     text-shadow: 0px 2px 4px black;
   `,
 
   CompanyInfo: styled.p`
     white-space: pre-wrap;
-    ${({ theme }) => theme.font.FONT14B}
+    ${({ theme }) => theme.font.FONT18B}
     text-shadow: 0px 2px 4px black;
   `,
 
@@ -84,8 +84,8 @@ const S = {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 20rem;
-    height: 5rem;
+    width: 23rem;
+    height: 7rem;
     z-index: 1;
 
     &::before {
@@ -108,7 +108,7 @@ const S = {
     align-items: center;
     height: 100%;
     color: ${({ theme }) => theme.color.white};
-    ${({ theme }) => theme.font.FONT18B}
+    ${({ theme }) => theme.font.FONT20B}
   `,
 };
 
