@@ -37,14 +37,14 @@ const S = {
   Cell: styled.div`
     position: relative;
     height: 100%;
-    background-image: url(${(props) => props.$backgroundImage});
+    background-image: url(${({ $backgroundImage }) => $backgroundImage});
     background-size: cover;
     background-position: center;
     overflow: hidden;
   `,
 
   Index: styled.span`
-    display: ${(props) => (props.show ? 'none' : 'flex')};
+    display: ${({ $show }) => ($show ? 'none' : 'flex')};
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -76,7 +76,7 @@ const Root = () => {
             onMouseLeave={() => setHovered(null)}
           >
             <S.Index
-              show={hovered === id}
+              $show={hovered === id}
               $backgroundColor={theme.color[indexColor]}
             >
               {name}
