@@ -44,18 +44,33 @@ const S = {
   `,
 
   Index: styled.span`
-    display: ${({ $show }) => ($show ? 'none' : 'flex')};
     position: absolute;
     bottom: 0px;
     right: 0px;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
+    display: ${({ $show }) => ($show ? 'none' : 'inline')};
     width: 20rem;
     height: 5rem;
-    border-top-left-radius: 70px;
-    opacity: 0.8;
-    background-color: ${({ $backgroundColor }) => $backgroundColor};
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: ${({ $backgroundColor }) => $backgroundColor};
+      opacity: 0.8;
+      border-top-left-radius: 70px;
+      z-index: -1;
+    }
+  `,
+
+  IndexText: styled.h2`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT18B}
   `,
@@ -79,7 +94,7 @@ const Root = () => {
               $show={hovered === id}
               $backgroundColor={theme.color[indexColor]}
             >
-              {name}
+              <S.IndexText>{name}</S.IndexText>
             </S.Index>
           </S.Cell>
         ))}
