@@ -28,26 +28,37 @@ const S = {
     justify-content: center;
     height: 100%;
 
-    @media (max-width: 767px) {
+    /* @media (max-width: 767px) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(3, 1fr);
-    }
+    } */
   `,
 
   Cell: styled.div`
     position: relative;
     height: 100%;
-    background-image: url(${({ $backgroundImage }) => $backgroundImage});
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    background-image: url(${({ $backgroundImage }) => $backgroundImage});
+    cursor: pointer;
+
+    &:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: ${({ $backgroundColor }) => $backgroundColor};
+      opacity: 0.3;
+    }
   `,
 
   Index: styled.span`
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
     display: ${({ $show }) => ($show ? 'none' : 'inline')};
+    position: absolute;
+    bottom: 0;
+    right: 0;
     width: 20rem;
     height: 5rem;
     z-index: 1;
@@ -59,10 +70,10 @@ const S = {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: ${({ $backgroundColor }) => $backgroundColor};
       opacity: 0.8;
       border-top-left-radius: 70px;
       z-index: -1;
+      background-color: ${({ $backgroundColor }) => $backgroundColor};
     }
   `,
 
@@ -81,12 +92,13 @@ const Root = () => {
 
   return (
     <S.Container>
-      <S.Header />
+      <S.Header>로고</S.Header>
       <S.CellContainer>
         {ROOT.CELLS.map(({ id, cellImg, indexColor, name }) => (
           <S.Cell
             key={id}
             $backgroundImage={cellImg}
+            $backgroundColor={theme.color[indexColor]}
             onMouseEnter={() => setHovered(id)}
             onMouseLeave={() => setHovered(null)}
           >
