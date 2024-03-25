@@ -14,7 +14,7 @@ export default FooterExample;
 
 const S = {
   FooterWrapper: styled.div`
-    background-color: ${({ theme }) => theme.color.mainGray};
+    background-color: ${({ theme }) => theme.color.black};
     color: ${({ theme }) => theme.color.white};
     padding: 25px 25px;
   `,
