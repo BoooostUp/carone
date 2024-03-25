@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import styled, { css } from 'styled-components';
-import LogoImage from '../../assets/images/Logo.webp';
+import styled from 'styled-components';
+import LogoIcon from '../../assets/icons/Logo.svg';
 import { GNB_CONTENTS } from '../../constants/GNB_CONTENTS';
 
 const S = {
@@ -52,6 +52,24 @@ const S = {
       display: none;
     }
   `,
+  FactoryContainer: styled.div`
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    color: ${({ theme, $company, $isOpen }) =>
+      $isOpen ? theme.color[$company] : theme.color.white};
+
+    @media (max-width: 767px) {
+      gap: 2rem;
+    }
+    span {
+      ${({ theme }) => theme.font.FONT18SB}
+      cursor: pointer;
+      @media (max-width: 767px) {
+        ${({ theme }) => theme.font.FONT14B}
+      }
+    }
+  `,
   Menu: styled.ul`
     display: flex;
     justify-content: space-between;
@@ -77,24 +95,32 @@ const S = {
 
 const GNB = ({ company }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const companyLowerCase = company.toLowerCase();
+  const companyUpperCase = company.toUpperCase();
   return (
     <div>
       <S.Container
         className="gnb-container"
-        $company={company.toLowerCase()}
+        $company={companyLowerCase}
         $isOpen={isOpen}
       >
         <S.LogoContainer>
-          <S.Logo src={LogoImage} />
-          <S.TitleContainer $company={company.toLowerCase()} $isOpen={isOpen}>
-            <S.Title>{GNB_CONTENTS.TITLE[company.toUpperCase()][0]}</S.Title>
-            <S.SubTitle>
-              {GNB_CONTENTS.TITLE[company.toUpperCase()][1]}
-            </S.SubTitle>
+          <S.Logo src={LogoIcon} />
+          <S.TitleContainer $company={companyLowerCase} $isOpen={isOpen}>
+            <S.Title>{GNB_CONTENTS[companyUpperCase].Title}</S.Title>
+            <S.SubTitle>{GNB_CONTENTS[companyUpperCase].SubTitle}</S.SubTitle>
           </S.TitleContainer>
+
+          {GNB_CONTENTS[companyUpperCase].Factory && (
+            <S.FactoryContainer $company={companyLowerCase} $isOpen={isOpen}>
+              <span>{GNB_CONTENTS[companyUpperCase].Factory[0]}</span>
+              <span>{GNB_CONTENTS[companyUpperCase].Factory[1]}</span>
+            </S.FactoryContainer>
+          )}
         </S.LogoContainer>
+
         <S.Menu
-          $company={company.toLowerCase()}
+          $company={companyLowerCase}
           $isOpen={isOpen}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
