@@ -21,7 +21,7 @@ const S = {
     z-index: 2;
   `,
 
-  CellContainer: styled.section`
+  CellWrapper: styled.section`
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     grid-template-rows: repeat(2, 2fr);
@@ -52,6 +52,31 @@ const S = {
       background-color: ${({ $backgroundColor }) => $backgroundColor};
       opacity: 0.3;
     }
+  `,
+
+  CompanyWrapper: styled.div`
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    display: ${({ $show }) => ($show ? 'flex' : 'none')};
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+    color: ${({ theme }) => theme.color.white};
+  `,
+
+  CompanyName: styled.h2`
+    ${({ theme }) => theme.font.FONT28B}
+    text-shadow: 0px 2px 4px black;
+  `,
+
+  CompanyInfo: styled.p`
+    white-space: pre-wrap;
+    ${({ theme }) => theme.font.FONT14B}
+    text-shadow: 0px 2px 4px black;
   `,
 
   Index: styled.span`
@@ -93,8 +118,8 @@ const Root = () => {
   return (
     <S.Container>
       <S.Header>로고</S.Header>
-      <S.CellContainer>
-        {ROOT.CELLS.map(({ id, cellImg, indexColor, name }) => (
+      <S.CellWrapper>
+        {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
           <S.Cell
             key={id}
             $backgroundImage={cellImg}
@@ -102,6 +127,10 @@ const Root = () => {
             onMouseEnter={() => setHovered(id)}
             onMouseLeave={() => setHovered(null)}
           >
+            <S.CompanyWrapper $show={hovered === id}>
+              <S.CompanyName>{name}</S.CompanyName>
+              <S.CompanyInfo>{description}</S.CompanyInfo>
+            </S.CompanyWrapper>
             <S.Index
               $show={hovered === id}
               $backgroundColor={theme.color[indexColor]}
@@ -110,7 +139,7 @@ const Root = () => {
             </S.Index>
           </S.Cell>
         ))}
-      </S.CellContainer>
+      </S.CellWrapper>
     </S.Container>
   );
 };

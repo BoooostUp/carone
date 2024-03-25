@@ -4,7 +4,7 @@ export const ROOT = Object.freeze({
       id: 1,
       name: '회사소개',
       cellImg: 'src/assets/images/root/home.png',
-      description: '',
+      description: 'Energy & Water',
       indexColor: 'home',
     },
     {
@@ -40,7 +40,7 @@ export const ROOT = Object.freeze({
       id: 6,
       name: '세명인텍(주)',
       cellImg: 'src/assets/images/root/sg.png',
-      description: '이온정제유 및 윤활유 생산 판매',
+      description: '이온정제유 및 윤활유 \n생산 판매',
       indexColor: 'si',
     },
   ],
