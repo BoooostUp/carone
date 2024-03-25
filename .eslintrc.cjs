@@ -47,6 +47,7 @@ module.exports = {
     {
       files: ['**/*.js', '**/*.jsx'],
       rules: {
+        'react/prop-types': 'off',
         'import/order': [
           'warn',
           {
