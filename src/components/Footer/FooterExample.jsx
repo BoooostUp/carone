@@ -8,9 +8,10 @@ const FooterExample = () => {
     <S.FooterWrapper>
       <Footer contents={footerContents.carone} />
       <Footer contents={footerContents.ce} />
-      <Footer contents={footerContents.carone} />
-      <Footer contents={footerContents.carone} />
-      <Footer contents={footerContents.carone} />
+      <Footer contents={footerContents.total} />
+      <Footer contents={footerContents.si} />
+      <Footer contents={footerContents.sg} />
+      <Footer contents={footerContents.main} />
     </S.FooterWrapper>
   );
 };

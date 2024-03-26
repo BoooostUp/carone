@@ -9,27 +9,36 @@ import { media } from '../../styles/utils/mediaQuery.ts';
 
 const Footer = ({ contents }) => {
   return (
-    <div>
-      <S.NameSloganWrapper>
-        <div>
-          <S.MainWrapper>
-            <S.LogoImage src={Logo} alt="" />
-            <div>
-              <S.CompanyName>{contents.companyName}</S.CompanyName>
-              <S.Subtitle>{contents.subtitle}</S.Subtitle>
-            </div>
-          </S.MainWrapper>
-        </div>
+    console.log(contents.subtitle),
+    (
+      <div>
+        <S.NameSloganWrapper>
+          <div>
+            <S.MainWrapper>
+              <S.LogoImage src={Logo} alt="" />
+              <div>
+                <S.CompanyName>{contents.companyName}</S.CompanyName>
+                <S.Subtitle>{contents.subtitle}</S.Subtitle>
+              </div>
+            </S.MainWrapper>
+          </div>
 
-        <div>© Since 2002</div>
-      </S.NameSloganWrapper>
+          <div>© Since 2002</div>
+        </S.NameSloganWrapper>
 
-      <S.InfoWrapper>
-        <p>{contents.address}</p>
-        <p>{contents.tel}</p>
-        <p>{contents.fax}</p>
-      </S.InfoWrapper>
-    </div>
+        <S.InfoContainer>
+          {contents.info.map((info) => {
+            return (
+              <S.InfoWrapper>
+                <p>{info.address}</p>
+                <p>{info.tel}</p>
+                <p>{info.fax}</p>
+              </S.InfoWrapper>
+            );
+          })}
+        </S.InfoContainer>
+      </div>
+    )
   );
 };
 
@@ -48,34 +57,40 @@ const S = {
   `,
 
   Subtitle: styled.div`
-    ${({ theme }) => theme.font.FONT14}
+    ${({ theme }) => theme.font.FONT}
   `,
 
   InfoWrapper: styled.div`
-    padding: 20px 0;
+    padding: 5px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5px;
-    ${({ theme }) => theme.font.FONT18}
-
+    gap: 10px;
+    ${({ theme }) => theme.font.FONT14};
     ${media.desktop`
         flex-direction: row;
         justify-content: start;
-        gap: 20px;
-    `}
+    `};
   `,
 
   MainWrapper: styled.div`
     display: flex;
     align-items: center;
-    gap: 20px;
+  `,
+
+  InfoContainer: styled.div`
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    ${media.desktop`
+        flex-direction: column;
+    `}
   `,
 
   CompanyName: styled.div`
     display: flex;
     align-items: flex-end;
-    ${({ theme }) => theme.font.FONT20};
+    ${({ theme }) => theme.font.FONT16};
     margin-bottom: 10px;
   `,
 };
