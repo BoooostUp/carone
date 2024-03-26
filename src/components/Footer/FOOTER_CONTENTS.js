@@ -1,4 +1,4 @@
-export const footerContents = {
+export const FOOTER_CONTENTS = {
   main: {
     companyName: 'Waste Treatment & Collection of Waste',
     info: [

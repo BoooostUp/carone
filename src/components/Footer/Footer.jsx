@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../assets/logo.svg';
 import { media } from '../../styles/utils/mediaQuery.ts';
@@ -27,12 +26,14 @@ const Footer = ({ contents }) => {
         </S.NameSloganWrapper>
 
         <S.InfoContainer>
-          {contents.info.map((info) => {
+          {contents.info.map((info, index) => {
             return (
-              <S.InfoWrapper>
+              <S.InfoWrapper key={index}>
                 <p>{info.address}</p>
-                <p>{info.tel}</p>
-                <p>{info.fax}</p>
+                <S.TelFaxWrapper companyName={contents.companyName}>
+                  <p>{info.tel}</p>
+                  <p>{info.fax}</p>
+                </S.TelFaxWrapper>
               </S.InfoWrapper>
             );
           })}
@@ -46,8 +47,8 @@ export default Footer;
 
 const S = {
   LogoImage: styled.img`
-    width: 45px;
-    margin-right: 10px;
+    width: 4.5rem;
+    margin-right: 1rem;
   `,
   NameSloganWrapper: styled.div`
     display: flex;
@@ -61,11 +62,11 @@ const S = {
   `,
 
   InfoWrapper: styled.div`
-    padding: 5px 0;
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 1rem;
     ${({ theme }) => theme.font.FONT14};
     ${media.desktop`
         flex-direction: row;
@@ -85,6 +86,18 @@ const S = {
     ${media.desktop`
         flex-direction: column;
     `}
+    gap: 1rem;
+  `,
+
+  TelFaxWrapper: styled.div`
+    display: flex;
+    gap: 1.5rem;
+    ${({ theme }) => theme.font.FONT14};
+    //if contents company name is main then make flex direction column
+    ${({ companyName }) =>
+      companyName === 'Waste Treatment & Collection of Waste' &&
+      `flex-direction: column;
+      gap: 0.5rem;`}
   `,
 
   CompanyName: styled.div`
