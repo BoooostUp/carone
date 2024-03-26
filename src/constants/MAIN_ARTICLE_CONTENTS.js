@@ -39,11 +39,80 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     },
     {
       ID: 'si',
-      TITLE1: '세명인텍(주)',
-      CONTENT1: `세명인텍(주)는 안전, 환경을 우선하는 기업으로 정직과 신뢰를 바탕으로 미래의 주도적인 기업을 창조합니다.
+      TITLE1: '(주)세명인텍',
+      CONTENT1: `(주)세명인텍는 안전, 환경을 우선하는 기업으로 정직과 신뢰를 바탕으로 미래의 주도적인 기업을 창조합니다.
         
         고객의 입장에서 고객이 만족할 때까지 최선을 다하겠습니다.`,
       IMAGE_ADDRESS: '/src/assets/images/mainArticle/si.webp',
     },
+  ],
+  CE: [
+    {
+      ID: 1,
+      TITLE1: '사업장 폐기물 공동 수집',
+      CONTENT1:
+        '자동차정비업에서 배출되는 폐기물을 배출하는 회원사에 위탁받아 폐기물 배출 신고 및 관리하는 공동운영기구입니다.',
+      IMAGE_ADDRESS: '',
+    },
+    {
+      ID: 2,
+      TITLE1: '폐기물 운반',
+      CONTENT1: '',
+      IMAGE_ADDRESS: '',
+    },
+    {
+      ID: 3,
+      TITLE1: '폐기물 재처리',
+      CONTENT1: '',
+      IMAGE_ADDRESS: '',
+    },
+    {
+      ID: 4,
+      TITLE1: '폐기물 재활용',
+      CONTENT1: '',
+      IMAGE_ADDRESS: '',
+    },
+  ],
+  CARONE1: [
+    {
+      ID: 1,
+      TITLE1: '석면운반/처리',
+      CONTENT1:
+        '(주)카원은 폐기물 수집·운반업을 중점으로 모든 사업장폐기물을 수집운반하며, 재활용업까지 사업분야를 넓혀 폐기물을 자원으로 최대한 활용합니다.',
+      IMAGE_ADDRESS: '',
+    },
+    { ID: 2, TITLE1: '고철운반/처리', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 3, TITLE1: '취급품목', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 4, TITLE1: '보유장비', CONTENT1: '', IMAGE_ADDRESS: '' },
+  ],
+  CARONE2: [
+    { ID: 1, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 2, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 3, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 4, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+  ],
+  SG: [
+    { ID: 1, TITLE1: '폐유 저장시설', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 2, TITLE1: '폐유 여과처리', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 3, TITLE1: '이온정제유 생산', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 4, TITLE1: '재생연료유 생산', CONTENT1: '', IMAGE_ADDRESS: '' },
+  ],
+  TOTAL1: [
+    { ID: 1, TITLE1: '폐기물 수집', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 2, TITLE1: '유기용제 생산', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 3, TITLE1: '스팀 생산', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 4, TITLE1: '연료 재활용', CONTENT1: '', IMAGE_ADDRESS: '' },
+  ],
+  TOTAL2: [
+    { ID: 1, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 2, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 3, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 4, TITLE1: '', CONTENT1: '', IMAGE_ADDRESS: '' },
+  ],
+  SI: [
+    { ID: 1, TITLE1: '(주)세명인텍', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 2, TITLE1: '사업 내용', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 3, TITLE1: '클리닝 세척', CONTENT1: '', IMAGE_ADDRESS: '' },
+    { ID: 4, TITLE1: '작업 내역', CONTENT1: '', IMAGE_ADDRESS: '' },
   ],
 });
