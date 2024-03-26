@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import FooterExample from './components/Footer/FooterExample';
+import CertificationTestPage from './components/Certification/CertificationTestPage';
 import Carone from './pages/Carone';
 import Ce from './pages/Ce';
 import Home from './pages/Home';
@@ -44,7 +44,7 @@ const Router = createBrowserRouter([
       },
       {
         path: 'test',
-        element: <FooterExample />,
+        element: <CertificationTestPage />,
       },
     ],
   },
