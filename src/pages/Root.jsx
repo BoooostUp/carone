@@ -42,15 +42,16 @@ const S = {
     background-image: url(${({ $backgroundImage }) => $backgroundImage});
     cursor: pointer;
 
-    &:hover::before {
+    &::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: ${({ $backgroundColor }) => $backgroundColor};
-      opacity: 0.3;
+      background-color: ${({ $backgroundColor, hovered }) =>
+        hovered ? $backgroundColor : 'transparent'};
+      opacity: ${({ hovered }) => (hovered ? 0.3 : 0)};
     }
   `,
 
@@ -80,7 +81,6 @@ const S = {
   `,
 
   Index: styled.span`
-    display: ${({ $show }) => ($show ? 'none' : 'inline')};
     position: absolute;
     bottom: 0;
     right: 0;
@@ -99,6 +99,7 @@ const S = {
       border-top-left-radius: 70px;
       z-index: -1;
       background-color: ${({ $backgroundColor }) => $backgroundColor};
+      visibility: ${({ $show }) => ($show ? 'hidden' : 'visible')};
     }
   `,
 
@@ -109,6 +110,7 @@ const S = {
     height: 100%;
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT24B}
+    visibility: ${({ $show }) => ($show ? 'hidden' : 'visible')};
   `,
 };
 
@@ -124,18 +126,19 @@ const Root = () => {
             key={id}
             $backgroundImage={cellImg}
             $backgroundColor={theme.color[indexColor]}
-            onMouseEnter={() => setHovered(id)}
-            onMouseLeave={() => setHovered(null)}
+            $hovered={hovered === id}
           >
             <S.CompanyWrapper $show={hovered === id}>
               <S.CompanyName>{name}</S.CompanyName>
               <S.CompanyInfo>{description}</S.CompanyInfo>
             </S.CompanyWrapper>
             <S.Index
-              $show={hovered === id}
               $backgroundColor={theme.color[indexColor]}
+              $show={hovered === id}
+              onMouseEnter={() => setHovered(id)}
+              onMouseLeave={() => setHovered(null)}
             >
-              <S.IndexText>{name}</S.IndexText>
+              <S.IndexText $show={hovered === id}>{name}</S.IndexText>
             </S.Index>
           </S.Cell>
         ))}
