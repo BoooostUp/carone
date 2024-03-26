@@ -108,7 +108,7 @@ const S = {
     align-items: center;
     height: 100%;
     color: ${({ theme }) => theme.color.white};
-    ${({ theme }) => theme.font.FONT20B}
+    ${({ theme }) => theme.font.FONT24B}
   `,
 };
 
