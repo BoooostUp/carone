@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import Footer from './Footer';
-import { footerContents as FOOTER_CONTETNTS } from './FOOTER_CONTENTS';
+import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 
 const FooterExample = () => {
   return (
     <S.FooterWrapper>
-      <Footer contents={FOOTER_CONTETNTS.carone} />
-      <Footer contents={FOOTER_CONTETNTS.ce} />
-      <Footer contents={FOOTER_CONTETNTS.total} />
-      <Footer contents={FOOTER_CONTETNTS.si} />
-      <Footer contents={FOOTER_CONTETNTS.sg} />
-      <Footer contents={FOOTER_CONTETNTS.main} />
+      <Footer contents={FOOTER_CONTENTS.carone} />
+      <Footer contents={FOOTER_CONTENTS.ce} />
+      <Footer contents={FOOTER_CONTENTS.total} />
+      <Footer contents={FOOTER_CONTENTS.si} />
+      <Footer contents={FOOTER_CONTENTS.sg} />
+      <Footer contents={FOOTER_CONTENTS.main} />
     </S.FooterWrapper>
   );
 };
