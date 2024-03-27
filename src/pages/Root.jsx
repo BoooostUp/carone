@@ -4,6 +4,43 @@ import logo from '../assets/icons/Logo.svg';
 import { ROOT } from '../constants/ROOT';
 import theme from '../styles/theme';
 
+const Root = () => {
+  const [hovered, setHovered] = useState(null);
+
+  return (
+    <S.Container>
+      <S.Header>
+        <S.Logo src={logo} />
+      </S.Header>
+      <S.CellWrapper>
+        {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
+          <S.Cell
+            key={id}
+            $isHovered={hovered === id}
+            $backgroundImage={cellImg}
+            $backgroundColor={theme.color[indexColor]}
+          >
+            <S.CompanyWrapper $isHovered={hovered === id}>
+              <S.CompanyName>{name}</S.CompanyName>
+              <S.CompanyInfo>{description}</S.CompanyInfo>
+            </S.CompanyWrapper>
+            <S.Index
+              $isHovered={hovered === id}
+              $backgroundColor={theme.color[indexColor]}
+              onMouseEnter={() => setHovered(id)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
+            </S.Index>
+          </S.Cell>
+        ))}
+      </S.CellWrapper>
+    </S.Container>
+  );
+};
+
+export default Root;
+
 const S = {
   Container: styled.div`
     position: relative;
@@ -117,40 +154,3 @@ const S = {
     ${({ theme }) => theme.font.FONT24B}
   `,
 };
-
-const Root = () => {
-  const [hovered, setHovered] = useState(null);
-
-  return (
-    <S.Container>
-      <S.Header>
-        <S.Logo src={logo} />
-      </S.Header>
-      <S.CellWrapper>
-        {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
-          <S.Cell
-            key={id}
-            $isHovered={hovered === id}
-            $backgroundImage={cellImg}
-            $backgroundColor={theme.color[indexColor]}
-          >
-            <S.CompanyWrapper $isHovered={hovered === id}>
-              <S.CompanyName>{name}</S.CompanyName>
-              <S.CompanyInfo>{description}</S.CompanyInfo>
-            </S.CompanyWrapper>
-            <S.Index
-              $isHovered={hovered === id}
-              $backgroundColor={theme.color[indexColor]}
-              onMouseEnter={() => setHovered(id)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
-            </S.Index>
-          </S.Cell>
-        ))}
-      </S.CellWrapper>
-    </S.Container>
-  );
-};
-
-export default Root;
