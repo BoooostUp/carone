@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/icons/Logo.svg';
+import RecruitButton from '../components/RecruitButton';
 import { ROOT } from '../constants/ROOT';
 import theme from '../styles/theme';
 
@@ -11,6 +12,7 @@ const Root = () => {
     <S.Container>
       <S.Header>
         <S.Logo src={logo} />
+        <RecruitButton />
       </S.Header>
       <S.CellWrapper>
         {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
