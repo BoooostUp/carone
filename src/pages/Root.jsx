@@ -49,9 +49,9 @@ const S = {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: ${({ $backgroundColor, hovered }) =>
-        hovered ? $backgroundColor : 'transparent'};
-      opacity: ${({ hovered }) => (hovered ? 0.3 : 0)};
+      opacity: 0.3;
+      display: ${({ $isHovered }) => ($isHovered ? 'block' : 'none')};
+      background-color: ${({ $backgroundColor }) => $backgroundColor};
     }
   `,
 
@@ -60,24 +60,24 @@ const S = {
     left: 50%;
     right: 50%;
     transform: translate(-50%);
-    display: ${({ $show }) => ($show ? 'flex' : 'none')};
     justify-content: center;
     align-items: center;
     gap: 3rem;
     width: 100%;
     height: 100%;
+    display: ${({ $isHovered }) => ($isHovered ? 'flex' : 'none')};
     color: ${({ theme }) => theme.color.white};
   `,
 
   CompanyName: styled.h2`
-    ${({ theme }) => theme.font.FONT36B}
     text-shadow: 0px 2px 4px black;
+    ${({ theme }) => theme.font.FONT36B}
   `,
 
   CompanyInfo: styled.p`
     white-space: pre-wrap;
-    ${({ theme }) => theme.font.FONT18B}
     text-shadow: 0px 2px 4px black;
+    ${({ theme }) => theme.font.FONT18B}
   `,
 
   Index: styled.span`
@@ -98,19 +98,18 @@ const S = {
       opacity: 0.8;
       border-top-left-radius: 70px;
       z-index: -1;
+      display: ${({ $isHovered }) => ($isHovered ? 'none' : 'block')};
       background-color: ${({ $backgroundColor }) => $backgroundColor};
-      visibility: ${({ $show }) => ($show ? 'hidden' : 'visible')};
     }
   `,
 
   IndexText: styled.h2`
-    display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    display: ${({ $isHovered }) => ($isHovered ? 'none' : 'flex')};
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT24B}
-    visibility: ${({ $show }) => ($show ? 'hidden' : 'visible')};
   `,
 };
 
@@ -124,21 +123,21 @@ const Root = () => {
         {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
           <S.Cell
             key={id}
+            $isHovered={hovered === id}
             $backgroundImage={cellImg}
             $backgroundColor={theme.color[indexColor]}
-            $hovered={hovered === id}
           >
-            <S.CompanyWrapper $show={hovered === id}>
+            <S.CompanyWrapper $isHovered={hovered === id}>
               <S.CompanyName>{name}</S.CompanyName>
               <S.CompanyInfo>{description}</S.CompanyInfo>
             </S.CompanyWrapper>
             <S.Index
+              $isHovered={hovered === id}
               $backgroundColor={theme.color[indexColor]}
-              $show={hovered === id}
               onMouseEnter={() => setHovered(id)}
               onMouseLeave={() => setHovered(null)}
             >
-              <S.IndexText $show={hovered === id}>{name}</S.IndexText>
+              <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
             </S.Index>
           </S.Cell>
         ))}
