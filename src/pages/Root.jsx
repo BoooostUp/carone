@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import logo from '../assets/icons/Logo.svg';
 import { ROOT } from '../constants/ROOT';
 import theme from '../styles/theme';
 
@@ -19,6 +20,10 @@ const S = {
     align-items: center;
     padding: 20px;
     z-index: 2;
+  `,
+
+  Logo: styled.img`
+    width: 10rem;
   `,
 
   CellWrapper: styled.section`
@@ -118,7 +123,9 @@ const Root = () => {
 
   return (
     <S.Container>
-      <S.Header>로고</S.Header>
+      <S.Header>
+        <S.Logo src={logo} />
+      </S.Header>
       <S.CellWrapper>
         {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
           <S.Cell
