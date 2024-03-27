@@ -2,26 +2,36 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Certification from './Certification';
 import lens from '../../assets/icons/lens.svg';
-import certificate from '../../assets/images/certificates/certificate1.svg';
 
-const CertificationTestPage = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const showModal = () => {
-    setModalOpen(true);
-  };
+const CertificationTestPage = ({
+  image,
+  setModalOpen,
+  modalOpen,
+  showModal,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
       <S.Container>
-        <S.CertificationImgContainer onClick={showModal}>
-          <S.CertificationImg src={certificate} alt="" />
+        <S.CertificationImgContainer
+          onClick={showModal}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <S.CertificationImg
+            src={image}
+            alt="certificate"
+            className={isHovered ? 'hovered' : ''}
+          />
+          <S.Lens
+            src={lens}
+            alt="lens"
+            className={!isHovered ? 'display' : ''}
+          />
         </S.CertificationImgContainer>
-
-        <S.Lens src={lens} alt="lens" />
       </S.Container>
-
-      {modalOpen && <Certification setModalOpen={setModalOpen} />}
+      {modalOpen && <Certification image={image} setModalOpen={setModalOpen} />}
     </>
   );
 };
@@ -33,15 +43,12 @@ const S = {
     width: 10rem;
     height: auto;
     display: inline-block;
+    cursor: pointer;
   `,
 
   CertificationImgContainer: styled.div`
     cursor: pointer;
-    &:hover {
-      filter: brightness(0.5);
-    }
   `,
-
   Lens: styled.img`
     width: 2rem;
     position: absolute;
@@ -49,9 +56,16 @@ const S = {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
+    &.display {
+      display: none;
+    }
   `,
   CertificationImg: styled.img`
     width: 100%;
     display: block;
+    transition: filter 0.5s;
+    &.hovered {
+      filter: brightness(0.5);
+    }
   `,
 };

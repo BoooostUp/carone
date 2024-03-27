@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import certificate from '../../assets/images/certificates/certificate1.svg';
-const Certification = ({ setModalOpen }) => {
+const Certification = ({ setModalOpen, image }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
@@ -14,7 +13,6 @@ const Certification = ({ setModalOpen }) => {
         setModalOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -25,7 +23,7 @@ const Certification = ({ setModalOpen }) => {
       <S.Backdrop onClick={closeModal} />
       <S.CertificationContainer ref={modalRef}>
         <button onClick={closeModal}>X</button>
-        <img src={certificate} alt="" />
+        <img src={image} alt="" />
       </S.CertificationContainer>
     </>
   );
