@@ -13,9 +13,9 @@ const IntroContent = () => {
               <S.TitleBox>
                 <S.Title>{item.Title}</S.Title>
               </S.TitleBox>
-              <S.Content>{item.Element1}</S.Content>
-              <S.Content>{item.Element2}</S.Content>
-              <S.Content>{item.Element3}</S.Content>
+              {item.Element1 && <S.Content>{item.Element1}</S.Content>}
+              {item.Element2 && <S.Content>{item.Element2}</S.Content>}
+              {item.Element3 && <S.Content>{item.Element3}</S.Content>}
               {item.Element4 && <S.Content>{item.Element4}</S.Content>}
             </S.TextBox>
           </S.Container>
@@ -30,8 +30,7 @@ export default IntroContent;
 const S = {
   Container: styled.article`
     display: flex;
-    min-width: 700px;
-    padding: 0px 3.2rem;
+    min-width: 580px;
     margin: 4rem auto;
     justify-content: center;
     align-items: center;
