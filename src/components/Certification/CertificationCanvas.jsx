@@ -1,25 +1,29 @@
 import { useState } from 'react';
-import styled from 'styled-components';
-import CertificationTestPage from './CertificationTestPage';
+import Certificate from './Certificate';
+import CertificationModal from './CertificateModal';
 import { CERTIFICATIONS } from '../Certification/CERTIFICATIONS';
 
 const CertificationCanvas = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const showModal = () => {
-    setModalOpen(true);
+  const [currentCert, setCurrentCert] = useState(null);
+  const showModal = (cert) => {
+    setCurrentCert(cert);
+  };
+  const closeModal = () => {
+    setCurrentCert(null);
   };
 
   return (
     <div>
       {CERTIFICATIONS.carone.certifications.map((certification, index) => (
-        <CertificationTestPage
-          showModal={showModal}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
+        <Certificate
+          showModal={() => showModal(certification)}
           image={certification}
           key={index}
         />
       ))}
+      {currentCert && (
+        <CertificationModal image={currentCert} setModalOpen={closeModal} />
+      )}
     </div>
   );
 };

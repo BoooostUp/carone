@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-const Certification = ({ setModalOpen, image }) => {
+const CertificateModal = ({ setModalOpen, image }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
@@ -29,14 +29,14 @@ const Certification = ({ setModalOpen, image }) => {
   );
 };
 
-export default Certification;
+export default CertificateModal;
 
 const S = {
   CertificationContainer: styled.div`
     width: 300px;
     height: 200px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   `,
