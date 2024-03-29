@@ -1,5 +1,9 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { media } from '../../styles/utils/mediaQuery';
+
+//TODO: 모바일일떄 사이즈 줄이고 중앙으로 배치하기
+
 const CertificateModal = ({ setModalOpen, image }) => {
   const closeModal = () => {
     setModalOpen(false);
@@ -19,13 +23,12 @@ const CertificateModal = ({ setModalOpen, image }) => {
     };
   }, [setModalOpen]);
   return (
-    <>
-      <S.Backdrop onClick={closeModal} />
+    <S.Backdrop onClick={closeModal}>
       <S.CertificationContainer ref={modalRef}>
         <button onClick={closeModal}>X</button>
-        <img src={image} alt="" />
+        <S.CertificateImg src={image} alt="" />
       </S.CertificationContainer>
-    </>
+    </S.Backdrop>
   );
 };
 
@@ -34,11 +37,23 @@ export default CertificateModal;
 const S = {
   CertificationContainer: styled.div`
     width: 300px;
-    height: 200px;
-    position: fixed;
-    top: 30%;
+    height: auto;
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 10px; // Optional: Adds rounded corners for a softer look
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    ${media.desktop`
+      width: 400px;
+      height: auto;
+    `}
+  `,
+
+  CertificateImg: styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   `,
 
   Backdrop: styled.div`
