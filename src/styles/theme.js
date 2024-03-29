@@ -3,12 +3,12 @@ import { css } from 'styled-components';
 const theme = Object.freeze({
   color: {
     //회사별 대표 색
-    ce: '#8CC747',
-    carone: '#F6B436',
-    sg: '#00B8D6',
-    total: '#217A54',
-    si: '#004686',
-    home: '#3E3E43',
+    CE: '#8CC747',
+    CARONE: '#F6B436',
+    SG: '#00B8D6',
+    TOTAL: '#217A54',
+    SI: '#004686',
+    HOME: '#3E3E43',
 
     //Gray
     mainGray: '#3E3E43',
