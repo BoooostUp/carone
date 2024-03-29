@@ -1,7 +1,7 @@
-import React from 'react';
+import WelcomeBox from '../components/Main/WelcomeBox';
 
 const Home = () => {
-  return <div>Home main page</div>;
+  return <WelcomeBox company="CARONE" />;
 };
 
 export default Home;
