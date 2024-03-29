@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import CertificationCanvas from './components/Certification/CertificationCanvas';
+import CertificationComponent from './components/Certification/CertificationComponent';
 import Carone from './pages/Carone';
 import Ce from './pages/Ce';
 import Home from './pages/Home';
@@ -44,7 +44,7 @@ const Router = createBrowserRouter([
       },
       {
         path: 'test',
-        element: <CertificationCanvas />,
+        element: <CertificationComponent />,
       },
     ],
   },

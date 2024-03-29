@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Certificate from './Certificate';
 import CertificationModal from './CertificateModal';
-import { CERTIFICATIONS } from '../Certification/CERTIFICATIONS';
+import { CERTIFICATIONS } from './CERTIFICATIONS';
 
-const CertificationCanvas = () => {
+const CertificationComponent = () => {
   const [currentCert, setCurrentCert] = useState(null);
   const showModal = (cert) => {
     setCurrentCert(cert);
@@ -28,4 +28,4 @@ const CertificationCanvas = () => {
   );
 };
 
-export default CertificationCanvas;
+export default CertificationComponent;
