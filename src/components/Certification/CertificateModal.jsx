@@ -36,7 +36,7 @@ export default CertificateModal;
 
 const S = {
   CertificationContainer: styled.div`
-    width: 300px;
+    width: 30rem;
     height: auto;
     position: absolute;
     top: 50%;
@@ -45,7 +45,7 @@ const S = {
     border-radius: 10px; // Optional: Adds rounded corners for a softer look
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     ${media.desktop`
-      width: 400px;
+      width: 60rem;
       height: auto;
     `}
   `,
