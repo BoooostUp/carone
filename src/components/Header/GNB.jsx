@@ -93,34 +93,32 @@ const S = {
   `,
 };
 
-const GNB = ({ company }) => {
+const Gnb = ({ company }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const companyLowerCase = company.toLowerCase();
-  const companyUpperCase = company.toUpperCase();
   return (
     <div>
       <S.Container
         className="gnb-container"
-        $company={companyLowerCase}
+        $company={company}
         $isOpen={isOpen}
       >
         <S.LogoContainer>
           <S.Logo src={LogoIcon} />
-          <S.TitleContainer $company={companyLowerCase} $isOpen={isOpen}>
-            <S.Title>{GNB_CONTENTS[companyUpperCase].Title}</S.Title>
-            <S.SubTitle>{GNB_CONTENTS[companyUpperCase].SubTitle}</S.SubTitle>
+          <S.TitleContainer $company={company} $isOpen={isOpen}>
+            <S.Title>{GNB_CONTENTS[company].title}</S.Title>
+            <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
           </S.TitleContainer>
 
-          {GNB_CONTENTS[companyUpperCase].Factory && (
-            <S.FactoryContainer $company={companyLowerCase} $isOpen={isOpen}>
-              <span>{GNB_CONTENTS[companyUpperCase].Factory[0]}</span>
-              <span>{GNB_CONTENTS[companyUpperCase].Factory[1]}</span>
+          {GNB_CONTENTS[company].Factory && (
+            <S.FactoryContainer $company={company} $isOpen={isOpen}>
+              <span>{GNB_CONTENTS[company].factory[0]}</span>
+              <span>{GNB_CONTENTS[company].factory[1]}</span>
             </S.FactoryContainer>
           )}
         </S.LogoContainer>
 
         <S.Menu
-          $company={companyLowerCase}
+          $company={company}
           $isOpen={isOpen}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
@@ -136,4 +134,4 @@ const GNB = ({ company }) => {
     </div>
   );
 };
-export default GNB;
+export default Gnb;
