@@ -15,10 +15,10 @@ const Certificate = ({ image, showModal }) => {
         <S.CertificationImg
           src={image}
           alt="certificate"
-          className={isHovered ? 'hovered' : ''}
+          $isHovered={isHovered}
           draggable="false"
         />
-        <S.Lens src={lens} alt="lens" className={!isHovered ? 'display' : ''} />
+        <S.Lens src={lens} alt="lens" $isHovered={isHovered} />
       </S.CertificationImgContainer>
     </S.Container>
   );
@@ -43,17 +43,13 @@ const S = {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
-    &.display {
-      display: none;
-    }
+    display: ${({ $isHovered }) => ($isHovered ? 'block' : 'none')};
   `,
   CertificationImg: styled.img`
     width: 100%;
     display: block;
     transition: filter 0.5s;
-    &.hovered {
-      filter: brightness(0.5);
-    }
+    filter: ${({ $isHovered }) =>
+      $isHovered ? 'brightness(0.5)' : 'brightness(1)'};
   `,
 };
