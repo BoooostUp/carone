@@ -4,8 +4,12 @@ import { WELCOME_BOX_CONTENTS } from '../../constants/WELCOME_BOX_CONTENTS';
 const WelcomeBox = ({ company }) => {
   return (
     <S.Container>
-      <S.WelcomeText $color={company}>WELCOME!</S.WelcomeText>
-      <S.CompanyInfo>{WELCOME_BOX_CONTENTS[company]}</S.CompanyInfo>
+      <S.TextWrapper>
+        <S.WelcomeText $color={company}>WELCOME!</S.WelcomeText>
+        <S.InfoWrapper>
+          <S.CompanyInfo>{WELCOME_BOX_CONTENTS[company]}</S.CompanyInfo>{' '}
+        </S.InfoWrapper>
+      </S.TextWrapper>
     </S.Container>
   );
 };
@@ -17,17 +21,32 @@ const S = {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
     width: 100%;
-    height: 18rem;
-    padding: 6rem 20rem;
+    height: 15rem;
+    padding: 0 20rem;
     opacity: 0.8;
     background-color: ${({ theme }) => theme.color.mainGray};
 
     @media (max-width: 1024px) {
-      padding: 0.4rem 6.5rem;
-      gap: 3rem;
+      padding: 0;
     }
+  `,
+
+  TextWrapper: styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  `,
+
+  InfoWrapper: styled.div`
+    overflow: hidden;
   `,
 
   WelcomeText: styled.p`

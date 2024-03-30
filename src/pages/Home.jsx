@@ -1,7 +1,7 @@
 import WelcomeBox from '../components/Main/WelcomeBox';
 
 const Home = () => {
-  return <WelcomeBox company="CARONE" />;
+  return <WelcomeBox company="CE" />;
 };
 
 export default Home;
