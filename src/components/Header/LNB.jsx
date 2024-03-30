@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { LNB_CONTENTS } from '../../../constants/LNB_CONTENTS';
+import { LNB_CONTENTS } from '../../constants/LNB_CONTENTS';
 
 const LNB = ({ company }) => {
   return (
-    <Lnb.Container company={company.toLowerCase()}>
+    <Lnb.Container company={company}>
       <Lnb.IntroduceContainer>
         {LNB_CONTENTS.OUR_COMPANY.map((item, index) => (
           <Link to="/" key={index}>

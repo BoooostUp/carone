@@ -45,6 +45,7 @@ const Router = createBrowserRouter([
       {
         path: 'test',
         element: <CertificationComponent />,
+
       },
     ],
   },
