@@ -1,4 +1,3 @@
-import { bool } from 'prop-types';
 import styled from 'styled-components';
 import BnbButton from './BnbButton';
 import { media } from '../../../styles/utils/mediaQuery';
@@ -39,19 +38,6 @@ const Bnb = ({ status, onClick }) => {
     </S.ButtonWrapper>
   );
 };
-
-//propTypes를 정해줍니다.
-Bnb.propTypes = {
-  status: {
-    home: bool,
-    ce: bool,
-    carone: bool,
-    sg: bool,
-    total: bool,
-    si: bool,
-  },
-};
-
 export default Bnb;
 
 const S = {

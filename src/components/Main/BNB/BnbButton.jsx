@@ -53,10 +53,10 @@ const buttonVariantMap = {
     ${({ status }) =>
       status &&
       css`
-        background-color: ${({ theme }) => theme.color.ce};
+        background-color: ${({ theme }) => theme.color.CE};
       `}
     &:hover {
-      background-color: ${({ theme }) => theme.color.ce};
+      background-color: ${({ theme }) => theme.color.CE};
     }
   `,
 
@@ -64,10 +64,10 @@ const buttonVariantMap = {
     ${({ status }) =>
       status &&
       css`
-        background-color: ${({ theme }) => theme.color.carone};
+        background-color: ${({ theme }) => theme.color.CARONE};
       `}
     &:hover {
-      background-color: ${({ theme }) => theme.color.carone};
+      background-color: ${({ theme }) => theme.color.CARONE};
     }
   `,
 
@@ -75,10 +75,10 @@ const buttonVariantMap = {
     ${({ status }) =>
       status &&
       css`
-        background-color: ${({ theme }) => theme.color.sg};
+        background-color: ${({ theme }) => theme.color.SG};
       `}
     &:hover {
-      background-color: ${({ theme }) => theme.color.sg};
+      background-color: ${({ theme }) => theme.color.SG};
     }
   `,
 
@@ -86,10 +86,10 @@ const buttonVariantMap = {
     ${({ status }) =>
       status &&
       css`
-        background-color: ${({ theme }) => theme.color.total};
+        background-color: ${({ theme }) => theme.color.TOTAL};
       `}
     &:hover {
-      background-color: ${({ theme }) => theme.color.total};
+      background-color: ${({ theme }) => theme.color.TOTAL};
     }
   `,
 
@@ -97,10 +97,10 @@ const buttonVariantMap = {
     ${({ status }) =>
       status &&
       css`
-        background-color: ${({ theme }) => theme.color.si};
+        background-color: ${({ theme }) => theme.color.SI};
       `}
     &:hover {
-      background-color: ${({ theme }) => theme.color.si};
+      background-color: ${({ theme }) => theme.color.SI};
     }
   `,
 };
