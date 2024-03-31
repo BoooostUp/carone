@@ -34,4 +34,11 @@ export const MAP_CONTENTS = Object.freeze({
     fax: '055. 384. 0703',
     imageSrc: '/src/assets/images/map/CE_CARONE_SG.webp',
   },
+  CARONE_2: {
+    name: '(주)카원 2공장',
+    address: '경상남도 양산시 상북면 수서로 503-104',
+    tel: '055. 381. 0703',
+    fax: '055. 384. 0703',
+    imageSrc: '/src/assets/images/map/CARONE2.webp',
+  },
 });
