@@ -4,7 +4,7 @@ const S = {
   Img: styled.img`
     width: 50rem;
     @media (max-width: 767px) {
-      width: 30rem;
+      width: 35rem;
     }
   `,
   Table: styled.table`
@@ -13,7 +13,7 @@ const S = {
     border-collapse: collapse;
     border-top: 1px solid #000;
     @media (max-width: 767px) {
-      width: 40rem;
+      width: 35rem;
     }
   `,
   Tr: styled.tr`
@@ -27,8 +27,9 @@ const S = {
     ${({ theme }) => theme.font.FONT14}
   `,
   CompanyName: styled.h1`
-    text-align: left;
-    margin-top: 2rem;
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
     ${({ theme }) => theme.font.FONT20B}
   `,
