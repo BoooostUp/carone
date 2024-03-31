@@ -16,6 +16,9 @@ export default QnAButton;
 
 const S = {
   Container: styled.button`
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
