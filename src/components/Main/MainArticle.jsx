@@ -3,34 +3,28 @@ import { media } from '../../styles/utils/mediaQuery';
 
 const MainArticle = ({ currentCompany, item }) => {
   const {
-    ID,
-    TITLE1,
-    TITLE2 = '',
-    CONTENT1,
-    CONTENT2 = '',
-    IMAGE_ADDRESS,
+    id,
+    title1,
+    title2 = '',
+    content1,
+    content2 = '',
+    imageAddress,
   } = item;
 
   return (
-    <S.Container $company={currentCompany.toLowerCase()}>
-      <S.Img src={IMAGE_ADDRESS} />
+    <S.Container $company={currentCompany}>
+      <S.Img src={imageAddress} />
       <S.ContentBox>
-        <S.Title
-          $companyTitle={ID}
-          $currentCompany={currentCompany.toLowerCase()}
-        >
-          {TITLE1}
+        <S.Title $companyTitle={id} $currentCompany={currentCompany}>
+          {title1}
         </S.Title>
-        <S.Content>{CONTENT1}</S.Content>
-        {TITLE2 && (
+        <S.Content>{content1}</S.Content>
+        {title2 && (
           <>
-            <S.Title
-              $companyTitle={ID}
-              $currentCompany={currentCompany.toLowerCase()}
-            >
-              {TITLE2}
+            <S.Title $companyTitle={id} $currentCompany={currentCompany}>
+              {title2}
             </S.Title>
-            <S.Content>{CONTENT2}</S.Content>
+            <S.Content>{content2}</S.Content>
           </>
         )}
       </S.ContentBox>
@@ -95,7 +89,7 @@ const S = {
   `,
   Title: styled.h1`
     color: ${({ theme, $companyTitle, $currentCompany }) =>
-      $currentCompany === 'home'
+      $currentCompany === 'HOME'
         ? theme.color[$companyTitle]
         : theme.color.mainGray};
     ${({ theme }) => theme.font.FONT20B};
