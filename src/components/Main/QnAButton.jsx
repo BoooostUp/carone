@@ -5,7 +5,7 @@ const QnAButton = () => {
   return (
     <div>
       <S.Container>
-        <img src="/src/assets/icons/vector.svg" />
+        <img src="/src/assets/icons/questionMark.svg" />
         <span>Q n A</span>
       </S.Container>
     </div>
