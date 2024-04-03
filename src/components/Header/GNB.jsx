@@ -3,20 +3,64 @@ import styled from 'styled-components';
 import LogoIcon from '../../assets/icons/Logo.svg';
 import { GNB_CONTENTS } from '../../constants/GNB_CONTENTS';
 
+const Gnb = ({ company }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <S.Gnb className="gnb-container" $company={company} $isOpen={isOpen}>
+      <S.Container>
+        <S.LogoContainer>
+          <S.Logo src={LogoIcon} />
+          <S.TitleContainer $company={company} $isOpen={isOpen}>
+            <S.Title>{GNB_CONTENTS[company].title}</S.Title>
+            <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
+          </S.TitleContainer>
+
+          {GNB_CONTENTS[company].Factory && (
+            <S.FactoryContainer $company={company} $isOpen={isOpen}>
+              <span>{GNB_CONTENTS[company].factory[0]}</span>
+              <span>{GNB_CONTENTS[company].factory[1]}</span>
+            </S.FactoryContainer>
+          )}
+        </S.LogoContainer>
+
+        <S.Menu
+          $company={company}
+          $isOpen={isOpen}
+          onMouseEnter={() => setIsOpen(true)}
+          onMouseLeave={() => setIsOpen(false)}
+        >
+          {company === 'Home'
+            ? GNB_CONTENTS.HOME_MENU.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))
+            : GNB_CONTENTS.MENU.map((item, idx) => <li key={idx}>{item}</li>)}
+        </S.Menu>
+      </S.Container>
+      {isOpen && <div>하이용ㅇㅇㅇㅇㅇ</div>}
+    </S.Gnb>
+  );
+};
+export default Gnb;
+
 const S = {
+  Gnb: styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: ${({ theme, $company, $isOpen }) =>
+      $isOpen ? theme.color.white : theme.color[$company]};
+  `,
   Container: styled.div`
     display: flex;
     width: 100%;
-    max-width: 160rem;
+    max-width: 130rem;
     justify-content: space-between;
-    padding: 1.5rem 13rem;
-    background-color: ${({ theme, $company, $isOpen }) =>
-      $isOpen ? theme.color.white : theme.color[$company]};
+    padding: 1.5rem 6rem;
 
     @media (max-width: 767px) {
       flex-direction: column;
       align-items: center;
-      padding: 1.5rem 6rem;
+      padding: 1.5rem 3rem;
       gap: 2rem;
     }
   `,
@@ -87,51 +131,8 @@ const S = {
       }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       max-width: 35rem;
     }
   `,
 };
-
-const Gnb = ({ company }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div>
-      <S.Container
-        className="gnb-container"
-        $company={company}
-        $isOpen={isOpen}
-      >
-        <S.LogoContainer>
-          <S.Logo src={LogoIcon} />
-          <S.TitleContainer $company={company} $isOpen={isOpen}>
-            <S.Title>{GNB_CONTENTS[company].title}</S.Title>
-            <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
-          </S.TitleContainer>
-
-          {GNB_CONTENTS[company].Factory && (
-            <S.FactoryContainer $company={company} $isOpen={isOpen}>
-              <span>{GNB_CONTENTS[company].factory[0]}</span>
-              <span>{GNB_CONTENTS[company].factory[1]}</span>
-            </S.FactoryContainer>
-          )}
-        </S.LogoContainer>
-
-        <S.Menu
-          $company={company}
-          $isOpen={isOpen}
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-        >
-          {company === 'Home'
-            ? GNB_CONTENTS.HOME_MENU.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))
-            : GNB_CONTENTS.MENU.map((item, idx) => <li key={idx}>{item}</li>)}
-        </S.Menu>
-      </S.Container>
-      {isOpen && <div>하이용ㅇㅇㅇㅇㅇ</div>}
-    </div>
-  );
-};
-export default Gnb;
