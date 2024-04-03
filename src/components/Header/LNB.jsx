@@ -2,30 +2,30 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { LNB_CONTENTS } from '../../constants/LNB_CONTENTS';
 
-const LNB = ({ company }) => {
+const Lnb = ({ company }) => {
   return (
-    <Lnb.Container company={company}>
-      <Lnb.IntroduceContainer>
+    <S.Container company={company}>
+      <S.IntroduceContainer>
         {LNB_CONTENTS.OUR_COMPANY.map((item, index) => (
           <Link to="/" key={index}>
-            <Lnb.LnbButton>{item}</Lnb.LnbButton>
+            <S.LnbButton>{item}</S.LnbButton>
           </Link>
         ))}
-      </Lnb.IntroduceContainer>
-      <Lnb.Contents>
+      </S.IntroduceContainer>
+      <S.Contents>
         {LNB_CONTENTS[company].map((item, index) => (
           <Link to="/" key={index}>
-            <Lnb.LnbButton key={index}>{item}</Lnb.LnbButton>
+            <S.LnbButton key={index}>{item}</S.LnbButton>
           </Link>
         ))}
-      </Lnb.Contents>
-    </Lnb.Container>
+      </S.Contents>
+    </S.Container>
   );
 };
 
-export default LNB;
+export default Lnb;
 
-const Lnb = {
+const S = {
   Container: styled.div`
     display: flex;
     flex-direction: row;
