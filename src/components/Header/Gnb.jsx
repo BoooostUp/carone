@@ -39,11 +39,7 @@ const Gnb = ({ company }) => {
         </S.Container>
       </S.Gnb>
       {isOpen && (
-        <Lnb
-          company={company}
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-        />
+        <Lnb company={company} onMouseLeave={() => setIsOpen(false)} />
       )}
     </div>
   );
@@ -57,13 +53,16 @@ const S = {
     justify-content: center;
     background-color: ${({ theme, $company, $isOpen }) =>
       $isOpen ? theme.color.white : theme.color[$company]};
+    height: 8rem;
+    @media (max-width: 767px) {
+      height: 9.5rem;
+    }
   `,
   Container: styled.div`
     display: flex;
     width: 100%;
-    /* max-width: 130rem; */
     justify-content: space-between;
-    padding: 1.5rem 8rem;
+    padding: 0 8rem;
 
     @media (max-width: 767px) {
       flex-direction: column;
