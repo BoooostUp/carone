@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import Logo from '../../assets/logo.svg';
+import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery.ts';
 
 //TODO: Mobile version : 글씨체 Bold 빼기
 //TODO: 카원 회사글씨 줄이던가 로고 키우기
 //TODO: 주소빼고 전화번호랑 팩스번호 서로 사이에 만들기
 
-const Footer = ({ contents }) => {
+const Footer = ({ company }) => {
   return (
-    console.log(contents.subtitle),
+    console.log(FOOTER_CONTENTS[company].companyName),
     (
       <div>
         <S.NameSloganWrapper>
@@ -16,8 +17,10 @@ const Footer = ({ contents }) => {
             <S.MainWrapper>
               <S.LogoImage src={Logo} alt="" />
               <div>
-                <S.CompanyName>{contents.companyName}</S.CompanyName>
-                <S.Subtitle>{contents.subtitle}</S.Subtitle>
+                <S.CompanyName>
+                  {FOOTER_CONTENTS[company].companyName}
+                </S.CompanyName>
+                <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
               </div>
             </S.MainWrapper>
           </div>
@@ -26,11 +29,13 @@ const Footer = ({ contents }) => {
         </S.NameSloganWrapper>
 
         <S.InfoContainer>
-          {contents.info.map((info, index) => {
+          {FOOTER_CONTENTS[company].info.map((info, index) => {
             return (
               <S.InfoWrapper key={index}>
                 <p>{info.address}</p>
-                <S.TelFaxWrapper companyName={contents.companyName}>
+                <S.TelFaxWrapper
+                  companyName={FOOTER_CONTENTS[company].companyName}
+                >
                   <p>{info.tel}</p>
                   <p>{info.fax}</p>
                 </S.TelFaxWrapper>
