@@ -1,43 +1,51 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import Lnb from './Lnb';
 import LogoIcon from '../../assets/icons/Logo.svg';
 import { GNB_CONTENTS } from '../../constants/GNB_CONTENTS';
 
 const Gnb = ({ company }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <S.Gnb className="gnb-container" $company={company} $isOpen={isOpen}>
-      <S.Container>
-        <S.LogoContainer>
-          <S.Logo src={LogoIcon} />
-          <S.TitleContainer $company={company} $isOpen={isOpen}>
-            <S.Title>{GNB_CONTENTS[company].title}</S.Title>
-            <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
-          </S.TitleContainer>
+    <div>
+      <S.Gnb className="gnb-container" $company={company} $isOpen={isOpen}>
+        <S.Container>
+          <S.LogoContainer>
+            <S.Logo src={LogoIcon} />
+            <S.TitleContainer $company={company} $isOpen={isOpen}>
+              <S.Title>{GNB_CONTENTS[company].title}</S.Title>
+              <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
+            </S.TitleContainer>
 
-          {GNB_CONTENTS[company].Factory && (
-            <S.FactoryContainer $company={company} $isOpen={isOpen}>
-              <span>{GNB_CONTENTS[company].factory[0]}</span>
-              <span>{GNB_CONTENTS[company].factory[1]}</span>
-            </S.FactoryContainer>
-          )}
-        </S.LogoContainer>
+            {GNB_CONTENTS[company].Factory && (
+              <S.FactoryContainer $company={company} $isOpen={isOpen}>
+                <span>{GNB_CONTENTS[company].factory[0]}</span>
+                <span>{GNB_CONTENTS[company].factory[1]}</span>
+              </S.FactoryContainer>
+            )}
+          </S.LogoContainer>
 
-        <S.Menu
-          $company={company}
-          $isOpen={isOpen}
+          <S.Menu
+            $company={company}
+            $isOpen={isOpen}
+            onMouseEnter={() => setIsOpen(true)}
+          >
+            {company === 'Home'
+              ? GNB_CONTENTS.HOME_MENU.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))
+              : GNB_CONTENTS.MENU.map((item, idx) => <li key={idx}>{item}</li>)}
+          </S.Menu>
+        </S.Container>
+      </S.Gnb>
+      {isOpen && (
+        <Lnb
+          company={company}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-        >
-          {company === 'Home'
-            ? GNB_CONTENTS.HOME_MENU.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))
-            : GNB_CONTENTS.MENU.map((item, idx) => <li key={idx}>{item}</li>)}
-        </S.Menu>
-      </S.Container>
-      {isOpen && <div>하이용ㅇㅇㅇㅇㅇ</div>}
-    </S.Gnb>
+        />
+      )}
+    </div>
   );
 };
 export default Gnb;
@@ -53,9 +61,9 @@ const S = {
   Container: styled.div`
     display: flex;
     width: 100%;
-    max-width: 130rem;
+    /* max-width: 130rem; */
     justify-content: space-between;
-    padding: 1.5rem 6rem;
+    padding: 1.5rem 8rem;
 
     @media (max-width: 767px) {
       flex-direction: column;

@@ -2,37 +2,51 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { LNB_CONTENTS } from '../../constants/LNB_CONTENTS';
 
-const Lnb = ({ company }) => {
+const Lnb = ({ company, ...props }) => {
   return (
-    <S.Container company={company}>
-      <S.IntroduceContainer>
-        {LNB_CONTENTS.OUR_COMPANY.map((item, index) => (
-          <Link to="/" key={index}>
-            <S.LnbButton>{item}</S.LnbButton>
-          </Link>
-        ))}
-      </S.IntroduceContainer>
-      <S.Contents>
-        {LNB_CONTENTS[company].map((item, index) => (
-          <Link to="/" key={index}>
-            <S.LnbButton key={index}>{item}</S.LnbButton>
-          </Link>
-        ))}
-      </S.Contents>
-    </S.Container>
+    <S.WithGnb>
+      <S.Container company={company} {...props}>
+        <S.IntroduceContainer>
+          {LNB_CONTENTS.OUR_COMPANY.map((item, index) => (
+            <Link to="/" key={index}>
+              <S.LnbButton>{item}</S.LnbButton>
+            </Link>
+          ))}
+        </S.IntroduceContainer>
+        <S.Contents>
+          {LNB_CONTENTS[company].map((item, index) => (
+            <Link to="/" key={index}>
+              <S.LnbButton key={index}>{item}</S.LnbButton>
+            </Link>
+          ))}
+        </S.Contents>
+      </S.Container>
+    </S.WithGnb>
   );
 };
 
 export default Lnb;
 
 const S = {
+  WithGnb: styled.div`
+    width: 100%;
+    max-height: 50rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  `,
   Container: styled.div`
     display: flex;
     flex-direction: row;
     gap: 3rem;
     width: 100%;
-    padding: 2rem;
-    position: relative;
+    max-width: 130rem;
+    padding: 1.5rem 6rem;
+    position: absolute;
+    left: calc(100% - 61rem);
 
     &::after {
       content: '';
@@ -52,6 +66,7 @@ const S = {
   Contents: styled.div`
     display: flex;
     flex-direction: column;
+    padding-left: 4.5rem;
   `,
   LnbButton: styled.button`
     text-align: start;
