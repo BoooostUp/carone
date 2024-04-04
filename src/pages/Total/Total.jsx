@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router';
 import Gnb from '../../components/Header/Gnb';
 
-const Carone = () => {
+const Total = () => {
   return (
     <div>
-      <Gnb company="CARONE" />
+      <Gnb company="TOTAL" />
       <Outlet />
     </div>
   );
 };
 
-export default Carone;
+export default Total;

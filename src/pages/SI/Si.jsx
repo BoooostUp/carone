@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router';
+import Gnb from '../../components/Header/Gnb';
 
 const Si = () => {
   return (
     <div>
-      <div>헤더</div>
+      <Gnb company="SI" />
       <Outlet />
     </div>
   );
