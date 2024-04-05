@@ -1,6 +1,7 @@
 export const FOOTER_CONTENTS = {
   HOME: {
     companyName: 'Waste Treatment & Collection of Waste',
+    subtitle: 'Waste Treatment & Collection of Waste',
     info: [
       {
         companyName: '(주)카원',

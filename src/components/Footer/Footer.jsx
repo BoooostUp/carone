@@ -3,10 +3,6 @@ import Logo from '../../assets/icons/Logo.svg';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery.ts';
 
-//TODO: Mobile version : 글씨체 Bold 빼기
-//TODO: 카원 회사글씨 줄이던가 로고 키우기
-//TODO: 주소빼고 전화번호랑 팩스번호 서로 사이에 만들기
-
 const Footer = ({ company }) => {
   return (
     <div>
@@ -18,7 +14,9 @@ const Footer = ({ company }) => {
               <S.CompanyName>
                 {FOOTER_CONTENTS[company].companyName}
               </S.CompanyName>
-              <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
+              {company !== 'HOME' && (
+                <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
+              )}
             </div>
           </S.MainWrapper>
         </div>
@@ -32,7 +30,7 @@ const Footer = ({ company }) => {
             <S.InfoWrapper key={index}>
               <p>{info.address}</p>
               <S.TelFaxWrapper
-                companyName={FOOTER_CONTENTS[company].companyName}
+                $companyName={FOOTER_CONTENTS[company].companyName}
               >
                 <p>{info.tel}</p>
                 <p>{info.fax}</p>
@@ -49,13 +47,14 @@ export default Footer;
 
 const S = {
   LogoImage: styled.img`
-    width: 4.5rem;
+    width: 6rem;
     margin-right: 1rem;
   `,
   NameSloganWrapper: styled.div`
     display: flex;
     align-items: end;
     justify-content: space-between;
+    padding: 1rem 0;
     border-bottom: 1px solid ${({ theme }) => theme.color.white};
   `,
 
@@ -69,7 +68,7 @@ const S = {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    ${({ theme }) => theme.font.FONT14};
+    ${({ theme }) => theme.font.FONT16};
     ${media.desktop`
         flex-direction: row;
         justify-content: start;
@@ -88,13 +87,12 @@ const S = {
     ${media.desktop`
         flex-direction: column;
     `}
-    gap: 1rem;
   `,
 
   TelFaxWrapper: styled.div`
     display: flex;
     gap: 1.5rem;
-    ${({ theme }) => theme.font.FONT14};
+    ${({ theme }) => theme.font.FONT16};
     //if contents company name is main then make flex direction column
     ${({ companyName }) =>
       companyName === 'Waste Treatment & Collection of Waste' &&
@@ -103,8 +101,7 @@ const S = {
   `,
 
   CompanyName: styled.div`
-    display: flex;
-    align-items: flex-end;
+    justify-content: center;
     ${({ theme }) => theme.font.FONT16};
     margin-bottom: 10px;
   `,
