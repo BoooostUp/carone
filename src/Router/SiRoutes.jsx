@@ -1,66 +1,66 @@
-import SiBusinessCleaning from '../pages/SI/Business/SiBusinessCleaning';
-import SiBusinessDredging from '../pages/SI/Business/SiBusinessDredging';
-import SiBusinessPipe from '../pages/SI/Business/SiBusinessPipe';
-import SiInfoBusinessPartner from '../pages/SI/Info/SiInfoBusinessPartner';
-import SiInfoCeo from '../pages/SI/Info/SiInfoCeo';
-import SiInfoHistory from '../pages/SI/Info/SiInfoHistory';
-import SiInfoLocation from '../pages/SI/Info/SiInfoLocation';
-import SiFacilities from '../pages/SI/SiFacilities';
-import SiLicenses from '../pages/SI/SiLicenses';
-import SiMain from '../pages/SI/SiMain';
+import SiBusinessCleaning from '../pages/Si/Business/SiBusinessCleaning';
+import SiBusinessDredging from '../pages/Si/Business/SiBusinessDredging';
+import SiBusinessPipe from '../pages/Si/Business/SiBusinessPipe';
+import SiInfoBusinessPartner from '../pages/Si/Info/SiInfoBusinessPartner';
+import SiInfoCeo from '../pages/Si/Info/SiInfoCeo';
+import SiInfoHistory from '../pages/Si/Info/SiInfoHistory';
+import SiInfoLocation from '../pages/Si/Info/SiInfoLocation';
+import SiFacilities from '../pages/Si/SiFacilities';
+import SiLicenses from '../pages/Si/SiLicenses';
+import SiMain from '../pages/Si/SiMain';
 
 export const SiRoutes = [
   {
-    path: '/si',
+    path: '',
     element: <SiMain />,
   },
 
   {
-    path: '/si/info',
+    path: 'info',
     children: [
       {
-        path: '/si/info',
+        path: '',
         element: <SiInfoCeo />,
       },
       {
-        path: '/si/info/history',
+        path: 'history',
         element: <SiInfoHistory />,
       },
       {
-        path: '/si/info/location',
+        path: 'location',
         element: <SiInfoLocation />,
       },
       {
-        path: '/si/info/business-partner',
+        path: 'business-partner',
         element: <SiInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: '/si/business',
+    path: 'business',
     children: [
       {
-        path: '/si/business',
+        path: '',
         element: <SiBusinessCleaning />,
       },
       {
-        path: '/si/business/waste',
-        element: <SiBusinessPipe />,
+        path: 'dredging',
+        element: <SiBusinessDredging />,
       },
       {
-        path: '/si/business/process',
-        element: <SiBusinessDredging />,
+        path: 'pipe',
+        element: <SiBusinessPipe />,
       },
     ],
   },
 
   {
-    path: '/si/facilities',
+    path: 'facilities',
     element: <SiFacilities />,
   },
   {
-    path: '/si/licenses',
+    path: 'licenses',
     element: <SiLicenses />,
   },
 ];

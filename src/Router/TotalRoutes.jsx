@@ -11,56 +11,56 @@ import TotalMain from '../pages/Total/TotalMain';
 
 export const TotalRoutes = [
   {
-    path: '/total',
+    path: '',
     element: <TotalMain />,
   },
 
   {
-    path: '/total/info',
+    path: 'info',
     children: [
       {
-        path: '/total/info',
+        path: '',
         element: <TotalInfoCeo />,
       },
       {
-        path: '/total/info/history',
+        path: 'history',
         element: <TotalInfoHistory />,
       },
       {
-        path: '/total/info/location',
+        path: 'location',
         element: <TotalInfoLocation />,
       },
       {
-        path: '/total/info/business-partner',
+        path: 'business-partner',
         element: <TotalInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: '/total/business',
+    path: 'business',
     children: [
       {
-        path: '/total/business',
+        path: '',
         element: <TotalBusinessAbout />,
       },
       {
-        path: '/total/business/waste',
+        path: 'waste',
         element: <TotalBusinessWaste />,
       },
       {
-        path: '/total/business/process',
+        path: 'process',
         element: <TotalBusinessProcess />,
       },
     ],
   },
 
   {
-    path: '/total/facilities',
+    path: 'facilities',
     element: <TotalFacilities />,
   },
   {
-    path: '/total/licenses',
+    path: 'licenses',
     element: <TotalLicenses />,
   },
 ];

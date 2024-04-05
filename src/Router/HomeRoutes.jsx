@@ -6,23 +6,23 @@ import HomeRecruit from '../pages/Home/HomeRecruit';
 
 export const HomeRoutes = [
   {
-    path: '/home',
+    path: '',
     element: <HomeMain />,
   },
   {
-    path: '/home/ceo',
+    path: 'ceo',
     element: <HomeCeo />,
   },
   {
-    path: '/home/history',
+    path: 'history',
     element: <HomeHistory />,
   },
   {
-    path: '/home/location',
+    path: 'location',
     element: <HomeLocation />,
   },
   {
-    path: '/home/recruit',
+    path: 'recruit',
     element: <HomeRecruit />,
   },
 ];

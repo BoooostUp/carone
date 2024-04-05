@@ -11,56 +11,56 @@ import CaroneInfoLocation from '../pages/Carone/Info/CaroneInfoLocation';
 
 export const CaroneRoutes = [
   {
-    path: '/carone',
+    path: '',
     element: <CaroneMain />,
   },
 
   {
-    path: '/carone/info',
+    path: 'info',
     children: [
       {
-        path: '/carone/info',
+        path: '',
         element: <CaroneInfoCeo />,
       },
       {
-        path: '/carone/info/history',
+        path: 'history',
         element: <CaroneInfoHistory />,
       },
       {
-        path: '/carone/info/location',
+        path: 'location',
         element: <CaroneInfoLocation />,
       },
       {
-        path: '/carone/info/business-partner',
+        path: 'business-partner',
         element: <CaroneInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: '/carone/business',
+    path: 'business',
     children: [
       {
-        path: '/carone/business',
+        path: '',
         element: <CaroneBusinessAbout />,
       },
       {
-        path: '/carone/business/waste',
+        path: 'waste',
         element: <CaroneBusinessWaste />,
       },
       {
-        path: '/carone/business/process',
+        path: 'process',
         element: <CaroneBusinessProcess />,
       },
     ],
   },
 
   {
-    path: '/carone/facilities',
+    path: 'facilities',
     element: <CaroneFacilities />,
   },
   {
-    path: '/carone/licenses',
+    path: 'licenses',
     element: <CaroneLicenses />,
   },
 ];
