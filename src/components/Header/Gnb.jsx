@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Lnb from './Lnb';
 import LogoIcon from '../../assets/icons/Logo.svg';
@@ -13,7 +14,9 @@ const Gnb = ({ company }) => {
           <S.LogoContainer>
             <S.Logo src={LogoIcon} />
             <S.TitleContainer $company={company} $isOpen={isOpen}>
-              <S.Title>{GNB_CONTENTS[company].title}</S.Title>
+              <Link to={GNB_CONTENTS[company].link}>
+                <S.Title>{GNB_CONTENTS[company].title}</S.Title>
+              </Link>
               <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
             </S.TitleContainer>
 
@@ -28,22 +31,24 @@ const Gnb = ({ company }) => {
           <S.Menu
             $company={company}
             $isOpen={isOpen}
-            onMouseEnter={() => setIsOpen(true)}
+            onMouseEnter={() => company !== 'HOME' && setIsOpen(true)}
           >
-            {company === 'Home'
-              ? GNB_CONTENTS.HOME_MENU.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+            {company === 'HOME'
+              ? GNB_CONTENTS.HOME_MENU_LIST.map((item, idx) => (
+                  <Link to={item.link} key={idx}>
+                    <li>{item.menu}</li>
+                  </Link>
                 ))
-              : GNB_CONTENTS.MENU.map((item, idx) => <li key={idx}>{item}</li>)}
+              : GNB_CONTENTS.MENU_LIST.map((item, idx) => (
+                  <Link to={item.link} key={idx}>
+                    <li>{item.menu}</li>
+                  </Link>
+                ))}
           </S.Menu>
         </S.Container>
       </S.Gnb>
       {isOpen && (
-        <Lnb
-          company={company}
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-        />
+        <Lnb company={company} onMouseLeave={() => setIsOpen(false)} />
       )}
     </div>
   );
@@ -57,13 +62,16 @@ const S = {
     justify-content: center;
     background-color: ${({ theme, $company, $isOpen }) =>
       $isOpen ? theme.color.white : theme.color[$company]};
+    height: 8rem;
+    @media (max-width: 767px) {
+      height: 9.5rem;
+    }
   `,
   Container: styled.div`
     display: flex;
     width: 100%;
-    /* max-width: 130rem; */
     justify-content: space-between;
-    padding: 1.5rem 8rem;
+    padding: 0 8rem;
 
     @media (max-width: 767px) {
       flex-direction: column;
