@@ -4,8 +4,8 @@ import Carone2BusinessWaste from '../pages/Carone2/Business/Carone2BusinessWaste
 import Carone2Facilities from '../pages/Carone2/Carone2Facilities';
 import Carone2Licenses from '../pages/Carone2/Carone2Licenses';
 import Carone2Main from '../pages/Carone2/Carone2Main';
-import Carone2InfoCeo from '../pages/Carone2/Info/Careone2InfoCeo';
 import Carone2InfoBusinessPartner from '../pages/Carone2/Info/Carone2InfoBusinessPartner';
+import Carone2InfoCeo from '../pages/Carone2/Info/Carone2InfoCeo';
 import Carone2InfoHistory from '../pages/Carone2/Info/Carone2InfoHistory';
 import Carone2InfoLocation from '../pages/Carone2/Info/Carone2InfoLocation';
 
