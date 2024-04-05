@@ -1,6 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import CertificationComponent from './components/Certification/CertificationComponent';
-import FooterExample from './components/Footer/FooterExample';
+import SubCategoryBar from './components/Main/SubCategoryBar';
 import Carone from './pages/Carone';
 import Ce from './pages/Ce';
 import Home from './pages/Home';
@@ -45,7 +44,7 @@ const Router = createBrowserRouter([
       },
       {
         path: 'test',
-        element: <FooterExample />,
+        element: <SubCategoryBar />,
       },
     ],
   },
