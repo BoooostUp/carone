@@ -7,15 +7,15 @@ const Lnb = ({ company, ...props }) => {
     <S.Container $company={company} {...props}>
       <S.IntroduceContainer>
         {LNB_CONTENTS.OUR_COMPANY.map((item, index) => (
-          <Link to="/" key={index}>
-            <S.LnbButton>{item}</S.LnbButton>
+          <Link to={item.link} key={index}>
+            <S.LnbButton>{item.menu}</S.LnbButton>
           </Link>
         ))}
       </S.IntroduceContainer>
       <S.ContentsContainer>
         {LNB_CONTENTS[company].map((item, index) => (
-          <Link to="/" key={index}>
-            <S.LnbButton key={index}>{item}</S.LnbButton>
+          <Link to={item.link} key={index}>
+            <S.LnbButton>{item.menu}</S.LnbButton>
           </Link>
         ))}
       </S.ContentsContainer>
