@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import BnbButton from './BnbButton';
 import { media } from '../../../styles/utils/mediaQuery';
 
 //TODO: Change initialState all false
 const Bnb = ({ company }) => {
+  const navigate = useNavigate();
   // Make initial state true if company name props is same as the button name
   const initialState = {
     HOME: company === 'HOME',
@@ -32,6 +34,20 @@ const Bnb = ({ company }) => {
       return newStatus;
     });
     // Navigate to the designated path
+    const pathMapping = {
+      HOME: '/home',
+      CE: '/ce',
+      CARONE: '/carone',
+      SG: '/sg',
+      TOTAL: '/total',
+      SI: '/si',
+    };
+
+    // Navigate to the designated path based on button name
+    const path = pathMapping[buttonName];
+    if (path) {
+      navigate(path);
+    }
   };
 
   return (

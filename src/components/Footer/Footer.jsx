@@ -5,7 +5,7 @@ import { media } from '../../styles/utils/mediaQuery.ts';
 
 const Footer = ({ company }) => {
   return (
-    <div>
+    <S.Container>
       <S.NameSloganWrapper>
         <div>
           <S.MainWrapper>
@@ -39,13 +39,21 @@ const Footer = ({ company }) => {
           );
         })}
       </S.InfoContainer>
-    </div>
+    </S.Container>
   );
 };
 
 export default Footer;
 
 const S = {
+  Container: styled.footer`
+    background-color: ${({ theme }) => theme.color.black};
+    color: ${({ theme }) => theme.color.white};
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  `,
   LogoImage: styled.img`
     width: 6rem;
     margin-right: 1rem;
