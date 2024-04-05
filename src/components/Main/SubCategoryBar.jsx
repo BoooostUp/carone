@@ -3,33 +3,46 @@ import styled from 'styled-components';
 import { css } from 'styled-components';
 import { SUBCATEGORY_CONTENTS } from '../../constants/SUBCATEGORY_CONTENTS';
 
-const activeCategory = {
-  1: false,
-  2: false,
-  3: false,
-};
-
 const SubCategoryBar = ({ company }) => {
-  const [selected, setSelected] = useState('0');
+  const activeCategory = {
+    1: true,
+    2: false,
+    3: false,
+  };
+  const [selected, setSelected] = useState(0);
   const [active, setActive] = useState(activeCategory);
 
   const onClick = (index, buttonNumber) => {
     setSelected(index);
+    // Make previous active button false and current active button true
     setActive({
-      ...activeCategory,
+      ...active,
       [buttonNumber]: true,
+      [selected + 1]: false,
     });
   };
   return (
     <>
       <S.ButtonWrapper>
-        <S.ButtonContainer status={active[1]} onClick={() => onClick(0, 1)}>
+        <S.ButtonContainer
+          variant={company}
+          status={active[1]}
+          onClick={() => onClick(0, 1)}
+        >
           {SUBCATEGORY_CONTENTS[company][0]}
         </S.ButtonContainer>
-        <S.ButtonContainer status={active[2]} onClick={() => onClick(1, 2)}>
+        <S.ButtonContainer
+          variant={company}
+          status={active[2]}
+          onClick={() => onClick(1, 2)}
+        >
           {SUBCATEGORY_CONTENTS[company][1]}
         </S.ButtonContainer>
-        <S.ButtonContainer status={active[3]} onClick={() => onClick(2, 3)}>
+        <S.ButtonContainer
+          variant={company}
+          status={active[3]}
+          onClick={() => onClick(2, 3)}
+        >
           {SUBCATEGORY_CONTENTS[company][2]}
         </S.ButtonContainer>
       </S.ButtonWrapper>
@@ -60,16 +73,33 @@ const S = {
     object-fit: cover;
     border-bottom: 2px solid ${({ theme }) => theme.color.lightGray};
     ${({ theme }) => theme.font.FONT16};
-    &:hover {
-      color: ${({ theme }) => theme.color.SG};
-      border-bottom: 2px solid ${({ theme }) => theme.color.SG};
-    }
+    ${({ variant }) => buttonVariantMap[variant]}
+  `,
+};
 
+const buttonVariantMap = {
+  CARONE: css`
+    ${({ status }) =>
+      status &&
+      css`
+        color: ${({ theme }) => theme.color.CARONE};
+        border-bottom: 2px solid ${({ theme }) => theme.color.CARONE};
+      `}
+    &:hover {
+      color: ${({ theme }) => theme.color.CARONE};
+      border-bottom: 2px solid ${({ theme }) => theme.color.CARONE};
+    }
+  `,
+  SG: css`
     ${({ status }) =>
       status &&
       css`
         color: ${({ theme }) => theme.color.SG};
         border-bottom: 2px solid ${({ theme }) => theme.color.SG};
       `}
+    &:hover {
+      color: ${({ theme }) => theme.color.SG};
+      border-bottom: 2px solid ${({ theme }) => theme.color.SG};
+    }
   `,
 };

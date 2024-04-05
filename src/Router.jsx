@@ -44,7 +44,7 @@ const Router = createBrowserRouter([
       },
       {
         path: 'test',
-        element: <SubCategoryBar company="CARONE" />,
+        element: <SubCategoryBar company="SG" />,
       },
     ],
   },
