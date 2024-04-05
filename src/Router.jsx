@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import CertificationComponent from './components/Certification/CertificationComponent';
+import Bnb from './pages/Bnb';
 import Carone from './pages/Carone';
 import Ce from './pages/Ce';
 import Home from './pages/Home';
@@ -44,8 +44,7 @@ const Router = createBrowserRouter([
       },
       {
         path: 'test',
-        element: <CertificationComponent />,
-
+        element: <Bnb />,
       },
     ],
   },
