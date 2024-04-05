@@ -4,12 +4,10 @@ import questionMark from '/src/assets/icons/questionMark.svg';
 
 const QnAButton = () => {
   return (
-    <div>
-      <S.Container>
-        <img src={questionMark} />
-        <span>Q n A</span>
-      </S.Container>
-    </div>
+    <S.Container>
+      <img src={questionMark} />
+      <span>Q n A</span>
+    </S.Container>
   );
 };
 
