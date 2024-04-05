@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BnbButton from './BnbButton';
 import { media } from '../../../styles/utils/mediaQuery';
 
+//TODO: Change initialState all false
 const Bnb = ({ company }) => {
   // Make initial state true if company name props is same as the button name
   const initialState = {
