@@ -6,7 +6,7 @@ const Lnb = ({ company, ...props }) => {
   return (
     <S.Container $company={company} {...props}>
       <S.IntroduceContainer>
-        {LNB_CONTENTS.OUR_COMPANY.map((item, index) => (
+        {LNB_CONTENTS.INFO.map((item, index) => (
           <Link to={item.link} key={index}>
             <S.LnbButton>{item.menu}</S.LnbButton>
           </Link>

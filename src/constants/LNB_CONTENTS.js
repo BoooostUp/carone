@@ -1,5 +1,5 @@
 export const LNB_CONTENTS = Object.freeze({
-  OUR_COMPANY: [
+  INFO: [
     { menu: '인사말', link: 'info' },
     { menu: '연혁', link: 'info/history' },
     { menu: '오시는 길', link: 'info/location' },
