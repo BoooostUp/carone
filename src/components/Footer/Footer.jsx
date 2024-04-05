@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/icons/Logo.svg';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery.ts';
 
@@ -9,42 +9,39 @@ import { media } from '../../styles/utils/mediaQuery.ts';
 
 const Footer = ({ company }) => {
   return (
-    console.log(FOOTER_CONTENTS[company].companyName),
-    (
-      <div>
-        <S.NameSloganWrapper>
-          <div>
-            <S.MainWrapper>
-              <S.LogoImage src={Logo} alt="" />
-              <div>
-                <S.CompanyName>
-                  {FOOTER_CONTENTS[company].companyName}
-                </S.CompanyName>
-                <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
-              </div>
-            </S.MainWrapper>
-          </div>
+    <div>
+      <S.NameSloganWrapper>
+        <div>
+          <S.MainWrapper>
+            <S.LogoImage src={Logo} alt="" />
+            <div>
+              <S.CompanyName>
+                {FOOTER_CONTENTS[company].companyName}
+              </S.CompanyName>
+              <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
+            </div>
+          </S.MainWrapper>
+        </div>
 
-          <div>© Since 2002</div>
-        </S.NameSloganWrapper>
+        <div>© Since 2002</div>
+      </S.NameSloganWrapper>
 
-        <S.InfoContainer>
-          {FOOTER_CONTENTS[company].info.map((info, index) => {
-            return (
-              <S.InfoWrapper key={index}>
-                <p>{info.address}</p>
-                <S.TelFaxWrapper
-                  companyName={FOOTER_CONTENTS[company].companyName}
-                >
-                  <p>{info.tel}</p>
-                  <p>{info.fax}</p>
-                </S.TelFaxWrapper>
-              </S.InfoWrapper>
-            );
-          })}
-        </S.InfoContainer>
-      </div>
-    )
+      <S.InfoContainer>
+        {FOOTER_CONTENTS[company].info.map((info, index) => {
+          return (
+            <S.InfoWrapper key={index}>
+              <p>{info.address}</p>
+              <S.TelFaxWrapper
+                companyName={FOOTER_CONTENTS[company].companyName}
+              >
+                <p>{info.tel}</p>
+                <p>{info.fax}</p>
+              </S.TelFaxWrapper>
+            </S.InfoWrapper>
+          );
+        })}
+      </S.InfoContainer>
+    </div>
   );
 };
 
