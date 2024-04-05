@@ -38,7 +38,7 @@ export const GNB_CONTENTS = Object.freeze({
     },
     {
       menu: '사업 분야',
-      link: 'history',
+      link: 'business',
     },
     {
       menu: '오시는 길',
