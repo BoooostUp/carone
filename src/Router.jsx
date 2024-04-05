@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Bnb from './pages/Bnb';
+
 import Carone from './pages/Carone';
 import Ce from './pages/Ce';
 import Home from './pages/Home';
