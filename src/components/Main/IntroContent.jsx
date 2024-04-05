@@ -8,15 +8,15 @@ const IntroContent = () => {
       {C.CONTENTS.map((item, index) => {
         return (
           <S.Container key={index}>
-            <S.Img src={item.ImageAddress} />
+            <S.Img src={item.imageAddress} />
             <S.TextBox>
               <S.TitleBox>
-                <S.Title>{item.Title}</S.Title>
+                <S.Title>{item.title}</S.Title>
               </S.TitleBox>
-              {item.Element1 && <S.Content>{item.Element1}</S.Content>}
-              {item.Element2 && <S.Content>{item.Element2}</S.Content>}
-              {item.Element3 && <S.Content>{item.Element3}</S.Content>}
-              {item.Element4 && <S.Content>{item.Element4}</S.Content>}
+              {item.element1 && <S.Content>{item.element1}</S.Content>}
+              {item.element2 && <S.Content>{item.element2}</S.Content>}
+              {item.element3 && <S.Content>{item.element3}</S.Content>}
+              {item.element4 && <S.Content>{item.element4}</S.Content>}
             </S.TextBox>
           </S.Container>
         );
