@@ -1,18 +1,21 @@
-import { Outlet } from 'react-router';
+import { Outlet } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import Gnb from '../../components/Header/Gnb';
 import Bnb from '../../components/Main/BNB/Bnb';
-import SubCategoryBar from '../../components/Main/SubCategoryBar';
+import Hero from '../../components/Main/Hero';
+import { useHeroSize } from '../../hooks/useHeroAttribute';
 
 const Home = () => {
+  const { currentPath, heroSize } = useHeroSize();
+
   return (
-    <div>
+    <>
       <Gnb company="HOME" />
+      <Hero size={heroSize} link={currentPath} company="HOME" />
       <Outlet />
-      <SubCategoryBar company="CARONE" />
       <Bnb company="HOME" />
       <Footer company="HOME" />
-    </div>
+    </>
   );
 };
 
