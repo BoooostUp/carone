@@ -1,9 +1,11 @@
 import SgBusinessAbout from '../pages/Sg/Business/SgBusinessAbout';
 import SgBusinessFlowchart from '../pages/Sg/Business/SgBusinessFlowchart';
+import SgBusinessLayout from '../pages/Sg/Business/SgBusinessLayout';
 import SgBusinessWaste from '../pages/Sg/Business/SgBusinessWaste';
 import SgInfoBusinessPartner from '../pages/Sg/Info/SgInfoBusinessPartner';
 import SgInfoCeo from '../pages/Sg/Info/SgInfoCeo';
 import SgInfoHistory from '../pages/Sg/Info/SgInfoHistory';
+import SgInfoLayout from '../pages/Sg/Info/SgInfoLayout';
 import SgInfoLocation from '../pages/Sg/Info/SgInfoLocation';
 import SgFacilities from '../pages/Sg/SgFacilities';
 import SgLicenses from '../pages/Sg/SgLicenses';
@@ -16,40 +18,40 @@ export const SgRoutes = [
   },
 
   {
-    path: 'info',
+    element: <SgInfoLayout />,
     children: [
       {
-        path: '',
+        path: 'info/ceo',
         element: <SgInfoCeo />,
       },
       {
-        path: 'history',
+        path: 'info/history',
         element: <SgInfoHistory />,
       },
       {
-        path: 'location',
+        path: 'info/location',
         element: <SgInfoLocation />,
       },
       {
-        path: 'business-partner',
+        path: 'info/business-partner',
         element: <SgInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: 'business',
+    element: <SgBusinessLayout />,
     children: [
       {
-        path: '',
+        path: 'business/about',
         element: <SgBusinessAbout />,
       },
       {
-        path: 'waste',
+        path: 'business/waste',
         element: <SgBusinessWaste />,
       },
       {
-        path: 'flowchart',
+        path: 'business/flowchart',
         element: <SgBusinessFlowchart />,
       },
     ],

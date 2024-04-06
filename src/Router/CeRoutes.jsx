@@ -1,4 +1,5 @@
 import CeBusinessAbout from '../pages/Ce/Business/CeBusinessAbout';
+import CeBusinessLayout from '../pages/Ce/Business/CeBusinessLayout';
 import CeBusinessRegistration from '../pages/Ce/Business/CeBusinessRegistration';
 import CeBusinessWaste from '../pages/Ce/Business/CeBusinessWaste';
 import CeFacilities from '../pages/Ce/CeFacilities';
@@ -7,6 +8,7 @@ import CeMain from '../pages/Ce/CeMain';
 import CeInfoBusinessPartner from '../pages/Ce/Info/CeInfoBusinessPartner';
 import CeInfoCeo from '../pages/Ce/Info/CeInfoCeo';
 import CeInfoHistory from '../pages/Ce/Info/CeInfoHistory';
+import CeInfoLayout from '../pages/Ce/Info/CeInfoLayout';
 import CeInfoLocation from '../pages/Ce/Info/CeInfoLocation';
 
 export const CeRoutes = [
@@ -16,40 +18,40 @@ export const CeRoutes = [
   },
 
   {
-    path: 'info',
+    element: <CeInfoLayout />,
     children: [
       {
-        path: '',
+        path: 'info/ceo',
         element: <CeInfoCeo />,
       },
       {
-        path: 'history',
+        path: 'info/history',
         element: <CeInfoHistory />,
       },
       {
-        path: 'location',
+        path: 'info/location',
         element: <CeInfoLocation />,
       },
       {
-        path: 'business-partner',
+        path: 'info/business-partner',
         element: <CeInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: 'business',
+    element: <CeBusinessLayout />,
     children: [
       {
-        path: '',
+        path: 'business/about',
         element: <CeBusinessAbout />,
       },
       {
-        path: 'waste',
+        path: 'business/waste',
         element: <CeBusinessWaste />,
       },
       {
-        path: 'registration',
+        path: 'business/registration',
         element: <CeBusinessRegistration />,
       },
     ],

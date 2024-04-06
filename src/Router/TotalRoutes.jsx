@@ -1,9 +1,11 @@
 import TotalBusinessAbout from '../pages/Total/Business/TotalBusinessAbout';
+import TotalBusinessLayout from '../pages/Total/Business/TotalBusinessLayout';
 import TotalBusinessProcess from '../pages/Total/Business/TotalBusinessProcess';
 import TotalBusinessWaste from '../pages/Total/Business/TotalBusinessWaste';
 import TotalInfoBusinessPartner from '../pages/Total/Info/TotalInfoBusinessPartner';
 import TotalInfoCeo from '../pages/Total/Info/TotalInfoCeo';
 import TotalInfoHistory from '../pages/Total/Info/TotalInfoHistory';
+import TotalInfoLayout from '../pages/Total/Info/TotalInfoLayout';
 import TotalInfoLocation from '../pages/Total/Info/TotalInfoLocation';
 import TotalFacilities from '../pages/Total/TotalFacilities';
 import TotalLicenses from '../pages/Total/TotalLicenses';
@@ -16,40 +18,40 @@ export const TotalRoutes = [
   },
 
   {
-    path: 'info',
+    element: <TotalInfoLayout />,
     children: [
       {
-        path: '',
+        path: 'info/ceo',
         element: <TotalInfoCeo />,
       },
       {
-        path: 'history',
+        path: 'info/history',
         element: <TotalInfoHistory />,
       },
       {
-        path: 'location',
+        path: 'info/location',
         element: <TotalInfoLocation />,
       },
       {
-        path: 'business-partner',
+        path: 'info/business-partner',
         element: <TotalInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: 'business',
+    element: <TotalBusinessLayout />,
     children: [
       {
-        path: '',
+        path: 'business/about',
         element: <TotalBusinessAbout />,
       },
       {
-        path: 'waste',
+        path: 'business/waste',
         element: <TotalBusinessWaste />,
       },
       {
-        path: 'process',
+        path: 'business/process',
         element: <TotalBusinessProcess />,
       },
     ],
