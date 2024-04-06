@@ -73,33 +73,11 @@ const S = {
     object-fit: cover;
     border-bottom: 2px solid ${({ theme }) => theme.color.lightGray};
     ${({ theme }) => theme.font.FONT16};
-    ${({ variant }) => buttonVariantMap[variant]}
-  `,
-};
-
-const buttonVariantMap = {
-  CARONE: css`
-    ${({ status }) =>
+    ${({ status, variant }) =>
       status &&
       css`
-        color: ${({ theme }) => theme.color.CARONE};
-        border-bottom: 2px solid ${({ theme }) => theme.color.CARONE};
+        color: ${({ theme }) => theme.color[variant]};
+        border-bottom: 2px solid ${({ theme }) => theme.color[variant]};
       `}
-    &:hover {
-      color: ${({ theme }) => theme.color.CARONE};
-      border-bottom: 2px solid ${({ theme }) => theme.color.CARONE};
-    }
-  `,
-  SG: css`
-    ${({ status }) =>
-      status &&
-      css`
-        color: ${({ theme }) => theme.color.SG};
-        border-bottom: 2px solid ${({ theme }) => theme.color.SG};
-      `}
-    &:hover {
-      color: ${({ theme }) => theme.color.SG};
-      border-bottom: 2px solid ${({ theme }) => theme.color.SG};
-    }
   `,
 };
