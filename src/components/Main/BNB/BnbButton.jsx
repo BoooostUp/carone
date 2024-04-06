@@ -12,7 +12,6 @@ const BnbButton = ({ variant = 'home', status, ...props }) => {
     </div>
   );
 };
-
 export default BnbButton;
 
 const S = {

@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Pretendard", "Noto Sans", "sans-serif";
     word-break: keep-all;
     font-size: 62.5%;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
+    user-select: none;
   }
 
   html, body, div, span, applet, object, iframe,
