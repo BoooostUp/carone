@@ -68,7 +68,7 @@ const Bnb = ({ company }) => {
       </BnbButton>
       <BnbButton
         variant="carone"
-        status={status.CARONE}
+        status={buttonStatus.CARONE}
         onClick={() => handleClick('CARONE')}
       >
         (주)카원
@@ -82,7 +82,7 @@ const Bnb = ({ company }) => {
       </BnbButton>
       <BnbButton
         variant="total"
-        status={status.total}
+        status={buttonStatus.total}
         onClick={() => handleClick('TOTAL')}
       >
         (주)토탈
