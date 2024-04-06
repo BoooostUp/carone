@@ -1,25 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const CategoryBar = ({ company, category, selectedButton }) => {
-  const [toggleButton, setToggleButton] = useState(
-    selectedButton || category[0],
-  );
+const CategoryBar = ({ company, category, selectedButton, currentPage }) => {
+  const [toggleButton, setToggleButton] = useState(selectedButton);
+
+  useEffect(() => {
+    setToggleButton(selectedButton);
+  }, [selectedButton]);
+
   const handleClick = (item) => {
     setToggleButton(item);
   };
+
   return (
     <S.Container>
       <S.CategoryContainer>
         {category.map((item) => (
-          <S.Category
-            key={item}
-            $company={company}
-            $isToggled={toggleButton === item}
-            onClick={() => handleClick(item)}
+          <Link
+            key={item.menu}
+            to={`/${company.toLowerCase()}/${currentPage}/${item.link}`}
           >
-            {item}
-          </S.Category>
+            <S.Category
+              $company={company}
+              $isToggled={toggleButton === item.link}
+              onClick={() => handleClick(item.link)}
+            >
+              {item.menu}
+            </S.Category>
+          </Link>
         ))}
       </S.CategoryContainer>
     </S.Container>
