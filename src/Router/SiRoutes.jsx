@@ -1,9 +1,11 @@
 import SiBusinessCleaning from '../pages/Si/Business/SiBusinessCleaning';
 import SiBusinessDredging from '../pages/Si/Business/SiBusinessDredging';
+import SiBusinessLayout from '../pages/Si/Business/SiBusinessLayout';
 import SiBusinessPipe from '../pages/Si/Business/SiBusinessPipe';
 import SiInfoBusinessPartner from '../pages/Si/Info/SiInfoBusinessPartner';
 import SiInfoCeo from '../pages/Si/Info/SiInfoCeo';
 import SiInfoHistory from '../pages/Si/Info/SiInfoHistory';
+import SiInfoLayout from '../pages/Si/Info/SiInfoLayout';
 import SiInfoLocation from '../pages/Si/Info/SiInfoLocation';
 import SiFacilities from '../pages/Si/SiFacilities';
 import SiLicenses from '../pages/Si/SiLicenses';
@@ -16,40 +18,40 @@ export const SiRoutes = [
   },
 
   {
-    path: 'info',
+    element: <SiInfoLayout />,
     children: [
       {
-        path: '',
+        path: 'info/ceo',
         element: <SiInfoCeo />,
       },
       {
-        path: 'history',
+        path: 'info/history',
         element: <SiInfoHistory />,
       },
       {
-        path: 'location',
+        path: 'info/location',
         element: <SiInfoLocation />,
       },
       {
-        path: 'business-partner',
+        path: 'info/business-partner',
         element: <SiInfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: 'business',
+    element: <SiBusinessLayout />,
     children: [
       {
-        path: '',
+        path: 'business/cleaning',
         element: <SiBusinessCleaning />,
       },
       {
-        path: 'dredging',
+        path: 'business/dredging',
         element: <SiBusinessDredging />,
       },
       {
-        path: 'pipe',
+        path: 'business/pipe',
         element: <SiBusinessPipe />,
       },
     ],

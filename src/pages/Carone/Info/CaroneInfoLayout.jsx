@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import CategoryBar from '../../../components/Main/CategoryBar';
 import { LNB_CONTENTS } from '../../../constants/LNB_CONTENTS';
 
-const CeInfoLayout = () => {
+const CaroneInfoLayout = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const parts = currentPath.split('/');
@@ -11,7 +11,7 @@ const CeInfoLayout = () => {
   return (
     <div>
       <CategoryBar
-        company="CE"
+        company="CARONE"
         category={LNB_CONTENTS.INFO}
         selectedButton={selectedCategory}
         currentPage="info"
@@ -20,4 +20,4 @@ const CeInfoLayout = () => {
   );
 };
 
-export default CeInfoLayout;
+export default CaroneInfoLayout;

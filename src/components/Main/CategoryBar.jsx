@@ -53,6 +53,7 @@ const S = {
     align-items: center;
     width: 14rem;
     padding: 1.2rem 1rem;
+    white-space: nowrap;
     background-color: ${({ theme, $company, $isToggled }) =>
       $isToggled && theme.color[$company]};
     border-radius: 18px;

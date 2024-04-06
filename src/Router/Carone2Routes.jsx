@@ -1,4 +1,5 @@
 import Carone2BusinessAbout from '../pages/Carone2/Business/Carone2BusinessAbout';
+import Carone2BusinessLayout from '../pages/Carone2/Business/Carone2BusinessLayout';
 import Carone2BusinessProcess from '../pages/Carone2/Business/Carone2BusinessProcess';
 import Carone2BusinessWaste from '../pages/Carone2/Business/Carone2BusinessWaste';
 import Carone2Facilities from '../pages/Carone2/Carone2Facilities';
@@ -7,6 +8,7 @@ import Carone2Main from '../pages/Carone2/Carone2Main';
 import Carone2InfoBusinessPartner from '../pages/Carone2/Info/Carone2InfoBusinessPartner';
 import Carone2InfoCeo from '../pages/Carone2/Info/Carone2InfoCeo';
 import Carone2InfoHistory from '../pages/Carone2/Info/Carone2InfoHistory';
+import Carone2InfoLayout from '../pages/Carone2/Info/Carone2InfoLayout';
 import Carone2InfoLocation from '../pages/Carone2/Info/Carone2InfoLocation';
 
 export const Carone2Routes = [
@@ -16,40 +18,40 @@ export const Carone2Routes = [
   },
 
   {
-    path: 'info',
+    element: <Carone2InfoLayout />,
     children: [
       {
-        path: '',
+        path: 'info/ceo',
         element: <Carone2InfoCeo />,
       },
       {
-        path: 'history',
+        path: 'info/history',
         element: <Carone2InfoHistory />,
       },
       {
-        path: 'location',
+        path: 'info/location',
         element: <Carone2InfoLocation />,
       },
       {
-        path: 'business-partner',
+        path: 'info/business-partner',
         element: <Carone2InfoBusinessPartner />,
       },
     ],
   },
 
   {
-    path: 'business',
+    element: <Carone2BusinessLayout />,
     children: [
       {
-        path: '',
+        path: 'business/about',
         element: <Carone2BusinessAbout />,
       },
       {
-        path: 'waste',
+        path: 'business/waste',
         element: <Carone2BusinessWaste />,
       },
       {
-        path: 'process',
+        path: 'business/process',
         element: <Carone2BusinessProcess />,
       },
     ],
