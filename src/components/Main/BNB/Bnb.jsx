@@ -51,53 +51,50 @@ const Bnb = ({ company }) => {
   };
 
   return (
-    console.log(initialState.CARONE),
-    (
-      <S.ButtonWrapper>
-        <BnbButton
-          variant="home"
-          status={buttonStatus.HOME}
-          onClick={() => handleClick('HOME')}
-        >
-          HOME
-        </BnbButton>
-        <BnbButton
-          variant="ce"
-          status={buttonStatus.CE}
-          onClick={() => handleClick('CE')}
-        >
-          (주)자동차환경
-        </BnbButton>
-        <BnbButton
-          variant="carone"
-          status={buttonStatus.CARONE}
-          onClick={() => handleClick('CARONE')}
-        >
-          (주)카원
-        </BnbButton>
-        <BnbButton
-          variant="sg"
-          status={buttonStatus.SG}
-          onClick={() => handleClick('SG')}
-        >
-          (주)에스지산업
-        </BnbButton>
-        <BnbButton
-          variant="total"
-          status={buttonStatus.total}
-          onClick={() => handleClick('TOTAL')}
-        >
-          (주)토탈
-        </BnbButton>
-        <BnbButton
-          variant="si"
-          status={buttonStatus.SI}
-          onClick={() => handleClick('SI')}
-        >
-          (주)세명인텍
-        </BnbButton>
-      </S.ButtonWrapper>
-    )
+    <S.ButtonWrapper>
+      <BnbButton
+        variant="home"
+        status={buttonStatus.HOME}
+        onClick={() => handleClick('HOME')}
+      >
+        HOME
+      </BnbButton>
+      <BnbButton
+        variant="ce"
+        status={buttonStatus.CE}
+        onClick={() => handleClick('CE')}
+      >
+        (주)자동차환경
+      </BnbButton>
+      <BnbButton
+        variant="carone"
+        status={buttonStatus.CARONE}
+        onClick={() => handleClick('CARONE')}
+      >
+        (주)카원
+      </BnbButton>
+      <BnbButton
+        variant="sg"
+        status={buttonStatus.SG}
+        onClick={() => handleClick('SG')}
+      >
+        (주)에스지산업
+      </BnbButton>
+      <BnbButton
+        variant="total"
+        status={buttonStatus.total}
+        onClick={() => handleClick('TOTAL')}
+      >
+        (주)토탈
+      </BnbButton>
+      <BnbButton
+        variant="si"
+        status={buttonStatus.SI}
+        onClick={() => handleClick('SI')}
+      >
+        (주)세명인텍
+      </BnbButton>
+    </S.ButtonWrapper>
   );
 };
 export default Bnb;
