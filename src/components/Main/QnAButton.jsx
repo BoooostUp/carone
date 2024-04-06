@@ -1,15 +1,30 @@
+import { useState } from 'react';
 import styled from 'styled-components';
+import QnAModal from './QnAModal';
 import { media } from '../../styles/utils/mediaQuery';
 import questionMark from '/src/assets/icons/questionMark.svg';
 
 const QnAButton = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleModalOpen = () => {
+    setOpenModal(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleModalClose = () => {
+    setOpenModal(false);
+    document.body.style.overflow = 'auto';
+  };
+
   return (
-    <div>
-      <S.Container>
+    <>
+      {openModal && <QnAModal onClick={handleModalClose} />}
+      <S.Container onClick={() => handleModalOpen()}>
         <img src={questionMark} />
         <span>Q n A</span>
       </S.Container>
-    </div>
+    </>
   );
 };
 

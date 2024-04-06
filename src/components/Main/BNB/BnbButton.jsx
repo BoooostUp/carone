@@ -12,14 +12,6 @@ const BnbButton = ({ variant = 'home', status, ...props }) => {
     </div>
   );
 };
-
-//propTypes를 정해줍니다.
-BnbButton.propTypes = {
-  children: PropTypes.node.isRequired,
-  variant: PropTypes.string,
-  status: PropTypes.bool,
-};
-
 export default BnbButton;
 
 const S = {
