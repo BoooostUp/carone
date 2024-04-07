@@ -4,6 +4,7 @@ import Gnb from '../../components/Header/Gnb';
 import Bnb from '../../components/Main/BNB/Bnb';
 import Hero from '../../components/Main/Hero';
 import { useHeroSize } from '../../hooks/useHeroAttribute';
+import QnAButton from '../../components/Main/QnAButton';
 
 const Total = () => {
   const { currentPath, heroSize } = useHeroSize();
@@ -13,6 +14,7 @@ const Total = () => {
       <Gnb company="TOTAL" />
       <Hero size={heroSize} link={currentPath} company="TOTAL" />
       <Outlet />
+      <QnAButton />
       <Bnb company="TOTAL" />
       <Footer company="TOTAL" />
     </div>
