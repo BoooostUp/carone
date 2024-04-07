@@ -6,7 +6,7 @@ const BnbButton = ({ variant = 'home', status, ...props }) => {
   const { children } = props;
   return (
     <div>
-      <S.Button variant={variant} status={status} {...props}>
+      <S.Button $variant={variant} $status={status} {...props}>
         {children}
       </S.Button>
     </div>
@@ -18,7 +18,7 @@ const S = {
   Button: styled.button`
     outline: none;
     border: none;
-    padding: 40px 20px;
+    padding: 2rem 2rem;
     background-color: black;
     width: 100%;
     color: white;
