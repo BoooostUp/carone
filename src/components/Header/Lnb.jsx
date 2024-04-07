@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { LNB_CONTENTS } from '../../constants/LNB_CONTENTS';
 
 const Lnb = ({ company, ...props }) => {
@@ -25,6 +25,15 @@ const Lnb = ({ company, ...props }) => {
 
 export default Lnb;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const S = {
   Container: styled.div`
     display: flex;
@@ -32,7 +41,8 @@ const S = {
     width: 100%;
     height: 13rem;
     padding: 1.5rem;
-    position: relative;
+    position: fixed;
+    animation: ${fadeIn} 0.5s ease;
     @media (max-width: 1024px) {
       display: none;
     }
