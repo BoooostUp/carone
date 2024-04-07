@@ -114,6 +114,7 @@ const S = {
   `,
 
   CompanyName: styled.h2`
+    white-space: nowrap;
     text-shadow: 0px 2px 4px black;
     ${({ theme }) => theme.font.FONT36B}
   `,
