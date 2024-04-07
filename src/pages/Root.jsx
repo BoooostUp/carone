@@ -18,27 +18,26 @@ const Root = () => {
       <S.CellWrapper>
         {ROOT.CELLS.map(
           ({ id, cellImg, indexColor, name, description, link }) => (
-            <S.Cell
-              key={id}
-              $isHovered={hovered === id}
-              $backgroundImage={cellImg}
-              $backgroundColor={theme.color[indexColor]}
-            >
-              <S.CompanyWrapper $isHovered={hovered === id}>
-                <S.CompanyName>{name}</S.CompanyName>
-                <S.CompanyInfo>{description}</S.CompanyInfo>
-              </S.CompanyWrapper>
-              <Link to={link}>
+            <Link to={link} key={id}>
+              <S.Cell
+                $isHovered={hovered === id}
+                $backgroundImage={cellImg}
+                $backgroundColor={theme.color[indexColor]}
+                onMouseEnter={() => setHovered(id)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <S.CompanyWrapper $isHovered={hovered === id}>
+                  <S.CompanyName>{name}</S.CompanyName>
+                  <S.CompanyInfo>{description}</S.CompanyInfo>
+                </S.CompanyWrapper>
                 <S.Index
                   $isHovered={hovered === id}
                   $backgroundColor={theme.color[indexColor]}
-                  onMouseEnter={() => setHovered(id)}
-                  onMouseLeave={() => setHovered(null)}
                 >
                   <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
                 </S.Index>
-              </Link>
-            </S.Cell>
+              </S.Cell>
+            </Link>
           ),
         )}
       </S.CellWrapper>
