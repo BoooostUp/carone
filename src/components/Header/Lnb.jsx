@@ -43,7 +43,7 @@ const S = {
     width: 100%;
     height: 13rem;
     padding: 1.5rem;
-    position: fixed;
+    position: absolute;
     animation: ${slide} 0.5s ease;
     @media (max-width: 1024px) {
       display: none;
