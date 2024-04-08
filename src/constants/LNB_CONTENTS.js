@@ -15,12 +15,22 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '영업대상 폐기물', link: 'waste' },
     { menu: '폐기물 처리 Flow', link: 'process' },
   ],
+  CARONE2: [
+    { menu: '사업 분야', link: 'about' },
+    { menu: '영업대상 폐기물', link: 'waste' },
+    { menu: '폐기물 처리 Flow', link: 'process' },
+  ],
   SG: [
     { menu: '사업 분야', link: 'about' },
     { menu: '영업대상 폐기물', link: 'waste' },
     { menu: '제품 생산 공정도', link: 'flowchart' },
   ],
   TOTAL: [
+    { menu: '사업 분야', link: 'about' },
+    { menu: '영업대상 폐기물', link: 'waste' },
+    { menu: '폐기물 처리 Flow', link: 'process' },
+  ],
+  TOTAL2: [
     { menu: '사업 분야', link: 'about' },
     { menu: '영업대상 폐기물', link: 'waste' },
     { menu: '폐기물 처리 Flow', link: 'process' },
