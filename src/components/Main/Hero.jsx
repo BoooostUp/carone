@@ -28,6 +28,9 @@ const S = {
     background-size: cover;
     background-position: center;
     object-fit: cover;
+    @media (max-width: 767px) {
+      height: 28rem;
+    }
   `,
 
   Text: styled.h2`
@@ -35,5 +38,11 @@ const S = {
     text-shadow: 0px 2px 4px black;
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT60B};
+
+    @media (max-width: 767px) {
+      text-align: center;
+      white-space: normal;
+      ${({ theme }) => theme.font.FONT28B}
+    }
   `,
 };
