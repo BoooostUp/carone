@@ -19,6 +19,7 @@ export default Hero;
 
 const S = {
   Container: styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,10 +32,10 @@ const S = {
     &::after {
       content: '';
       position: absolute;
-      top: 8rem;
+      top: 0;
       left: 0;
       width: 100%;
-      height: ${({ $size }) => ($size === 'bg' ? '86.8rem' : '54rem')};
+      height: 100%;
       background-color: ${({ theme }) => theme.color.black};
       opacity: 0.4;
       z-index: 0;
