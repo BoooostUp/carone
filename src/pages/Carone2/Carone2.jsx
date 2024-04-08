@@ -12,16 +12,16 @@ const Carone2 = () => {
 
   return (
     <S.PageContainer>
-      <div>
-        <Gnb company="CARONE2" />
-        <Hero size={heroSize} link={currentPath} company="CARONE" />
+      <Gnb company="CARONE2" />
+      <Hero size={heroSize} link={currentPath} company="CARONE" />
+      <S.ContentSpacer>
         <Outlet />
-        <QnAButton />
-        <S.BnBFooterContainer>
-          <Bnb company="CARONE" />
-          <Footer company="CARONE" />
-        </S.BnBFooterContainer>
-      </div>
+      </S.ContentSpacer>
+      <QnAButton />
+      <S.BnBFooterContainer>
+        <Bnb company="CARONE" />
+        <Footer company="CARONE" />
+      </S.BnBFooterContainer>
     </S.PageContainer>
   );
 };
@@ -30,13 +30,16 @@ export default Carone2;
 
 const S = {
   PageContainer: styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    position: relative;
   `,
 
+  ContentSpacer: styled.div`
+    flex: 1;
+  `,
   BnBFooterContainer: styled.div`
-    position: absolute;
-    bottom: 0;
     width: 100%;
   `,
 };

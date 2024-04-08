@@ -14,7 +14,9 @@ const Total2 = () => {
     <S.PageContainer>
       <Gnb company="TOTAL2" />
       <Hero size={heroSize} link={currentPath} company="TOTAL" />
-      <Outlet />
+      <S.ContentSpacer>
+        <Outlet />
+      </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
         <Bnb company="TOTAL" />
@@ -28,13 +30,16 @@ export default Total2;
 
 const S = {
   PageContainer: styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    position: relative;
   `,
 
+  ContentSpacer: styled.div`
+    flex: 1;
+  `,
   BnBFooterContainer: styled.div`
-    position: absolute;
-    bottom: 0;
     width: 100%;
   `,
 };
