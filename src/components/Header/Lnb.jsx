@@ -25,12 +25,14 @@ const Lnb = ({ company, ...props }) => {
 
 export default Lnb;
 
-const fadeIn = keyframes`
+const slide = keyframes`
   from {
     opacity: 0;
+    transform: translateY(-100%);
   }
   to {
     opacity: 1;
+    transform: translateY(0%);
   }
 `;
 
@@ -42,7 +44,7 @@ const S = {
     height: 13rem;
     padding: 1.5rem;
     position: fixed;
-    animation: ${fadeIn} 0.5s ease;
+    animation: ${slide} 0.5s ease;
     @media (max-width: 1024px) {
       display: none;
     }
