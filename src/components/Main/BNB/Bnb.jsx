@@ -82,7 +82,7 @@ const Bnb = ({ company }) => {
       </BnbButton>
       <BnbButton
         variant="total"
-        status={buttonStatus.total}
+        status={buttonStatus.TOTAL}
         onClick={() => handleClick('TOTAL')}
       >
         (주)토탈
