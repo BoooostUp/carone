@@ -13,7 +13,7 @@ const Carone2 = () => {
   return (
     <S.PageContainer>
       <div>
-        <Gnb company="CARONE" />
+        <Gnb company="CARONE2" />
         <Hero size={heroSize} link={currentPath} company="CARONE" />
         <Outlet />
         <QnAButton />

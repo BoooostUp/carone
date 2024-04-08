@@ -12,7 +12,7 @@ const Total2 = () => {
 
   return (
     <S.PageContainer>
-      <Gnb company="TOTAL" />
+      <Gnb company="TOTAL2" />
       <Hero size={heroSize} link={currentPath} company="TOTAL" />
       <Outlet />
       <QnAButton />
