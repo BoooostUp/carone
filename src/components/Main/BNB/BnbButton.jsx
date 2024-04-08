@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { css } from 'styled-components';
 
@@ -16,22 +15,19 @@ export default BnbButton;
 
 const S = {
   Button: styled.button`
-    outline: none;
-    border: none;
     padding: 2rem 2rem;
-    background-color: black;
     width: 100%;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: ${({ theme }) => theme.color.black};
     ${({ theme }) => theme.font.FONT20};
-    ${({ variant }) => buttonVariantMap[variant]}
+    ${({ $variant }) => buttonVariantMap[$variant]};
   `,
 };
 
 const buttonVariantMap = {
   home: css`
-    ${({ status }) =>
-      status &&
+    ${({ $status }) =>
+      $status &&
       css`
         color: ${({ theme }) => theme.color.black};
         background-color: ${({ theme }) => theme.color.white};
@@ -42,8 +38,8 @@ const buttonVariantMap = {
     }
   `,
   ce: css`
-    ${({ status }) =>
-      status &&
+    ${({ $status }) =>
+      $status &&
       css`
         background-color: ${({ theme }) => theme.color.CE};
       `}
@@ -53,8 +49,8 @@ const buttonVariantMap = {
   `,
 
   carone: css`
-    ${({ status }) =>
-      status &&
+    ${({ $status }) =>
+      $status &&
       css`
         background-color: ${({ theme }) => theme.color.CARONE};
       `}
@@ -64,8 +60,8 @@ const buttonVariantMap = {
   `,
 
   sg: css`
-    ${({ status }) =>
-      status &&
+    ${({ $status }) =>
+      $status &&
       css`
         background-color: ${({ theme }) => theme.color.SG};
       `}
@@ -75,8 +71,8 @@ const buttonVariantMap = {
   `,
 
   total: css`
-    ${({ status }) =>
-      status &&
+    ${({ $status }) =>
+      $status &&
       css`
         background-color: ${({ theme }) => theme.color.TOTAL};
       `}
@@ -86,8 +82,8 @@ const buttonVariantMap = {
   `,
 
   si: css`
-    ${({ status }) =>
-      status &&
+    ${({ $status }) =>
+      $status &&
       css`
         background-color: ${({ theme }) => theme.color.SI};
       `}
