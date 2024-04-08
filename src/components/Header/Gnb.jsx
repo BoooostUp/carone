@@ -7,12 +7,15 @@ import { GNB_CONTENTS } from '../../constants/GNB_CONTENTS';
 
 const Gnb = ({ company }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <S.Gnb className="gnb-container" $company={company} $isOpen={isOpen}>
         <S.Container>
           <S.LogoContainer>
-            <S.Logo src={LogoIcon} />
+            <Link to="/">
+              <S.Logo src={LogoIcon} />
+            </Link>
             <S.TitleContainer $company={company} $isOpen={isOpen}>
               <Link to={GNB_CONTENTS[company].link}>
                 <S.Title>{GNB_CONTENTS[company].title}</S.Title>
@@ -20,10 +23,24 @@ const Gnb = ({ company }) => {
               <S.SubTitle>{GNB_CONTENTS[company].subTitle}</S.SubTitle>
             </S.TitleContainer>
 
-            {GNB_CONTENTS[company].Factory && (
+            {GNB_CONTENTS[company].factory && (
               <S.FactoryContainer $company={company} $isOpen={isOpen}>
-                <span>{GNB_CONTENTS[company].factory[0]}</span>
-                <span>{GNB_CONTENTS[company].factory[1]}</span>
+                <Link to={GNB_CONTENTS[company].factory.link[0]}>
+                  <S.Factory
+                    $company={company}
+                    $factory={GNB_CONTENTS[company].factory.link[0]}
+                  >
+                    {GNB_CONTENTS[company].factory.number[0]}
+                  </S.Factory>
+                </Link>
+                <Link to={GNB_CONTENTS[company].factory.link[1]}>
+                  <S.Factory
+                    $company={company}
+                    $factory={GNB_CONTENTS[company].factory.link[1]}
+                  >
+                    {GNB_CONTENTS[company].factory.number[1]}
+                  </S.Factory>
+                </Link>
               </S.FactoryContainer>
             )}
           </S.LogoContainer>
@@ -39,11 +56,17 @@ const Gnb = ({ company }) => {
                     <li>{item.menu}</li>
                   </Link>
                 ))
-              : GNB_CONTENTS.MENU_LIST.map((item, idx) => (
-                  <Link to={item.link} key={idx}>
-                    <li>{item.menu}</li>
-                  </Link>
-                ))}
+              : company === 'SI'
+                ? GNB_CONTENTS.SI_LIST.map((item, idx) => (
+                    <Link to={item.link} key={idx}>
+                      <li>{item.menu}</li>
+                    </Link>
+                  ))
+                : GNB_CONTENTS.MENU_LIST.map((item, idx) => (
+                    <Link to={item.link} key={idx}>
+                      <li>{item.menu}</li>
+                    </Link>
+                  ))}
           </S.Menu>
         </S.Container>
       </S.Gnb>
@@ -63,8 +86,12 @@ const S = {
     background-color: ${({ theme, $company, $isOpen }) =>
       $isOpen ? theme.color.white : theme.color[$company]};
     height: 8rem;
+
+    position: relative;
+    z-index: 2;
     @media (max-width: 767px) {
       height: 9.5rem;
+      background-color: ${({ theme, $company }) => theme.color[$company]};
     }
   `,
   Container: styled.div`
@@ -83,14 +110,20 @@ const S = {
   LogoContainer: styled.div`
     display: flex;
     align-items: center;
+
     gap: 1.5rem;
   `,
   TitleContainer: styled.div`
     display: flex;
     flex-direction: column;
     padding-right: 2rem;
+    width: 22rem;
     color: ${({ theme, $company, $isOpen }) =>
       $isOpen ? theme.color[$company] : theme.color.white};
+    @media (max-width: 767px) {
+      color: ${({ theme }) => theme.color.white};
+      width: 100%;
+    }
   `,
   Logo: styled.img`
     width: 7rem;
@@ -121,6 +154,7 @@ const S = {
 
     @media (max-width: 767px) {
       gap: 2rem;
+      color: ${({ theme }) => theme.color.white};
     }
     span {
       ${({ theme }) => theme.font.FONT18SB}
@@ -130,6 +164,11 @@ const S = {
       }
     }
   `,
+  Factory: styled.span`
+    text-decoration: ${({ $company, $factory }) =>
+      $factory === GNB_CONTENTS[$company].link && 'underline'};
+  `,
+
   Menu: styled.ul`
     display: flex;
     justify-content: space-between;
@@ -144,6 +183,7 @@ const S = {
 
       @media (max-width: 767px) {
         ${({ theme }) => theme.font.FONT12SB};
+        color: ${({ theme }) => theme.color.white};
       }
     }
 

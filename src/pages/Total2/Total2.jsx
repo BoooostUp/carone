@@ -10,7 +10,7 @@ const Total2 = () => {
 
   return (
     <div>
-      <Gnb company="TOTAL" />
+      <Gnb company="TOTAL2" />
       <Hero size={heroSize} link={currentPath} company="TOTAL" />
       <Outlet />
       <Bnb company="TOTAL" />

@@ -5,8 +5,10 @@ const theme = Object.freeze({
     //회사별 대표 색
     CE: '#8CC747',
     CARONE: '#F6B436',
+    CARONE2: '#F6B436',
     SG: '#00B8D6',
     TOTAL: '#217A54',
+    TOTAL2: '#217A54',
     SI: '#004686',
     HOME: '#3E3E43',
 

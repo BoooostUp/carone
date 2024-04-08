@@ -11,7 +11,7 @@ const Carone2 = () => {
   return (
     <div>
       <div>
-        <Gnb company="CARONE" />
+        <Gnb company="CARONE2" />
         <Hero size={heroSize} link={currentPath} company="CARONE" />
         <Outlet />
         <Bnb company="CARONE" />
