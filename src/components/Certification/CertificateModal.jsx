@@ -42,6 +42,7 @@ const S = {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     border-radius: 10px; // Optional: Adds rounded corners for a softer look
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     ${media.desktop`
@@ -58,6 +59,7 @@ const S = {
 
   Backdrop: styled.div`
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;

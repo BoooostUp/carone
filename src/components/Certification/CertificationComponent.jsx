@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 import Certificate from './Certificate';
 import CertificationModal from './CertificateModal';
 import { CERTIFICATIONS } from './CERTIFICATIONS';
+import { media } from '../../styles/utils/mediaQuery';
 
-const CertificationComponent = () => {
+const CertificationComponent = ({ company }) => {
   const [currentCert, setCurrentCert] = useState(null);
   const showModal = (cert) => {
     setCurrentCert(cert);
@@ -13,19 +15,42 @@ const CertificationComponent = () => {
   };
 
   return (
-    <div>
-      {CERTIFICATIONS.carone.certifications.map((certification, index) => (
+    <S.CertificateContainer>
+      {CERTIFICATIONS[company].certifications.map((certification, index) => (
         <Certificate
-          showModal={() => showModal(certification)}
-          image={certification}
+          showModal={() => showModal(certification.certification)}
+          image={certification.certification}
+          title={certification.title}
           key={index}
         />
       ))}
       {currentCert && (
         <CertificationModal image={currentCert} setModalOpen={closeModal} />
       )}
-    </div>
+    </S.CertificateContainer>
   );
 };
 
 export default CertificationComponent;
+
+const S = {
+  CertificateContainer: styled.div`
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    ${media.tablet`
+     grid-template-columns: repeat(3, 1fr);
+    `}
+    ${media.desktop`
+    padding: 2rem 10rem; 
+     grid-template-columns: repeat(4, 1fr);
+    `}
+    ${media.widescreen`
+    padding: 2rem 10rem; 
+     grid-template-columns: repeat(5, 1fr);
+    `}
+  `,
+};
