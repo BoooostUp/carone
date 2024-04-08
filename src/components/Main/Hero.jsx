@@ -27,9 +27,26 @@ const S = {
     background-image: url(${caroneCars});
     background-size: cover;
     background-position: center;
-    object-fit: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      width: 100%;
+      height: ${({ $size }) => ($size === 'bg' ? '86.8rem' : '54rem')};
+      background-color: ${({ theme }) => theme.color.black};
+      opacity: 0.4;
+      z-index: 0;
+    }
+
     @media (max-width: 767px) {
       height: 28rem;
+
+      &::after {
+        top: 9.5rem;
+        height: 28rem;
+      }
     }
   `,
 
@@ -37,6 +54,7 @@ const S = {
     white-space: nowrap;
     text-shadow: 0px 2px 4px black;
     color: ${({ theme }) => theme.color.white};
+    z-index: 1;
     ${({ theme }) => theme.font.FONT60B};
 
     @media (max-width: 767px) {
