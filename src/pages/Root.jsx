@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/icons/Logo.svg';
 import RecruitButton from '../components/RecruitButton';
@@ -15,27 +16,30 @@ const Root = () => {
         <RecruitButton />
       </S.Header>
       <S.CellWrapper>
-        {ROOT.CELLS.map(({ id, cellImg, indexColor, name, description }) => (
-          <S.Cell
-            key={id}
-            $isHovered={hovered === id}
-            $backgroundImage={cellImg}
-            $backgroundColor={theme.color[indexColor]}
-          >
-            <S.CompanyWrapper $isHovered={hovered === id}>
-              <S.CompanyName>{name}</S.CompanyName>
-              <S.CompanyInfo>{description}</S.CompanyInfo>
-            </S.CompanyWrapper>
-            <S.Index
-              $isHovered={hovered === id}
-              $backgroundColor={theme.color[indexColor]}
-              onMouseEnter={() => setHovered(id)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
-            </S.Index>
-          </S.Cell>
-        ))}
+        {ROOT.CELLS.map(
+          ({ id, cellImg, indexColor, name, description, link }) => (
+            <Link to={link} key={id}>
+              <S.Cell
+                $isHovered={hovered === id}
+                $backgroundImage={cellImg}
+                $backgroundColor={theme.color[indexColor]}
+                onMouseEnter={() => setHovered(id)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <S.CompanyWrapper $isHovered={hovered === id}>
+                  <S.CompanyName>{name}</S.CompanyName>
+                  <S.CompanyInfo>{description}</S.CompanyInfo>
+                </S.CompanyWrapper>
+                <S.Index
+                  $isHovered={hovered === id}
+                  $backgroundColor={theme.color[indexColor]}
+                >
+                  <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
+                </S.Index>
+              </S.Cell>
+            </Link>
+          ),
+        )}
       </S.CellWrapper>
     </S.Container>
   );
@@ -114,6 +118,7 @@ const S = {
   `,
 
   CompanyName: styled.h2`
+    white-space: nowrap;
     text-shadow: 0px 2px 4px black;
     ${({ theme }) => theme.font.FONT36B}
   `,

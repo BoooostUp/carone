@@ -23,17 +23,44 @@ const S = {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: ${({ $size }) => ($size === 'bg' ? '86.8rem' : '54rem')};
+    height: ${({ $size }) => ($size === 'bg' ? '70rem' : '45rem')};
     background-image: url(${caroneCars});
     background-size: cover;
     background-position: center;
-    object-fit: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      width: 100%;
+      height: ${({ $size }) => ($size === 'bg' ? '86.8rem' : '54rem')};
+      background-color: ${({ theme }) => theme.color.black};
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    @media (max-width: 767px) {
+      height: 28rem;
+
+      &::after {
+        top: 9.5rem;
+        height: 28rem;
+      }
+    }
   `,
 
   Text: styled.h2`
     white-space: nowrap;
     text-shadow: 0px 2px 4px black;
     color: ${({ theme }) => theme.color.white};
-    ${({ theme }) => theme.font.FONT60B};
+    z-index: 1;
+    ${({ theme }) => theme.font.FONT45B};
+
+    @media (max-width: 767px) {
+      text-align: center;
+      white-space: normal;
+      ${({ theme }) => theme.font.FONT28B}
+    }
   `,
 };
