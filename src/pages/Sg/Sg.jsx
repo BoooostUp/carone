@@ -14,7 +14,9 @@ const Sg = () => {
     <S.PageContainer>
       <Gnb company="SG" />
       <Hero size={heroSize} link={currentPath} company="SG" />
-      <Outlet />
+      <S.ContentSpacer>
+        <Outlet />
+      </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
         <Bnb company="SG" />
@@ -28,13 +30,16 @@ export default Sg;
 
 const S = {
   PageContainer: styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    position: relative;
   `,
 
+  ContentSpacer: styled.div`
+    flex: 1;
+  `,
   BnBFooterContainer: styled.div`
-    position: absolute;
-    bottom: 0;
     width: 100%;
   `,
 };

@@ -43,7 +43,7 @@ const S = {
     background-color: ${({ theme }) => theme.color.white};
     filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.25));
     border-radius: 50%;
-
+    z-index: 3;
     span {
       display: none;
       margin-left: 1rem;
