@@ -8,12 +8,17 @@ import QnAButton from '../../components/Main/QnAButton';
 import { useHeroAttribute } from '../../hooks/useHeroAttribute';
 
 const Total = () => {
-  const { currentPath, heroSize } = useHeroAttribute();
+  const { currentPath, heroSize, isMain } = useHeroAttribute();
 
   return (
     <S.PageContainer>
       <Gnb company="TOTAL" />
-      <Hero size={heroSize} link={currentPath} company="TOTAL" />
+      <Hero
+        size={heroSize}
+        link={currentPath}
+        company="TOTAL"
+        isMain={isMain}
+      />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
