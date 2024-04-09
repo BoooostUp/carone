@@ -93,6 +93,7 @@ const S = {
     background-size: cover;
     background-position: center;
     background-image: url(${({ $backgroundImage }) => $backgroundImage});
+    overflow: hidden;
     cursor: pointer;
 
     &::before {
