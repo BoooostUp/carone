@@ -43,11 +43,6 @@ const S = {
 
     @media (max-width: 767px) {
       height: 28rem;
-
-      &::after {
-        top: 9.5rem;
-        height: 28rem;
-      }
     }
   `,
 
