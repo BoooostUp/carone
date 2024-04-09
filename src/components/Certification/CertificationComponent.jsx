@@ -35,22 +35,21 @@ export default CertificationComponent;
 
 const S = {
   CertificateContainer: styled.div`
-    padding: 2rem 2rem;
+    padding: 5rem 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     flex-wrap: wrap;
     gap: 4rem;
     ${media.tablet`
-     grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     `}
     ${media.desktop`
-    padding: 2rem 10rem; 
-     grid-template-columns: repeat(4, 1fr);
-    `}
-    ${media.widescreen`
-    padding: 2rem 10rem; 
-     grid-template-columns: repeat(5, 1fr);
-    `}
+      padding: 8rem 10rem;
+      grid-template-columns: repeat(4, 1fr);
+    `} /* ${media.widescreen`
+      padding: 8rem 44rem;
+      grid-template-columns: repeat(4, 1fr); // Keeps the grid items from becoming too small
+    `} */
   `,
 };

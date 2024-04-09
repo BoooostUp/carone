@@ -42,7 +42,7 @@ const S = {
   Lens: styled.img`
     width: 2rem;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: ${({ $isHovered }) => ($isHovered ? 'block' : 'none')};

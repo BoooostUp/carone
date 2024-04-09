@@ -13,6 +13,7 @@ const SubCategoryBar = ({ company }) => {
   const [active, setActive] = useState(activeCategory);
 
   const onClick = (index, buttonNumber) => {
+    if (active[buttonNumber]) return;
     setSelected(index);
     // Make previous active button false and current active button true
     setActive({
@@ -25,22 +26,22 @@ const SubCategoryBar = ({ company }) => {
     <>
       <S.ButtonWrapper>
         <S.ButtonContainer
-          variant={company}
-          status={active[1]}
+          $variant={company}
+          $status={active[1]}
           onClick={() => onClick(0, 1)}
         >
           {SUBCATEGORY_CONTENTS[company][0]}
         </S.ButtonContainer>
         <S.ButtonContainer
-          variant={company}
-          status={active[2]}
+          $variant={company}
+          $status={active[2]}
           onClick={() => onClick(1, 2)}
         >
           {SUBCATEGORY_CONTENTS[company][1]}
         </S.ButtonContainer>
         <S.ButtonContainer
-          variant={company}
-          status={active[3]}
+          $variant={company}
+          $status={active[3]}
           onClick={() => onClick(2, 3)}
         >
           {SUBCATEGORY_CONTENTS[company][2]}
@@ -73,11 +74,11 @@ const S = {
     object-fit: cover;
     border-bottom: 2px solid ${({ theme }) => theme.color.lightGray};
     ${({ theme }) => theme.font.FONT16};
-    ${({ status, variant }) =>
-      status &&
+    ${({ $status, $variant }) =>
+      $status &&
       css`
-        color: ${({ theme }) => theme.color[variant]};
-        border-bottom: 2px solid ${({ theme }) => theme.color[variant]};
+        color: ${({ theme }) => theme.color[$variant]};
+        border-bottom: 2px solid ${({ theme }) => theme.color[$variant]};
       `}
   `,
 };
