@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-export function useHeroSize() {
+export function useHeroAttribute() {
   const location = useLocation();
   const pathSegments = location.pathname.split('/');
   const currentPath = pathSegments[2];

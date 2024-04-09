@@ -5,10 +5,10 @@ import Gnb from '../../components/Header/Gnb';
 import Bnb from '../../components/Main/BNB/Bnb';
 import Hero from '../../components/Main/Hero';
 import QnAButton from '../../components/Main/QnAButton';
-import { useHeroSize } from '../../hooks/useHeroAttribute';
+import { useHeroAttribute } from '../../hooks/useHeroAttribute';
 
 const Sg = () => {
-  const { currentPath, heroSize } = useHeroSize();
+  const { currentPath, heroSize } = useHeroAttribute();
 
   return (
     <S.PageContainer>
