@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import WelcomeBox from './WelcomeBox';
 import caroneCars from '../../assets/images/hero/caroneCars.jpg';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { HERO_CONTENTS } from '../../constants/HERO_CONTENTS';
@@ -11,6 +12,11 @@ const Hero = ({ size, link, company }) => {
   return (
     <S.Container $size={size}>
       <S.Text>{textContent}</S.Text>
+      {company !== 'HOME' && (
+        <S.WelcomeBoxWrapper>
+          <WelcomeBox company={company} />
+        </S.WelcomeBoxWrapper>
+      )}
     </S.Container>
   );
 };
@@ -28,6 +34,7 @@ const S = {
     background-image: url(${caroneCars});
     background-size: cover;
     background-position: center;
+    z-index: 0;
 
     &::after {
       content: '';
@@ -38,16 +45,10 @@ const S = {
       height: 100%;
       background-color: ${({ theme }) => theme.color.black};
       opacity: 0.4;
-      z-index: 0;
     }
 
     @media (max-width: 767px) {
       height: 28rem;
-
-      &::after {
-        top: 9.5rem;
-        height: 28rem;
-      }
     }
   `,
 
@@ -63,5 +64,11 @@ const S = {
       white-space: normal;
       ${({ theme }) => theme.font.FONT28B}
     }
+  `,
+
+  WelcomeBoxWrapper: styled.div`
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
   `,
 };
