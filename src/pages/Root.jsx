@@ -61,8 +61,12 @@ const S = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
     z-index: 2;
+
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
   `,
 
   Logo: styled.img`
