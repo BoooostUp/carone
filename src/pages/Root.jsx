@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/icons/Logo.svg';
 import RecruitButton from '../components/RecruitButton';
-import { ROOT } from '../constants/ROOT';
+import { ROOT, CELL_IMAGE } from '../constants/ROOT';
 import theme from '../styles/theme';
 
 const Root = () => {
@@ -16,30 +16,28 @@ const Root = () => {
         <RecruitButton />
       </S.Header>
       <S.CellWrapper>
-        {ROOT.CELLS.map(
-          ({ id, cellImg, indexColor, name, description, link }) => (
-            <Link to={link} key={id}>
-              <S.Cell
+        {ROOT.CELLS.map(({ id, indexColor, name, description, company }) => (
+          <Link to={company} key={id}>
+            <S.Cell
+              $isHovered={hovered === id}
+              $cellImage={company}
+              $backgroundColor={theme.color[indexColor]}
+              onMouseEnter={() => setHovered(id)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <S.CompanyWrapper $isHovered={hovered === id}>
+                <S.CompanyName>{name}</S.CompanyName>
+                <S.CompanyInfo>{description}</S.CompanyInfo>
+              </S.CompanyWrapper>
+              <S.Index
                 $isHovered={hovered === id}
-                $backgroundImage={cellImg}
                 $backgroundColor={theme.color[indexColor]}
-                onMouseEnter={() => setHovered(id)}
-                onMouseLeave={() => setHovered(null)}
               >
-                <S.CompanyWrapper $isHovered={hovered === id}>
-                  <S.CompanyName>{name}</S.CompanyName>
-                  <S.CompanyInfo>{description}</S.CompanyInfo>
-                </S.CompanyWrapper>
-                <S.Index
-                  $isHovered={hovered === id}
-                  $backgroundColor={theme.color[indexColor]}
-                >
-                  <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
-                </S.Index>
-              </S.Cell>
-            </Link>
-          ),
-        )}
+                <S.IndexText $isHovered={hovered === id}>{name}</S.IndexText>
+              </S.Index>
+            </S.Cell>
+          </Link>
+        ))}
       </S.CellWrapper>
     </S.Container>
   );
@@ -92,7 +90,7 @@ const S = {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url(${({ $backgroundImage }) => $backgroundImage});
+    background-image: url(${({ $cellImage }) => CELL_IMAGE[$cellImage]});
     overflow: hidden;
     cursor: pointer;
 
