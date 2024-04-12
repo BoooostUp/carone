@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { css } from 'styled-components';
+import caroneImg2 from '../../assets/images/carone/고철운반.png';
+import caroneImg1 from '../../assets/images/carone/사업내용.png';
+import caroneImg3 from '../../assets/images/carone/취급품목.png';
 import { SUBCATEGORY_CONTENTS } from '../../constants/SUBCATEGORY_CONTENTS';
-
 const SubCategoryBar = ({ company }) => {
   const activeCategory = {
     1: true,
@@ -47,11 +49,17 @@ const SubCategoryBar = ({ company }) => {
         </S.ButtonContainer>
       </S.ButtonWrapper>
       {selected === 0 ? (
-        <div>Page1</div>
+        <div>
+          <img src={caroneImg1} alt="석면운반/처리" style={{ width: '100%' }} />
+        </div>
       ) : selected === 1 ? (
-        <div>Page2</div>
+        <div>
+          <img src={caroneImg2} alt="석면운반/처리" style={{ width: '100%' }} />
+        </div>
       ) : (
-        <div>Page3</div>
+        <div>
+          <img src={caroneImg3} alt="석면운반/처리" style={{ width: '100%' }} />
+        </div>
       )}
     </>
   );
@@ -65,6 +73,7 @@ const S = {
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
+    margin-bottom: 8rem;
   `,
 
   ButtonContainer: styled.button`
