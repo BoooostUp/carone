@@ -46,6 +46,9 @@ const S = {
   CategoryContainer: styled.div`
     display: flex;
     gap: 5rem;
+    @media (max-width: 767px) {
+      gap: 1rem;
+    }
   `,
   Category: styled.div`
     display: flex;
@@ -61,6 +64,11 @@ const S = {
     color: ${({ theme, $isToggled }) => $isToggled && theme.color.white};
     ${({ theme, $isToggled }) =>
       $isToggled ? theme.font.FONT16SB : theme.font.FONT16}
+
+    @media (max-width: 767px) {
+      width: 12rem;
+      ${({ theme }) => theme.font.FONT14}
+    }
   `,
 };
 
