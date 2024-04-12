@@ -75,6 +75,10 @@ const S = {
     gap: 1rem;
     width: 100%;
     margin-bottom: 8rem;
+
+    @media (max-width: 767px) {
+      margin-bottom: 5rem;
+    }
   `,
 
   ButtonContainer: styled.button`
