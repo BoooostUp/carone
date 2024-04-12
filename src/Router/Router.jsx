@@ -7,7 +7,6 @@ import { SgRoutes } from './SgRoutes';
 import { SiRoutes } from './SiRoutes';
 import { Total2Routes } from './Total2Routes';
 import { TotalRoutes } from './TotalRoutes';
-import CertificationComponent from '../components/Certification/CertificationComponent';
 import Carone from '../pages/Carone/Carone';
 import Carone2 from '../pages/Carone2/Carone2';
 import Ce from '../pages/Ce/Ce';
@@ -62,10 +61,6 @@ const Router = createBrowserRouter([
     path: '/si',
     element: <Si />,
     children: [...SiRoutes],
-  },
-  {
-    path: '/test',
-    element: <CertificationComponent />,
   },
 ]);
 

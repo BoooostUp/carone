@@ -44,6 +44,7 @@ const S = {
     height: 13rem;
     padding: 1.5rem;
     position: absolute;
+    z-index: 1;
     animation: ${slide} 0.5s ease;
     @media (max-width: 1024px) {
       display: none;
