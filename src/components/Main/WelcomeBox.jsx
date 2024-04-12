@@ -7,7 +7,7 @@ const WelcomeBox = ({ company }) => {
       <S.TextWrapper>
         <S.WelcomeText $color={company}>WELCOME!</S.WelcomeText>
         <S.InfoWrapper>
-          <S.CompanyInfo>{WELCOME_BOX_CONTENTS[company]}</S.CompanyInfo>{' '}
+          <S.CompanyInfo>{WELCOME_BOX_CONTENTS[company]}</S.CompanyInfo>
         </S.InfoWrapper>
       </S.TextWrapper>
     </S.Container>
