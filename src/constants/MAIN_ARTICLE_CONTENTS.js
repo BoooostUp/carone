@@ -40,7 +40,7 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     {
       id: 'SI',
       title1: '(주)세명인텍',
-      content1: `(주)세명인텍는 안전, 환경을 우선하는 기업으로 정직과 신뢰를 바탕으로 미래의 주도적인 기업을 창조합니다.
+      content1: `(주)세명인텍은 안전, 환경을 우선하는 기업으로 정직과 신뢰를 바탕으로 미래의 주도적인 기업을 창조합니다.
         
         고객의 입장에서 고객이 만족할 때까지 최선을 다하겠습니다.`,
       imageAddress: '/src/assets/images/mainArticle/si.webp',
