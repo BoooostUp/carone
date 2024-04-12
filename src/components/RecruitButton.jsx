@@ -20,10 +20,20 @@ const S = {
     border-radius: 20px;
     background-color: ${({ theme }) => theme.color.black};
     cursor: pointer;
+
+    @media (max-width: 767px) {
+      width: 9rem;
+      height: 4rem;
+      border-radius: 15px;
+    }
   `,
 
   ButtonText: styled.h3`
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT18B};
+
+    @media (max-width: 767px) {
+      ${({ theme }) => theme.font.FONT16B};
+    }
   `,
 };

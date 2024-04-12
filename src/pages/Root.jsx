@@ -61,8 +61,12 @@ const S = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
     z-index: 2;
+
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
   `,
 
   Logo: styled.img`
@@ -76,18 +80,20 @@ const S = {
     justify-content: center;
     height: 100%;
 
-    /* @media (max-width: 767px) {
-      grid-template-columns: repeat(1, 1fr);
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
-    } */
+    }
   `,
 
   Cell: styled.div`
     position: relative;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-image: url(${({ $backgroundImage }) => $backgroundImage});
+    overflow: hidden;
     cursor: pointer;
 
     &::before {
@@ -121,12 +127,20 @@ const S = {
     white-space: nowrap;
     text-shadow: 0px 2px 4px black;
     ${({ theme }) => theme.font.FONT36B}
+
+    @media (max-width: 767px) {
+      ${({ theme }) => theme.font.FONT20B}
+    }
   `,
 
   CompanyInfo: styled.p`
     white-space: pre-wrap;
     text-shadow: 0px 2px 4px black;
     ${({ theme }) => theme.font.FONT18B}
+
+    @media (max-width: 767px) {
+      ${({ theme }) => theme.font.FONT12SB}
+    }
   `,
 
   Index: styled.span`
@@ -150,14 +164,24 @@ const S = {
       display: ${({ $isHovered }) => ($isHovered ? 'none' : 'block')};
       background-color: ${({ $backgroundColor }) => $backgroundColor};
     }
+
+    @media (max-width: 767px) {
+      width: 12rem;
+      height: 4rem;
+    }
   `,
 
   IndexText: styled.h2`
     height: 100%;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
     display: ${({ $isHovered }) => ($isHovered ? 'none' : 'flex')};
     color: ${({ theme }) => theme.color.white};
     ${({ theme }) => theme.font.FONT24B}
+
+    @media (max-width: 767px) {
+      ${({ theme }) => theme.font.FONT14B}
+    }
   `,
 };
