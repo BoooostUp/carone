@@ -91,7 +91,7 @@ const S = {
   InfoContainer: styled.div`
     padding: 20px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     ${media.desktop`
         flex-direction: column;
     `}
