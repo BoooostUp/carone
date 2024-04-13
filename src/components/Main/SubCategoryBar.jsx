@@ -4,6 +4,9 @@ import { css } from 'styled-components';
 import caroneImg2 from '../../assets/images/carone/고철운반.png';
 import caroneImg1 from '../../assets/images/carone/사업내용.png';
 import caroneImg3 from '../../assets/images/carone/취급품목.png';
+import sgImg1 from '../../assets/images/sg/이온정제유.png';
+import sgImg2 from '../../assets/images/sg/재생연료유.png';
+import sgImg3 from '../../assets/images/sg/재생연료유_공정.png';
 import { SUBCATEGORY_CONTENTS } from '../../constants/SUBCATEGORY_CONTENTS';
 const SubCategoryBar = ({ company }) => {
   const activeCategory = {
@@ -49,22 +52,33 @@ const SubCategoryBar = ({ company }) => {
           {SUBCATEGORY_CONTENTS[company][2]}
         </S.ButtonContainer>
       </S.ButtonWrapper>
-      {selected === 0 ? (
-        <div>
-          <img src={caroneImg1} alt="석면운반/처리" style={{ width: '100%' }} />
-        </div>
-      ) : selected === 1 ? (
-        <div>
-          <img src={caroneImg2} alt="석면운반/처리" style={{ width: '100%' }} />
-        </div>
-      ) : (
-        <div>
-          <img src={caroneImg3} alt="석면운반/처리" style={{ width: '100%' }} />
-        </div>
+      {company === 'CARONE' && (
+        <ImageBlock
+          selected={selected}
+          images={[caroneImg1, caroneImg2, caroneImg3]}
+          altTexts={['석면운반/처리', '고철운반/처리', '취급 품목']}
+        />
+      )}
+      {company === 'SG' && (
+        <ImageBlock
+          selected={selected}
+          images={[sgImg1, sgImg2, sgImg3]}
+          altTexts={['이온정제유', '재생연료유', '재생연료유 공정']}
+        />
       )}
     </>
   );
 };
+
+const ImageBlock = ({ selected, images, altTexts }) => (
+  <div>
+    <img
+      src={images[selected]}
+      alt={altTexts[selected]}
+      style={{ width: '100%' }}
+    />
+  </div>
+);
 
 export default SubCategoryBar;
 
