@@ -15,7 +15,7 @@ const CategoryBar = ({ company, category, selectedButton, currentPage }) => {
 
   return (
     <S.Container>
-      <S.CategoryContainer>
+      <S.CategoryContainer $category={category}>
         {category.map((item) => (
           <Link
             key={item.menu}
@@ -47,7 +47,7 @@ const S = {
     display: flex;
     gap: 5rem;
     @media (max-width: 767px) {
-      gap: 1rem;
+      gap: ${({ $category }) => ($category.length === 3 ? '1rem' : '0rem')};
     }
   `,
   Category: styled.div`
@@ -66,8 +66,9 @@ const S = {
       $isToggled ? theme.font.FONT16SB : theme.font.FONT16}
 
     @media (max-width: 767px) {
-      width: 12rem;
-      ${({ theme }) => theme.font.FONT14}
+      width: 9rem;
+      border-radius: 14px;
+      ${({ theme }) => theme.font.FONT12}
     }
   `,
 };
