@@ -41,7 +41,7 @@ const S = {
     align-items: center;
     flex-direction: column;
     gap: 3rem;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
     position: relative;
 
     &:nth-of-type(even) {
