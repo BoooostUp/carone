@@ -89,7 +89,7 @@ const S = {
 
     position: relative;
     z-index: 2;
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       height: 9.5rem;
       background-color: ${({ theme, $company }) => theme.color[$company]};
     }
@@ -120,7 +120,7 @@ const S = {
     width: 22rem;
     color: ${({ theme, $company, $isOpen }) =>
       $isOpen ? theme.color[$company] : theme.color.white};
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       color: ${({ theme }) => theme.color.white};
       width: 100%;
     }
@@ -141,7 +141,7 @@ const S = {
   `,
   SubTitle: styled.span`
     ${({ theme }) => theme.font.FONT14};
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       display: none;
     }
   `,
@@ -152,7 +152,7 @@ const S = {
     color: ${({ theme, $company, $isOpen }) =>
       $isOpen ? theme.color[$company] : theme.color.white};
 
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       gap: 2rem;
       color: ${({ theme }) => theme.color.white};
     }
@@ -181,9 +181,11 @@ const S = {
       ${({ theme }) => theme.font.FONT18SB};
       cursor: pointer;
 
+      @media (max-width: 1024px) {
+        color: ${({ theme }) => theme.color.white};
+      }
       @media (max-width: 767px) {
         ${({ theme }) => theme.font.FONT12SB};
-        color: ${({ theme }) => theme.color.white};
       }
     }
 

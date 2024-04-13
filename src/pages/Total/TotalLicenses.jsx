@@ -1,5 +1,11 @@
+import CertificationComponent from '../../components/Certification/CertificationComponent';
+
 function TotalLicenses() {
-  return <div>TotalLicenses</div>;
+  return (
+    <div>
+      <CertificationComponent company="CARONE" />
+    </div>
+  );
 }
 
 export default TotalLicenses;

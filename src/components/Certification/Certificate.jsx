@@ -40,7 +40,7 @@ const S = {
     cursor: pointer;
   `,
   Lens: styled.img`
-    width: 2rem;
+    width: 4rem;
     position: absolute;
     top: 40%;
     left: 50%;

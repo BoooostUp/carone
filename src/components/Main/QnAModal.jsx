@@ -81,7 +81,7 @@ const S = {
     top: 0;
     left: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
   `,
   Container: styled.div`
     width: 55rem;

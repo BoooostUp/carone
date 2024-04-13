@@ -4,7 +4,7 @@ import caroneCars from '../../assets/images/hero/caroneCars.jpg';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { HERO_CONTENTS } from '../../constants/HERO_CONTENTS';
 
-const Hero = ({ size, link, company }) => {
+const Hero = ({ size, link, company, isMain }) => {
   const textContent = link
     ? HERO_CONTENTS[company][link]
     : FOOTER_CONTENTS[company].subtitle;
@@ -12,9 +12,9 @@ const Hero = ({ size, link, company }) => {
   return (
     <S.Container $size={size}>
       <S.Text>{textContent}</S.Text>
-      {company !== 'HOME' && (
+      {company !== 'HOME' && isMain === 2 && (
         <S.WelcomeBoxWrapper>
-          <WelcomeBox company={company} />
+          <WelcomeBox company={company} isMain={isMain} />
         </S.WelcomeBoxWrapper>
       )}
     </S.Container>
@@ -68,6 +68,7 @@ const S = {
 
   WelcomeBoxWrapper: styled.div`
     position: absolute;
+    width: 100%;
     bottom: 0;
     z-index: 1;
   `,

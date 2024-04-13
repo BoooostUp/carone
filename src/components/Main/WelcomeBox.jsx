@@ -28,6 +28,7 @@ const S = {
 
     @media (max-width: 1024px) {
       padding: 0;
+      height: 10rem;
     }
   `,
 
@@ -54,7 +55,7 @@ const S = {
 
     @media (max-width: 1024px) {
       padding: 0.4rem 6.5rem;
-      ${({ theme }) => theme.font.FONT24B};
+      ${({ theme }) => theme.font.FONT20B};
     }
   `,
 
@@ -64,7 +65,7 @@ const S = {
 
     @media (max-width: 1024px) {
       padding: 0.4rem 6.5rem;
-      ${({ theme }) => theme.font.FONT10};
+      ${({ theme }) => theme.font.FONT12};
     }
   `,
 };

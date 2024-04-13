@@ -75,7 +75,7 @@ const S = {
     `}
   `,
   ContentBox: styled.div`
-    width: 44rem;
+    max-width: 44rem;
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
@@ -105,12 +105,17 @@ const S = {
   `,
   Img: styled.img`
     border-radius: 3rem;
-    width: 40rem;
-    height: 28rem;
+    width: 30rem;
+    height: 20rem;
     object-fit: cover; /*이미지 비율 유지*/
     object-position: bottom; /* 이미지를 아래쪽으로 정렬 */
     position: relative;
     z-index: 1;
     grid-area: Img;
+
+    ${media.desktop`
+      width: 40rem;
+      height: 28rem;
+    `}
   `,
 };
