@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled, { css } from 'styled-components';
 import closeIcon from '../../assets/icons/close.png';
+import { media } from '../../styles/utils/mediaQuery';
 
 const QnAModal = ({ onClick }) => {
   const ref = useRef(null);
@@ -22,7 +23,7 @@ const QnAModal = ({ onClick }) => {
   }, []);
 
   const handleClickButton = () => {
-    alert('등록 완~');
+    alert('등록되었습니다.');
     onClick();
   };
 
@@ -84,17 +85,23 @@ const S = {
     z-index: 2;
   `,
   Container: styled.div`
-    width: 55rem;
-    padding: 4rem 3rem;
+    max-width: 30rem;
+    padding: 2rem;
     background-color: ${({ theme }) => theme.color.white};
     display: flex;
     position: relative;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 1.5rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    ${media.tablet`
+      max-width: 50rem;
+      padding: 4rem 3rem;
+      gap: 2rem;
+    `}
   `,
   Image: styled.img`
     width: 3rem;
@@ -105,30 +112,42 @@ const S = {
   `,
   Title: styled.h1`
     color: ${({ theme }) => theme.color.black};
-    ${({ theme }) => theme.font.FONT20B};
+    ${({ theme }) => theme.font.FONT16SB};
+
+    ${media.tablet`
+      ${({ theme }) => theme.font.FONT20B};
+    `}
   `,
   HorizontalLine: styled.div`
     width: 100%;
     border-bottom: 1px solid ${({ theme }) => theme.color.lightGray};
-    margin: 0.2rem 0 1rem;
+    margin: 0.1rem 0 0.5rem;
   `,
   FormBox: styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 1rem;
   `,
   Label: styled.label`
     min-width: 8rem;
     color: ${({ theme }) => theme.color.black};
-    ${({ theme }) => theme.font.FONT14B}
+    ${({ theme }) => theme.font.FONT12SB};
+
+    ${media.tablet`
+      ${({ theme }) => theme.font.FONT14B};
+    `}
   `,
   Input: styled.input`
     width: 100%;
-    padding: 1.4rem;
+    padding: 1rem;
     border-radius: 0.4rem;
     border: 0.8px solid ${({ theme }) => theme.color.black};
-    ${({ theme }) => theme.font.FONT14};
+    ${({ theme }) => theme.font.FONT12};
+
+    ${media.tablet`
+      ${({ theme }) => theme.font.FONT14};
+    `}
 
     &:focus {
       border: 1.2px solid ${({ theme }) => theme.color.TOTAL};
@@ -140,7 +159,7 @@ const S = {
     }
   `,
   Select: styled.select`
-    padding: 1rem 1.4rem;
+    padding: 1rem 1.2rem;
     border-radius: 0.4rem;
     border: 0.8px solid ${({ theme }) => theme.color.black};
     ${({ theme }) => theme.font.FONT12};
@@ -152,10 +171,14 @@ const S = {
   `,
   TextArea: styled.textarea`
     width: 100%;
-    padding: 1.5rem;
+    padding: 1.3rem;
     border-radius: 0.4rem;
     border: 0.8px solid ${({ theme }) => theme.color.black};
-    ${({ theme }) => theme.font.FONT14};
+    ${({ theme }) => theme.font.FONT12};
+
+    ${media.tablet`
+      ${({ theme }) => theme.font.FONT14};
+    `}
 
     &:focus {
       outline: none;
@@ -171,6 +194,10 @@ const S = {
     border-radius: 0.8rem;
     background-color: ${({ theme }) => theme.color.HOME};
     color: ${({ theme }) => theme.color.white};
-    ${({ theme }) => theme.font.FONT14B}
+    ${({ theme }) => theme.font.FONT12SB};
+
+    ${media.tablet`
+      ${({ theme }) => theme.font.FONT14B};
+    `}
   `,
 };
