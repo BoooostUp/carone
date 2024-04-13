@@ -31,15 +31,21 @@ export default TotalInfoLayout;
 const S = {
   Layout: styled.div`
     display: flex;
-    justify-content: center;
+
     .outletWrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       margin: 0 auto;
       max-width: 70rem;
+      min-height: 40rem;
       padding-top: 8rem;
       padding-bottom: 8rem;
-    }
-    @media (max-width: 767px) {
-      padding: 0rem 3rem;
+
+      @media (max-width: 767px) {
+        padding: 5rem 3rem;
+        min-height: 30rem;
+      }
     }
   `,
 };
