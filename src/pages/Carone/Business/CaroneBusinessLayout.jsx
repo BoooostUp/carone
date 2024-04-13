@@ -37,9 +37,10 @@ const S = {
       max-width: 70rem;
       padding-top: 8rem;
       padding-bottom: 8rem;
-    }
-    @media (max-width: 767px) {
-      padding: 0rem 3rem;
+
+      @media (max-width: 767px) {
+        padding: 5rem 3rem;
+      }
     }
   `,
 };
