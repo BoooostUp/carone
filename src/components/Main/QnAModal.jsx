@@ -82,7 +82,7 @@ const S = {
     top: 0;
     left: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
   `,
   Container: styled.div`
     max-width: 30rem;
