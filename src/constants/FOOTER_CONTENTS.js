@@ -1,6 +1,7 @@
 export const FOOTER_CONTENTS = {
-  main: {
+  HOME: {
     companyName: 'Waste Treatment & Collection of Waste',
+    subtitle: 'Waste Treatment & Collection of Waste',
     info: [
       {
         companyName: '(주)카원',
@@ -34,7 +35,7 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
-  carone: {
+  CARONE: {
     companyName: '(주)카원',
     subtitle: '폐기물을 자원으로, 우리 환경을 꺠끗하게 추구하는 신뢰의 기업',
     info: [
@@ -45,7 +46,7 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
-  ce: {
+  CE: {
     companyName: '(주)자동차환경',
     subtitle: '모두를 이롭게 하는 기업',
     info: [
@@ -56,7 +57,7 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
-  sg: {
+  SG: {
     companyName: '(주)에스지산업',
     subtitle: '그린에너지를 실천하는 기업',
     info: [
@@ -67,7 +68,7 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
-  si: {
+  SI: {
     companyName: '(주)세명인텍',
     subtitle: '안전, 환경을 우선하는 기업',
     info: [
@@ -78,7 +79,7 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
-  total: {
+  TOTAL: {
     companyName: '(주)토탈',
     subtitle: '완벽한 폐기물 처리 시스템과 기술력',
     info: [
