@@ -1,5 +1,10 @@
+import CertificationComponent from '../../components/Certification/CertificationComponent';
 function SgLicenses() {
-  return <div>SgLicenses</div>;
+  return (
+    <div>
+      <CertificationComponent company="CARONE" />
+    </div>
+  );
 }
 
 export default SgLicenses;
