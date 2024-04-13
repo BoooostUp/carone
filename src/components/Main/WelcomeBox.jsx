@@ -24,8 +24,7 @@ const S = {
     width: 100%;
     height: 13rem;
     padding: 0 20rem;
-    opacity: 0.8;
-    background-color: ${({ theme }) => theme.color.mainGray};
+    background-color: ${({ theme }) => theme.color.mainGray}CC;
 
     @media (max-width: 1024px) {
       padding: 0;
