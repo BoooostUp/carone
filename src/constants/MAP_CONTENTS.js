@@ -1,20 +1,20 @@
 export const MAP_CONTENTS = Object.freeze({
   CE: {
-    name: '자동차 환경',
+    name: '자동차환경',
     address: '경상남도 양산시 상북면 공원로 403 - 19',
     tel: '055. 381. 0703',
     fax: '055. 384. 0703',
     imageSrc: '/src/assets/images/map/CE_CARONE_SG.webp',
   },
   SG: {
-    name: '(주)에스지 산업',
+    name: '(주)에스지산업',
     address: '경상남도 양산시 상북면 공원로 403 - 19',
     tel: '055. 374. 7784',
     fax: '055. 374. 7786',
     imageSrc: '/src/assets/images/map/CE_CARONE_SG.webp',
   },
   SI: {
-    name: '(주)세명인택',
+    name: '(주)세명인텍',
     address: '울산광역시 남구 용연로 98번길 23',
     tel: '052. 277. 5550',
     fax: '052. 970. 5800',
