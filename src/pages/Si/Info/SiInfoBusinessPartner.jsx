@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BusinessPartner from '../../../components/Main/BusinessPartner';
 import { BUSINESS_PARTNER_CONTENTS } from '../../../constants/BUSINESS_PARTNER_CONTENTS';
 
-function SiInfoBusinessPartner() {
+const SiInfoBusinessPartner = () => {
   return (
     <>
       <S.Text>{BUSINESS_PARTNER_CONTENTS.SI.title}</S.Text>
@@ -13,7 +13,7 @@ function SiInfoBusinessPartner() {
       </S.Container>
     </>
   );
-}
+};
 
 export default SiInfoBusinessPartner;
 
