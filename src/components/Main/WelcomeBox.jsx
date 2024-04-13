@@ -7,7 +7,7 @@ const WelcomeBox = ({ company }) => {
       <S.TextWrapper>
         <S.WelcomeText $color={company}>WELCOME!</S.WelcomeText>
         <S.InfoWrapper>
-          <S.CompanyInfo>{WELCOME_BOX_CONTENTS[company]}</S.CompanyInfo>{' '}
+          <S.CompanyInfo>{WELCOME_BOX_CONTENTS[company]}</S.CompanyInfo>
         </S.InfoWrapper>
       </S.TextWrapper>
     </S.Container>
@@ -24,8 +24,7 @@ const S = {
     width: 100%;
     height: 13rem;
     padding: 0 20rem;
-    opacity: 0.8;
-    background-color: ${({ theme }) => theme.color.mainGray};
+    background-color: ${({ theme }) => theme.color.mainGray}CC;
 
     @media (max-width: 1024px) {
       padding: 0;
