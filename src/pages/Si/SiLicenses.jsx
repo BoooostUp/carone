@@ -1,5 +1,11 @@
+import CertificationComponent from '../../components/Certification/CertificationComponent';
+
 function SiLicenses() {
-  return <div>SiLicenses</div>;
+  return (
+    <div>
+      <CertificationComponent company="CARONE" />
+    </div>
+  );
 }
 
 export default SiLicenses;
