@@ -5,15 +5,20 @@ import Gnb from '../../components/Header/Gnb';
 import Bnb from '../../components/Main/BNB/Bnb';
 import Hero from '../../components/Main/Hero';
 import QnAButton from '../../components/Main/QnAButton';
-import { useHeroSize } from '../../hooks/useHeroAttribute';
+import { useHeroAttribute } from '../../hooks/useHeroAttribute';
 
 const Total = () => {
-  const { currentPath, heroSize } = useHeroSize();
+  const { currentPath, heroSize, isMain } = useHeroAttribute();
 
   return (
     <S.PageContainer>
       <Gnb company="TOTAL" />
-      <Hero size={heroSize} link={currentPath} company="TOTAL" />
+      <Hero
+        size={heroSize}
+        link={currentPath}
+        company="TOTAL"
+        isMain={isMain}
+      />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
