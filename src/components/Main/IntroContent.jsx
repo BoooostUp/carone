@@ -30,13 +30,14 @@ export default IntroContent;
 const S = {
   Container: styled.article`
     display: flex;
-    min-width: 580px;
     margin: 4rem auto;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 4rem;
 
     ${media.desktop`
+      flex-direction: row;
       margin: 8rem auto;
       gap: 8rem;
     `}
