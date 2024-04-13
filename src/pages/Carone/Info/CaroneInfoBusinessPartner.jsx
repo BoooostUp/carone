@@ -16,6 +16,7 @@ const CaroneInfoBusinessPartner = () => {
 };
 
 export default CaroneInfoBusinessPartner;
+
 const S = {
   Container: styled.div`
     margin: 0 auto;
