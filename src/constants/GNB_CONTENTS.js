@@ -5,17 +5,17 @@ export const GNB_CONTENTS = Object.freeze({
     link: '/home',
   },
   CE: {
-    title: '자동차 환경',
+    title: '자동차환경',
     subTitle: '폐기물 수집, 운반, 중간 처리',
     link: '/ce',
   },
   SG: {
-    title: '(주)에스지 산업',
+    title: '(주)에스지산업',
     subTitle: '폐유를 재활용 이온 정제류를 생산',
     link: '/sg',
   },
   SI: {
-    title: '세명인택(주)',
+    title: '(주)세명인텍',
     subTitle: '세정, 세척 등',
     link: '/si',
   },
