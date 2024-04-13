@@ -1,4 +1,5 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Outlet } from 'react-router-dom';
+import styled from 'styled-components';
 import CategoryBar from '../../../components/Main/CategoryBar';
 import { LNB_CONTENTS } from '../../../constants/LNB_CONTENTS';
 
@@ -9,15 +10,36 @@ const SiInfoLayout = () => {
   const selectedCategory = parts[parts.length - 1];
 
   return (
-    <div>
+    <>
       <CategoryBar
         company="SI"
         category={LNB_CONTENTS.INFO}
         selectedButton={selectedCategory}
         currentPage="info"
       />
-    </div>
+      <S.Layout>
+        <div className="outletWrapper">
+          <Outlet />
+        </div>
+      </S.Layout>
+    </>
   );
 };
 
 export default SiInfoLayout;
+
+const S = {
+  Layout: styled.div`
+    display: flex;
+    justify-content: center;
+    .outletWrapper {
+      margin: 0 auto;
+      max-width: 70rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+    @media (max-width: 767px) {
+      padding: 0rem 3rem;
+    }
+  `,
+};
