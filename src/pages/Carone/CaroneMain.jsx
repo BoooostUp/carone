@@ -5,7 +5,7 @@ function CaroneMain() {
   return (
     <div>
       {MAIN_ARTICLE_CONTENTS.CARONE1.map((item, index) => {
-        return <MainArticle key={index} currentCompany="CARONE1" item={item} />;
+        return <MainArticle key={index} currentCompany="CARONE" item={item} />;
       })}
     </div>
   );

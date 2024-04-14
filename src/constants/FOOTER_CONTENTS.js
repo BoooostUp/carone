@@ -37,7 +37,7 @@ export const FOOTER_CONTENTS = {
   },
   CARONE: {
     companyName: '(주)카원',
-    subtitle: '폐기물을 자원으로, 우리 환경을 꺠끗하게 추구하는 신뢰의 기업',
+    subtitle: '폐기물을 자원으로, 우리 환경을 깨끗하게 추구하는 신뢰의 기업',
     info: [
       {
         address: '경상남도 양산시 상북면 공원로 403 - 19',

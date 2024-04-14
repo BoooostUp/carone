@@ -5,7 +5,7 @@ function TotalMain() {
   return (
     <div>
       {MAIN_ARTICLE_CONTENTS.TOTAL1.map((item, index) => {
-        return <MainArticle key={index} currentCompany="TOTAL1" item={item} />;
+        return <MainArticle key={index} currentCompany="TOTAL" item={item} />;
       })}
     </div>
   );

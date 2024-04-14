@@ -95,7 +95,9 @@ const S = {
     }
   `,
 
-  ButtonContainer: styled.button`
+  ButtonContainer: styled.div`
+    padding: 1.5rem;
+    text-align: center;
     width: 100%;
     height: 5rem;
     object-fit: cover;
