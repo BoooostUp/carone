@@ -2,7 +2,9 @@ import HomeBusiness from '../pages/Home/HomeBusiness';
 import HomeCeo from '../pages/Home/HomeCeo';
 import HomeLocation from '../pages/Home/HomeLocation';
 import HomeMain from '../pages/Home/HomeMain';
-import HomeRecruit from '../pages/Home/HomeRecruit';
+import HomeRecruitApply from '../pages/Home/HomeRecruit/HomeRecruitApply';
+import HomeRecruitLayout from '../pages/Home/HomeRecruit/HomeRecruitLayout';
+import HomeRecruitProcess from '../pages/Home/HomeRecruit/HomeRecruitProcess';
 
 export const HomeRoutes = [
   {
@@ -22,7 +24,16 @@ export const HomeRoutes = [
     element: <HomeLocation />,
   },
   {
-    path: 'recruit',
-    element: <HomeRecruit />,
+    element: <HomeRecruitLayout />,
+    children: [
+      {
+        path: 'recruit/process',
+        element: <HomeRecruitProcess />,
+      },
+      {
+        path: 'recruit/apply',
+        element: <HomeRecruitApply />,
+      },
+    ],
   },
 ];

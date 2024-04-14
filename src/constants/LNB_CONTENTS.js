@@ -5,6 +5,10 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '오시는 길', link: 'location' },
     { menu: '주요 거래처', link: 'business-partner' },
   ],
+  HOME: [
+    { menu: '채용 절차', link: 'process' },
+    { menu: '입사지원', link: 'apply' },
+  ],
   CE: [
     { menu: '사업 분야', link: 'about' },
     { menu: '영업대상 폐기물', link: 'waste' },

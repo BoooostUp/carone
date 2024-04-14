@@ -71,7 +71,7 @@ export const GNB_CONTENTS = Object.freeze({
     },
     {
       menu: '인재 채용',
-      link: 'recruit',
+      link: 'recruit/process',
     },
   ],
   MENU_LIST: [
