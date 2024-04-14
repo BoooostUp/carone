@@ -36,7 +36,7 @@ export default CertificateModal;
 
 const S = {
   CertificationContainer: styled.div`
-    width: 30rem;
+    max-width: 50rem;
     height: auto;
     position: absolute;
     top: 50%;
