@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import BusinessPartner from '../../../components/Main/BusinessPartner';
 import { BUSINESS_PARTNER_CONTENTS } from '../../../constants/BUSINESS_PARTNER_CONTENTS';
+import { media } from '../../../styles/utils/mediaQuery';
 
 const Total2InfoBusinessPartner = () => {
   return (
@@ -29,7 +30,11 @@ const S = {
   Text: styled.div`
     color: ${({ theme }) => theme.color.black};
     text-align: center;
-    ${({ theme }) => theme.font.FONT20SB}
+    ${({ theme }) => theme.font.FONT14};
     margin-bottom: 4rem;
+
+    ${media.desktop`
+    ${({ theme }) => theme.font.FONT18}
+    `}
   `,
 };
