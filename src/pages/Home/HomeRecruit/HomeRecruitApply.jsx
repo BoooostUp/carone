@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const HomeRecruitApply = () => {
   return (
     <S.Container>
-      <S.Title>Q&A - E-mail 문의</S.Title>
+      <S.Title>입사 신청</S.Title>
       <S.HorizontalLine />
       <S.FormBox>
         <S.Label htmlFor="customName">이름</S.Label>
