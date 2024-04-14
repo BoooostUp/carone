@@ -46,7 +46,7 @@ export default HomeRecruitApply;
 
 const S = {
   Container: styled.div`
-    width: 55rem;
+    width: 100%;
     padding-bottom: 3rem;
     background-color: ${({ theme }) => theme.color.white};
     display: flex;
