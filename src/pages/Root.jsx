@@ -13,7 +13,9 @@ const Root = () => {
     <S.Container>
       <S.Header>
         <S.Logo src={logo} />
-        <RecruitButton />
+        <Link to="home/recruit">
+          <RecruitButton />
+        </Link>
       </S.Header>
       <S.CellWrapper>
         {ROOT.CELLS.map(({ id, indexColor, name, description, company }) => (
