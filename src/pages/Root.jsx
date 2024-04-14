@@ -13,7 +13,7 @@ const Root = () => {
     <S.Container>
       <S.Header>
         <S.Logo src={logo} />
-        <Link to="home/recruit">
+        <Link to="home/recruit/process">
           <RecruitButton />
         </Link>
       </S.Header>
