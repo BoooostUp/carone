@@ -3,7 +3,9 @@ import Carone2BusinessLayout from '../pages/Carone2/Business/Carone2BusinessLayo
 import Carone2BusinessProcess from '../pages/Carone2/Business/Carone2BusinessProcess';
 import Carone2BusinessWaste from '../pages/Carone2/Business/Carone2BusinessWaste';
 import Carone2Facilities from '../pages/Carone2/Carone2Facilities';
-import Carone2Licenses from '../pages/Carone2/Carone2Licenses';
+import Carone2Licenses from '../pages/Carone2/Carone2Licenses/Carone2Licenses';
+import Carone2LicensesLayout from '../pages/Carone2/Carone2Licenses/Carone2LicensesLayout';
+import Carone2Patent from '../pages/Carone2/Carone2Licenses/Carone2Patent';
 import Carone2Main from '../pages/Carone2/Carone2Main';
 import Carone2InfoBusinessPartner from '../pages/Carone2/Info/Carone2InfoBusinessPartner';
 import Carone2InfoCeo from '../pages/Carone2/Info/Carone2InfoCeo';
@@ -62,7 +64,16 @@ export const Carone2Routes = [
     element: <Carone2Facilities />,
   },
   {
-    path: 'licenses',
-    element: <Carone2Licenses />,
+    element: <Carone2LicensesLayout />,
+    children: [
+      {
+        path: 'licenses/certification',
+        element: <Carone2Licenses />,
+      },
+      {
+        path: 'licenses/patent',
+        element: <Carone2Patent />,
+      },
+    ],
   },
 ];

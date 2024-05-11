@@ -10,6 +10,10 @@ import carone2Permission1 from '../../assets/images/certificates/carone2/카원 
 import ceRegister from '../../assets/images/certificates/ce/자동차환경사업자등록증.svg';
 import cePermission1 from '../../assets/images/certificates/ce/자동차환경사업장폐기물배출자신고증명서202303-1.svg';
 import cePermission2 from '../../assets/images/certificates/ce/자동차환경폐기물처리계획확인증명서202303-01.svg';
+import patent1 from '../../assets/images/certificates/patents/특허증 - 드럼통 세척 장치.jpg';
+import patent2 from '../../assets/images/certificates/patents/특허증 - 트롬멜 선별기.jpg';
+import patent3 from '../../assets/images/certificates/patents/특허증 - 폐수처리장치.jpg';
+import patent4 from '../../assets/images/certificates/patents/특허증 - 폐캔 재활용.jpg';
 import sgRegister from '../../assets/images/certificates/sg/에스지산업 - 사업자등록증.jpg';
 import sgPermission1 from '../../assets/images/certificates/sg/주에스지산업 - 종합재활용업 허가증22.07-01.svg';
 import totalRegister from '../../assets/images/certificates/total/토탈-사업자등록증-1.svg';
@@ -66,5 +70,13 @@ export const CERTIFICATIONS = {
   },
   SI: {
     certifications: [{ certification: totalRegister, title: 1 }],
+  },
+  PATENTS: {
+    certifications: [
+      { certification: patent1, title: '드럼통 세척 장치' },
+      { certification: patent2, title: '트롬멜 선별기' },
+      { certification: patent3, title: '페수처리장치' },
+      { certification: patent4, title: '폐캔 재활용' },
+    ],
   },
 };

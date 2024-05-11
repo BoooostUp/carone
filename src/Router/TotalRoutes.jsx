@@ -8,7 +8,9 @@ import TotalInfoHistory from '../pages/Total/Info/TotalInfoHistory';
 import TotalInfoLayout from '../pages/Total/Info/TotalInfoLayout';
 import TotalInfoLocation from '../pages/Total/Info/TotalInfoLocation';
 import TotalFacilities from '../pages/Total/TotalFacilities';
-import TotalLicenses from '../pages/Total/TotalLicenses';
+import TotalLicenses from '../pages/Total/TotalLicenses/TotalLicenses';
+import TotalLicensesLayout from '../pages/Total/TotalLicenses/TotalLicensesLayout';
+import TotalPatent from '../pages/Total/TotalLicenses/TotalPatent';
 import TotalMain from '../pages/Total/TotalMain';
 
 export const TotalRoutes = [
@@ -62,7 +64,16 @@ export const TotalRoutes = [
     element: <TotalFacilities />,
   },
   {
-    path: 'licenses',
-    element: <TotalLicenses />,
+    element: <TotalLicensesLayout />,
+    children: [
+      {
+        path: 'licenses/certification',
+        element: <TotalLicenses />,
+      },
+      {
+        path: 'licenses/patent',
+        element: <TotalPatent />,
+      },
+    ],
   },
 ];

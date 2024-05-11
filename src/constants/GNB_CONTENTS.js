@@ -89,7 +89,7 @@ export const GNB_CONTENTS = Object.freeze({
     },
     {
       menu: '인허가사항',
-      link: 'licenses',
+      link: 'licenses/certification',
     },
   ],
   SI_LIST: [
@@ -107,7 +107,7 @@ export const GNB_CONTENTS = Object.freeze({
     },
     {
       menu: '인허가사항',
-      link: 'licenses',
+      link: 'licenses/certification',
     },
   ],
 });

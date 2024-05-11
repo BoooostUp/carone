@@ -3,7 +3,9 @@ import CeBusinessLayout from '../pages/Ce/Business/CeBusinessLayout';
 import CeBusinessRegistration from '../pages/Ce/Business/CeBusinessRegistration';
 import CeBusinessWaste from '../pages/Ce/Business/CeBusinessWaste';
 import CeFacilities from '../pages/Ce/CeFacilities';
-import CeLicenses from '../pages/Ce/CeLicenses';
+import CeLicenses from '../pages/Ce/CeLicenses/CeLicenses';
+import CeLicensesLayout from '../pages/Ce/CeLicenses/CeLicensesLayout';
+import CePatent from '../pages/Ce/CeLicenses/CePatent';
 import CeMain from '../pages/Ce/CeMain';
 import CeInfoBusinessPartner from '../pages/Ce/Info/CeInfoBusinessPartner';
 import CeInfoCeo from '../pages/Ce/Info/CeInfoCeo';
@@ -62,7 +64,10 @@ export const CeRoutes = [
     element: <CeFacilities />,
   },
   {
-    path: 'licenses',
-    element: <CeLicenses />,
+    element: <CeLicensesLayout />,
+    children: [
+      { path: 'licenses/certification', element: <CeLicenses /> },
+      { path: 'licenses/patent', element: <CePatent /> },
+    ],
   },
 ];
