@@ -1,9 +1,9 @@
-import caroneImage from '../assets/images/root/carone.png';
-import ceImage from '../assets/images/root/ce.png';
-import homeImage from '../assets/images/root/home.png';
-import sgImage from '../assets/images/root/sg.png';
-import siImage from '../assets/images/root/sg.png';
-import totalImage from '../assets/images/root/total.png';
+import caroneImage from '../assets/images/root/caroneImage.jpg';
+import ceImage from '../assets/images/root/ceImage.jpg';
+import homeImage from '../assets/images/root/home.jpg';
+import sgImage from '../assets/images/root/sg.jpeg';
+import siImage from '../assets/images/root/si.jpeg';
+import totalImage from '../assets/images/root/total.jpg';
 
 export const CELL_IMAGE = Object.freeze({
   home: homeImage,
