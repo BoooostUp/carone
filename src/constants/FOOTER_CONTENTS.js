@@ -13,7 +13,7 @@ export const FOOTER_CONTENTS = {
         companyName: '(주)자동차환경',
         address: '경상남도 양산시 상북면 공원로 403 - 19',
         tel: 'TEL 055-381-0703',
-        fax: 'FAX 055-384-0703',
+        fax: 'FAX 055-384-07034',
       },
       {
         companyName: '(주)에스지산업',
