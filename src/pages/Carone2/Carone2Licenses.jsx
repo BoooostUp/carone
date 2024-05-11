@@ -3,7 +3,7 @@ import CertificationComponent from '../../components/Certification/Certification
 function Carone2Licenses() {
   return (
     <div>
-      <CertificationComponent company="CARONE" />
+      <CertificationComponent company="CARONE2" />
     </div>
   );
 }
