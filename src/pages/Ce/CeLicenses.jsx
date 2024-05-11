@@ -3,7 +3,7 @@ import CertificationComponent from '../../components/Certification/Certification
 function SgLicenses() {
   return (
     <div>
-      <CertificationComponent company="CARONE" />
+      <CertificationComponent company="CE" />
     </div>
   );
 }
