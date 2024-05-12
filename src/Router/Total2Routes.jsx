@@ -8,7 +8,9 @@ import Total2InfoHistory from '../pages/Total2/Info/Total2InfoHistory';
 import Total2InfoLayout from '../pages/Total2/Info/Total2InfoLayout';
 import Total2InfoLocation from '../pages/Total2/Info/Total2InfoLocation';
 import Total2Facilities from '../pages/Total2/Total2Facilities';
-import Total2Licenses from '../pages/Total2/Total2Licenses';
+import Total2Licenses from '../pages/Total2/Total2Licenses/Total2Licenses';
+import Total2LicensesLayout from '../pages/Total2/Total2Licenses/Total2LicensesLayout';
+import Total2Patent from '../pages/Total2/Total2Licenses/Total2Patent';
 import Total2Main from '../pages/Total2/Total2Main';
 
 export const Total2Routes = [
@@ -62,7 +64,16 @@ export const Total2Routes = [
     element: <Total2Facilities />,
   },
   {
-    path: 'licenses',
-    element: <Total2Licenses />,
+    element: <Total2LicensesLayout />,
+    children: [
+      {
+        path: 'licenses/certification',
+        element: <Total2Licenses />,
+      },
+      {
+        path: 'licenses/patent',
+        element: <Total2Patent />,
+      },
+    ],
   },
 ];

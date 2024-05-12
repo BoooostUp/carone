@@ -8,7 +8,8 @@ import SiInfoHistory from '../pages/Si/Info/SiInfoHistory';
 import SiInfoLayout from '../pages/Si/Info/SiInfoLayout';
 import SiInfoLocation from '../pages/Si/Info/SiInfoLocation';
 import SiFacilities from '../pages/Si/SiFacilities';
-import SiLicenses from '../pages/Si/SiLicenses';
+import SiLicenses from '../pages/Si/SiLicenses/SiLicenses';
+import SiLicensesLayout from '../pages/Si/SiLicenses/SiLicensesLayout';
 import SiMain from '../pages/Si/SiMain';
 
 export const SiRoutes = [
@@ -62,7 +63,12 @@ export const SiRoutes = [
     element: <SiFacilities />,
   },
   {
-    path: 'licenses',
-    element: <SiLicenses />,
+    element: <SiLicensesLayout />,
+    children: [
+      {
+        path: 'licenses/certification',
+        element: <SiLicenses />,
+      },
+    ],
   },
 ];

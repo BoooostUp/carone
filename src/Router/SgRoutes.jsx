@@ -8,7 +8,8 @@ import SgInfoHistory from '../pages/Sg/Info/SgInfoHistory';
 import SgInfoLayout from '../pages/Sg/Info/SgInfoLayout';
 import SgInfoLocation from '../pages/Sg/Info/SgInfoLocation';
 import SgFacilities from '../pages/Sg/SgFacilities';
-import SgLicenses from '../pages/Sg/SgLicenses';
+import SgLicenses from '../pages/Sg/SgLicenses/SgLicenses';
+import SgLicensesLayout from '../pages/Sg/SgLicenses/SgLicensesLayout';
 import SgMain from '../pages/Sg/SgMain';
 
 export const SgRoutes = [
@@ -62,7 +63,12 @@ export const SgRoutes = [
     element: <SgFacilities />,
   },
   {
-    path: 'licenses',
-    element: <SgLicenses />,
+    element: <SgLicensesLayout />,
+    children: [
+      {
+        path: 'licenses/certification',
+        element: <SgLicenses />,
+      },
+    ],
   },
 ];
