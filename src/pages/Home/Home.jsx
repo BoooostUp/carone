@@ -19,6 +19,7 @@ const Home = () => {
   return (
     <S.PageContainer>
       <Gnb company="HOME" />
+
       <Hero
         size={heroSize}
         link={currentPath}
