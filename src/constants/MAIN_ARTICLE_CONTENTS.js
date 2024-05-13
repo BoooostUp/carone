@@ -34,10 +34,10 @@ import sgImage4 from '/src/assets/images/sg/main4.png';
 // import sgImage3 from '';
 // import sgImage4 from '';
 
-// import total1Image1 from '';
-// import total1Image2 from '';
-// import total1Image3 from '';
-// import total1Image4 from '';
+import total1Image1 from '/src/assets/images/total/total_factory.webp';
+import total1Image2 from '/src/assets/images/total/total_factory.webp';
+import total1Image3 from '/src/assets/images/total/total_factory.webp';
+import total1Image4 from '/src/assets/images/total/total_factory.webp';
 
 import total2Image1 from '/src/assets/images/total2/material.webp';
 import total2Image2 from '/src/assets/images/total2/shredding.webp';
@@ -179,28 +179,28 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       title1: '폐기물 수집',
       content1:
         '다양한 산업 현장에서 발생하는 고체 및 액체 폐기물을 수집하여 적절한 처리를 위해 전달하는 전문적인 서비스입니다',
-      imageAddress: '',
+      imageAddress: total1Image1,
     },
     {
       id: 2,
       title1: '유기용제 생산',
       content1:
         '화학 산업의 일부로, 다양한 산업 공정에서 사용되는 유기화학 제품을 제조하는 과정입니다',
-      imageAddress: '',
+      imageAddress: total1Image2,
     },
     {
       id: 3,
       title1: '스팀 생산',
       content1:
         '열에너지를 이용하여 물을 가열하여 대량의 증기를 생성하는 과정으로, 이 증기는 주로 발전, 난방, 산업 공정 등에 활용됩니다',
-      imageAddress: '',
+      imageAddress: total1Image3,
     },
     {
       id: 4,
       title1: '연료 재활용',
       content1:
         '사용된 연료나 폐자원을 수집하고 처리하여 재사용 가능한 형태로 전환하는 과정으로, 자원의 효율적 사용과 환경 보호에 기여합니다',
-      imageAddress: '',
+      imageAddress: total1Image4,
     },
   ],
   TOTAL2: [
