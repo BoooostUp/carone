@@ -81,7 +81,7 @@ export const FOOTER_CONTENTS = {
   },
   TOTAL: {
     companyName: '(주)토탈',
-    subtitle: '완벽한 폐기물 처리 시스템과 기술력',
+    subtitle: '폐기물 소각부터 재활용처리까지 산업 폐기물 처리 전문기업',
     info: [
       {
         address: '울산광역시 남구 용연로 179번길 18',
