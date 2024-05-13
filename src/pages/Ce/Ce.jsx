@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Footer from '../../components/Footer/Footer';
 import Gnb from '../../components/Header/Gnb';
@@ -10,10 +11,21 @@ import { useHeroAttribute } from '../../hooks/useHeroAttribute';
 const Ce = () => {
   const { currentPath, heroSize, isMain } = useHeroAttribute();
 
+  const location = useLocation();
+  const current = location.pathname;
+  const parts = current.split('/');
+  const selectedCategory = parts[parts.length - 1];
+
   return (
     <S.PageContainer>
       <Gnb company="CE" />
-      <Hero size={heroSize} link={currentPath} company="CE" isMain={isMain} />
+      <Hero
+        size={heroSize}
+        link={currentPath}
+        company="CE"
+        isMain={isMain}
+        page={selectedCategory}
+      />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>

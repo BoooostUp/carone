@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import DashBoard from './DashBoard';
+import heroImage1 from '../../assets/images/hero/caroneCars.jpg';
 import { INTRO_CONTENT_CONTENTS as C } from '../../constants/INTRO_CONTENT_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery';
 
