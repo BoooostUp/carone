@@ -4,6 +4,11 @@ import homeImage3 from '/src/assets/images/mainArticle/sg.webp';
 import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 import homeImage5 from '/src/assets/images/mainArticle/si.webp';
 
+import ceImage1 from '/src/assets/images/ce/main1.png';
+import ceImage2 from '/src/assets/images/ce/main2.png';
+import ceImage3 from '/src/assets/images/ce/main3.png';
+import ceImage4 from '/src/assets/images/ce/main4.png';
+
 // import ceImage1 from '';
 // import ceImage2 from '';
 // import ceImage3 from '';
@@ -44,7 +49,7 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     {
       id: 'CE',
       title1: '(주)자동차 환경',
-      content1: `자동차환경은 자동차정비업에서 배출되는 폐기물을 배출하는 회원사에 위탁받아 폐기물 배출 신고 및 관리하는 공동운영기구입니다.
+      content1: `(주)자동차환경은 자동차정비업에서 배출되는 폐기물을 배출하는 회원사에 위탁받아 폐기물 배출 신고 및 관리하는 공동운영기구입니다.
         
       폐기물을 공동으로 수집 · 운반 · 재활용 · 처분하며 깨끗한 환경을 위해 더욱더 앞장서겠습니다.`,
       imageAddress: homeImage1,
@@ -93,25 +98,28 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       title1: '사업장 폐기물 공동 수집',
       content1:
         '자동차정비업에서 배출되는 폐기물을 배출하는 회원사에 위탁받아 폐기물 배출 신고 및 관리하는 공동운영기구입니다.',
-      imageAddress: '',
+      imageAddress: ceImage1,
     },
     {
       id: 2,
       title1: '폐기물 운반',
-      content1: '',
-      imageAddress: '',
+      content1:
+        '폐기물의 종류와 특성에 맞는 전용 차량을 사용하며, 운반 과정에서 발생할 수 있는 환경오염을 최소화합니다.',
+      imageAddress: ceImage2,
     },
     {
       id: 3,
       title1: '폐기물 재처리',
-      content1: '',
-      imageAddress: '',
+      content1:
+        '폐기물의 성분과 특성을 분석하여 적절한 재처리 방법을 적용하며, 관련 법규를 준수합니다.',
+      imageAddress: ceImage3,
     },
     {
       id: 4,
       title1: '폐기물 재활용',
-      content1: '',
-      imageAddress: '',
+      content1:
+        '사업장에서 발생한 폐기물 중 재활용이 가능한 자원을 선별하여 새로운 제품 생산에 활용하는 서비스를 제공합니다.',
+      imageAddress: ceImage4,
     },
   ],
   CARONE1: [
