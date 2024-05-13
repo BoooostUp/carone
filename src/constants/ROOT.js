@@ -25,7 +25,7 @@ export const ROOT = Object.freeze({
     },
     {
       id: 2,
-      name: '자동차환경',
+      name: '(주)자동차환경',
       company: 'ce',
       description: '자동차정비업 폐기물\n운반·재처리',
       indexColor: 'CE',
