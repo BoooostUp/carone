@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { css } from 'styled-components';
-import caroneImg2 from '../../assets/images/carone/고철운반.png';
-import caroneImg1 from '../../assets/images/carone/사업내용.png';
-import caroneImg3 from '../../assets/images/carone/취급품목.png';
+import caroneImg1 from '../../assets/images/carone/about1.webp';
+import caroneImg2 from '../../assets/images/carone/about2.webp';
+import caroneImg3 from '../../assets/images/carone/about3.webp';
 import sgImg1 from '../../assets/images/sg/이온정제유.png';
 import sgImg2 from '../../assets/images/sg/재생연료유.png';
 import sgImg3 from '../../assets/images/sg/재생연료유_공정.png';

@@ -9,15 +9,15 @@ import homeImage5 from '/src/assets/images/mainArticle/si.webp';
 // import ceImage3 from '';
 // import ceImage4 from '';
 
-// import carone1Image1 from '';
-// import carone1Image2 from '';
-// import carone1Image3 from '';
-// import carone1Image4 from '';
+import carone1Image1 from '/src/assets/images/carone/main1.webp';
+import carone1Image2 from '/src/assets/images/carone/main2.webp';
+import carone1Image3 from '/src/assets/images/carone/main3.webp';
+import carone1Image4 from '/src/assets/images/carone/main4.webp';
 
-// import carone2Image1 from '';
-// import carone2Image2 from '';
-// import carone2Image3 from '';
-// import carone2Image4 from '';
+import carone2Image1 from '/src/assets/images/carone2/main1.webp';
+import carone2Image2 from '/src/assets/images/carone2/main2.webp';
+import carone2Image3 from '/src/assets/images/carone2/main3.webp';
+import carone2Image4 from '/src/assets/images/carone2/main4.webp';
 
 // import sgImage1 from '';
 // import sgImage2 from '';
@@ -119,18 +119,58 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       id: 1,
       title1: '석면운반/처리',
       content1:
-        '(주)카원은 폐기물 수집·운반업을 중점으로 모든 사업장폐기물을 수집운반하며, 재활용업까지 사업분야를 넓혀 폐기물을 자원으로 최대한 활용합니다.',
-      imageAddress: '',
+        '사업장에서 발생하는 석면 폐기물의 안전한 운반 및 처리 서비스를 제공합니다.',
+      imageAddress: carone1Image1,
     },
-    { id: 2, title1: '고철운반/처리', content1: '', imageAddress: '' },
-    { id: 3, title1: '취급품목', content1: '', imageAddress: '' },
-    { id: 4, title1: '보유장비', content1: '', imageAddress: '' },
+    {
+      id: 2,
+      title1: '고철운반/처리',
+      content1:
+        '사업장에서 발생하는 고철 폐기물의 안전한 운반 및 처리 서비스를 제공합니다.',
+      imageAddress: carone1Image2,
+    },
+    {
+      id: 3,
+      title1: '취급품목',
+      content1: 'PP, PE, 파쇄고철, 폐밧데리 등을 취급하고 있습니다.',
+      imageAddress: carone1Image3,
+    },
+    {
+      id: 4,
+      title1: '보유설비',
+      content1:
+        '지정폐기물 및 일반폐기물을 수집하고 운반할 수 있는 전용 차량을 사용합니다.',
+      imageAddress: carone1Image4,
+    },
   ],
   CARONE2: [
-    { id: 1, title1: '', content1: '', imageAddress: '' },
-    { id: 2, title1: '', content1: '', imageAddress: '' },
-    { id: 3, title1: '', content1: '', imageAddress: '' },
-    { id: 4, title1: '', content1: '', imageAddress: '' },
+    {
+      id: 1,
+      title1: '파쇄/분쇄',
+      content1:
+        '기존에 소각으로 처리하던 용기류(폐페인트칩, 폐유드럼통)를 파쇄/분쇄합니다.',
+      imageAddress: carone2Image1,
+    },
+    {
+      id: 2,
+      title1: '재활용',
+      content1:
+        '사업장에서 발생하는 폐기물을 자원으로 최대한 활용하여 맑고 깨끗한 환경을 추구합니다.',
+      imageAddress: carone2Image2,
+    },
+    {
+      id: 3,
+      title1: '취급품목',
+      content1: 'PP, PE, 파쇄고철, 폐밧데리 등을 취급하고 있습니다.',
+      imageAddress: carone2Image3,
+    },
+    {
+      id: 4,
+      title1: '보유설비',
+      content1:
+        '파쇄시설, 탈수시설, 탈유시설, 마그네틱 선별기 등의 다양한 장비를 사용하고 있습니다.',
+      imageAddress: carone2Image4,
+    },
   ],
   SG: [
     { id: 1, title1: '폐유 저장시설', content1: '', imageAddress: '' },
