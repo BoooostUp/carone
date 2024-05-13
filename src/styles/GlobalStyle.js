@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
- * {
+  * {
     box-sizing: border-box;
     margin: 0;
     font-family: "Pretendard", "Noto Sans", "sans-serif";
@@ -10,8 +10,25 @@ const GlobalStyle = createGlobalStyle`
 
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-use-select: none;
+    -ms-user-select: none;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    opacity: 0.5;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #C7C7C7;
   }
 
   html, body, div, span, applet, object, iframe,
