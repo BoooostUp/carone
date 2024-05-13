@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import BnbButton from './BnbButton';
@@ -49,6 +49,9 @@ const Bnb = ({ company }) => {
       navigate(path);
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <S.ButtonWrapper>
