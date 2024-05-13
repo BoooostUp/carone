@@ -29,10 +29,10 @@ import homeImage5 from '/src/assets/images/mainArticle/si.webp';
 // import total1Image3 from '';
 // import total1Image4 from '';
 
-// import total2Image1 from '';
-// import total2Image2 from '';
-// import total2Image3 from '';
-// import total2Image4 from '';
+import total2Image1 from '/src/assets/images/total2/material.webp';
+import total2Image2 from '/src/assets/images/total2/shredding.webp';
+import total2Image3 from '/src/assets/images/total2/grinding.webp';
+import total2Image4 from '/src/assets/images/total2/magnetic_separation.webp';
 
 // import siImage1 from '';
 // import siImage2 from '';
@@ -139,16 +139,64 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     { id: 4, title1: '재생연료유 생산', content1: '', imageAddress: '' },
   ],
   TOTAL1: [
-    { id: 1, title1: '폐기물 수집', content1: '', imageAddress: '' },
-    { id: 2, title1: '유기용제 생산', content1: '', imageAddress: '' },
-    { id: 3, title1: '스팀 생산', content1: '', imageAddress: '' },
-    { id: 4, title1: '연료 재활용', content1: '', imageAddress: '' },
+    {
+      id: 1,
+      title1: '폐기물 수집',
+      content1:
+        '다양한 산업 현장에서 발생하는 고체 및 액체 폐기물을 수집하여 적절한 처리를 위해 전달하는 전문적인 서비스입니다',
+      imageAddress: '',
+    },
+    {
+      id: 2,
+      title1: '유기용제 생산',
+      content1:
+        '화학 산업의 일부로, 다양한 산업 공정에서 사용되는 유기화학 제품을 제조하는 과정입니다',
+      imageAddress: '',
+    },
+    {
+      id: 3,
+      title1: '스팀 생산',
+      content1:
+        '열에너지를 이용하여 물을 가열하여 대량의 증기를 생성하는 과정으로, 이 증기는 주로 발전, 난방, 산업 공정 등에 활용됩니다',
+      imageAddress: '',
+    },
+    {
+      id: 4,
+      title1: '연료 재활용',
+      content1:
+        '사용된 연료나 폐자원을 수집하고 처리하여 재사용 가능한 형태로 전환하는 과정으로, 자원의 효율적 사용과 환경 보호에 기여합니다',
+      imageAddress: '',
+    },
   ],
   TOTAL2: [
-    { id: 1, title1: '', content1: '', imageAddress: '' },
-    { id: 2, title1: '', content1: '', imageAddress: '' },
-    { id: 3, title1: '', content1: '', imageAddress: '' },
-    { id: 4, title1: '', content1: '', imageAddress: '' },
+    {
+      id: 1,
+      title1: '원료입고 및 보관',
+      content1:
+        ' 제조 과정에서 필요한 원료를 안전하게 수령하고, 적절한 조건에서 저장하여 품질을 유지하는 활동입니다',
+      imageAddress: total2Image1,
+    },
+    {
+      id: 2,
+      title1: '파쇄',
+      content1:
+        '재활용 과정에서 대형 폐기물을 작은 조각으로 쪼개어 처리 용이성을 높이는 과정으로, 이는 재활용 효율을 개선하고 추가 처리 과정을 용이하게 합니다',
+      imageAddress: total2Image2,
+    },
+    {
+      id: 3,
+      title1: '분쇄',
+      content1:
+        '고체 재료를 더 작은 입자로 만드는 과정으로, 화학 반응의 표면적을 늘리거나, 특정 제품의 생산을 위해 사용됩니다',
+      imageAddress: total2Image3,
+    },
+    {
+      id: 4,
+      title1: '마그네틱 선별',
+      content1:
+        '자성을 이용하여 혼합물에서 철과 같은 자성 금속을 분리하는 과정으로, 재활용 산업에서 폐기물에서 가치 있는 재료를 회수하는 데 중요한 역할을 합니다',
+      imageAddress: total2Image4,
+    },
   ],
   SI: [
     { id: 1, title1: '(주)세명인텍', content1: '', imageAddress: '' },
