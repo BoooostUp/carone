@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import WelcomeBox from './WelcomeBox';
-import caroneCars from '../../assets/images/hero/caroneCars.jpg';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { HERO_CONTENTS } from '../../constants/HERO_CONTENTS';
+import { HERO_IMAGES } from '../../constants/HERO_IMAGES';
 
-const Hero = ({ size, link, company, isMain }) => {
+const Hero = ({ size, link, company, isMain, page }) => {
   const textContent = link
     ? HERO_CONTENTS[company][link]
     : FOOTER_CONTENTS[company].subtitle;
 
   return (
-    <S.Container $size={size}>
+    <S.Container $size={size} $company={company} $page={page}>
       <S.Text>{textContent}</S.Text>
       {company !== 'HOME' && isMain === 2 && (
         <S.WelcomeBoxWrapper>
@@ -31,7 +31,8 @@ const S = {
     align-items: center;
     width: 100%;
     height: ${({ $size }) => ($size === 'bg' ? '70rem' : '45rem')};
-    background-image: url(${caroneCars});
+    background-image: ${({ $company, $page }) =>
+      `url(${HERO_IMAGES[$company][$page]})`};
     background-size: cover;
     background-position: center;
     z-index: 0;
