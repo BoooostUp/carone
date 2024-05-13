@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { css } from 'styled-components';
+import { media } from '../../../styles/utils/mediaQuery';
 
 const BnbButton = ({ variant = 'home', status, ...props }) => {
   const { children } = props;
@@ -15,12 +16,16 @@ export default BnbButton;
 
 const S = {
   Button: styled.button`
-    padding: 2rem 2rem;
+    padding: 1.5rem 1.5rem;
     width: 100%;
     color: rgb(255, 255, 255);
     background-color: ${({ theme }) => theme.color.black};
-    ${({ theme }) => theme.font.FONT20};
+    ${({ theme }) => theme.font.FONT16};
     ${({ $variant }) => buttonVariantMap[$variant]};
+    ${media.desktop`
+      padding: 2rem 2rem;
+      ${({ theme }) => theme.font.FONT20};
+    `}
   `,
 };
 
