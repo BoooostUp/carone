@@ -5,7 +5,7 @@ export const GNB_CONTENTS = Object.freeze({
     link: '/home',
   },
   CE: {
-    title: '자동차환경',
+    title: '(주)자동차환경',
     subTitle: '폐기물 수집, 운반, 중간 처리',
     link: '/ce',
   },
