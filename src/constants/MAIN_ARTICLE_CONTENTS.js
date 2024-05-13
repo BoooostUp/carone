@@ -9,6 +9,11 @@ import ceImage2 from '/src/assets/images/ce/main2.png';
 import ceImage3 from '/src/assets/images/ce/main3.png';
 import ceImage4 from '/src/assets/images/ce/main4.png';
 
+import sgImage1 from '/src/assets/images/sg/main1.png';
+import sgImage2 from '/src/assets/images/sg/main2.png';
+import sgImage3 from '/src/assets/images/sg/main3.png';
+import sgImage4 from '/src/assets/images/sg/main4.png';
+
 // import ceImage1 from '';
 // import ceImage2 from '';
 // import ceImage3 from '';
@@ -141,10 +146,32 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     { id: 4, title1: '', content1: '', imageAddress: '' },
   ],
   SG: [
-    { id: 1, title1: '폐유 저장시설', content1: '', imageAddress: '' },
-    { id: 2, title1: '폐유 여과처리', content1: '', imageAddress: '' },
-    { id: 3, title1: '이온정제유 생산', content1: '', imageAddress: '' },
-    { id: 4, title1: '재생연료유 생산', content1: '', imageAddress: '' },
+    {
+      id: 1,
+      title1: '폐유 저장시설',
+      content1: '폐유를 안전하게 보관하고 관리하는 시설을 운영하고 있습니다.',
+      imageAddress: sgImage1,
+    },
+    {
+      id: 2,
+      title1: '폐유 여과처리',
+      content1:
+        '폐유 내 부유물질 및 불순물을 여과 및 정화하는 기술을 보유하고 있습니다.',
+      imageAddress: sgImage2,
+    },
+    {
+      id: 3,
+      title1: '이온정제유 생산',
+      content1: '벙커 A/B/C유 대체연료유로 사용할 수 있습니다.',
+      imageAddress: sgImage3,
+    },
+    {
+      id: 4,
+      title1: '재생연료유 생산',
+      content1:
+        '시멘트 및 석고를 제조하는 소성로의 보조 연료로 사용할 수 있습니다.',
+      imageAddress: sgImage4,
+    },
   ],
   TOTAL1: [
     { id: 1, title1: '폐기물 수집', content1: '', imageAddress: '' },
