@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Footer from '../../components/Footer/Footer';
 import Gnb from '../../components/Header/Gnb';
 import Bnb from '../../components/Main/BNB/Bnb';
-import DashBoard from '../../components/Main/DashBoard';
 import Hero from '../../components/Main/Hero';
 import QnAButton from '../../components/Main/QnAButton';
 import { useHeroAttribute } from '../../hooks/useHeroAttribute';
@@ -15,7 +14,7 @@ const Home = () => {
     <S.PageContainer>
       <Gnb company="HOME" />
       <Hero size={heroSize} link={currentPath} company="HOME" />
-      <DashBoard />
+
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
