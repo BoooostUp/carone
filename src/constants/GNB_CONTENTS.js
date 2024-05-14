@@ -99,7 +99,7 @@ export const GNB_CONTENTS = Object.freeze({
     },
     {
       menu: '사업 내용',
-      link: 'business/cleaning',
+      link: 'business/about',
     },
     {
       menu: '보유 설비',

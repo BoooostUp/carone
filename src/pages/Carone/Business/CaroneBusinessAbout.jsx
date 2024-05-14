@@ -1,7 +1,12 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import SubCategoryBar from '../../../components/Main/SubCategoryBar';
 
 const CaroneBusinessAbout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <S.Layout>
       <SubCategoryBar company="CARONE" />

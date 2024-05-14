@@ -44,7 +44,7 @@ export const SiRoutes = [
     element: <SiBusinessLayout />,
     children: [
       {
-        path: 'business/cleaning',
+        path: 'business/about',
         element: <SiBusinessCleaning />,
       },
       {

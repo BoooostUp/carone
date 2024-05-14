@@ -54,16 +54,18 @@ const S = {
   `,
 
   Text: styled.h2`
-    white-space: nowrap;
     text-shadow: 0px 2px 4px black;
     color: ${({ theme }) => theme.color.white};
+    text-align: center;
     z-index: 1;
+    padding: 10rem;
     ${({ theme }) => theme.font.FONT45B};
 
     @media (max-width: 767px) {
       text-align: center;
       white-space: normal;
       ${({ theme }) => theme.font.FONT28B}
+      padding: 1rem;
     }
   `,
 
