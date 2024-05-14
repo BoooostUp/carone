@@ -1,10 +1,24 @@
+import carone1Partner1 from '../assets/images/carone/business_partner1.webp';
+import carone1Partner2 from '../assets/images/carone/business_partner2.webp';
+import carone1Partner3 from '../assets/images/carone/business_partner3.webp';
+import carone1Partner4 from '../assets/images/carone/business_partner4.webp';
+import carone1Partner5 from '../assets/images/carone/business_partner5.webp';
+import carone1Partner6 from '../assets/images/carone/business_partner6.webp';
+import carone1Partner7 from '../assets/images/carone/business_partner7.webp';
+import carone1Partner8 from '../assets/images/carone/business_partner8.webp';
+import carone2Partner1 from '../assets/images/carone2/business_partner1.webp';
+import carone2Partner2 from '../assets/images/carone2/business_partner2.webp';
+import carone2Partner3 from '../assets/images/carone2/business_partner3.webp';
+import carone2Partner4 from '../assets/images/carone2/business_partner4.webp';
+import carone2Partner5 from '../assets/images/carone2/business_partner5.webp';
+import carone2Partner6 from '../assets/images/carone2/business_partner6.webp';
+import carone2Partner7 from '../assets/images/carone2/business_partner7.webp';
 import ce1 from '../assets/images/ce/business_partner1.png';
 import ce2 from '../assets/images/ce/business_partner2.png';
 import ce3 from '../assets/images/ce/business_partner3.png';
 import ce4 from '../assets/images/ce/business_partner4.png';
 import ce5 from '../assets/images/ce/business_partner5.png';
 import ce6 from '../assets/images/ce/business_partner6.png';
-
 import image from '../assets/images/introContent/IntroContent1.webp'; // mock data
 
 import sg1 from '../assets/images/sg/business_partner1.png';
@@ -21,13 +35,30 @@ export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
     id: 2,
     title:
       '현대중공업, 삼성중공업, 대우조선해양, 르노코리아, BGF리테일(CU),부산신항국제터미널, LS전선, 부산식약청 등 약 2,000개소',
-    imageAddress: [image, image, image, image, image, image, image],
+    imageAddress: [
+      carone1Partner1,
+      carone1Partner2,
+      carone1Partner3,
+      carone1Partner4,
+      carone1Partner5,
+      carone1Partner6,
+      carone1Partner7,
+      carone1Partner8,
+    ],
   },
   CARONE2: {
     id: 3,
     title:
-      '재생드럼 생산업체, 금강페인트, 현대중공업, 삼성중공업, 한화오션, HJ중공업,대한조선, 현대삼호조선 등',
-    imageAddress: [image, image, image],
+      '재생드럼 생산업체, 금강페인트, 현대중공업, 삼성중공업, 한화오션, HJ중공업, 대한조선, 현대삼호조선 등',
+    imageAddress: [
+      carone2Partner1,
+      carone2Partner2,
+      carone2Partner3,
+      carone2Partner4,
+      carone2Partner5,
+      carone2Partner6,
+      carone2Partner7,
+    ],
   },
   SG: {
     id: 4,

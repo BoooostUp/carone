@@ -1,4 +1,4 @@
-import wasteImg from '../../../assets/images/carone/영업대상폐기물.png';
+import wasteImg from '../../../assets/images/carone/waste.webp';
 
 const CaroneBusinessWaste = () => {
   return (
