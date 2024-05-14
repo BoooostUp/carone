@@ -45,7 +45,7 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '폐기물 처리 Flow', link: 'process' },
   ],
   SI: [
-    { menu: '세정 사업 영역', link: 'cleaning' },
+    { menu: '세정 사업 영역', link: 'about' },
     { menu: '준설 사업 영역', link: 'dredging' },
     { menu: '하수관/횡주관 청소', link: 'pipe' },
   ],
