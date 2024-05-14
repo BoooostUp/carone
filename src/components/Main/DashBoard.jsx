@@ -5,6 +5,7 @@ import facility from '../../assets/images/dashboard/facility.gif';
 import dashboard1 from '../../assets/images/dashboard/recycle.gif';
 import recycle from '../../assets/images/dashboard/trash.gif';
 import theme from '../../styles/theme';
+import { media } from '../../styles/utils/mediaQuery';
 
 const DashBoard = () => {
   return (
@@ -49,7 +50,7 @@ const S = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     padding: 40px;
     background-color: ${({ theme }) => theme.color.white};
   `,
@@ -63,26 +64,35 @@ const S = {
     color: ${({ theme }) => theme.color.primary};
   `,
   Wrapper: styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
     gap: 40px;
     padding: 40px;
     justify-content: center;
     background-color: ${({ theme }) => theme.color.white};
+    ${media.desktop`
+     grid-template-columns: repeat(4, 1fr);
+    `}
   `,
   Container: styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 200px;
+    width: 150px;
     height: 300px;
+    text-align: center;
     gap: 10px;
     padding: 20px;
     background-color: ${({ theme }) => theme.color.white};
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    ${media.desktop`
+      width: 200px;
+      height: 300px;
+    `}
 
     &:hover {
       transform: translateY(-5px);
