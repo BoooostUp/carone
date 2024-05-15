@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from '../../styles/utils/mediaQuery';
 
@@ -13,7 +14,15 @@ const MainArticle = ({ currentCompany, item }) => {
 
   return (
     <S.Container $company={currentCompany}>
-      <S.Img src={imageAddress} />
+      {typeof id === 'string' ? (
+        <Link to={`/${id.toLowerCase()}`}>
+          <S.Img src={imageAddress} />
+        </Link>
+      ) : (
+        <Link to={`/${currentCompany.toLowerCase()}/business/about`}>
+          <S.Img src={imageAddress} />
+        </Link>
+      )}
       <S.ContentBox>
         <S.Title $companyTitle={id} $currentCompany={currentCompany}>
           {title1}
@@ -31,6 +40,7 @@ const MainArticle = ({ currentCompany, item }) => {
     </S.Container>
   );
 };
+
 export default MainArticle;
 
 const S = {
@@ -52,7 +62,7 @@ const S = {
         position: absolute;
         top: 0;
         left: 0;
-        opacity: 0.1;
+        opacity: 0.05;
         background-color: ${({ $company, theme }) => theme.color[$company]};
       }
     }
@@ -75,7 +85,7 @@ const S = {
     `}
   `,
   ContentBox: styled.div`
-    max-width: 44rem;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
@@ -91,17 +101,19 @@ const S = {
     color: ${({ theme, $companyTitle, $currentCompany }) =>
       $currentCompany === 'HOME'
         ? theme.color[$companyTitle]
-        : theme.color.mainGray};
+        : theme.color[$currentCompany]};
     ${({ theme }) => theme.font.FONT20B};
 
     ${media.desktop`
-    ${({ theme }) => theme.font.FONT24B};
+    ${({ theme }) => theme.font.FONT28B};
     `}
   `,
   Content: styled.pre`
     white-space: pre-line;
+    word-break: break-all;
+    overflow-wrap: break-word;
     color: ${({ theme }) => theme.color.deepGray};
-    ${({ theme }) => theme.font.FONT14};
+    ${({ theme }) => theme.font.FONT18};
   `,
   Img: styled.img`
     border-radius: 3rem;
@@ -116,6 +128,12 @@ const S = {
     ${media.desktop`
       width: 40rem;
       height: 28rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
     `}
   `,
 };
