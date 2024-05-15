@@ -69,7 +69,7 @@ export const CERTIFICATIONS = {
     ],
   },
   SI: {
-    certifications: [{ certification: totalRegister, title: 1 }],
+    certifications: [{ certification: totalRegister, title: '사업자등록증' }],
   },
   PATENTS: {
     certifications: [
