@@ -44,6 +44,11 @@ import total2Image4 from '/src/assets/images/total2/magnetic_separation.webp';
 // import siImage3 from '';
 // import siImage4 from '';
 
+import siImage1 from '/src/assets/images/si/siImage1.webp';
+import siImage2 from '/src/assets/images/si/siImage2.webp';
+import siImage3 from '/src/assets/images/si/siImage3.webp';
+import siImage4 from '/src/assets/images/si/siImage4.webp';
+
 export const MAIN_ARTICLE_CONTENTS = Object.freeze({
   HOME: [
     {
@@ -269,9 +274,30 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     },
   ],
   SI: [
-    { id: 1, title1: '(주)세명인텍', content1: '', imageAddress: '' },
-    { id: 2, title1: '사업 내용', content1: '', imageAddress: '' },
-    { id: 3, title1: '클리닝 세척', content1: '', imageAddress: '' },
-    { id: 4, title1: '작업 내역', content1: '', imageAddress: '' },
+    {
+      id: 1,
+      title1: '(주)세명인텍',
+      content1: `(주)세명인텍은 안전, 환경을 우선하는 기업으로 정직과 신뢰를 바탕으로 미래의 주도적인 기업을 창조합니다.
+    고객의 입장에서 고객이 만족할 때까지 최선을 다하겠습니다.`,
+      imageAddress: siImage1,
+    },
+    {
+      id: 2,
+      title1: '사업 내용',
+      content1: `열교환기, 반응기, 배관 세정, 슬러지 작업, TANK CLEANING, 철 구조물 제작 및 설치, 폐기물 수집 운반 등의 서비스를 제공합니다.`,
+      imageAddress: siImage3,
+    },
+    {
+      id: 3,
+      title1: '클리닝 세척',
+      content1: `소각로, 열교환기 세정, 촉매 제거, 배관 교체 및 전기공사 등 다양한 클리닝 세척 작업을 수행합니다.`,
+      imageAddress: siImage4,
+    },
+    {
+      id: 4,
+      title1: '작업 내역',
+      content1: `한솔 EME, 롯데정밀화학, 울진원자력발전소, S-OIL, POSCO 등 다양한 기업과 협력하여 환경 정화 작업을 진행합니다.`,
+      imageAddress: siImage2,
+    },
   ],
 });
