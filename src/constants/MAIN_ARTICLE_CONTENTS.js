@@ -4,10 +4,10 @@ import homeImage3 from '/src/assets/images/mainArticle/sg.webp';
 import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 import homeImage5 from '/src/assets/images/mainArticle/si.webp';
 
-import ceImage1 from '/src/assets/images/ce/main1.png';
+import ceImage1 from '/src/assets/images/ce/main1.webp';
 import ceImage2 from '/src/assets/images/ce/main2.png';
 import ceImage3 from '/src/assets/images/ce/main3.png';
-import ceImage4 from '/src/assets/images/ce/main4.png';
+import ceImage4 from '/src/assets/images/ce/main4.webp';
 
 import sgImage1 from '/src/assets/images/sg/main1.png';
 import sgImage2 from '/src/assets/images/sg/main2.png';
@@ -29,15 +29,15 @@ import carone2Image4 from '/src/assets/images/carone2/main4.webp';
 // import sgImage3 from '';
 // import sgImage4 from '';
 
-import total1Image1 from '/src/assets/images/total/total_factory.webp';
-import total1Image2 from '/src/assets/images/total/total_factory.webp';
-import total1Image3 from '/src/assets/images/total/total_factory.webp';
-import total1Image4 from '/src/assets/images/total/total_factory.webp';
+import total1Image1 from '/src/assets/images/total/main1.webp';
+import total1Image2 from '/src/assets/images/total/main2.webp';
+import total1Image3 from '/src/assets/images/total/main3.webp';
+import total1Image4 from '/src/assets/images/total/main4.webp';
 
-import total2Image1 from '/src/assets/images/total2/material.webp';
+import total2Image1 from '/src/assets/images/total2/main1.webp';
 import total2Image2 from '/src/assets/images/total2/shredding.webp';
-import total2Image3 from '/src/assets/images/total2/grinding.webp';
-import total2Image4 from '/src/assets/images/total2/magnetic_separation.webp';
+import total2Image3 from '/src/assets/images/total2/main3.webp';
+import total2Image4 from '/src/assets/images/total2/main4.webp';
 
 // import siImage1 from '';
 // import siImage2 from '';
@@ -130,9 +130,9 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
   CARONE1: [
     {
       id: 1,
-      title1: '석면운반/처리',
+      title1: '파쇄',
       content1:
-        '사업장에서 발생하는 석면 폐기물의 안전한 운반 및 처리 서비스를 제공합니다.',
+        '사업장에서 발생하는 폐기물의 안전하고 효율적인 파쇄 서비스를 제공합니다. 최신 장비와 전문 인력을 통해 폐기물을 신속하게 처리하여 환경 보호와 공간 절약에 기여합니다.',
       imageAddress: carone1Image1,
     },
     {
@@ -223,9 +223,9 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     },
     {
       id: 2,
-      title1: '유기용제 생산',
+      title1: '고온/소각',
       content1:
-        '화학 산업의 일부로, 다양한 산업 공정에서 사용되는 유기화학 제품을 제조하는 과정입니다.',
+        '다양한 산업 공정에서 발생하는 폐기물을 고온 소각하여 안전하고 효율적으로 처리하는 서비스를 제공합니다. 최첨단 소각 설비를 사용해 환경 오염을 최소화하고, 지속 가능한 폐기물 관리 솔루션을 제공합니다.',
       imageAddress: total1Image2,
     },
     {
