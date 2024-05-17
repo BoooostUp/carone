@@ -7,9 +7,9 @@ import caronePermission5 from '../../assets/images/certificates/carone/카원지
 import caronePermission6 from '../../assets/images/certificates/carone/카원지정폐기물수집운반업허가증.svg';
 import carone2Register from '../../assets/images/certificates/carone2/카원 2공장 - 사업자등록증.webp';
 import carone2Permission1 from '../../assets/images/certificates/carone2/카원 제2공장 - 종합재활용업허가증23.9.18, 변경허가-1.svg';
-import ceRegister from '../../assets/images/certificates/ce/ceRegister.svg';
-import cePermission1 from '../../assets/images/certificates/ce/자동차환경사업장폐기물배출자신고증명서202303-1.svg';
-import cePermission2 from '../../assets/images/certificates/ce/자동차환경폐기물처리계획확인증명서202303-01.svg';
+import cePermission1 from '../../assets/images/certificates/ce/ce1.webp';
+import cePermission2 from '../../assets/images/certificates/ce/ce2.webp';
+import ceRegister from '../../assets/images/certificates/ce/ceRegister.webp';
 import patent1 from '../../assets/images/certificates/patents/특허증 - 드럼통 세척 장치.webp';
 import patent2 from '../../assets/images/certificates/patents/특허증 - 트롬멜 선별기.webp';
 import patent3 from '../../assets/images/certificates/patents/특허증 - 폐수처리장치.webp';
@@ -69,7 +69,7 @@ export const CERTIFICATIONS = {
     ],
   },
   SI: {
-    certifications: [{ certification: totalRegister, title: '사업자등록증' }],
+    certifications: [],
   },
   PATENTS: {
     certifications: [
