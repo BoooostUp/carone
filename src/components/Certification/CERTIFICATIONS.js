@@ -55,6 +55,11 @@ export const CERTIFICATIONS = {
       { certification: totalPermission3, title: '중간처분폐기불지정-허가증' },
     ],
   },
+  TOTAL2: {
+    certifications: [
+      { certification: totalPermission1, title: '중간재활용업-허가증' },
+    ],
+  },
   CE: {
     certifications: [
       { certification: ceRegister, title: '사업자등록증' },

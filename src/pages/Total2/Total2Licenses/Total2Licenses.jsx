@@ -3,7 +3,7 @@ import CertificationComponent from '../../../components/Certification/Certificat
 function Total2Licenses() {
   return (
     <div>
-      <CertificationComponent company="CARONE" />
+      <CertificationComponent company="TOTAL2" />
     </div>
   );
 }
