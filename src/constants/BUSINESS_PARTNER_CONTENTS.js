@@ -20,8 +20,11 @@ import ce4 from '../assets/images/ce/business_partner4.png';
 import ce5 from '../assets/images/ce/business_partner5.png';
 import ce6 from '../assets/images/ce/business_partner6.png';
 import image from '../assets/images/introContent/IntroContent1.webp'; // mock data
-
 import sg1 from '../assets/images/sg/business_partner1.png';
+import si1 from '../assets/images/si/business_partner1.webp';
+import si2 from '../assets/images/si/business_partner2.webp';
+import si3 from '../assets/images/si/business_partner3.webp';
+import si4 from '../assets/images/si/business_partner4.webp';
 
 export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
   CE: {
@@ -80,6 +83,6 @@ export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
   SI: {
     id: 7,
     title: 'POSCO, SK가스, SK FCC 2공장, 태광산업, KPS울산사업소, 울산화력 등',
-    imageAddress: [image, image, image],
+    imageAddress: [si1, si2, si3, si4],
   },
 });
