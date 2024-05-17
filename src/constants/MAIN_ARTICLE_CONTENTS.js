@@ -130,14 +130,14 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
   CARONE1: [
     {
       id: 1,
-      title1: '파쇄',
+      title1: '사업장폐기물 수집/운반',
       content1:
-        '사업장에서 발생하는 폐기물의 안전하고 효율적인 파쇄 서비스를 제공합니다. 최신 장비와 전문 인력을 통해 폐기물을 신속하게 처리하여 환경 보호와 공간 절약에 기여합니다.',
+        '사업장에서 발생하는 폐기물의 안전하고 효율적인 수집 및 운반 서비스를 제공합니다. 최신 장비와 전문 인력을 통해 폐기물을 신속하게 수거하고 운반하여 환경 보호와 공간 절약에 기여합니다.',
       imageAddress: carone1Image1,
     },
     {
       id: 2,
-      title1: '고철운반/처리',
+      title1: '고철 운반/처리',
       content1:
         '사업장에서 발생하는 고철 폐기물의 안전한 운반 및 처리 서비스를 제공합니다.',
       imageAddress: carone1Image2,
