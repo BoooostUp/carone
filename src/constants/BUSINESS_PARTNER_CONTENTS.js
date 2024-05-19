@@ -20,8 +20,23 @@ import ce4 from '../assets/images/ce/business_partner4.png';
 import ce5 from '../assets/images/ce/business_partner5.png';
 import ce6 from '../assets/images/ce/business_partner6.png';
 import image from '../assets/images/introContent/IntroContent1.webp'; // mock data
-
 import sg1 from '../assets/images/sg/business_partner1.png';
+import total1 from '../assets/images/total/business_partner1.webp';
+import total2 from '../assets/images/total/business_partner2.webp';
+import total3 from '../assets/images/total/business_partner3.webp';
+import total4 from '../assets/images/total/business_partner4.webp';
+import total5 from '../assets/images/total/business_partner5.webp';
+import total6 from '../assets/images/total/business_partner6.webp';
+import total7 from '../assets/images/total/business_partner7.webp';
+import total8 from '../assets/images/total/business_partner8.webp';
+import total9 from '../assets/images/total/business_partner9.webp';
+import total21 from '../assets/images/total2/business_partner1.webp';
+import total22 from '../assets/images/total2/business_partner2.webp';
+import total23 from '../assets/images/total2/business_partner3.webp';
+import total24 from '../assets/images/total2/business_partner4.webp';
+import total25 from '../assets/images/total2/business_partner5.webp';
+import total26 from '../assets/images/total2/business_partner6.webp';
+import total27 from '../assets/images/total2/business_partner7.webp';
 
 export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
   CE: {
@@ -69,13 +84,31 @@ export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
     id: 5,
     title:
       '현대자동차, 현대제철, SKPIC글로벌, SKPU코어, 한국무브넥스, 대륙금속,고려제강, 삼성전기, 울산대학교병원 등',
-    imageAddress: [image, image, image],
+    imageAddress: [
+      total1,
+      total2,
+      total3,
+      total4,
+      total5,
+      total6,
+      total7,
+      total8,
+      total9,
+    ],
   },
   TOTAL2: {
     id: 6,
     title:
-      '재생드럼 생산업체, 금강페인트, 현대중공업, 삼성중공업, 한화오션, HJ중공업,대한조선, 현대삼호조선 등',
-    imageAddress: [image, image, image],
+      '재생드럼 생산업체, 금강페인트, 현대중공업, 삼성중공업, 한화오션, HJ중공업, 대한조선, 현대삼호조선 등',
+    imageAddress: [
+      total21,
+      total22,
+      total23,
+      total24,
+      total25,
+      total26,
+      total27,
+    ],
   },
   SI: {
     id: 7,
