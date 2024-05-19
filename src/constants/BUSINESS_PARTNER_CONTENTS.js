@@ -13,14 +13,22 @@ import carone2Partner4 from '../assets/images/carone2/business_partner4.webp';
 import carone2Partner5 from '../assets/images/carone2/business_partner5.webp';
 import carone2Partner6 from '../assets/images/carone2/business_partner6.webp';
 import carone2Partner7 from '../assets/images/carone2/business_partner7.webp';
-import ce1 from '../assets/images/ce/business_partner1.png';
-import ce2 from '../assets/images/ce/business_partner2.png';
-import ce3 from '../assets/images/ce/business_partner3.png';
-import ce4 from '../assets/images/ce/business_partner4.png';
-import ce5 from '../assets/images/ce/business_partner5.png';
-import ce6 from '../assets/images/ce/business_partner6.png';
-import image from '../assets/images/introContent/IntroContent1.webp'; // mock data
-import sg1 from '../assets/images/sg/business_partner1.png';
+
+import ce1 from '../assets/images/ce/business_partner1.webp';
+import ce10 from '../assets/images/ce/business_partner10.webp';
+import ce2 from '../assets/images/ce/business_partner2.webp';
+import ce3 from '../assets/images/ce/business_partner3.webp';
+import ce4 from '../assets/images/ce/business_partner4.webp';
+import ce5 from '../assets/images/ce/business_partner5.webp';
+import ce6 from '../assets/images/ce/business_partner6.webp';
+import ce7 from '../assets/images/ce/business_partner7.webp';
+import ce8 from '../assets/images/ce/business_partner8.webp';
+import ce9 from '../assets/images/ce/business_partner9.webp';
+
+import sg1 from '../assets/images/sg/business_partner1.webp';
+import sg2 from '../assets/images/sg/business_partner2.webp';
+import sg3 from '../assets/images/sg/business_partner3.webp';
+import sg4 from '../assets/images/sg/business_partner4.webp';
 
 import si1 from '../assets/images/si/business_partner1.webp';
 import si2 from '../assets/images/si/business_partner2.webp';
@@ -44,13 +52,12 @@ import total25 from '../assets/images/total2/business_partner5.webp';
 import total26 from '../assets/images/total2/business_partner6.webp';
 import total27 from '../assets/images/total2/business_partner7.webp';
 
-
 export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
   CE: {
     id: 1,
     title:
-      '현대블루핸즈, 한국지엠, GM대우바로정비, SK내트럭하우스, 르노코리아,기아 등 약 1000개소',
-    imageAddress: [ce1, ce2, ce3, ce4, ce5, ce6],
+      '현대블루핸즈, 한국지엠, GM대우바로정비, SK내트럭하우스, 르노코리아, 기아, BMW, 벤츠, 마세라티, 폭스바겐 등 약 1000개소',
+    imageAddress: [ce1, ce2, ce3, ce4, ce5, ce6, ce7, ce8, ce9, ce10],
   },
 
   CARONE1: {
@@ -85,7 +92,7 @@ export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
   SG: {
     id: 4,
     title: '(주)동신화학, 신성메탈(주), (주)협성이피에스, (주)태산개발',
-    imageAddress: [sg1],
+    imageAddress: [sg1, sg2, sg3, sg4],
   },
   TOTAL1: {
     id: 5,
