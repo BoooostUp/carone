@@ -89,6 +89,7 @@ const S = {
     gap: 1rem;
     width: 100%;
     margin-bottom: 8rem;
+    cursor: pointer;
 
     @media (max-width: 767px) {
       margin-bottom: 5rem;
