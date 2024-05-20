@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const theme = Object.freeze({
   color: {
-    //회사별 대표 색
+    //회사별 대표 색입니다
     CE: '#8CC747',
     CARONE: '#F6B436',
     CARONE2: '#F6B436',
