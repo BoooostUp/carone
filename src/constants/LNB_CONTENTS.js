@@ -12,7 +12,7 @@ export const LNB_CONTENTS = Object.freeze({
   License2: [{ menu: '인증서', link: 'certification' }],
   HOME: [
     { menu: '채용 절차', link: 'process' },
-    { menu: '입사지원', link: 'apply' },
+    // { menu: '입사지원', link: 'apply' },
   ],
   CE: [
     { menu: '사업 분야', link: 'about' },

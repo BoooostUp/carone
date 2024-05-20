@@ -28,12 +28,12 @@ const Footer = ({ company }) => {
         {FOOTER_CONTENTS[company].info.map((info, index) => {
           return (
             <S.InfoWrapper key={index}>
-              <p>{info.address}</p>
+              <S.Tel>{info.address}</S.Tel>
               <S.TelFaxWrapper
                 $companyName={FOOTER_CONTENTS[company].companyName}
               >
-                <p>{info.tel}</p>
-                <p>{info.fax}</p>
+                <S.Tel>{info.tel}</S.Tel>
+                <S.Tel>{info.fax}</S.Tel>
               </S.TelFaxWrapper>
             </S.InfoWrapper>
           );
@@ -67,7 +67,7 @@ const S = {
   `,
 
   Subtitle: styled.div`
-    ${({ theme }) => theme.font.FONT}
+    ${({ theme }) => theme.font.FONT16}
   `,
 
   InfoWrapper: styled.div`
@@ -81,6 +81,10 @@ const S = {
         flex-direction: row;
         justify-content: start;
     `};
+  `,
+
+  Tel: styled.div`
+    ${({ theme }) => theme.font.FONT16}
   `,
 
   MainWrapper: styled.div`
