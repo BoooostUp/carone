@@ -1,7 +1,7 @@
 export const GNB_CONTENTS = Object.freeze({
   HOME: {
-    title: '에너지스토리',
-    subTitle: 'Energy Story',
+    title: '99%',
+    subTitle: '99%를 자원으로..',
     link: '/home',
   },
   CE: {
