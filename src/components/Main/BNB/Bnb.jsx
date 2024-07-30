@@ -74,7 +74,7 @@ const Bnb = ({ company }) => {
         status={buttonStatus.CARONE}
         onClick={() => handleClick('CARONE')}
       >
-        (주)카원
+        (유)카원
       </BnbButton>
       <BnbButton
         variant="sg"
