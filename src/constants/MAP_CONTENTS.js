@@ -1,9 +1,13 @@
-import ceImage from '/src/assets/images/map/CE_CARONE_SG.webp';
-import sgImage from '/src/assets/images/map/CE_CARONE_SG.webp';
-import siImage from '/src/assets/images/map/TOTAL_SI.webp';
-import totalImage from '/src/assets/images/map/TOTAL_SI.webp';
-import caroneImage from '/src/assets/images/map/CE_CARONE_SG.webp';
 import carone2Image from '/src/assets/images/map/CARONE2.webp';
+import {
+  default as caroneImage,
+  default as ceImage,
+  default as sgImage,
+} from '/src/assets/images/map/CE_CARONE_SG.webp';
+import {
+  default as siImage,
+  default as totalImage,
+} from '/src/assets/images/map/TOTAL_SI.webp';
 
 export const MAP_CONTENTS = Object.freeze({
   CE: {
@@ -46,6 +50,13 @@ export const MAP_CONTENTS = Object.freeze({
     address: '경상남도 양산시 상북면 수서로 503-104',
     tel: '055. 381. 0703',
     fax: '055. 384. 0703',
+    imageSrc: carone2Image,
+  },
+  HJ: {
+    name: '(주)황지',
+    address: '울산광역시 남구 용연로 179번길 18',
+    tel: '052. 256. 0207',
+    fax: '052. 256. 0209',
     imageSrc: carone2Image,
   },
 });

@@ -55,6 +55,11 @@ export const GNB_CONTENTS = Object.freeze({
     },
     link: '/carone2',
   },
+  HJ: {
+    title: '(주)황지',
+    subTitle: '안정적이고 위생적인 매립시설',
+    link: '/hj',
+  },
 
   HOME_MENU_LIST: [
     {

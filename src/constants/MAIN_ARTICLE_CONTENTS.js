@@ -1,8 +1,8 @@
-import homeImage1 from '/src/assets/images/mainArticle/ce.webp';
 import homeImage2 from '/src/assets/images/mainArticle/carone.webp';
+import homeImage1 from '/src/assets/images/mainArticle/ce.webp';
 import homeImage3 from '/src/assets/images/mainArticle/sg.webp';
-import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 import homeImage5 from '/src/assets/images/mainArticle/si.webp';
+import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 
 import ceImage1 from '/src/assets/images/ce/main1.webp';
 import ceImage2 from '/src/assets/images/ce/main2.png';
@@ -35,9 +35,9 @@ import total1Image3 from '/src/assets/images/total/main3.webp';
 import total1Image4 from '/src/assets/images/total/main4.webp';
 
 import total2Image1 from '/src/assets/images/total2/main1.webp';
-import total2Image2 from '/src/assets/images/total2/shredding.webp';
 import total2Image3 from '/src/assets/images/total2/main3.webp';
 import total2Image4 from '/src/assets/images/total2/main4.webp';
+import total2Image2 from '/src/assets/images/total2/shredding.webp';
 
 // import siImage1 from '';
 // import siImage2 from '';
@@ -297,6 +297,32 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       id: 4,
       title1: '작업 내역',
       content1: `한솔 EME, 롯데정밀화학, 울진원자력발전소, S-OIL, POSCO 등 다양한 기업과 협력하여 환경 정화 작업을 진행합니다.`,
+      imageAddress: siImage2,
+    },
+  ],
+  HJ: [
+    {
+      id: 1,
+      title1: '(주)황지',
+      content1: `(주)황지는 최신의 안정적이고 위생적인 매립시설을 갖춘 사업장폐기물 최종 처분 업체입니다.`,
+      imageAddress: siImage1,
+    },
+    {
+      id: 2,
+      title1: '사업 내용',
+      content1: ``,
+      imageAddress: siImage3,
+    },
+    {
+      id: 3,
+      title1: '클리닝 세척',
+      content1: ``,
+      imageAddress: siImage4,
+    },
+    {
+      id: 4,
+      title1: '작업 내역',
+      content1: ``,
       imageAddress: siImage2,
     },
   ],

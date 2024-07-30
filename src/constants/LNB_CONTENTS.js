@@ -49,4 +49,9 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '준설 사업 영역', link: 'dredging' },
     { menu: '하수관/횡주관 청소', link: 'pipe' },
   ],
+  HJ: [
+    { menu: '사업 분야', link: 'about' },
+    { menu: '영업대상 폐기물', link: 'waste' },
+    { menu: '폐기물 처리 Flow', link: 'process' },
+  ],
 });

@@ -90,4 +90,15 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
+  HJ: {
+    companyName: '(주)황지',
+    subtitle: '최고의 기술로 최적의 매립시설을 갖춘 기업',
+    info: [
+      {
+        address: '울산광역시 남구 용연로 179번길 18',
+        tel: 'TEL 052-256-0207',
+        fax: 'FAX 052-256-0209',
+      },
+    ],
+  },
 };
