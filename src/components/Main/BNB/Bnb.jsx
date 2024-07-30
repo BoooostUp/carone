@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import BnbButton from './BnbButton';
 import { media } from '../../../styles/utils/mediaQuery';
+import BnbButton from './BnbButton';
 
 //TODO: Change initialState all false
 const Bnb = ({ company }) => {
@@ -35,7 +35,7 @@ const Bnb = ({ company }) => {
     });
     // Navigate to the designated path
     const pathMapping = {
-      HOME: '/home',
+      HOME: '/',
       CE: '/ce',
       CARONE: '/carone',
       SG: '/sg',
