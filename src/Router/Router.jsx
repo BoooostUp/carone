@@ -2,18 +2,18 @@ import { createBrowserRouter } from 'react-router-dom';
 import Carone from '../pages/Carone/Carone';
 import Carone2 from '../pages/Carone2/Carone2';
 import Ce from '../pages/Ce/Ce';
+import Es from '../pages/Es/Es';
 import Home from '../pages/Home/Home';
 import Sg from '../pages/Sg/Sg';
 import Si from '../pages/Si/Si';
 import Total from '../pages/Total/Total';
-import Total2 from '../pages/Total2/Total2';
 import { Carone2Routes } from './Carone2Routes';
 import { CaroneRoutes } from './CaroneRoutes';
 import { CeRoutes } from './CeRoutes';
+import { EsRoutes } from './EsRoutes';
 import { HomeRoutes } from './HomeRoutes';
 import { SgRoutes } from './SgRoutes';
 import { SiRoutes } from './SiRoutes';
-import { Total2Routes } from './Total2Routes';
 import { TotalRoutes } from './TotalRoutes';
 
 const Router = createBrowserRouter([
@@ -48,14 +48,14 @@ const Router = createBrowserRouter([
     children: [...TotalRoutes],
   },
   {
-    path: '/total2',
-    element: <Total2 />,
-    children: [...Total2Routes],
-  },
-  {
     path: '/si',
     element: <Si />,
     children: [...SiRoutes],
+  },
+  {
+    path: '/es',
+    element: <Es />,
+    children: [...EsRoutes],
   },
 ]);
 

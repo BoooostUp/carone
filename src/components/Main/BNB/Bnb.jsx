@@ -15,6 +15,7 @@ const Bnb = ({ company }) => {
     SG: company === 'SG',
     TOTAL: company === 'TOTAL',
     SI: company === 'SI',
+    ES: company === 'ES',
   };
 
   const [buttonStatus, setButtonStatus] = useState(initialState);
@@ -41,6 +42,7 @@ const Bnb = ({ company }) => {
       SG: '/sg',
       TOTAL: '/total',
       SI: '/si',
+      ES: '/es',
     };
 
     // Navigate to the designated path based on button name
@@ -96,6 +98,13 @@ const Bnb = ({ company }) => {
         onClick={() => handleClick('SI')}
       >
         (주)세명인텍
+      </BnbButton>
+      <BnbButton
+        variant="es"
+        status={buttonStatus.ES}
+        onClick={() => handleClick('ES')}
+      >
+        (주)에너지스토리
       </BnbButton>
     </S.ButtonWrapper>
   );

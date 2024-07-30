@@ -1,9 +1,13 @@
-import ceImage from '/src/assets/images/map/CE_CARONE_SG.webp';
-import sgImage from '/src/assets/images/map/CE_CARONE_SG.webp';
-import siImage from '/src/assets/images/map/TOTAL_SI.webp';
-import totalImage from '/src/assets/images/map/TOTAL_SI.webp';
-import caroneImage from '/src/assets/images/map/CE_CARONE_SG.webp';
 import carone2Image from '/src/assets/images/map/CARONE2.webp';
+import {
+  default as caroneImage,
+  default as ceImage,
+  default as sgImage,
+} from '/src/assets/images/map/CE_CARONE_SG.webp';
+import {
+  default as siImage,
+  default as totalImage,
+} from '/src/assets/images/map/TOTAL_SI.webp';
 
 export const MAP_CONTENTS = Object.freeze({
   CE: {
@@ -48,4 +52,6 @@ export const MAP_CONTENTS = Object.freeze({
     fax: '055. 384. 0703',
     imageSrc: carone2Image,
   },
+  //TODO: 에너지스토리 정보 기입
+  ES: { name: '', address: '', tel: '', fax: '', imageSrc: '' },
 });

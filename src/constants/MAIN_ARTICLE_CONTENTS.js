@@ -1,8 +1,8 @@
-import homeImage1 from '/src/assets/images/mainArticle/ce.webp';
 import homeImage2 from '/src/assets/images/mainArticle/carone.webp';
+import homeImage1 from '/src/assets/images/mainArticle/ce.webp';
 import homeImage3 from '/src/assets/images/mainArticle/sg.webp';
-import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 import homeImage5 from '/src/assets/images/mainArticle/si.webp';
+import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 
 import ceImage1 from '/src/assets/images/ce/main1.webp';
 import ceImage2 from '/src/assets/images/ce/main2.png';
@@ -33,11 +33,6 @@ import total1Image1 from '/src/assets/images/total/main1.webp';
 import total1Image2 from '/src/assets/images/total/main2.webp';
 import total1Image3 from '/src/assets/images/total/main3.webp';
 import total1Image4 from '/src/assets/images/total/main4.webp';
-
-import total2Image1 from '/src/assets/images/total2/main1.webp';
-import total2Image2 from '/src/assets/images/total2/shredding.webp';
-import total2Image3 from '/src/assets/images/total2/main3.webp';
-import total2Image4 from '/src/assets/images/total2/main4.webp';
 
 // import siImage1 from '';
 // import siImage2 from '';
@@ -243,36 +238,7 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       imageAddress: total1Image4,
     },
   ],
-  TOTAL2: [
-    {
-      id: 1,
-      title1: '원료입고 및 보관',
-      content1:
-        ' 제조 과정에서 필요한 원료를 안전하게 수령하고, 적절한 조건에서 저장하여 품질을 유지하는 활동입니다.',
-      imageAddress: total2Image1,
-    },
-    {
-      id: 2,
-      title1: '파쇄',
-      content1:
-        '재활용 과정에서 대형 폐기물을 작은 조각으로 쪼개어 처리 용이성을 높이는 과정으로, 이는 재활용 효율을 개선하고 추가 처리 과정을 용이하게 합니다.',
-      imageAddress: total2Image2,
-    },
-    {
-      id: 3,
-      title1: '분쇄',
-      content1:
-        '고체 재료를 더 작은 입자로 만드는 과정으로, 화학 반응의 표면적을 늘리거나, 특정 제품의 생산을 위해 사용됩니다.',
-      imageAddress: total2Image3,
-    },
-    {
-      id: 4,
-      title1: '마그네틱 선별',
-      content1:
-        '자성을 이용하여 혼합물에서 철과 같은 자성 금속을 분리하는 과정으로, 재활용 산업에서 폐기물에서 가치 있는 재료를 회수하는 데 중요한 역할을 합니다.',
-      imageAddress: total2Image4,
-    },
-  ],
+
   SI: [
     {
       id: 1,
@@ -298,6 +264,33 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       title1: '작업 내역',
       content1: `한솔 EME, 롯데정밀화학, 울진원자력발전소, S-OIL, POSCO 등 다양한 기업과 협력하여 환경 정화 작업을 진행합니다.`,
       imageAddress: siImage2,
+    },
+  ],
+  //TODO: 에너지스토리 정보 기입
+  ES: [
+    {
+      id: 1,
+      title1: '(주)에너지스토리',
+      content1: '',
+      imageAddress: '',
+    },
+    {
+      id: 2,
+      title1: '',
+      content1: '',
+      imageAddress: '',
+    },
+    {
+      id: 3,
+      title1: '',
+      content1: '',
+      imageAddress: '',
+    },
+    {
+      id: 4,
+      title1: '',
+      content1: '',
+      imageAddress: '',
     },
   ],
 });
