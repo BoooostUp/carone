@@ -26,12 +26,12 @@ const Total = () => {
         isMain={isMain}
         page={selectedCategory}
       />
+      <Bnb company="TOTAL" />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
-        <Bnb company="TOTAL" />
         <Footer company="TOTAL" />
       </S.BnBFooterContainer>
     </S.PageContainer>
