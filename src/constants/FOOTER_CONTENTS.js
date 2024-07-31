@@ -91,4 +91,3 @@ export const FOOTER_CONTENTS = {
     ],
   },
 };
-f;
