@@ -51,8 +51,8 @@ export const CERTIFICATIONS = {
     certifications: [
       { certification: totalRegister, title: '사업자 등록증' },
       { certification: totalPermission1, title: '중간재활용업-허가증' },
-      { certification: totalPermission2, title: '중간처분폐기불-허가증' },
-      { certification: totalPermission3, title: '중간처분폐기불지정-허가증' },
+      { certification: totalPermission2, title: '중간처분폐기물-허가증' },
+      { certification: totalPermission3, title: '중간처분폐기물지정-허가증' },
     ],
   },
   CE: {

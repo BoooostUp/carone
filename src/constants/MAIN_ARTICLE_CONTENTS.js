@@ -24,11 +24,6 @@ import carone2Image2 from '/src/assets/images/carone2/main2.webp';
 import carone2Image3 from '/src/assets/images/carone2/main3.webp';
 import carone2Image4 from '/src/assets/images/carone2/main4.webp';
 
-// import sgImage1 from '';
-// import sgImage2 from '';
-// import sgImage3 from '';
-// import sgImage4 from '';
-
 import total1Image1 from '/src/assets/images/total/main1.webp';
 import total1Image2 from '/src/assets/images/total/main2.webp';
 import total1Image3 from '/src/assets/images/total/main3.webp';
@@ -56,11 +51,11 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     },
     {
       id: 'CARONE',
-      title1: '(주)카원 1공장',
-      title2: '(주)카원 2공장',
+      title1: '(유)카원 1공장',
+      title2: '(유)카원 2공장',
       content1:
-        '(주)카원은 폐기물 수집·운반업을 중점으로 모든 사업장폐기물을 수집운반하며, 재활용업까지 사업분야를 넓혀 폐기물을 자원으로 최대한 활용합니다.',
-      content2: `(주)카원 제 2공장은 기존에 소각으로 처리하던 용기류(폐페인트칩, 폐유드럼통)를 파쇄 분쇄하여 원자재 고철로 생산하는 재활용업입니다.
+        '(유)카원은 폐기물 수집·운반업을 중점으로 모든 사업장폐기물을 수집운반하며, 재활용업까지 사업분야를 넓혀 폐기물을 자원으로 최대한 활용합니다.',
+      content2: `(유)카원 제 2공장은 기존에 소각으로 처리하던 용기류(폐페인트칩, 폐유드럼통)를 파쇄 분쇄하여 원자재 고철로 생산하는 재활용업입니다.
         
         폐기물이 99.9%의 자원으로 재활용될 때까지 최선을 다하겠습니다.`,
       imageAddress: homeImage2,
