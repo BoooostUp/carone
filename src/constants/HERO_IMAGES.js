@@ -105,4 +105,18 @@ export const HERO_IMAGES = Object.freeze({
     certification: certification,
     patent: certification,
   },
+  //TODO: 황지 정보 기입
+  HJ: {
+    total: total,
+    ceo: totalCeo,
+    history: totalCeo,
+    location: totalCeo,
+    'business-partner': totalCeo,
+    about: about,
+    waste: about,
+    process: about,
+    facilities: about,
+    certification: certification,
+    patent: certification,
+  },
 });

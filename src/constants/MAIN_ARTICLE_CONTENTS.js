@@ -256,6 +256,7 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       imageAddress: siImage2,
     },
   ],
+  //TODO: 황지 정보 기입
   HJ: [
     {
       id: 1,

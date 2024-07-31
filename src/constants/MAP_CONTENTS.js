@@ -52,6 +52,7 @@ export const MAP_CONTENTS = Object.freeze({
     fax: '055. 384. 0703',
     imageSrc: carone2Image,
   },
+  //TODO: 황지 정보 기입
   HJ: {
     name: '(주)황지',
     address: '울산광역시 남구 용연로 179번길 18',

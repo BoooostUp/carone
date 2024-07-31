@@ -42,6 +42,7 @@ export const GNB_CONTENTS = Object.freeze({
     },
     link: '/carone2',
   },
+  //TODO: 황지 정보 기입
   HJ: {
     title: '(주)황지',
     subTitle: '안정적이고 위생적인 매립시설',

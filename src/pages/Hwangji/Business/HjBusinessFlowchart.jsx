@@ -1,5 +1,6 @@
 import processImg from '../../../assets/images/sg/businessFlowchart.png';
 
+//TODO: 황지 정보 기입
 function HjBusinessFlowchart() {
   return (
     <div>

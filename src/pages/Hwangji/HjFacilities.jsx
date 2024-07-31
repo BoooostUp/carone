@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import sgFacilities from '../../assets/images/facilities/sgFacilities.png';
 
 function HjFacilities() {
+  //TODO: 황지 정보 기입
   return (
     <S.Container>
-      <S.Image src={sgFacilities} alt="카원 보유 설비" />
+      <S.Image src={sgFacilities} alt="황지 보유 설비" />
     </S.Container>
   );
 }

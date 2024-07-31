@@ -1,5 +1,6 @@
 import processImg from '../../../assets/images/sg/businessWaste.png';
 
+//TODO: 황지 정보 기입
 function HjBusinessWaste() {
   return (
     <div>

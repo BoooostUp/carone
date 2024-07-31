@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import img from '../../../assets/images/ce/businessAbout.png';
 
-function CeBusinessAbout() {
+//TODO: 황지 정보 기입
+function HjBusinessAbout() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -13,4 +14,4 @@ function CeBusinessAbout() {
   );
 }
 
-export default CeBusinessAbout;
+export default HjBusinessAbout;
