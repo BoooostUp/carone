@@ -26,12 +26,12 @@ const Sg = () => {
         isMain={isMain}
         page={selectedCategory}
       />
+      <Bnb company="SG" />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
-        <Bnb company="SG" />
         <Footer company="SG" />
       </S.BnBFooterContainer>
     </S.PageContainer>

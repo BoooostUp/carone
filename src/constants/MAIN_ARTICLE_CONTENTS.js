@@ -24,25 +24,10 @@ import carone2Image2 from '/src/assets/images/carone2/main2.webp';
 import carone2Image3 from '/src/assets/images/carone2/main3.webp';
 import carone2Image4 from '/src/assets/images/carone2/main4.webp';
 
-// import sgImage1 from '';
-// import sgImage2 from '';
-// import sgImage3 from '';
-// import sgImage4 from '';
-
 import total1Image1 from '/src/assets/images/total/main1.webp';
 import total1Image2 from '/src/assets/images/total/main2.webp';
 import total1Image3 from '/src/assets/images/total/main3.webp';
 import total1Image4 from '/src/assets/images/total/main4.webp';
-
-import total2Image1 from '/src/assets/images/total2/main1.webp';
-import total2Image3 from '/src/assets/images/total2/main3.webp';
-import total2Image4 from '/src/assets/images/total2/main4.webp';
-import total2Image2 from '/src/assets/images/total2/shredding.webp';
-
-// import siImage1 from '';
-// import siImage2 from '';
-// import siImage3 from '';
-// import siImage4 from '';
 
 import siImage1 from '/src/assets/images/si/siImage1.webp';
 import siImage2 from '/src/assets/images/si/siImage2.webp';
@@ -61,11 +46,11 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
     },
     {
       id: 'CARONE',
-      title1: '(주)카원 1공장',
-      title2: '(주)카원 2공장',
+      title1: '(유)카원 1공장',
+      title2: '(유)카원 2공장',
       content1:
-        '(주)카원은 폐기물 수집·운반업을 중점으로 모든 사업장폐기물을 수집운반하며, 재활용업까지 사업분야를 넓혀 폐기물을 자원으로 최대한 활용합니다.',
-      content2: `(주)카원 제 2공장은 기존에 소각으로 처리하던 용기류(폐페인트칩, 폐유드럼통)를 파쇄 분쇄하여 원자재 고철로 생산하는 재활용업입니다.
+        '(유)카원은 폐기물 수집·운반업을 중점으로 모든 사업장폐기물을 수집운반하며, 재활용업까지 사업분야를 넓혀 폐기물을 자원으로 최대한 활용합니다.',
+      content2: `(유)카원 제 2공장은 기존에 소각으로 처리하던 용기류(폐페인트칩, 폐유드럼통)를 파쇄 분쇄하여 원자재 고철로 생산하는 재활용업입니다.
         
         폐기물이 99.9%의 자원으로 재활용될 때까지 최선을 다하겠습니다.`,
       imageAddress: homeImage2,
@@ -243,36 +228,7 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       imageAddress: total1Image4,
     },
   ],
-  TOTAL2: [
-    {
-      id: 1,
-      title1: '원료입고 및 보관',
-      content1:
-        ' 제조 과정에서 필요한 원료를 안전하게 수령하고, 적절한 조건에서 저장하여 품질을 유지하는 활동입니다.',
-      imageAddress: total2Image1,
-    },
-    {
-      id: 2,
-      title1: '파쇄',
-      content1:
-        '재활용 과정에서 대형 폐기물을 작은 조각으로 쪼개어 처리 용이성을 높이는 과정으로, 이는 재활용 효율을 개선하고 추가 처리 과정을 용이하게 합니다.',
-      imageAddress: total2Image2,
-    },
-    {
-      id: 3,
-      title1: '분쇄',
-      content1:
-        '고체 재료를 더 작은 입자로 만드는 과정으로, 화학 반응의 표면적을 늘리거나, 특정 제품의 생산을 위해 사용됩니다.',
-      imageAddress: total2Image3,
-    },
-    {
-      id: 4,
-      title1: '마그네틱 선별',
-      content1:
-        '자성을 이용하여 혼합물에서 철과 같은 자성 금속을 분리하는 과정으로, 재활용 산업에서 폐기물에서 가치 있는 재료를 회수하는 데 중요한 역할을 합니다.',
-      imageAddress: total2Image4,
-    },
-  ],
+
   SI: [
     {
       id: 1,
@@ -324,6 +280,33 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       title1: '작업 내역',
       content1: ``,
       imageAddress: siImage2,
+    },
+  ],
+  //TODO: 에너지스토리 정보 기입
+  ES: [
+    {
+      id: 1,
+      title1: '(주)에너지스토리',
+      content1: '',
+      imageAddress: '',
+    },
+    {
+      id: 2,
+      title1: '',
+      content1: '',
+      imageAddress: '',
+    },
+    {
+      id: 3,
+      title1: '',
+      content1: '',
+      imageAddress: '',
+    },
+    {
+      id: 4,
+      title1: '',
+      content1: '',
+      imageAddress: '',
     },
   ],
 });

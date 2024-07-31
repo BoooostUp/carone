@@ -39,11 +39,6 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '영업대상 폐기물', link: 'waste' },
     { menu: '폐기물 처리 Flow', link: 'process' },
   ],
-  TOTAL2: [
-    { menu: '사업 분야', link: 'about' },
-    { menu: '영업대상 폐기물', link: 'waste' },
-    { menu: '폐기물 처리 Flow', link: 'process' },
-  ],
   SI: [
     { menu: '세정 사업 영역', link: 'about' },
     { menu: '준설 사업 영역', link: 'dredging' },
@@ -53,5 +48,11 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '사업 분야', link: 'about' },
     { menu: '영업대상 폐기물', link: 'waste' },
     { menu: '폐기물 처리 Flow', link: 'process' },
+  ],
+  //TODO: 에너지스토리 정보 기입
+  ES: [
+    { menu: '', link: '' },
+    { menu: '', link: '' },
+    { menu: '', link: '' },
   ],
 });

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { media } from '../../../styles/utils/mediaQuery';
+import DropDown from '../DropDown';
 import BnbButton from './BnbButton';
 
 //TODO: Change initialState all false
@@ -16,9 +16,11 @@ const Bnb = ({ company }) => {
     TOTAL: company === 'TOTAL',
     SI: company === 'SI',
     HJ: company === 'HJ',
+    ES: company === 'ES',
   };
 
   const [buttonStatus, setButtonStatus] = useState(initialState);
+  const [isMobileSize, setIsMobileSize] = useState(window.innerWidth < 768);
 
   const handleClick = (buttonName) => {
     // Update the status of the button
@@ -36,13 +38,14 @@ const Bnb = ({ company }) => {
     });
     // Navigate to the designated path
     const pathMapping = {
-      HOME: '/home',
+      HOME: '/',
       CE: '/ce',
       CARONE: '/carone',
       SG: '/sg',
       TOTAL: '/total',
       SI: '/si',
       HJ: '/hj',
+      ES: '/es',
     };
 
     // Navigate to the designated path based on button name
@@ -51,11 +54,23 @@ const Bnb = ({ company }) => {
       navigate(path);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileSize(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
+  return isMobileSize ? (
+    <DropDown handleClick={handleClick} buttonStatus={buttonStatus} />
+  ) : (
     <S.ButtonWrapper>
       <BnbButton
         variant="home"
@@ -76,7 +91,7 @@ const Bnb = ({ company }) => {
         status={buttonStatus.CARONE}
         onClick={() => handleClick('CARONE')}
       >
-        (주)카원
+        (유)카원
       </BnbButton>
       <BnbButton
         variant="sg"
@@ -106,6 +121,13 @@ const Bnb = ({ company }) => {
       >
         (주)황지
       </BnbButton>
+      <BnbButton
+        variant="es"
+        status={buttonStatus.ES}
+        onClick={() => handleClick('ES')}
+      >
+        (주)에너지스토리
+      </BnbButton>
     </S.ButtonWrapper>
   );
 };
@@ -115,11 +137,6 @@ const S = {
   ButtonWrapper: styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    ${media.desktop`
-     grid-template-columns: repeat(6, 1fr);
-
-    `}
+    grid-template-columns: repeat(6, 1fr);
   `,
 };

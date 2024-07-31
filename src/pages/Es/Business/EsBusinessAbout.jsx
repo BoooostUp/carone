@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import processImg from '../../../assets/images/total2/businessAbout.png';
+import processImg from '../../../assets/images/total/businessAbout.png';
 
-function Total2BusinessAbout() {
+function EsBusinessAbout() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -13,4 +13,4 @@ function Total2BusinessAbout() {
   );
 }
 
-export default Total2BusinessAbout;
+export default EsBusinessAbout;

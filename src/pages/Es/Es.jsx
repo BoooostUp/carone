@@ -8,7 +8,7 @@ import Hero from '../../components/Main/Hero';
 import QnAButton from '../../components/Main/QnAButton';
 import { useHeroAttribute } from '../../hooks/useHeroAttribute';
 
-const Total2 = () => {
+const Es = () => {
   const { currentPath, heroSize, isMain } = useHeroAttribute();
 
   const location = useLocation();
@@ -18,11 +18,11 @@ const Total2 = () => {
 
   return (
     <S.PageContainer>
-      <Gnb company="TOTAL2" />
+      <Gnb company="ES" />
       <Hero
         size={heroSize}
         link={currentPath}
-        company="TOTAL"
+        company="ES"
         isMain={isMain}
         page={selectedCategory}
       />
@@ -31,14 +31,14 @@ const Total2 = () => {
       </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
-        <Bnb company="TOTAL" />
-        <Footer company="TOTAL" />
+        <Bnb company="ES" />
+        <Footer company="ES" />
       </S.BnBFooterContainer>
     </S.PageContainer>
   );
 };
 
-export default Total2;
+export default Es;
 
 const S = {
   PageContainer: styled.div`

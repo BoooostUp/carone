@@ -8,7 +8,7 @@ import Hero from '../../components/Main/Hero';
 import QnAButton from '../../components/Main/QnAButton';
 import { useHeroAttribute } from '../../hooks/useHeroAttribute';
 
-const Total = () => {
+const Total2 = () => {
   const { currentPath, heroSize, isMain } = useHeroAttribute();
 
   const location = useLocation();
@@ -18,7 +18,7 @@ const Total = () => {
 
   return (
     <S.PageContainer>
-      <Gnb company="TOTAL" />
+      <Gnb company="TOTAL2" />
       <Hero
         size={heroSize}
         link={currentPath}
@@ -38,7 +38,7 @@ const Total = () => {
   );
 };
 
-export default Total;
+export default Total2;
 
 const S = {
   PageContainer: styled.div`
