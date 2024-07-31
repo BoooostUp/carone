@@ -10,6 +10,7 @@ import carone2Permission1 from '../../assets/images/certificates/carone2/카원 
 import cePermission1 from '../../assets/images/certificates/ce/ce1.webp';
 import cePermission2 from '../../assets/images/certificates/ce/ce2.webp';
 import ceRegister from '../../assets/images/certificates/ce/ceRegister.webp';
+import hjPermission from '../../assets/images/certificates/hj/hjCertificate.webp';
 import patent1 from '../../assets/images/certificates/patents/특허증 - 드럼통 세척 장치.webp';
 import patent2 from '../../assets/images/certificates/patents/특허증 - 트롬멜 선별기.webp';
 import patent3 from '../../assets/images/certificates/patents/특허증 - 폐수처리장치.webp';
@@ -70,6 +71,9 @@ export const CERTIFICATIONS = {
   },
   SI: {
     certifications: [],
+  },
+  HJ: {
+    certifications: [{ certification: hjPermission, title: '사업자등록증' }],
   },
   ES: { certification: [] },
   PATENTS: {

@@ -15,6 +15,7 @@ const Bnb = ({ company }) => {
     SG: company === 'SG',
     TOTAL: company === 'TOTAL',
     SI: company === 'SI',
+    HJ: company === 'HJ',
     ES: company === 'ES',
   };
 
@@ -43,6 +44,7 @@ const Bnb = ({ company }) => {
       SG: '/sg',
       TOTAL: '/total',
       SI: '/si',
+      HJ: '/hj',
       ES: '/es',
     };
 
@@ -111,6 +113,13 @@ const Bnb = ({ company }) => {
         onClick={() => handleClick('SI')}
       >
         (주)세명인텍
+      </BnbButton>
+      <BnbButton
+        variant="hj"
+        status={buttonStatus.HJ}
+        onClick={() => handleClick('HJ')}
+      >
+        (주)황지
       </BnbButton>
       <BnbButton
         variant="es"

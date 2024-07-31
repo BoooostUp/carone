@@ -5,7 +5,7 @@ const commonContent = Object.freeze({
   licenses: '인허가사항',
 });
 
-const otherCompanies = ['CE', 'CARONE', 'SG', 'TOTAL', 'SI', 'ES'];
+const otherCompanies = ['CE', 'CARONE', 'SG', 'TOTAL', 'SI', 'ES', 'HJ'];
 
 export const HERO_CONTENTS = Object.freeze({
   HOME: {

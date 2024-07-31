@@ -29,11 +29,6 @@ import total1Image2 from '/src/assets/images/total/main2.webp';
 import total1Image3 from '/src/assets/images/total/main3.webp';
 import total1Image4 from '/src/assets/images/total/main4.webp';
 
-// import siImage1 from '';
-// import siImage2 from '';
-// import siImage3 from '';
-// import siImage4 from '';
-
 import siImage1 from '/src/assets/images/si/siImage1.webp';
 import siImage2 from '/src/assets/images/si/siImage2.webp';
 import siImage3 from '/src/assets/images/si/siImage3.webp';
@@ -258,6 +253,33 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       id: 4,
       title1: '작업 내역',
       content1: `한솔 EME, 롯데정밀화학, 울진원자력발전소, S-OIL, POSCO 등 다양한 기업과 협력하여 환경 정화 작업을 진행합니다.`,
+      imageAddress: siImage2,
+    },
+  ],
+  //TODO: 황지 정보 기입
+  HJ: [
+    {
+      id: 1,
+      title1: '(주)황지',
+      content1: `(주)황지는 최신의 안정적이고 위생적인 매립시설을 갖춘 사업장폐기물 최종 처분 업체입니다.`,
+      imageAddress: siImage1,
+    },
+    {
+      id: 2,
+      title1: '사업 내용',
+      content1: ``,
+      imageAddress: siImage3,
+    },
+    {
+      id: 3,
+      title1: '클리닝 세척',
+      content1: ``,
+      imageAddress: siImage4,
+    },
+    {
+      id: 4,
+      title1: '작업 내역',
+      content1: ``,
       imageAddress: siImage2,
     },
   ],
