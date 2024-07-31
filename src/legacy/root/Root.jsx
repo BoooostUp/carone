@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/icons/Logo.svg';
-import RecruitButton from '../components/RecruitButton';
+import RecruitButton from '../../components/RecruitButton';
 import { ROOT, CELL_IMAGE } from '../constants/ROOT';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 const Root = () => {
   const [hovered, setHovered] = useState(null);

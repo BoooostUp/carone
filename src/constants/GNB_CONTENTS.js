@@ -2,7 +2,7 @@ export const GNB_CONTENTS = Object.freeze({
   HOME: {
     title: '99%',
     subTitle: '99%를 자원으로..',
-    link: '/home',
+    link: '/',
   },
   CE: {
     title: '(주)자동차환경',
@@ -22,20 +22,7 @@ export const GNB_CONTENTS = Object.freeze({
   TOTAL: {
     title: '(주)토탈',
     subTitle: '산업 폐기물 소각부터 재활용하는 완벽 시스템',
-    factory: {
-      number: ['1공장', '2공장'],
-      link: ['/total', '/total2'],
-    },
     link: '/total',
-  },
-  TOTAL2: {
-    title: '(주)토탈',
-    subTitle: '용기류를 파쇄 분쇄',
-    factory: {
-      number: ['1공장', '2공장'],
-      link: ['/total', '/total2'],
-    },
-    link: '/total2',
   },
   CARONE: {
     title: '(유)카원',
@@ -54,6 +41,12 @@ export const GNB_CONTENTS = Object.freeze({
       link: ['/carone', '/carone2'],
     },
     link: '/carone2',
+  },
+  //TODO: 에너지스토리 정보 기입
+  ES: {
+    title: '(주)에너지스토리',
+    subTitle: '',
+    link: '/es',
   },
 
   HOME_MENU_LIST: [

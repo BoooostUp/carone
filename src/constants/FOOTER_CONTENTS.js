@@ -90,4 +90,10 @@ export const FOOTER_CONTENTS = {
       },
     ],
   },
+  //TODO: 에너지스토리 정보 기입
+  ES: {
+    companyName: '(주)에너지스토리',
+    subtitle: '',
+    info: [{ address: '', tel: '', fax: '' }],
+  },
 };

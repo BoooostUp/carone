@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media } from '../../../styles/utils/mediaQuery';
 
 const BnbButton = ({ variant = 'home', status, ...props }) => {
@@ -94,6 +93,17 @@ const buttonVariantMap = {
       `}
     &:hover {
       background-color: ${({ theme }) => theme.color.SI};
+    }
+  `,
+
+  es: css`
+    ${({ $status }) =>
+      $status &&
+      css`
+        background-color: ${({ theme }) => theme.color.ES};
+      `}
+    &:hover {
+      background-color: ${({ theme }) => theme.color.ES};
     }
   `,
 };

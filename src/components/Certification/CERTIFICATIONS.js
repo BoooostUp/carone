@@ -55,11 +55,6 @@ export const CERTIFICATIONS = {
       { certification: totalPermission3, title: '중간처분폐기물지정-허가증' },
     ],
   },
-  TOTAL2: {
-    certifications: [
-      { certification: totalPermission1, title: '중간재활용업-허가증' },
-    ],
-  },
   CE: {
     certifications: [
       { certification: ceRegister, title: '사업자등록증' },
@@ -76,6 +71,7 @@ export const CERTIFICATIONS = {
   SI: {
     certifications: [],
   },
+  ES: { certification: [] },
   PATENTS: {
     certifications: [
       { certification: patent1, title: '드럼통 세척 장치' },

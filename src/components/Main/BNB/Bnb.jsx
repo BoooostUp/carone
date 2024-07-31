@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import BnbButton from './BnbButton';
 import DropDown from '../DropDown';
+import BnbButton from './BnbButton';
 
 //TODO: Change initialState all false
 const Bnb = ({ company }) => {
@@ -15,6 +15,7 @@ const Bnb = ({ company }) => {
     SG: company === 'SG',
     TOTAL: company === 'TOTAL',
     SI: company === 'SI',
+    ES: company === 'ES',
   };
 
   const [buttonStatus, setButtonStatus] = useState(initialState);
@@ -36,12 +37,13 @@ const Bnb = ({ company }) => {
     });
     // Navigate to the designated path
     const pathMapping = {
-      HOME: '/home',
+      HOME: '/',
       CE: '/ce',
       CARONE: '/carone',
       SG: '/sg',
       TOTAL: '/total',
       SI: '/si',
+      ES: '/es',
     };
 
     // Navigate to the designated path based on button name
@@ -109,6 +111,13 @@ const Bnb = ({ company }) => {
         onClick={() => handleClick('SI')}
       >
         (주)세명인텍
+      </BnbButton>
+      <BnbButton
+        variant="es"
+        status={buttonStatus.ES}
+        onClick={() => handleClick('ES')}
+      >
+        (주)에너지스토리
       </BnbButton>
     </S.ButtonWrapper>
   );

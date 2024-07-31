@@ -5,7 +5,7 @@ import ce from '../assets/images/hero/ce/ce.webp';
 import ceCeo from '../assets/images/hero/ce/ceCeo.webp';
 import certification from '../assets/images/hero/certification.webp';
 import facilities from '../assets/images/hero/facilities.webp';
-import homeBussiness from '../assets/images/hero/home/bussiness.webp';
+import homeBusiness from '../assets/images/hero/home/business.webp';
 import homeCeo from '../assets/images/hero/home/ceo.webp';
 import home from '../assets/images/hero/home/home.webp';
 import homeLocation from '../assets/images/hero/home/location.webp';
@@ -16,14 +16,13 @@ import si from '../assets/images/hero/si/si.webp';
 import siAbout from '../assets/images/hero/si/siAbout.webp';
 import siCeo from '../assets/images/hero/si/siCeo.webp';
 import total from '../assets/images/hero/total/total.webp';
-import total2 from '../assets/images/hero/total/total2.webp';
 import totalCeo from '../assets/images/hero/total/totalCeo.webp';
 
 export const HERO_IMAGES = Object.freeze({
   HOME: {
     home: home,
     ceo: homeCeo,
-    business: homeBussiness,
+    business: homeBusiness,
     location: homeLocation,
     process: homeRecruit,
     apply: homeRecruit,
@@ -69,7 +68,6 @@ export const HERO_IMAGES = Object.freeze({
   },
   TOTAL: {
     total: total,
-    total2: total2,
     ceo: totalCeo,
     history: totalCeo,
     location: totalCeo,
@@ -92,5 +90,19 @@ export const HERO_IMAGES = Object.freeze({
     pipe: siAbout,
     facilities: facilities,
     certification: certification,
+  },
+  //TODO: 에너지스토리 정보 기입
+  ES: {
+    total: total,
+    ceo: totalCeo,
+    history: totalCeo,
+    location: totalCeo,
+    'business-partner': totalCeo,
+    about: about,
+    waste: about,
+    process: about,
+    facilities: about,
+    certification: certification,
+    patent: certification,
   },
 });
