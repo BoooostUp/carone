@@ -25,16 +25,12 @@ const Footer = ({ company }) => {
       </S.NameSloganWrapper>
 
       <S.InfoContainer>
-        {FOOTER_CONTENTS[company].info.map((info, index) => {
+        {FOOTER_CONTENTS[company].info.map((companyName, index) => {
           return (
-            <S.InfoWrapper key={index}>
-              <S.Tel>{info.address}</S.Tel>
-              <S.TelFaxWrapper
-                $companyName={FOOTER_CONTENTS[company].companyName}
-              >
-                <S.Tel>{info.tel}</S.Tel>
-                <S.Tel>{info.fax}</S.Tel>
-              </S.TelFaxWrapper>
+            <S.InfoWrapper key={companyName}>
+              <S.Address>{companyName.address}</S.Address>
+              <S.Tel>{companyName.tel}</S.Tel>
+              <S.Tel>{companyName.fax}</S.Tel>
             </S.InfoWrapper>
           );
         })}
@@ -83,8 +79,14 @@ const S = {
     `};
   `,
 
+  Address: styled.div`
+    ${({ theme }) => theme.font.FONT16}
+    width: 40rem;
+  `,
+
   Tel: styled.div`
     ${({ theme }) => theme.font.FONT16}
+    width: 20rem;
   `,
 
   MainWrapper: styled.div`
@@ -96,6 +98,7 @@ const S = {
     padding: 20px 0;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     ${media.desktop`
         flex-direction: column;
     `}
