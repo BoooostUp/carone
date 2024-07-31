@@ -19,19 +19,18 @@ const Home = () => {
   return (
     <S.PageContainer>
       <Gnb company="HOME" />
-
       <Hero
         size={heroSize}
         link={currentPath}
         company="HOME"
         page={selectedCategory}
       />
+      <Bnb company="HOME" />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
-        <Bnb company="HOME" />
         <Footer company="HOME" />
       </S.BnBFooterContainer>
     </S.PageContainer>
