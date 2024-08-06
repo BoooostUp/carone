@@ -75,7 +75,7 @@ export const CERTIFICATIONS = {
   HJ: {
     certifications: [{ certification: hjPermission, title: '사업자등록증' }],
   },
-  ES: { certification: [] },
+  ES: { certifications: [] },
   PATENTS: {
     certifications: [
       { certification: patent1, title: '드럼통 세척 장치' },
