@@ -25,9 +25,9 @@ const Footer = ({ company }) => {
       </S.NameSloganWrapper>
 
       <S.InfoContainer>
-        {FOOTER_CONTENTS[company].info.map((companyName, index) => {
+        {FOOTER_CONTENTS[company].info.map((companyName) => {
           return (
-            <S.InfoWrapper key={companyName}>
+            <S.InfoWrapper key={companyName.companyName}>
               <S.Address>{companyName.address}</S.Address>
               <S.Tel>{companyName.tel}</S.Tel>
               <S.Tel>{companyName.fax}</S.Tel>
