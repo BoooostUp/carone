@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import DropDown from '../DropDown';
 import BnbButton from './BnbButton';
+import { media } from '../../../styles/utils/mediaQuery';
+import DropDown from '../DropDown';
 
 //TODO: Change initialState all false
 const Bnb = ({ company }) => {
@@ -137,6 +138,9 @@ const S = {
   ButtonWrapper: styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    ${media.desktop`
+      grid-template-columns: repeat(8, 1fr);
+    `}
   `,
 };
