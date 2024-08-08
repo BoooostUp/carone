@@ -26,12 +26,12 @@ const Hwangji = () => {
         isMain={isMain}
         page={selectedCategory}
       />
+      <Bnb company="HJ" />
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
       <QnAButton />
       <S.BnBFooterContainer>
-        <Bnb company="HJ" />
         <Footer company="HJ" />
       </S.BnBFooterContainer>
     </S.PageContainer>

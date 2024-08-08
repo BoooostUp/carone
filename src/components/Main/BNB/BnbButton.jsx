@@ -22,8 +22,7 @@ const S = {
     ${({ theme }) => theme.font.FONT16};
     ${({ $variant }) => buttonVariantMap[$variant]};
     ${media.desktop`
-      padding: 2rem 2rem;
-      ${({ theme }) => theme.font.FONT20};
+      padding: 2rem 0.5rem;
     `}
   `,
 };

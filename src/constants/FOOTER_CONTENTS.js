@@ -5,7 +5,7 @@ export const FOOTER_CONTENTS = {
     info: [
       {
         companyName: '(유)카원',
-        address: '(유)카원 : 경상남도 양산시 상북면 공원로 403 - 19',
+        address: '📍 (유)카원 : 경상남도 양산시 상북면 공원로 403 - 19',
         tel: 'TEL 055-381-0703',
         fax: 'FAX 055-384-0703',
       },
