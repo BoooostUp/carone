@@ -1,6 +1,6 @@
 import CertificationComponent from '../../../components/Certification/CertificationComponent';
 
-function TotalLicenses() {
+function EsLicenses() {
   return (
     <div>
       <CertificationComponent company="ES" />
@@ -8,4 +8,4 @@ function TotalLicenses() {
   );
 }
 
-export default TotalLicenses;
+export default EsLicenses;
