@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Lnb from './Lnb';
@@ -6,17 +6,38 @@ import LogoIcon from '../../assets/icons/Logo.svg';
 import { GNB_CONTENTS } from '../../constants/GNB_CONTENTS';
 
 const Gnb = ({ company }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div>
-      <S.Gnb className="gnb-container" $company={company} $isOpen={isOpen}>
+      <S.Gnb
+        className="gnb-container"
+        $company={company}
+        // $isOpen={isOpen}
+        $isScrolled={isScrolled}
+      >
         <S.Container>
           <S.LogoContainer>
             <Link to="/">
               <S.Logo src={LogoIcon} />
             </Link>
-            <S.TitleContainer $company={company} $isOpen={isOpen}>
+            <S.TitleContainer $company={company}>
               <Link to={GNB_CONTENTS[company].link}>
                 <S.Title>{GNB_CONTENTS[company].title}</S.Title>
               </Link>
@@ -24,7 +45,7 @@ const Gnb = ({ company }) => {
             </S.TitleContainer>
 
             {GNB_CONTENTS[company].factory && (
-              <S.FactoryContainer $company={company} $isOpen={isOpen}>
+              <S.FactoryContainer $company={company}>
                 <Link to={GNB_CONTENTS[company].factory.link[0]}>
                   <S.Factory
                     $company={company}
@@ -47,8 +68,8 @@ const Gnb = ({ company }) => {
 
           <S.Menu
             $company={company}
-            $isOpen={isOpen}
-            onMouseEnter={() => company !== 'HOME' && setIsOpen(true)}
+            // $isOpen={isOpen}
+            onMouseEnter={() => company !== 'HOME'}
           >
             {company === 'HOME'
               ? GNB_CONTENTS.HOME_MENU_LIST.map((item, idx) => (
@@ -70,9 +91,9 @@ const Gnb = ({ company }) => {
           </S.Menu>
         </S.Container>
       </S.Gnb>
-      {isOpen && (
+      {/* {isOpen && (
         <Lnb company={company} onMouseLeave={() => setIsOpen(false)} />
-      )}
+      )} */}
     </div>
   );
 };
@@ -83,15 +104,25 @@ const S = {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: ${({ theme, $company, $isOpen }) =>
-      $isOpen ? theme.color.white : theme.color[$company]};
+    background-color: ${({ theme, $company, $isOpen, $isScrolled }) =>
+      $isScrolled
+        ? $isOpen
+          ? theme.color.white
+          : theme.color[$company]
+        : 'transparent'};
+    transition: background-color 0.5s ease-in-out;
     height: 8rem;
 
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
     @media (max-width: 1024px) {
       height: 9.5rem;
-      background-color: ${({ theme, $company }) => theme.color[$company]};
+      background-color: ${({ theme, $company, $isScrolled }) =>
+        $isScrolled ? theme.color[$company] : 'transparent'};
     }
   `,
   Container: styled.div`

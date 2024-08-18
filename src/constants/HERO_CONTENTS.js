@@ -12,7 +12,7 @@ export const HERO_CONTENTS = Object.freeze({
     ceo: '인사말',
     business: '사업 분야',
     location: '오시는 길',
-    recruit: '인재 채용',
+    process: '인재 채용',
   },
   ...otherCompanies.reduce(
     (acc, section) => ({ ...acc, [section]: commonContent }),

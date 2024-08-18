@@ -10,8 +10,8 @@ const theme = Object.freeze({
     TOTAL: '#217A54',
     SI: '#004686',
     HJ: '#ff9900',
-    HOME: '#3E3E43',
-    ES: '#c1deef',
+    HOME: '#202020',
+    ES: '#5BB2FF',
 
     //Gray
     mainGray: '#3E3E43',

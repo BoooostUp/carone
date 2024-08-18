@@ -22,7 +22,7 @@ const Hwangji = () => {
       <Hero
         size={heroSize}
         link={currentPath}
-        company="SG"
+        company="HJ"
         isMain={isMain}
         page={selectedCategory}
       />

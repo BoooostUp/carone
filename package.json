@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^11.3.28",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
+    "react-slot-counter": "^3.0.1",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
