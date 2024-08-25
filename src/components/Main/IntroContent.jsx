@@ -1,27 +1,37 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import DashBoard from './DashBoard';
-import heroImage1 from '../../assets/images/hero/caroneCars.webp';
+import Intro from './Intro';
 import { INTRO_CONTENT_CONTENTS as C } from '../../constants/INTRO_CONTENT_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery';
 
 const IntroContent = () => {
   return (
     <>
+      <Intro />
       <DashBoard />
       {C.CONTENTS.map((item, index) => {
         return (
-          <S.Container key={index}>
-            <S.Img src={item.imageAddress} />
-            <S.TextBox>
-              <S.TitleBox>
-                <S.Title>{item.title}</S.Title>
-              </S.TitleBox>
-              {item.element1 && <S.Content>{item.element1}</S.Content>}
-              {item.element2 && <S.Content>{item.element2}</S.Content>}
-              {item.element3 && <S.Content>{item.element3}</S.Content>}
-              {item.element4 && <S.Content>{item.element4}</S.Content>}
-            </S.TextBox>
-          </S.Container>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ ease: 'easeOut', duration: 2, y: { duration: 1 } }}
+          >
+            <S.Container key={index}>
+              <S.Img src={item.imageAddress} />
+              <S.TextBox>
+                <S.TitleBox>
+                  <S.Title>{item.title}</S.Title>
+                </S.TitleBox>
+                {item.element1 && <S.Content>{item.element1}</S.Content>}
+                {item.element2 && <S.Content>{item.element2}</S.Content>}
+                {item.element3 && <S.Content>{item.element3}</S.Content>}
+                {item.element4 && <S.Content>{item.element4}</S.Content>}
+              </S.TextBox>
+            </S.Container>
+          </motion.div>
         );
       })}
     </>

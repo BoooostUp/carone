@@ -10,7 +10,7 @@ import { media } from '../../styles/utils/mediaQuery';
 const DashBoard = () => {
   return (
     <S.MainWrapper>
-      <S.MainTitle>우리 회사의 핵심 성과 및 역량</S.MainTitle>
+      <S.MainTitle>핵심 성과 및 역량</S.MainTitle>
       <S.Wrapper>
         <S.Container>
           <S.Image src={dashboard1} alt="Dashboard" />
@@ -80,7 +80,7 @@ const S = {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 150px;
+    width: 200px;
     height: 300px;
     text-align: center;
     gap: 10px;

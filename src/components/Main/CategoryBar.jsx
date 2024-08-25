@@ -65,6 +65,31 @@ const S = {
     ${({ theme, $isToggled }) =>
       $isToggled ? theme.font.FONT16SB : theme.font.FONT16}
 
+    position:relative;
+    transition: color 0.3 ease;
+    &:hover {
+      color: ${({ theme, $company, $isToggled }) =>
+        $isToggled ? theme.color.white : theme.color[$company]};
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -4px; /* Adjust the distance between the text and the underline */
+      left: 0;
+      right: 0;
+      height: 2px; /* Thickness of the underline */
+      background-color: ${({ theme, $company }) =>
+        theme.color[$company]}; /* Underline color */
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease; /* Smooth underline transition */
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+    }
+
     @media (max-width: 767px) {
       width: 9rem;
       border-radius: 14px;

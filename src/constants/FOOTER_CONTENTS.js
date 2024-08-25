@@ -1,7 +1,13 @@
+import Carone from '../pages/Carone/Carone';
+
 export const FOOTER_CONTENTS = {
   HOME: {
     companyName: '',
-    subtitle: '99%를 자원으로..',
+    home: '',
+    ceo: '인사말',
+    business: '사업 분야',
+    location: '오시는 길',
+    process: '인재 채용',
     info: [
       {
         companyName: '(유)카원',
@@ -36,6 +42,7 @@ export const FOOTER_CONTENTS = {
     ],
   },
   CARONE: {
+    carone: '카원',
     companyName: '(유)카원',
     subtitle: '폐기물을 자원으로, 우리 환경을 깨끗하게 추구하는 신뢰의 기업',
     info: [
@@ -47,6 +54,7 @@ export const FOOTER_CONTENTS = {
     ],
   },
   CE: {
+    ce: '자동차환경',
     companyName: '자동차환경',
     subtitle: '모두를 이롭게 하는 기업',
     info: [
@@ -58,6 +66,7 @@ export const FOOTER_CONTENTS = {
     ],
   },
   SG: {
+    sg: '에스지산업',
     companyName: '(주)에스지산업',
     subtitle: '그린에너지를 실천하는 기업',
     info: [
@@ -69,6 +78,7 @@ export const FOOTER_CONTENTS = {
     ],
   },
   SI: {
+    si: '세명인텍',
     companyName: '(주)세명인텍',
     subtitle: '안전, 환경을 우선하는 기업',
     info: [
@@ -80,6 +90,7 @@ export const FOOTER_CONTENTS = {
     ],
   },
   TOTAL: {
+    total: '토탈',
     companyName: '(주)토탈',
     subtitle: '폐기물 소각부터 재활용처리까지 산업 폐기물 처리 전문기업',
     info: [
@@ -91,6 +102,7 @@ export const FOOTER_CONTENTS = {
     ],
   },
   HJ: {
+    hj: '황지',
     companyName: '(주)황지',
     subtitle: '최고의 기술로 최적의 매립시설을 갖춘 기업',
     info: [
@@ -103,6 +115,7 @@ export const FOOTER_CONTENTS = {
   },
   //TODO: 에너지스토리 정보 기입
   ES: {
+    es: '에너지스토리',
     companyName: '(주)에너지스토리',
     subtitle: '',
     info: [{ address: '', tel: '', fax: '' }],

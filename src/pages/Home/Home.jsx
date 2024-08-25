@@ -14,26 +14,33 @@ const Home = () => {
   const location = useLocation();
   const current = location.pathname;
   const parts = current.split('/');
-  const selectedCategory = parts[parts.length - 1];
+  let selectedCategory = parts[parts.length - 1];
+
+  if (selectedCategory === '') {
+    selectedCategory = 'home';
+  }
 
   return (
-    <S.PageContainer>
-      <Gnb company="HOME" />
-      <Hero
-        size={heroSize}
-        link={currentPath}
-        company="HOME"
-        page={selectedCategory}
-      />
-      <Bnb company="HOME" />
-      <S.ContentSpacer>
-        <Outlet />
-      </S.ContentSpacer>
-      <QnAButton />
-      <S.BnBFooterContainer>
-        <Footer company="HOME" />
-      </S.BnBFooterContainer>
-    </S.PageContainer>
+    console.log(currentPath),
+    (
+      <S.PageContainer>
+        <Gnb company="HOME" />
+        <Hero
+          size={heroSize}
+          link={currentPath}
+          company="HOME"
+          page={selectedCategory}
+        />
+        <Bnb company="HOME" />
+        <S.ContentSpacer>
+          <Outlet />
+        </S.ContentSpacer>
+        <QnAButton />
+        <S.BnBFooterContainer>
+          <Footer company="HOME" />
+        </S.BnBFooterContainer>
+      </S.PageContainer>
+    )
   );
 };
 

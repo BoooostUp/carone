@@ -7,7 +7,7 @@ import { HERO_IMAGES } from '../../constants/HERO_IMAGES';
 const Hero = ({ size, link, company, isMain, page }) => {
   const textContent = link
     ? HERO_CONTENTS[company][link]
-    : FOOTER_CONTENTS[company].subtitle;
+    : FOOTER_CONTENTS[company][page];
 
   return (
     <S.Container $size={size} $company={company} $page={page}>
@@ -30,7 +30,7 @@ const S = {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: ${({ $size }) => ($size === 'bg' ? '70rem' : '45rem')};
+    height: ${({ $size }) => ($size === 'bg' ? '90rem' : '45rem')};
     background-image: ${({ $company, $page }) =>
       `url(${HERO_IMAGES[$company][$page]})`};
     background-size: cover;
@@ -45,7 +45,7 @@ const S = {
       width: 100%;
       height: 100%;
       background-color: ${({ theme }) => theme.color.black};
-      opacity: 0.4;
+      opacity: 0.7;
     }
 
     @media (max-width: 767px) {
