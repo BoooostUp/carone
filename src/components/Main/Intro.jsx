@@ -14,7 +14,7 @@ const Intro = () => {
           transition={{ ease: 'easeOut', duration: 2, y: { duration: 1 } }}
         >
           <S.Title>
-            폐기물의 <S.Span>99%</S.Span> 자원으로..
+            폐기물의 <S.Span>99.9%</S.Span> 자원으로..
           </S.Title>
 
           <S.Subtitle>환경을 위한 노력을 기울이고 있습니다.</S.Subtitle>
