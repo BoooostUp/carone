@@ -6,35 +6,38 @@ import { media } from '../../styles/utils/mediaQuery.ts';
 const Footer = ({ company }) => {
   return (
     <S.Container>
-      <S.NameSloganWrapper>
-        <div>
-          <S.MainWrapper>
-            <S.LogoImage src={Logo} alt="" />
-            <div>
-              <S.CompanyName>
-                {FOOTER_CONTENTS[company].companyName}
-              </S.CompanyName>
-              {company !== 'HOME' && (
-                <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
-              )}
-            </div>
-          </S.MainWrapper>
-        </div>
+      <S.ContentWrapper>
+        {/* Company Information Section */}
+        <S.CompanyInfo>
+          <S.LogoImage src={Logo} alt="Company Logo" />
+          <div>
+            <S.CompanyName>
+              {FOOTER_CONTENTS[company].companyName}
+            </S.CompanyName>
+            {company !== 'HOME' && (
+              <S.Subtitle>{FOOTER_CONTENTS[company].subtitle}</S.Subtitle>
+            )}
+          </div>
+        </S.CompanyInfo>
 
-        <div>© Since 2002</div>
-      </S.NameSloganWrapper>
+        {/* Contact Information Section */}
+        <S.ContactInfo>
+          {FOOTER_CONTENTS[company].info.map((info) => (
+            <S.InfoBlock key={info.companyName}>
+              <S.Address>{info.address}</S.Address>
+              <S.ContactDetails>
+                <S.Tel>{info.tel}</S.Tel>
+                {info.fax && <S.Fax>Fax: {info.fax}</S.Fax>}
+              </S.ContactDetails>
+            </S.InfoBlock>
+          ))}
+        </S.ContactInfo>
+      </S.ContentWrapper>
 
-      <S.InfoContainer>
-        {FOOTER_CONTENTS[company].info.map((companyName) => {
-          return (
-            <S.InfoWrapper key={companyName.companyName}>
-              <S.Address>{companyName.address}</S.Address>
-              <S.Tel>{companyName.tel}</S.Tel>
-              <S.Tel>{companyName.fax}</S.Tel>
-            </S.InfoWrapper>
-          );
-        })}
-      </S.InfoContainer>
+      {/* Footer Bottom Section */}
+      <S.BottomWrapper>
+        <S.SinceText>© Since 2002</S.SinceText>
+      </S.BottomWrapper>
     </S.Container>
   );
 };
@@ -44,80 +47,94 @@ export default Footer;
 const S = {
   Container: styled.footer`
     background-color: ${({ theme }) => theme.color.black};
-    color: ${({ theme }) => theme.color.white};
-    padding: 2rem;
+    color: #f0f0f0;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  `,
-  LogoImage: styled.img`
-    width: 6rem;
-    margin-right: 1rem;
-  `,
-  NameSloganWrapper: styled.div`
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    padding: 1rem 0;
-    border-bottom: 1px solid ${({ theme }) => theme.color.white};
-  `,
-
-  Subtitle: styled.div`
-    ${({ theme }) => theme.font.FONT16}
-  `,
-
-  InfoWrapper: styled.div`
-    padding: 0.5rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    ${({ theme }) => theme.font.FONT16};
+    gap: 2rem;
     ${media.desktop`
-        flex-direction: row;
-        justify-content: start;
-    `};
-  `,
-
-  Address: styled.div`
-    ${({ theme }) => theme.font.FONT16}
-    width: 40rem;
-  `,
-
-  Tel: styled.div`
-    ${({ theme }) => theme.font.FONT16}
-    width: 20rem;
-  `,
-
-  MainWrapper: styled.div`
-    display: flex;
-    align-items: center;
-  `,
-
-  InfoContainer: styled.div`
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    ${media.desktop`
-        flex-direction: column;
+      padding: 4rem 6rem;
     `}
   `,
 
-  TelFaxWrapper: styled.div`
+  ContentWrapper: styled.div`
     display: flex;
-    gap: 1.5rem;
-    ${({ theme }) => theme.font.FONT16};
-    //if contents company name is main then make flex direction column
-    ${({ companyName }) =>
-      companyName === 'Waste Treatment & Collection of Waste' &&
-      `flex-direction: column;
-      gap: 0.5rem;`}
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
   `,
 
-  CompanyName: styled.div`
-    justify-content: center;
+  CompanyInfo: styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 30rem;
+    ${media.desktop`
+      flex: 1;
+    `}
+  `,
+
+  LogoImage: styled.img`
+    width: 8rem;
+  `,
+
+  CompanyName: styled.h2`
     ${({ theme }) => theme.font.FONT16};
-    margin-bottom: 10px;
+    margin: 0;
+  `,
+
+  Subtitle: styled.div`
+    ${({ theme }) => theme.font.FONT14};
+  `,
+
+  ContactInfo: styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    ${media.desktop`
+      flex: 2;
+    `}
+  `,
+
+  InfoBlock: styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    ${({ theme }) => theme.font.FONT16};
+  `,
+
+  Address: styled.div`
+    ${({ theme }) => theme.font.FONT16};
+    width: 100%;
+  `,
+
+  ContactDetails: styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    ${({ theme }) => theme.font.FONT16};
+
+    ${media.desktop`
+      flex-direction: row;
+      gap: 1.5rem;
+    `}
+  `,
+
+  Tel: styled.div`
+    ${({ theme }) => theme.font.FONT16};
+  `,
+
+  Fax: styled.div`
+    ${({ theme }) => theme.font.FONT16};
+  `,
+
+  BottomWrapper: styled.div`
+    text-align: center;
+    border-top: 1px solid ${({ theme }) => theme.color.white};
+    padding-top: 1rem;
+  `,
+
+  SinceText: styled.div`
+    ${({ theme }) => theme.font.FONT14};
   `,
 };
