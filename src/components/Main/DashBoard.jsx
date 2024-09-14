@@ -1,10 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-import deal from '../../assets/images/dashboard/deal.gif';
-import facility from '../../assets/images/dashboard/facility.gif';
-import dashboard1 from '../../assets/images/dashboard/recycle.gif';
-import recycle from '../../assets/images/dashboard/trash.gif';
-import theme from '../../styles/theme';
+import capability from '../../assets/images/dashboard/capability.png';
+import contract from '../../assets/images/dashboard/contract.png';
+import factory from '../../assets/images/dashboard/factory.png';
+import recycle from '../../assets/images/dashboard/recycle.png';
 import { media } from '../../styles/utils/mediaQuery';
 
 const DashBoard = () => {
@@ -20,29 +18,28 @@ const DashBoard = () => {
           거듭나겠습니다.
         </S.SubTitle>
       </S.SubWrapper>
-
       <S.Wrapper>
         <S.Container>
-          <S.Image src={dashboard1} alt="Dashboard" />
+          <S.Image src={recycle} alt="Dashboard" />
           <S.Title>99% 재활용</S.Title>
           <S.Description>
             자원 순환율을 목표로 하며, 폐기물의 최대 재활용을 지향합니다.
           </S.Description>
         </S.Container>
         <S.Container>
-          <S.Image src={deal} alt="Deal" />
+          <S.Image src={contract} alt="Deal" />
           <S.Title>주요 거래처</S.Title>
           <S.Description>2,000개의 주요 기업과 협력 중입니다.</S.Description>
         </S.Container>
         <S.Container>
-          <S.Image src={recycle} alt="Facility" />
+          <S.Image src={capability} alt="Facility" />
           <S.Title>폐기물 처리 능력</S.Title>
           <S.Description>
             연간 60만 톤 이상의 폐기물을 처리합니다.
           </S.Description>
         </S.Container>
         <S.Container>
-          <S.Image src={facility} alt="Recycle" />
+          <S.Image src={factory} alt="Recycle" />
           <S.Title>지점 및 설비</S.Title>
           <S.Description>
             10개의 주요 지점에서 폐기물 수집 및 재활용 작업을 수행합니다.
@@ -110,11 +107,6 @@ const S = {
     padding: 40px;
     justify-content: center;
     border-radius: 15px;
-    background: linear-gradient(
-      135deg,
-      #2a472f 0%,
-      #ffffff 100%
-    ); /* Gradient background */
     ${media.desktop`
      grid-template-columns: repeat(4, 1fr);
     `}
@@ -124,10 +116,14 @@ const S = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    width: 220px;
-    height: 320px;
+    gap: 50px;
+    width: 200px;
+    height: 270px;
     text-align: center;
+    ${media.desktop`
+      width: 200px;
+      height: 270px;
+    `}
     gap: 15px;
     padding: 20px;
     background-color: ${({ theme }) => theme.color.white};
