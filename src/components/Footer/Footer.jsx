@@ -47,7 +47,7 @@ export default Footer;
 const S = {
   Container: styled.footer`
     background-color: ${({ theme }) => theme.color.black};
-    color: #f0f0f0;
+    color: #adb5bd;
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
