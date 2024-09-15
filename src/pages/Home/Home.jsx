@@ -21,26 +21,23 @@ const Home = () => {
   }
 
   return (
-    console.log(currentPath),
-    (
-      <S.PageContainer>
-        <Gnb company="HOME" />
-        <Hero
-          size={heroSize}
-          link={currentPath}
-          company="HOME"
-          page={selectedCategory}
-        />
-        <Bnb company="HOME" />
-        <S.ContentSpacer>
-          <Outlet />
-        </S.ContentSpacer>
-        <QnAButton />
-        <S.BnBFooterContainer>
-          <Footer company="HOME" />
-        </S.BnBFooterContainer>
-      </S.PageContainer>
-    )
+    <S.PageContainer>
+      <Gnb company="HOME" />
+      <Hero
+        size={heroSize}
+        link={currentPath}
+        company="HOME"
+        page={selectedCategory}
+      />
+      <Bnb company="HOME" />
+      <S.ContentSpacer>
+        <Outlet />
+      </S.ContentSpacer>
+      <QnAButton />
+      <S.BnBFooterContainer>
+        <Footer company="HOME" />
+      </S.BnBFooterContainer>
+    </S.PageContainer>
   );
 };
 
