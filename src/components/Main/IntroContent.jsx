@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import DashBoard from './DashBoard';
-import Intro from './Intro';
 import { INTRO_CONTENT_CONTENTS as C } from '../../constants/INTRO_CONTENT_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery';
+import DashBoard from './DashBoard';
 
 const IntroContent = () => {
   const [business, setBusiness] = useState(C.CONTENTS[0]);
@@ -39,7 +38,7 @@ const IntroContent = () => {
 
   return (
     <>
-      <Intro />
+      {/* <Intro /> */}
       <DashBoard />
       <S.Container>
         <S.Circle />
