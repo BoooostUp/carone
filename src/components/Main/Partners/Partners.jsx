@@ -44,8 +44,10 @@ const S = {
   `,
   Background: styled.div`
     position: relative;
-    height: 220px;
+    height: 250px;
     background-image: url('/src/assets/images/home/partner_background.jpg');
+    background-position: center 55%;
+    border-radius: 0.5rem;
   `,
   Title: styled.h2`
     display: flex;
@@ -68,7 +70,7 @@ const S = {
   `,
   SlickContainer: styled.div`
     position: absolute;
-    top: 120px;
+    top: 150px;
     margin-left: 50px;
 
     .slick-list {
