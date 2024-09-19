@@ -81,24 +81,35 @@ const S = {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     font-weight: bold;
     color: #2a472f;
+    ${media.desktop`
+      font-size: 50px;
+      margin-top: 40px;
+    `}
   `,
   SubTitle: styled.div`
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     color: ${({ theme }) => theme.color.secondary};
-    line-height: 40px;
+    line-height: 30px;
+    ${media.desktop`
+      font-size: 30px;
+      line-height: 50px;
+    `}
   `,
 
   Span: styled.span`
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #2a472f;
+    ${media.desktop`
+      font-size: 40px;
+    `}
   `,
   Wrapper: styled.div`
     display: grid;
@@ -117,7 +128,7 @@ const S = {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    width: 200px;
+    width: 180px;
     height: 270px;
     text-align: center;
     ${media.desktop`
