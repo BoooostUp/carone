@@ -1,12 +1,16 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import { media } from '../../styles/utils/mediaQuery';
 import mainInfoImage2 from './../../assets/images/home/main_info2.png';
 
 const MainInfo = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.3 });
+  const [ref, inView, entry] = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+  const isScrollDown =
+    entry && entry.boundingClientRect.top > (entry.rootBounds?.top ?? 0);
 
   return (
     <S.Layout>
@@ -15,7 +19,13 @@ const MainInfo = () => {
           <S.TextContainer>
             <S.Title
               as={motion.h1}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={
+                isScrollDown
+                  ? inView
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 20 }
+                  : { opacity: 1, y: 0 }
+              }
               transition={{ duration: 0.5 }}
             >
               99.9%
@@ -23,8 +33,14 @@ const MainInfo = () => {
 
             <S.SubText
               as={motion.p}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              animate={
+                isScrollDown
+                  ? inView
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 20 }
+                  : { opacity: 1, y: 0 }
+              }
+              transition={{ duration: 0.5, delay: 0.5 }}
             >
               폐기물의 99.9%를 자원으로 순환시키는 혁신적인 기술로 환경을 위해
               노력을 기울이고 있습니다.
@@ -33,8 +49,14 @@ const MainInfo = () => {
             <S.Link
               as={motion.a}
               href="/business"
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              animate={
+                isScrollDown
+                  ? inView
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 20 }
+                  : { opacity: 1, y: 0 }
+              }
+              transition={{ duration: 0.5, delay: 0.7 }}
             >
               View Companies →
             </S.Link>
@@ -43,15 +65,27 @@ const MainInfo = () => {
             <S.Image
               as={motion.img}
               src={mainInfoImage2}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              animate={
+                isScrollDown
+                  ? inView
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 20 }
+                  : { opacity: 1, y: 0 }
+              }
+              transition={{ duration: 0.5, delay: 0.8 }}
             />
           </S.ImageBox>
         </S.LeftSection>
         <S.RightSection
           as={motion.div}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          animate={
+            isScrollDown
+              ? inView
+                ? { opacity: 1, x: 0 }
+                : { opacity: 0, x: 100 }
+              : { opacity: 1, x: 0 }
+          }
+          transition={{ duration: 0.5, delay: 0.5 }}
         />
       </S.Container>
     </S.Layout>
@@ -63,7 +97,7 @@ export default MainInfo;
 const S = {
   Layout: styled.div`
     display: flex;
-    padding: 3rem;
+    padding: 5rem;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 9.5rem);
@@ -83,7 +117,7 @@ const S = {
     flex-direction: column;
     gap: 3rem;
     width: 100%;
-
+    height: 100%;
     margin: 0 auto;
     max-width: 110rem;
 
@@ -91,7 +125,6 @@ const S = {
       gap: 7rem;
       text-align: start;
       flex-direction: row;
-      height: 100%;
       max-height:50rem;
     `}
   `,
@@ -101,6 +134,7 @@ const S = {
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
+    height: 65%;
 
     ${media.tablet`
        width: 50%;
@@ -114,7 +148,7 @@ const S = {
     height: 100%;
     align-items: center;
     background-image: url('/src/assets/images/home/main_info.png');
-    background-position: 50%;
+    background-position: 70%;
     background-repeat: no-repeat;
     border-radius: 0.5rem;
     background-size: cover;
@@ -141,7 +175,12 @@ const S = {
   TextContainer: styled.div`
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+
+    gap: 1rem;
+
+    ${media.tablet`
+      gap: 2.5rem;
+    `}
   `,
   Title: styled.h1`
     font-size: 5rem;
