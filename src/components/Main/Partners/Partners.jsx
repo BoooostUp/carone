@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import styled from 'styled-components';
 import { MAIN_PARTNER_CONTENTS } from '../../../constants/MAIN_PARTNER_CONTENTS';
+import { media } from '../../../styles/utils/mediaQuery';
 
 const Partners = () => {
   const settings = {
@@ -12,13 +13,35 @@ const Partners = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <S.Container>
       <S.Title>
-        <S.Bold>환경을 위한 발걸음</S.Bold>은 계속됩니다.
+        <S.Bold>환경을 위한 노력</S.Bold>은 계속됩니다.
       </S.Title>
-      <S.SubText>더 밝은 미래와 더 나은 삶을 위해 노력하겠습니다.</S.SubText>
+      <S.SubText>
+        더 밝은 미래와 더 나은 삶을 위해 최선을 다하겠습니다.
+      </S.SubText>
       <S.Background>
         <S.SlickContainer>
           <Slider {...settings}>
@@ -38,20 +61,25 @@ export default Partners;
 
 const S = {
   Container: styled.div`
-    width: 1100px;
+    max-width: 1100px;
+    width: 90%;
     padding: 50px;
     margin: 30px auto;
+    text-align: center;
+
+    ${media.desktop`
+      width: 100%;
+    `}
   `,
   Background: styled.div`
     position: relative;
     height: 250px;
+    width: 100%;
     background-image: url('/src/assets/images/home/partner_background.jpg');
     background-position: center 55%;
     border-radius: 0.5rem;
   `,
   Title: styled.h2`
-    display: flex;
-    justify-content: center;
     font-size: 40px;
     font-weight: 500;
     color: black;
@@ -62,8 +90,6 @@ const S = {
     font-weight: 700;
   `,
   SubText: styled.h3`
-    display: flex;
-    justify-content: center;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 40px;
@@ -71,14 +97,20 @@ const S = {
   SlickContainer: styled.div`
     position: absolute;
     top: 150px;
-    margin-left: 50px;
+    left: 50px;
+    right: 50px;
+
+    .slick-slider {
+      max-width: 900px;
+      width: 100%;
+    }
 
     .slick-list {
-      width: 900px;
       background-color: white;
     }
     .slick-track {
       display: flex;
+      width: 80%;
       justify-content: center;
       align-items: center;
       gap: 30px;
