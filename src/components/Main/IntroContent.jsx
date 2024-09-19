@@ -3,45 +3,50 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import CompanyCarousel from './CompanyCarousel';
 import DashBoard from './DashBoard';
-import Intro from './Intro';
 import { INTRO_CONTENT_CONTENTS as C } from '../../constants/INTRO_CONTENT_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery';
-import DashBoard from './DashBoard';
 
 const IntroContent = () => {
   const [business, setBusiness] = useState(C.CONTENTS[0]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [hasViewed, setHasViewed] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
+
+  const handleClick = (item, index) => {
+    if (timeoutId) clearTimeout(timeoutId);
+    setIsAnimating(true);
+    setTimeoutId((prevTimeoutId) => {
+      if (prevTimeoutId) {
+        clearTimeout(prevTimeoutId);
+      }
+      return setTimeout(() => {
+        setBusiness(item);
+        setActiveIndex(index);
+        setIsAnimating(false);
+        setTimeoutId(null);
+      }, 500);
+    });
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveIndex((prevIndex) => {
-          const newIndex = (prevIndex + 1) % C.CONTENTS.length;
-          setBusiness(C.CONTENTS[newIndex]);
-          return newIndex;
-        });
-        setIsAnimating(false);
-      }, 200);
+      handleClick(
+        C.CONTENTS[(activeIndex + 1) % C.CONTENTS.length],
+        (activeIndex + 1) % C.CONTENTS.length,
+      );
     }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleClick = (item, index) => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setBusiness(item);
-      setActiveIndex(index);
-      setIsAnimating(false);
-    }, 500);
-  };
+    return () => {
+      clearInterval(interval);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [activeIndex, timeoutId]);
 
   return (
     <>
-      {/* <Intro /> */}
       <DashBoard />
       <S.Container>
         <S.Circle />
