@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styled from 'styled-components';
+import { media } from '../../styles/utils/mediaQuery';
 import mainInfoImage2 from './../../assets/images/home/main_info2.png';
 
 const MainInfo = () => {
@@ -58,22 +59,38 @@ export default MainInfo;
 const S = {
   Layout: styled.div`
     display: flex;
-    padding: 80px;
+    padding: 50px;
     justify-content: center;
     height: calc(100vh - 80px);
+
+    ${media.tablet`
+      padding: 80px;
+    `}
   `,
   Container: styled.div`
     display: flex;
-    gap: 70px;
+    flex-direction: column;
+    gap: 30px;
     width: 100%;
     margin: 0 auto;
     max-width: 1100px;
+
+    ${media.tablet`
+      gap: 70px;
+      text-align: start;
+      flex-direction: row;
+    `}
   `,
   LeftSection: styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
+
+    ${media.tablet`
+       width: 50%;
+    `}
   `,
   RightSection: styled.div`
     flex: 1;
@@ -82,9 +99,15 @@ const S = {
     width: 100%;
     align-items: center;
     background-image: url('/src/assets/images/home/main_info.png');
-    background-position: center;
+    background-position: 50%;
     background-repeat: no-repeat;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    background-size: cover;
+
+    ${media.tablet`
+      border-radius: 1rem;
+      background-position: center;
+    `}
   `,
   Image: styled.img`
     height: auto;
@@ -112,5 +135,6 @@ const S = {
     margin-top: 30px;
     font-size: 20px;
     font-weight: 600;
+    text-decoration: underline;
   `,
 };
