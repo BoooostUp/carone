@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import hero1 from '../../assets/images/hero/carone/caroneCeo.webp';
+import hero2 from '../../assets/images/hero/ce/ce.webp';
+import hero3 from '../../assets/images/hero/home/home.webp';
+import hero4 from '../../assets/images/hero/sg/sg.webp';
+import hero5 from '../../assets/images/hero/si/si.webp';
+import hero6 from '../../assets/images/hero/total/total.webp';
+import hero7 from '../../assets/images/hero/total/total2.webp';
 
 const companyNames = [
   '에너지스토리',
@@ -11,15 +18,7 @@ const companyNames = [
   '세명인텍',
   '황지',
 ];
-const companyImages = [
-  'https://via.placeholder.com/600x400?text=Image+1',
-  'https://via.placeholder.com/600x400?text=Image+2',
-  'https://via.placeholder.com/600x400?text=Image+3',
-  'https://via.placeholder.com/600x400?text=Image+4',
-  'https://via.placeholder.com/600x400?text=Image+5',
-  'https://via.placeholder.com/600x400?text=Image+6',
-  'https://via.placeholder.com/600x400?text=Image+7',
-];
+const companyImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 
 const CompanyCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
