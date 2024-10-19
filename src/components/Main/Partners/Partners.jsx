@@ -2,6 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import styled from 'styled-components';
+import bgImage from '../../../assets/images/home/partner_background.jpg';
 import { MAIN_PARTNER_CONTENTS } from '../../../constants/MAIN_PARTNER_CONTENTS';
 import { media } from '../../../styles/utils/mediaQuery';
 
@@ -73,11 +74,15 @@ const S = {
   `,
   Background: styled.div`
     position: relative;
-    height: 250px;
+    height: 150px;
     width: 100%;
-    background-image: url('/src/assets/images/home/partner_background.jpg');
+    background-image: url(${bgImage});
     background-position: center 55%;
     border-radius: 0.5rem;
+
+    ${media.desktop`
+      height: 250px;
+    `}
   `,
   Title: styled.h2`
     font-size: 40px;
@@ -96,9 +101,13 @@ const S = {
   `,
   SlickContainer: styled.div`
     position: absolute;
-    top: 150px;
+    top: 50px;
     left: 50px;
     right: 50px;
+
+    ${media.desktop`
+      top: 150px;
+    `}
 
     .slick-slider {
       max-width: 900px;
@@ -110,10 +119,17 @@ const S = {
     }
     .slick-track {
       display: flex;
-      width: 80%;
       justify-content: center;
       align-items: center;
-      gap: 30px;
+      gap: 15px;
+
+      ${media.desktop`
+        gap: 30px;
+    `}
+
+      .slick-slide {
+        text-align: center;
+      }
     }
   `,
   Box: styled.div`
