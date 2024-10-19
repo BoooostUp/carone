@@ -69,7 +69,7 @@ const MainInfo = () => {
                   : { opacity: 0, y: 20 }
                 : { opacity: 1, y: 0 }
             }
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
             <img src={leftImage} />
           </S.LeftImage>
@@ -120,9 +120,10 @@ const S = {
     max-width: 110rem;
 
     ${media.tablet`
+      gap: 7rem;
       text-align: start;
       flex-direction: row;
-      max-height:50rem;
+      max-height:60rem;
     `}
   `,
   LeftSection: styled.div`
@@ -139,7 +140,6 @@ const S = {
   `,
   LeftImage: styled.div`
     width: 100%;
-    height: 100%;
     border-radius: 0.5rem;
 
     img {
@@ -151,7 +151,9 @@ const S = {
 
     ${media.tablet`
       width: 100%;
-      min-width: 300px;
+      min-width: 30rem;
+      flex-grow: 1;
+      overflow: hidden;
     `}
   `,
   RightSection: styled.div`
@@ -179,6 +181,7 @@ const S = {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-shrink: 0;
 
     ${media.tablet`
       gap: 10px;
