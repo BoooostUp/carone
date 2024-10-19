@@ -61,47 +61,60 @@ export default Partners;
 
 const S = {
   Container: styled.div`
-    max-width: 1100px;
+    max-width: 110rem;
     width: 90%;
-    padding: 50px;
-    margin: 30px auto;
-    text-align: center;
+    padding: 5rem;
+    margin: 3rem auto;
+    text-align: left;
 
     ${media.desktop`
       width: 100%;
+      text-align: center;
     `}
   `,
   Background: styled.div`
     position: relative;
-    height: 250px;
+    height: 25rem;
     width: 100%;
     background-image: url('/src/assets/images/home/partner_background.jpg');
     background-position: center 55%;
     border-radius: 0.5rem;
   `,
   Title: styled.h2`
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 500;
     color: black;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
+
+    ${media.tablet`
+      font-size: 4rem;
+    `}
   `,
   Bold: styled.span`
-    font-size: 41px;
+    font-size: 3.1rem;
     font-weight: 700;
+
+    ${media.tablet`
+      font-size: 4.1rem;
+    `}
   `,
   SubText: styled.h3`
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
+
+    ${media.tablet`
+      font-size: 2rem;
+    `}
   `,
   SlickContainer: styled.div`
     position: absolute;
-    top: 150px;
-    left: 50px;
-    right: 50px;
+    top: 15rem;
+    left: 5rem;
+    right: 5rem;
 
     .slick-slider {
-      max-width: 900px;
+      max-width: 90rem;
       width: 100%;
     }
 
@@ -113,20 +126,20 @@ const S = {
       width: 80%;
       justify-content: center;
       align-items: center;
-      gap: 30px;
+      gap: 3rem;
     }
   `,
   Box: styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 10rem;
     height: 100%;
   `,
   Image: styled.img`
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 1rem;
     object-fit: contain;
   `,
 };
