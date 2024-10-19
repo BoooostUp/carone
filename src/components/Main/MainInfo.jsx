@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
+import rightImage from '../../assets/images/home/main_info.png';
 import { media } from '../../styles/utils/mediaQuery';
-import mainInfoImage2 from './../../assets/images/home/main_info2.png';
+import leftImage from './../../assets/images/home/main_info2.png';
 
 const MainInfo = () => {
   const [ref, inView, entry] = useInView({
@@ -30,7 +31,6 @@ const MainInfo = () => {
             >
               99.9%
             </S.Title>
-
             <S.SubText
               as={motion.p}
               animate={
@@ -40,12 +40,11 @@ const MainInfo = () => {
                     : { opacity: 0, y: 20 }
                   : { opacity: 1, y: 0 }
               }
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               폐기물의 99.9%를 자원으로 순환시키는 혁신적인 기술로 환경을 위해
               노력을 기울이고 있습니다.
             </S.SubText>
-
             <S.Link
               as={motion.a}
               href="/business"
@@ -56,25 +55,24 @@ const MainInfo = () => {
                     : { opacity: 0, y: 20 }
                   : { opacity: 1, y: 0 }
               }
-              transition={{ duration: 0.5, delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               View Companies →
             </S.Link>
           </S.TextContainer>
-          <S.ImageBox>
-            <S.Image
-              as={motion.img}
-              src={mainInfoImage2}
-              animate={
-                isScrollDown
-                  ? inView
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                  : { opacity: 1, y: 0 }
-              }
-              transition={{ duration: 0.5, delay: 0.8 }}
-            />
-          </S.ImageBox>
+          <S.LeftImage
+            as={motion.div}
+            animate={
+              isScrollDown
+                ? inView
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+                : { opacity: 1, y: 0 }
+            }
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <img src={leftImage} />
+          </S.LeftImage>
         </S.LeftSection>
         <S.RightSection
           as={motion.div}
@@ -125,78 +123,98 @@ const S = {
       gap: 7rem;
       text-align: start;
       flex-direction: row;
-      max-height:50rem;
+      max-height:60rem;
     `}
   `,
   LeftSection: styled.div`
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3rem;
-    height: 65%;
 
     ${media.tablet`
-       width: 50%;
-       height:100%;
+      width: 50%;
+      height: 100%;
+    `}
+  `,
+  LeftImage: styled.div`
+    width: 100%;
+    border-radius: 0.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+
+    ${media.tablet`
+      width: 100%;
+      min-width: 30rem;
+      flex-grow: 1;
+      overflow: hidden;
     `}
   `,
   RightSection: styled.div`
-    flex: 1;
     display: flex;
     width: 100%;
     height: 100%;
+    min-height: 10rem;
     align-items: center;
-    background-image: url('/src/assets/images/home/main_info.png');
-    background-position: 70%;
+    background-image: url(${rightImage});
+    background-position: 70% 70%;
     background-repeat: no-repeat;
     border-radius: 0.5rem;
     background-size: cover;
 
     ${media.tablet`
+      flex: 1;
+      height: auto;
+      min-width: 300px;
       border-radius: 1rem;
       background-position: center;
     `}
   `,
-  ImageBox: styled.div`
-    flex: 1;
-    position: relative;
-    width: 100%;
-  `,
-  Image: styled.img`
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 0.5rem;
-  `,
   TextContainer: styled.div`
     display: flex;
     flex-direction: column;
-
     gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
 
     ${media.tablet`
-      gap: 2.5rem;
+      gap: 10px;
     `}
   `,
   Title: styled.h1`
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: ${({ theme }) => theme.color.TOTAL};
+
+    ${media.tablet`
+      font-size:50px;
+    `}
   `,
   SubText: styled.p`
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
     color: ${({ theme }) => theme.color.mainGray};
     width: 90%;
+
+    ${media.tablet`
+      font-size:20px;
+      line-height: 25px;
+    `}
   `,
   Link: styled.a`
-    margin-top: 1rem;
-    font-size: 2rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-decoration: underline;
+
+    ${media.tablet`
+      font-size:20px;
+    `}
   `,
 };
