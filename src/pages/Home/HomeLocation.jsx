@@ -9,7 +9,7 @@ function HomeLocation() {
       <Map company="CARONE2" />
       <Map company="SG" />
       <Map company="TOTAL" />
-      <Map company="SI" />
+      {/* <Map company="SI" /> */}
     </S.Container>
   );
 }
