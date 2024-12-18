@@ -15,7 +15,7 @@ const Bnb = ({ company }) => {
     CARONE: company === 'CARONE',
     SG: company === 'SG',
     TOTAL: company === 'TOTAL',
-    SI: company === 'SI',
+    // SI: company === 'SI',
     HJ: company === 'HJ',
     ES: company === 'ES',
   };
@@ -44,7 +44,7 @@ const Bnb = ({ company }) => {
       CARONE: '/carone',
       SG: '/sg',
       TOTAL: '/total',
-      SI: '/si',
+      // SI: '/si',
       HJ: '/hj',
       ES: '/es',
     };
@@ -108,13 +108,13 @@ const Bnb = ({ company }) => {
       >
         (주)토탈
       </BnbButton>
-      <BnbButton
+      {/* <BnbButton
         variant="si"
         status={buttonStatus.SI}
         onClick={() => handleClick('SI')}
       >
         (주)세명인텍
-      </BnbButton>
+      </BnbButton> */}
       <BnbButton
         variant="hj"
         status={buttonStatus.HJ}
@@ -140,7 +140,7 @@ const S = {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     ${media.desktop`
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(7, 1fr);
     `}
   `,
 };

@@ -33,12 +33,12 @@ export const FOOTER_CONTENTS = {
         tel: 'TEL 055-374-7784',
         fax: 'FAX 055-374-7786',
       },
-      {
-        companyName: '(주)세명인텍',
-        address: '(주)세명인텍 : 울산광역시 남구 용연로 98번길 23',
-        tel: 'TEL 052-277-5550',
-        fax: 'FAX 052-970-5800',
-      },
+      // {
+      //   companyName: '(주)세명인텍',
+      //   address: '(주)세명인텍 : 울산광역시 남구 용연로 98번길 23',
+      //   tel: 'TEL 052-277-5550',
+      //   fax: 'FAX 052-970-5800',
+      // },
     ],
   },
   CARONE: {
