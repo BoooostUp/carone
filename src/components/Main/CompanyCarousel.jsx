@@ -15,7 +15,7 @@ const companyNames = [
   '카원',
   '에스지산업',
   '토탈',
-  '세명인텍',
+  // '세명인텍',
   '황지',
 ];
 const companyImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
