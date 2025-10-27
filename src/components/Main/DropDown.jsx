@@ -12,7 +12,9 @@ const DropDown = ({ handleClick, buttonStatus }) => {
         <option value="CARONE">(유)카원</option>
         <option value="SG">(주)에스지산업</option>
         <option value="TOTAL">(주)토탈</option>
-        <option value="SI">(주)세명인텍</option>
+        <option value="HJ">(주)황지</option>
+        <option value="ES">(주)에너지스토리</option>
+        {/* <option value="SI">(주)세명인텍</option> */}
       </S.Select>
     </S.DropDownWrapper>
   );

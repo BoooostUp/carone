@@ -30,7 +30,8 @@ const S = {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: ${({ $size }) => ($size === 'bg' ? '90rem' : '45rem')};
+    /* height: ${({ $size }) => ($size === 'bg' ? '90rem' : '45rem')}; */
+    min-height: 100dvh;
     background-image: ${({ $company, $page }) =>
       `url(${HERO_IMAGES[$company][$page]})`};
     background-size: cover;
@@ -49,7 +50,10 @@ const S = {
     }
 
     @media (max-width: 767px) {
-      height: 28rem;
+      height: 100vh;
+      height: 100dvh;
+      min-height: 100svh;
+      padding-bottom: max(0px, env(safe-area-inset-botton));
     }
   `,
 

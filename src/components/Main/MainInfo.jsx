@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import styled from 'styled-components';
 import { media } from '../../styles/utils/mediaQuery';
 import mainInfoImage2 from './../../assets/images/home/main_info2.png';
+import { Link as RouterLink } from 'react-router-dom';
 
 const MainInfo = () => {
   const ref = useRef(null);
@@ -32,7 +33,7 @@ const MainInfo = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <S.Link href="/business">View Companies →</S.Link>
+              <S.Link to="/business">더 보기 →</S.Link>
             </motion.div>
           </S.TextContainer>
           <motion.div
@@ -131,10 +132,11 @@ const S = {
     color: ${({ theme }) => theme.color.mainGray};
     width: 90%;
   `,
-  Link: styled.a`
+  Link: styled(RouterLink)`
     margin-top: 30px;
     font-size: 20px;
     font-weight: 600;
     text-decoration: underline;
+    cursor: pointer;
   `,
 };

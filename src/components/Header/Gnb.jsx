@@ -120,7 +120,9 @@ const S = {
     z-index: 1000;
 
     @media (max-width: 1024px) {
-      height: 9.5rem;
+      height: 10rem;
+      height: auto;
+      padding: 1.5rem 0;
       background-color: ${({ theme, $company, $isScrolled }) =>
         $isScrolled ? theme.color[$company] : 'transparent'};
     }
@@ -216,7 +218,7 @@ const S = {
         color: ${({ theme }) => theme.color.white};
       }
       @media (max-width: 767px) {
-        ${({ theme }) => theme.font.FONT12SB};
+        ${({ theme }) => theme.font.FONT18SB};
       }
     }
 
