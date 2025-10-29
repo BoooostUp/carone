@@ -81,7 +81,7 @@ const S = {
     background-image: url(${mainInfoBg});
     background-size: cover;
     background-position: center;
-    ${media.desktop`
+    ${media.tablet`
       width: 50%;
     `}
   `,
