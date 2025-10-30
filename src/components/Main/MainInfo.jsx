@@ -1,90 +1,25 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
-import rightImage from '../../assets/images/home/main_info.png';
 import { media } from '../../styles/utils/mediaQuery';
-import leftImage from './../../assets/images/home/main_info2.png';
+import mainInfoImage2 from './../../assets/images/home/main_info2.png';
+import mainInfoBg from './../../assets/images/home/main_info.png';
+import { Link as RouterLink } from 'react-router-dom';
 
 const MainInfo = () => {
-  const [ref, inView, entry] = useInView({
-    threshold: 0.2,
-    triggerOnce: false,
-  });
-  const isScrollDown =
-    entry && entry.boundingClientRect.top > (entry.rootBounds?.top ?? 0);
-
   return (
     <S.Layout>
-      <S.Container ref={ref}>
+      <S.Container>
         <S.LeftSection>
           <S.TextContainer>
-            <S.Title
-              as={motion.h1}
-              animate={
-                isScrollDown
-                  ? inView
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                  : { opacity: 1, y: 0 }
-              }
-              transition={{ duration: 0.5 }}
-            >
-              99.9%
-            </S.Title>
-            <S.SubText
-              as={motion.p}
-              animate={
-                isScrollDown
-                  ? inView
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                  : { opacity: 1, y: 0 }
-              }
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <S.Title>99.9%</S.Title>
+            <S.SubText>
               폐기물의 99.9%를 자원으로 순환시키는 혁신적인 기술로 환경을 위해
               노력을 기울이고 있습니다.
             </S.SubText>
-            <S.Link
-              as={motion.a}
-              href="/business"
-              animate={
-                isScrollDown
-                  ? inView
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                  : { opacity: 1, y: 0 }
-              }
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              View Companies →
-            </S.Link>
+            <S.Link to="/business">더 보기 →</S.Link>
           </S.TextContainer>
-          <S.LeftImage
-            as={motion.div}
-            animate={
-              isScrollDown
-                ? inView
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 20 }
-                : { opacity: 1, y: 0 }
-            }
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <img src={leftImage} />
-          </S.LeftImage>
+          <S.Image src={mainInfoImage2} alt="자원 순환 기술 이미지" />
         </S.LeftSection>
-        <S.RightSection
-          as={motion.div}
-          animate={
-            isScrollDown
-              ? inView
-                ? { opacity: 1, x: 0 }
-                : { opacity: 0, x: 100 }
-              : { opacity: 1, x: 0 }
-          }
-          transition={{ duration: 0.5, delay: 0.5 }}
-        />
+        <S.RightSection />
       </S.Container>
     </S.Layout>
   );
@@ -95,126 +30,97 @@ export default MainInfo;
 const S = {
   Layout: styled.div`
     display: flex;
-    padding: 5rem;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 9.5rem);
-    margin-top: 5rem;
+    padding: 50px 20px;
+    min-height: calc(100dvh - 8rem); /* 주소창 대응 */
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 40%,
+      rgba(0, 70, 134, 0.05) 40%
+    );
 
     ${media.tablet`
-      margin-top: 5rem;
-      padding: 8rem;
-    `}
-
-    ${media.desktop`
-      height: calc(100vh - 8rem);
+      padding: 80px 40px;
     `}
   `,
+
   Container: styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 40px;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    max-width: 110rem;
+    max-width: 1100px;
+    align-items: center;
 
     ${media.tablet`
-      gap: 7rem;
-      text-align: start;
       flex-direction: row;
-      max-height:60rem;
+      gap: 80px;
+      justify-content: space-between;
     `}
   `,
+
   LeftSection: styled.div`
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
+    width: 100%;
 
     ${media.tablet`
       width: 50%;
-      height: 100%;
     `}
   `,
-  LeftImage: styled.div`
-    width: 100%;
-    border-radius: 0.5rem;
 
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 0.5rem;
-      object-fit: cover;
-    }
-
-    ${media.tablet`
-      width: 100%;
-      min-width: 30rem;
-      flex-grow: 1;
-      overflow: hidden;
-    `}
-  `,
   RightSection: styled.div`
-    display: flex;
     width: 100%;
-    height: 100%;
-    min-height: 10rem;
-    align-items: center;
-    background-image: url(${rightImage});
-    background-position: 70% 70%;
-    background-repeat: no-repeat;
-    border-radius: 0.5rem;
+    min-height: 300px;
+    flex: 0 0 auto;
+    min-height: 300px;
+    border-radius: 1rem;
+    background-image: url(${mainInfoBg});
     background-size: cover;
-
+    background-position: center;
     ${media.tablet`
-      flex: 1;
-      height: auto;
-      min-width: 300px;
-      border-radius: 1rem;
-      background-position: center;
+      width: 50%;
     `}
   `,
+
+  Image: styled.img`
+    width: 100%;
+    border-radius: 0.8rem;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  `,
+
   TextContainer: styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    flex-shrink: 0;
-
-    ${media.tablet`
-      gap: 10px;
-    `}
+    gap: 20px;
   `,
+
   Title: styled.h1`
-    font-size: 3rem;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
     font-weight: 800;
     color: ${({ theme }) => theme.color.TOTAL};
-
-    ${media.tablet`
-      font-size:50px;
-    `}
   `,
+
   SubText: styled.p`
-    font-size: 1.6rem;
-    line-height: 2.5rem;
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    line-height: 1.6;
     color: ${({ theme }) => theme.color.mainGray};
-    width: 90%;
-
-    ${media.tablet`
-      font-size:20px;
-      line-height: 25px;
-    `}
   `,
-  Link: styled.a`
-    margin-top: 3rem;
+
+  Link: styled(RouterLink)`
+    margin-top: 20px;
     font-size: 1.8rem;
     font-weight: 600;
     text-decoration: underline;
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.black};
 
-    ${media.tablet`
-      font-size:20px;
-    `}
+    &:hover {
+      color: ${({ theme }) => theme.color.TOTAL};
+    }
   `,
 };

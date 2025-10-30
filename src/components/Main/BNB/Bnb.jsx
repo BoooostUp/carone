@@ -13,11 +13,11 @@ const Bnb = ({ company }) => {
     HOME: company === 'HOME',
     CE: company === 'CE',
     CARONE: company === 'CARONE',
-    SG: company === 'SG',
-    TOTAL: company === 'TOTAL',
-    SI: company === 'SI',
-    HJ: company === 'HJ',
     ES: company === 'ES',
+    TOTAL: company === 'TOTAL',
+    // SI: company === 'SI',
+    HJ: company === 'HJ',
+    SG: company === 'SG',
   };
 
   const [buttonStatus, setButtonStatus] = useState(initialState);
@@ -42,11 +42,12 @@ const Bnb = ({ company }) => {
       HOME: '/',
       CE: '/ce',
       CARONE: '/carone',
-      SG: '/sg',
-      TOTAL: '/total',
-      SI: '/si',
-      HJ: '/hj',
       ES: '/es',
+
+      TOTAL: '/total',
+      // SI: '/si',
+      HJ: '/hj',
+      SG: '/sg',
     };
 
     // Navigate to the designated path based on button name
@@ -95,12 +96,13 @@ const Bnb = ({ company }) => {
         (유)카원
       </BnbButton>
       <BnbButton
-        variant="sg"
-        status={buttonStatus.SG}
-        onClick={() => handleClick('SG')}
+        variant="es"
+        status={buttonStatus.ES}
+        onClick={() => handleClick('ES')}
       >
-        (주)에스지산업
+        (주)에너지스토리
       </BnbButton>
+
       <BnbButton
         variant="total"
         status={buttonStatus.TOTAL}
@@ -108,13 +110,13 @@ const Bnb = ({ company }) => {
       >
         (주)토탈
       </BnbButton>
-      <BnbButton
+      {/* <BnbButton
         variant="si"
         status={buttonStatus.SI}
         onClick={() => handleClick('SI')}
       >
         (주)세명인텍
-      </BnbButton>
+      </BnbButton> */}
       <BnbButton
         variant="hj"
         status={buttonStatus.HJ}
@@ -123,11 +125,11 @@ const Bnb = ({ company }) => {
         (주)황지
       </BnbButton>
       <BnbButton
-        variant="es"
-        status={buttonStatus.ES}
-        onClick={() => handleClick('ES')}
+        variant="sg"
+        status={buttonStatus.SG}
+        onClick={() => handleClick('SG')}
       >
-        (주)에너지스토리
+        (주)에스지산업
       </BnbButton>
     </S.ButtonWrapper>
   );
@@ -140,7 +142,7 @@ const S = {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     ${media.desktop`
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(7, 1fr);
     `}
   `,
 };

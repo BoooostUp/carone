@@ -94,7 +94,7 @@ const IntroContent = () => {
           ))}
         </S.ButtonBox>
       </S.Container>
-      <CompanyCarousel />
+      {/* <CompanyCarousel /> */}
     </>
   );
 };
@@ -208,7 +208,7 @@ const S = {
   `,
   Img: styled.img`
     width: 100%;
-    height: 20rem;
+    height: 30rem;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 0.5rem;

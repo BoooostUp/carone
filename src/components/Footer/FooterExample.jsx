@@ -7,7 +7,7 @@ const FooterExample = () => {
       <Footer company="HOME" />
       <Footer company="CE" />
       <Footer company="TOTAL" />
-      <Footer company="SI" />
+      {/* <Footer company="SI" /> */}
       <Footer company="SG" />
       <Footer company="CARONE" />
     </S.FooterWrapper>
