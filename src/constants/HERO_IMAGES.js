@@ -93,7 +93,7 @@ export const HERO_IMAGES = Object.freeze({
   },
   //TODO: 에너지스토리 정보 기입
   ES: {
-    total: total,
+    es: total,
     ceo: totalCeo,
     history: totalCeo,
     location: totalCeo,
@@ -107,7 +107,7 @@ export const HERO_IMAGES = Object.freeze({
   },
   //TODO: 황지 정보 기입
   HJ: {
-    total: total,
+    hj: total,
     ceo: totalCeo,
     history: totalCeo,
     location: totalCeo,
