@@ -3,7 +3,7 @@ import Carone from '../pages/Carone/Carone';
 export const FOOTER_CONTENTS = {
   HOME: {
     companyName: '',
-    home: '',
+    home: '99.9% 폐기물에서 자원으로...',
     ceo: '인사말',
     business: '사업 분야',
     location: '오시는 길',

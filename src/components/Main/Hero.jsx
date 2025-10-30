@@ -13,11 +13,10 @@ const Hero = ({ size, link, company, isMain, page }) => {
 
   // 2. 비디오 → 이미지 순으로 소스 결정
   //    (page 키가 없으면 main으로도 한 번 더 시도)
-  const videoSrc =
-    HERO_VIDEOS[company]?.[page] ?? HERO_VIDEOS[company]?.main ?? null;
+  const videoSrc = HERO_VIDEOS[company]?.[page] ?? null;
 
   const imageSrc =
-    HERO_IMAGES[company]?.[page] ?? HERO_IMAGES[company]?.main ?? null;
+    HERO_IMAGES[company]?.[page] ?? HERO_IMAGES[company]?.home ?? null;
 
   return (
     <S.Container $size={size}>
