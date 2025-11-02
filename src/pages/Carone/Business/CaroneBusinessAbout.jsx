@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import SubCategoryBar from '../../../components/Main/SubCategoryBar';
+import CaroneBusinessArea from './CaroneBusinessArea';
 
 const CaroneBusinessAbout = () => {
   useEffect(() => {
@@ -9,7 +10,8 @@ const CaroneBusinessAbout = () => {
 
   return (
     <S.Layout>
-      <SubCategoryBar company="CARONE" />
+      {/* <SubCategoryBar company="CARONE" /> */}
+      <CaroneBusinessArea />
     </S.Layout>
   );
 };

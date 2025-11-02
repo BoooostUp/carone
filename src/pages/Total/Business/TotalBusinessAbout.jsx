@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import processImg from '../../../assets/images/total/businessAbout.png';
+import styled from 'styled-components';
+import TotalBusinessArea from './TotalBusinessArea';
 
 function TotalBusinessAbout() {
   useEffect(() => {
@@ -7,10 +9,30 @@ function TotalBusinessAbout() {
   }, []);
 
   return (
-    <div>
-      <img src={processImg} alt="사업분야" style={{ width: '100%' }} />
-    </div>
+    <S.Container>
+      <TotalBusinessArea />
+    </S.Container>
   );
 }
 
 export default TotalBusinessAbout;
+
+const S = {
+  Container: styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  `,
+  Banner: styled.div`
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+      object-fit: cover;
+    }
+  `,
+};

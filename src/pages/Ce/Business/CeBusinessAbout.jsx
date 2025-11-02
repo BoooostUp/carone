@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import img from '../../../assets/images/ce/businessAbout.png';
+import CeBusinessArea from './CeBusinessArea';
 
 function CeBusinessAbout() {
   useEffect(() => {
@@ -7,8 +8,8 @@ function CeBusinessAbout() {
   }, []);
 
   return (
-    <div>
-      <img src={img} alt="사업 분야" style={{ width: '100%' }} />
+    <div style={{ width: '100' }}>
+      <CeBusinessArea />
     </div>
   );
 }
