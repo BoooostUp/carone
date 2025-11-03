@@ -56,12 +56,11 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       imageAddress: homeImage2,
     },
     {
-      id: 'SG',
-      title1: '(주)에스지산업',
-      content1: `(주)에스지산업은 숙련된 생산기술력과 인력으로 폐유를 재활용하여 이온정제유를 생산, 산업체 연료유로 재활용합니다.
-        
-        국가 정책에 부합하는 그린에너지를 실천하는 기업이 되기 위해 더욱더 노력하겠습니다.`,
-      imageAddress: homeImage3,
+      id: 'ES',
+      title1: '(주)에너지스토리',
+      content1: `(주)에너지스토리는 폐유성페인트, 폐수성페인트, 폐유기용제 등을 파쇄·분쇄·정제하여
+      유기용제 및 재생연료로 재활용하는 액상폐기물 재활용 전문 기업입니다.`,
+      imageAddress: homeImage2, // 실제 있는 이미지로 교체
     },
     {
       id: 'TOTAL',
@@ -73,14 +72,21 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
         '(주)토탈 제 2공장은 기존에 소각으로 처리하던 용기류(폐페인트칩, 폐유드럼통)를 파쇄 분쇄하여 원자재 고철로 생산하는 재활용업입니다.',
       imageAddress: homeImage4,
     },
-    // {
-    //   id: 'SI',
-    //   title1: '(주)세명인텍',
-    //   content1: `(주)세명인텍은 안전, 환경을 우선하는 기업으로 정직과 신뢰를 바탕으로 미래의 주도적인 기업을 창조합니다.
-
-    //     고객의 입장에서 고객이 만족할 때까지 최선을 다하겠습니다.`,
-    //   imageAddress: homeImage5,
-    // },
+    {
+      id: 'HJ',
+      title1: '(주)황지',
+      content1: `(주)황지는 울산시청 허가를 받아 사업장 일반폐기물 중 매립대상 폐기물을
+      안정적으로 처리하는 최종처분(매립) 전문 업체입니다.`,
+      imageAddress: homeImage2, // 실제 있는 이미지로 교체
+    },
+    {
+      id: 'SG',
+      title1: '(주)에스지산업',
+      content1: `(주)에스지산업은 숙련된 생산기술력과 인력으로 폐유를 재활용하여 이온정제유를 생산, 산업체 연료유로 재활용합니다.
+        
+        국가 정책에 부합하는 그린에너지를 실천하는 기업이 되기 위해 더욱더 노력하겠습니다.`,
+      imageAddress: homeImage3,
+    },
   ],
   CE: [
     {
