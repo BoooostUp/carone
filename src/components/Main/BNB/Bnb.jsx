@@ -8,7 +8,7 @@ import DropDown from '../DropDown';
 const NAV_ITEMS = [
   { key: 'HOME', label: 'HOME', variant: 'home', path: '/' },
   { key: 'CE', label: '(주)자동차환경', variant: 'ce', path: '/ce' },
-  { key: 'CARONE', label: '(유)카원', variant: 'carone', path: '/carone' },
+  { key: 'CARONE', label: '카원(유)', variant: 'carone', path: '/carone' },
   { key: 'ES', label: '(주)에너지스토리', variant: 'es', path: '/es' },
   { key: 'TOTAL', label: '(주)토탈', variant: 'total', path: '/total' },
   { key: 'HJ', label: '(주)황지', variant: 'hj', path: '/hj' },
