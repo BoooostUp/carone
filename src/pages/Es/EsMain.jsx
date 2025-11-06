@@ -4,7 +4,7 @@ import { MAIN_ARTICLE_CONTENTS } from '../../constants/MAIN_ARTICLE_CONTENTS.js'
 function EsMain() {
   return (
     <div>
-      {MAIN_ARTICLE_CONTENTS.TOTAL1.map((item, index) => {
+      {MAIN_ARTICLE_CONTENTS.ES.map((item, index) => {
         return <MainArticle key={index} currentCompany="ES" item={item} />;
       })}
     </div>

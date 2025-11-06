@@ -43,7 +43,7 @@ export const FOOTER_CONTENTS = {
   },
   CARONE: {
     carone: '카원',
-    companyName: '(유)카원',
+    companyName: '카원(유)',
     subtitle: '폐기물을 자원으로, 우리 환경을 깨끗하게 추구하는 신뢰의 기업',
     info: [
       {

@@ -1,25 +1,94 @@
+// src/components/Hero/Hero.jsx
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 import WelcomeBox from './WelcomeBox';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { HERO_CONTENTS } from '../../constants/HERO_CONTENTS';
 import { HERO_VIDEOS } from '../../constants/HERO_VIDEOS';
 import { HERO_IMAGES } from '../../constants/HERO_IMAGES';
 
-const Hero = ({ size, link, company, isMain, page }) => {
-  // 1. 텍스트 가져오기
-  const textContent = link
-    ? HERO_CONTENTS[company]?.[link]
-    : FOOTER_CONTENTS[company]?.[page] ?? '';
+export const getAutoHeroSize = ({ company, page, link, fallback = 'lg' }) => {
+  const normalizedCompany = (company || '').toUpperCase();
 
-  // 2. 비디오 → 이미지 순으로 소스 결정
-  //    (page 키가 없으면 main으로도 한 번 더 시도)
-  const videoSrc = HERO_VIDEOS[company]?.[page] ?? null;
+  if (normalizedCompany === 'HOME') {
+    const isHomeSub = !!link || (page && page !== 'home');
+    return isHomeSub ? 'sm' : 'lg';
+  }
+  if (link) return 'sm';
+  if (page && page !== 'home') return 'md';
+  return fallback;
+};
 
+// utils/path.ts (또는 Hero.jsx 상단에 함께)
+export const getPathInfo = (loc) => {
+  // HashRouter면 hash 사용, BrowserRouter면 pathname 사용
+  const raw = loc.hash?.startsWith('#')
+    ? loc.hash.slice(1)
+    : loc.pathname || '/';
+
+  // 쿼리/해시 조각 제거
+  const cleaned = raw.split('?')[0].split('#')[0];
+
+  // 베이스 경로가 있으면 여기서 제거하고 싶으면 아래처럼:
+  // const withoutBase = cleaned.replace(/^\/(app|home)\//, '/'); // 필요하면 수정
+
+  const parts = cleaned.replace(/^\/+/, '').split('/'); // ['', 'ceo'] → ['ceo']
+  const [first, second] = parts;
+
+  // HOME 하위 후보: /ceo | /business | /location | /process | /recruit/process
+  let homeLink = null;
+  if (['ceo', 'business', 'location', 'process'].includes(first))
+    homeLink = first;
+  if (first === 'recruit' && second === 'process') homeLink = 'process';
+
+  return {
+    raw,
+    cleaned,
+    parts,
+    slug: first || '',
+    homeLink,
+  };
+};
+
+const Hero = ({
+  size,
+  align = 'center',
+  link,
+  company = 'HOME',
+  isMain,
+  page = 'home',
+  showScrollCue = false,
+}) => {
+  const location = useLocation();
+  const { raw, cleaned, parts, slug, homeLink } = getPathInfo(location); // ❷ 튼튼한 파싱
+
+  // HOME 하위 경로로 들어오면 company를 HOME 취급, link 보정
+  const effectiveCompany = homeLink ? 'HOME' : company;
+  const effectiveLink = homeLink ?? link;
+
+  const autoSize =
+    size ||
+    getAutoHeroSize({
+      company: effectiveCompany,
+      page,
+      link: effectiveLink,
+    });
+
+  const textContent =
+    (effectiveLink
+      ? HERO_CONTENTS[effectiveCompany]?.[effectiveLink]
+      : HERO_CONTENTS[effectiveCompany]?.[page]) ??
+    FOOTER_CONTENTS[effectiveCompany]?.[page] ??
+    '';
+
+  const videoSrc = HERO_VIDEOS[effectiveCompany]?.[page] ?? null;
   const imageSrc =
-    HERO_IMAGES[company]?.[page] ?? HERO_IMAGES[company]?.home ?? null;
+    HERO_IMAGES[effectiveCompany]?.[page] ??
+    HERO_IMAGES[effectiveCompany]?.home ??
+    null;
 
   return (
-    <S.Container $size={size}>
+    <S.Container $size={autoSize} $align={align} data-hero>
       {videoSrc ? (
         <>
           <S.BackgroundVideo
@@ -29,7 +98,8 @@ const Hero = ({ size, link, company, isMain, page }) => {
             loop
             playsInline
             preload="auto"
-            poster={imageSrc || undefined} // 로딩 전 이미지
+            poster={imageSrc || undefined}
+            aria-hidden
           />
           <S.Overlay />
         </>
@@ -39,36 +109,57 @@ const Hero = ({ size, link, company, isMain, page }) => {
           <S.Overlay />
         </>
       ) : (
-        // 최후의 폴백
         <S.BackgroundFallback />
       )}
 
-      <S.Text>{textContent}</S.Text>
+      <S.Text $size={autoSize}>{textContent}</S.Text>
 
-      {company !== 'HOME' && isMain === 2 && (
+      {effectiveCompany !== 'HOME' && isMain === 2 && (
         <S.WelcomeBoxWrapper>
-          <WelcomeBox company={company} isMain={isMain} />
+          <WelcomeBox company={effectiveCompany} isMain={isMain} />
         </S.WelcomeBoxWrapper>
       )}
+
+      {showScrollCue && <S.ScrollCue>⌄</S.ScrollCue>}
     </S.Container>
   );
 };
 
 export default Hero;
 
+/* ===================== styles ===================== */
 const S = {
   Container: styled.div`
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     width: 100%;
-    min-height: 100dvh;
     overflow: hidden;
 
-    @media (max-width: 767px) {
-      min-height: 100svh;
-    }
+    ${({ $size }) => {
+      const map = { sm: 40, md: 70, lg: 100 };
+      const h = map[$size] || 100;
+      // ❻ dvh → svh → vh 폴백
+      return `
+        min-height: ${h}dvh;
+        @supports not (height: 1dvh) { min-height: ${h}svh; }
+        @supports not (height: 1svh) { min-height: ${h}vh; }
+      `;
+    }}
+  `,
+
+  DebugBar: styled.div`
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #d1f4ff;
+    pointer-events: none;
   `,
 
   BackgroundVideo: styled.video`
@@ -80,7 +171,6 @@ const S = {
     z-index: 0;
     pointer-events: none;
   `,
-
   BackgroundImage: styled.div`
     position: absolute;
     inset: 0;
@@ -90,36 +180,48 @@ const S = {
     z-index: 0;
     pointer-events: none;
   `,
-
   BackgroundFallback: styled.div`
     position: absolute;
     inset: 0;
-    background: #000;
+    background: #0b0f14;
     z-index: 0;
     pointer-events: none;
   `,
-
   Overlay: styled.div`
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
     pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.35) 35%,
+        rgba(0, 0, 0, 0.55) 100%
+      ),
+      radial-gradient(
+        120% 120% at 50% 60%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.45) 100%
+      );
+    mix-blend-mode: multiply;
   `,
 
-  Text: styled.h2`
+  Text: styled.h1`
     z-index: 2;
     text-align: center;
-    color: ${({ theme }) => theme.color.white};
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    padding: 10rem;
-    ${({ theme }) => theme.font.FONT45B};
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    white-space: pre-line;
+    font-weight: 800;
+    line-height: 1.15;
 
-    @media (max-width: 767px) {
-      ${({ theme }) => theme.font.FONT28B};
-      padding: 1rem;
-      white-space: normal;
-    }
+    ${({ $size }) => {
+      if ($size === 'sm')
+        return `padding:1rem;font-size:clamp(1.4rem,4.8vw,2.1rem);`;
+      if ($size === 'md')
+        return `padding:2rem;font-size:clamp(2rem,5.8vw,3rem);`;
+      return `padding:4rem;font-size:clamp(2.4rem,6.4vw,3.6rem);`;
+    }}
   `,
 
   WelcomeBoxWrapper: styled.div`
@@ -128,5 +230,24 @@ const S = {
     right: 0;
     bottom: 0;
     z-index: 2;
+  `,
+  ScrollCue: styled.div`
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.6rem;
+    animation: bounce 1.6s infinite;
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) translateY(6px);
+      }
+    }
   `,
 };

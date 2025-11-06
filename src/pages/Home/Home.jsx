@@ -24,9 +24,8 @@ const Home = () => {
     <S.PageContainer>
       <Gnb company="HOME" />
       <Hero
-        size={heroSize}
-        link={currentPath}
         company="HOME"
+        link={selectedCategory !== 'home' ? selectedCategory : undefined}
         page={selectedCategory}
       />
       <Bnb company="HOME" />
