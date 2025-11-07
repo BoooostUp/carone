@@ -30,7 +30,6 @@ const Ce = () => {
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
-      <QnAButton />
       <S.BnBFooterContainer>
         <Footer company="CE" />
       </S.BnBFooterContainer>

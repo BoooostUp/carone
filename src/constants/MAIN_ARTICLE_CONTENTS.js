@@ -1,7 +1,6 @@
 import homeImage2 from '/src/assets/images/mainArticle/carone.webp';
 import homeImage1 from '/src/assets/images/mainArticle/ce.webp';
 import homeImage3 from '/src/assets/images/mainArticle/sg.webp';
-import homeImage5 from '/src/assets/images/mainArticle/si.webp';
 import homeImage4 from '/src/assets/images/mainArticle/total.webp';
 
 import ceImage1 from '/src/assets/images/ce/main1.webp';
@@ -17,7 +16,7 @@ import sgImage4 from '/src/assets/images/sg/main4.png';
 import carone1Image1 from '/src/assets/images/carone/main1.webp';
 import carone1Image2 from '/src/assets/images/carone/main2.webp';
 import carone1Image3 from '/src/assets/images/carone/main3.webp';
-import carone1Image4 from '/src/assets/images/carone/main4.webp';
+import carone1Image4 from '/src/assets/images/carone/main4.jpg';
 
 import carone2Image1 from '/src/assets/images/carone2/main1.webp';
 import carone2Image2 from '/src/assets/images/carone2/main2.webp';
@@ -28,11 +27,6 @@ import total1Image1 from '/src/assets/images/total/main1.webp';
 import total1Image2 from '/src/assets/images/total/main2.webp';
 import total1Image3 from '/src/assets/images/total/main3.webp';
 import total1Image4 from '/src/assets/images/total/main4.webp';
-
-import siImage1 from '/src/assets/images/si/siImage1.webp';
-import siImage2 from '/src/assets/images/si/siImage2.webp';
-import siImage3 from '/src/assets/images/si/siImage3.webp';
-import siImage4 from '/src/assets/images/si/siImage4.webp';
 
 import esImage1 from '/src/assets/images/es/esImage1.png';
 import esImage2 from '/src/assets/images/es/esImage2.png';

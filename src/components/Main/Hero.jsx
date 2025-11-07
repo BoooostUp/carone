@@ -113,13 +113,6 @@ const Hero = ({
       )}
 
       <S.Text $size={autoSize}>{textContent}</S.Text>
-
-      {effectiveCompany !== 'HOME' && isMain === 2 && (
-        <S.WelcomeBoxWrapper>
-          <WelcomeBox company={effectiveCompany} isMain={isMain} />
-        </S.WelcomeBoxWrapper>
-      )}
-
       {showScrollCue && <S.ScrollCue>⌄</S.ScrollCue>}
     </S.Container>
   );

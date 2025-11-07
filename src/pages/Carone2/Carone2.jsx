@@ -30,7 +30,6 @@ const Carone2 = () => {
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
-      <QnAButton />
       <S.BnBFooterContainer>
         <Footer company="CARONE" />
       </S.BnBFooterContainer>

@@ -30,7 +30,6 @@ const Hwangji = () => {
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
-      <QnAButton />
       <S.BnBFooterContainer>
         <Footer company="HJ" />
       </S.BnBFooterContainer>
