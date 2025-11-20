@@ -7,11 +7,11 @@ import introContent1 from '../assets/videos/IntroContent1.mp4';
 export const HERO_VIDEOS = Object.freeze({
   HOME: {
     home: introContent1,
-    ceo: homeCeo,
-    business: homeBusiness,
-    location: homeLocation,
-    process: homeRecruit,
-    apply: homeRecruit,
+    // ceo: homeCeo,
+    // business: homeBusiness,
+    // location: homeLocation,
+    // process: homeRecruit,
+    // apply: homeRecruit,
   },
   CARONE: {},
   CE: {},

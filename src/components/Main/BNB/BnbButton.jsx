@@ -24,6 +24,7 @@ const S = {
     ${media.desktop`
       padding: 2rem 0.5rem;
     `}
+    height: 100%;
   `,
 };
 

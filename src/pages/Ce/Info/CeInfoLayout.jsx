@@ -1,3 +1,4 @@
+// 그대로 사용
 import { useLocation, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import CategoryBar from '../../../components/Main/CategoryBar';
@@ -5,8 +6,7 @@ import { LNB_CONTENTS } from '../../../constants/LNB_CONTENTS';
 
 const CeInfoLayout = () => {
   const location = useLocation();
-  const currentPath = location.pathname;
-  const parts = currentPath.split('/');
+  const parts = location.pathname.split('/');
   const selectedCategory = parts[parts.length - 1];
 
   return (

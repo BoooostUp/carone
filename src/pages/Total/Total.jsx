@@ -30,7 +30,6 @@ const Total = () => {
       <S.ContentSpacer>
         <Outlet />
       </S.ContentSpacer>
-      <QnAButton />
       <S.BnBFooterContainer>
         <Footer company="TOTAL" />
       </S.BnBFooterContainer>

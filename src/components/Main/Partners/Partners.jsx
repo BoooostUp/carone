@@ -13,149 +13,149 @@ const Partners = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
+    pauseOnHover: true,
+    arrows: false,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1280, settings: { slidesToShow: 4 } },
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      { breakpoint: 520, settings: { slidesToShow: 2.5 } },
     ],
   };
+
   return (
-    <S.Container>
-      <S.Title>
-        <S.Bold>환경을 위한 노력</S.Bold>은 계속됩니다.
-      </S.Title>
-      <S.SubText>
-        더 밝은 미래와 더 나은 삶을 위해 최선을 다하겠습니다.
-      </S.SubText>
-      <S.Background>
-        <S.SlickContainer>
+    <S.Section aria-labelledby="partners-title">
+      <S.Header>
+        <S.Title id="partners-title">
+          <b>환경을 위한 노력</b>은 계속됩니다.
+        </S.Title>
+        <S.Sub>더 밝은 미래와 더 나은 삶을 위해 최선을 다하겠습니다.</S.Sub>
+      </S.Header>
+
+      <S.Banner>
+        <S.Bar>
           <Slider {...settings}>
             {MAIN_PARTNER_CONTENTS.map((item) => (
-              <S.Box key={item.id}>
-                <S.Image src={item.img} />
-              </S.Box>
+              <div key={item.id}>
+                <S.LogoCard>
+                  <img src={item.img} alt={item.name || 'partner'} />
+                </S.LogoCard>
+              </div>
             ))}
           </Slider>
-        </S.SlickContainer>
-      </S.Background>
-    </S.Container>
+        </S.Bar>
+      </S.Banner>
+    </S.Section>
   );
 };
 
 export default Partners;
 
+/* ===================== styles ===================== */
 const S = {
-  Container: styled.div`
-    max-width: 110rem;
-    width: 90%;
-    padding: 5rem;
-    margin: 3rem auto;
+  Section: styled.section`
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 20px 72px;
+  `,
+
+  Header: styled.div`
     text-align: left;
+    margin-bottom: 20px;
 
     ${media.desktop`
-      width: 100%;
       text-align: center;
+      margin-bottom: 28px;
     `}
   `,
-  Background: styled.div`
-    position: relative;
-    height: 15rem;
-    width: 100%;
-    background-image: url(${bgImage});
-    background-position: center 55%;
-    border-radius: 0.5rem;
 
-    ${media.desktop`
-      height: 25rem;
-    `}
-  `,
   Title: styled.h2`
-    font-size: 3rem;
-    font-weight: 500;
-    color: black;
-    margin-bottom: 2.5rem;
-
-    ${media.tablet`
-      font-size: 4rem;
-    `}
-  `,
-  Bold: styled.span`
-    font-size: 3.1rem;
     font-weight: 700;
+    letter-spacing: -0.02em;
+    color: ${({ theme }) => theme.color.black};
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    margin: 0 0 10px 0;
 
-    ${media.tablet`
-      font-size: 4.1rem;
-    `}
-  `,
-  SubText: styled.h3`
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 4rem;
-
-    ${media.tablet`
-      font-size: 2rem;
-    `}
-  `,
-  SlickContainer: styled.div`
-    position: absolute;
-    top: 5rem;
-    left: 5rem;
-    right: 5rem;
-
-    ${media.desktop`
-      top: 150px;
-    `}
-
-    .slick-slider {
-      max-width: 90rem;
-      width: 100%;
+    b {
+      font-size: 2.5rem;
+      color: ${({ theme }) => theme.color.TOTAL};
     }
+  `,
 
+  Sub: styled.p`
+    color: ${({ theme }) => theme.color.mainGray};
+    font-size: clamp(2rem, 2.5vw, 1.2rem);
+    line-height: 1.7;
+    margin: 0;
+  `,
+
+  Banner: styled.div`
+    margin-top: 24px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url(${bgImage});
+    background-size: cover;
+    background-position: center 55%;
+    padding: clamp(14px, 3.5vw, 22px);
+  `,
+
+  Bar: styled.div`
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: clamp(10px, 2.5vw, 16px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+
+    /* slick 기본 정렬 안정화 */
     .slick-list {
-      background-color: white;
+      overflow: hidden;
+    }
+    .slick-slide > div {
+      display: flex;
+      justify-content: center;
     }
     .slick-track {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 1.5rem;
-
-      ${media.desktop`
-        gap: 3rem;
-    `}
-
-      .slick-slide {
-        text-align: center;
-      }
+      gap: clamp(10px, 2vw, 20px);
     }
   `,
-  Box: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 100%;
-  `,
-  Image: styled.img`
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-    object-fit: contain;
+
+  LogoCard: styled.div`
+    height: clamp(84px, 16vw, 120px);
+    width: clamp(140px, 22vw, 200px);
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    display: grid;
+    place-items: center;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    img {
+      width: 72%;
+      height: 72%;
+      object-fit: contain;
+      /* filter: grayscale(100%); */
+      opacity: 0.85;
+      transition:
+        filter 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    /* &:hover img {
+      filter: grayscale(0);
+      opacity: 1;
+      transform: scale(1.02);
+    } */
   `,
 };
