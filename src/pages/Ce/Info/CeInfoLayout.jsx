@@ -28,23 +28,29 @@ const CeInfoLayout = () => {
 
 export default CeInfoLayout;
 
+const HEADER_HEIGHT = 80;
+
 const S = {
-  Layout: styled.div`
-    display: flex;
+  Layout: styled.main`
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 1.5rem;
 
     .outletWrapper {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin: 0 auto;
+      width: 100%;
       max-width: 70rem;
-      min-height: 40rem;
-      padding-top: 8rem;
-      padding-bottom: 8rem;
+      margin: 0 auto;
+      padding: 6rem 2rem 7rem;
+      min-height: calc(100vh - ${HEADER_HEIGHT}px);
+      display: block;
+      border: 1px solid ${({ theme }) => theme.color.lightGray};
+      border-radius: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.05);
 
       @media (max-width: 767px) {
-        padding: 5rem 3rem;
-        min-height: 30rem;
+        padding: 4.5rem 1.5rem 5rem;
+        min-height: calc(100vh - ${HEADER_HEIGHT}px);
       }
     }
   `,
