@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import processImg from '../../../assets/images/total/businessAbout.png';
+import styled from 'styled-components';
+import EsBusinessArea from './EsBusinessArea';
 
 function EsBusinessAbout() {
   useEffect(() => {
@@ -7,10 +9,29 @@ function EsBusinessAbout() {
   }, []);
 
   return (
-    <div>
-      <img src={processImg} alt="사업분야" style={{ width: '100%' }} />
-    </div>
+    <S.Container>
+      <EsBusinessArea />
+    </S.Container>
   );
 }
 
 export default EsBusinessAbout;
+
+const S = {
+  Container: styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  `,
+  Banner: styled.div`
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  `,
+};

@@ -39,7 +39,7 @@ export const MAP_CONTENTS = Object.freeze({
     imageSrc: totalImage,
   },
   CARONE: {
-    name: '(유)카원',
+    name: '카원(유)',
     address: '경상남도 양산시 상북면 공원로 403 - 19',
     tel: '055. 381. 0703',
     fax: '055. 384. 0703',

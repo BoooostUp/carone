@@ -25,7 +25,7 @@ export const GNB_CONTENTS = Object.freeze({
     link: '/total',
   },
   CARONE: {
-    title: '(유)카원',
+    title: '카원(유)',
     subTitle: '폐기물을 자원으로 최대한 재활용',
     factory: {
       number: ['1공장', '2공장'],
@@ -34,7 +34,7 @@ export const GNB_CONTENTS = Object.freeze({
     link: '/carone',
   },
   CARONE2: {
-    title: '(유)카원',
+    title: '카원(유)',
     subTitle: '용기류를 파쇄 분쇄',
     factory: {
       number: ['1공장', '2공장'],

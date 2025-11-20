@@ -1,3 +1,4 @@
+// 그대로 사용
 import { useLocation, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import CategoryBar from '../../../components/Main/CategoryBar';
@@ -5,8 +6,7 @@ import { LNB_CONTENTS } from '../../../constants/LNB_CONTENTS';
 
 const CeInfoLayout = () => {
   const location = useLocation();
-  const currentPath = location.pathname;
-  const parts = currentPath.split('/');
+  const parts = location.pathname.split('/');
   const selectedCategory = parts[parts.length - 1];
 
   return (
@@ -28,29 +28,35 @@ const CeInfoLayout = () => {
 
 export default CeInfoLayout;
 
-const HEADER_HEIGHT = 80;
+const HEADER_HEIGHT = 72; // CategoryBar 실제 높이에 맞게 조정 (예: 64~88)
 
 const S = {
   Layout: styled.main`
+    /* 화면 전체 폭으로 깔고, 상단바 높이만큼 여백 주기 */
     width: 100%;
     box-sizing: border-box;
-    padding-top: 2rem;
-    background: linear-gradient(180deg, #f5f7f9 0%, #ffffff 35%);
+
+    /* CategoryBar가 fixed/sticky면 겹치지 않게 패딩 */
+    padding-top: ${HEADER_HEIGHT}px;
+
+    /* 가운데 정렬은 wrapper에 맡기고, 여기선 굳이 flex 안 씀 */
+    /* display: flex;  <-- 제거 */
 
     .outletWrapper {
+      /* 가운데 정렬 & 양옆 패딩 */
       width: 100%;
       max-width: 70rem;
       margin: 0 auto;
-      padding: 5.5rem 2.25rem 6.5rem;
+      padding: 8rem 2rem; /* 좌우 패딩 추가해서 ‘밀린’ 느낌 방지 */
+
+      /* 세로 길이 확보 (상단바 제외 가시 높이) */
       min-height: calc(100vh - ${HEADER_HEIGHT}px);
-      display: block;
-      border: 1px solid ${({ theme }) => `${theme.color.lightGray}80`};
-      border-radius: 22px;
-      background-color: #ffffff;
-      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.06);
+
+      /* 내용은 블록 흐름으로 자연스럽게 */
+      display: block; /* ✅ flex 제거 */
 
       @media (max-width: 767px) {
-        padding: 4.5rem 1.75rem 5.5rem;
+        padding: 5rem 1.5rem;
         min-height: calc(100vh - ${HEADER_HEIGHT}px);
       }
     }
