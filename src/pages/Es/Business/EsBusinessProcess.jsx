@@ -98,14 +98,14 @@ const S = {
 
     .tag {
       display: inline-block;
-      background: ${({ theme }) => theme.color.ES || '#2e8540'};
+      background: ${({ theme }) => theme.color.ES || '#5BB2FF'};
       color: #fff;
       padding: 0.8rem 2rem;
       border-radius: 999px;
       font-weight: 700;
       font-size: 1.2rem;
       box-shadow: 0 5px 15px
-        ${({ theme }) => (theme.color.ES || '#2e8540') + '55'};
+        ${({ theme }) => (theme.color.ES || '#5BB2FF') + '55'};
     }
 
     h2 {
@@ -125,7 +125,7 @@ const S = {
     }
 
     b {
-      color: ${({ theme }) => theme.color.ES || '#2e8540'};
+      color: ${({ theme }) => theme.color.ES || '#5BB2FF'};
       font-weight: 700;
     }
   `,
@@ -146,17 +146,17 @@ const S = {
     height: 3.4rem;
     border-radius: 999px;
     background: #fff;
-    border: 4px solid ${({ theme }) => theme.color.ES || '#2e8540'};
+    border: 4px solid ${({ theme }) => theme.color.ES || '#5BB2FF'};
     display: grid;
     place-items: center;
     font-weight: 700;
-    color: ${({ theme }) => theme.color.ES || '#2e8540'};
+    color: ${({ theme }) => theme.color.ES || '#5BB2FF'};
     font-size: 1.3rem;
     z-index: 2;
   `,
   Body: styled.div`
     background: #f9fbf9;
-    border: 1px solid rgba(46, 133, 64, 0.25);
+    border: 1px solid rgba(91, 178, 255, 0.25);
     border-radius: 1.2rem;
     padding: 1.5rem 1.8rem;
     flex: 1;
@@ -180,7 +180,7 @@ const S = {
     top: 3.3rem;
     width: 3px;
     height: calc(100% + 1.8rem);
-    background: ${({ theme }) => (theme.color.ES || '#2e8540') + '55'};
+    background: ${({ theme }) => (theme.color.ES || '#5BB2FF') + '55'};
     z-index: 1;
   `,
   Foot: styled.p`
@@ -191,7 +191,7 @@ const S = {
     line-height: 1.9;
 
     b {
-      color: ${({ theme }) => theme.color.ES || '#2e8540'};
+      color: ${({ theme }) => theme.color.ES || '#5BB2FF'};
     }
   `,
 };
