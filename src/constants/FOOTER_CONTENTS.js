@@ -113,8 +113,8 @@ export const FOOTER_CONTENTS = {
       {
         companyName: '(주)에너지스토리',
         address: '(주)에너지스토리 : 울산광역시 남구 용연로 161번길 45',
-        tel: 'TEL 052-000-0000',
-        fax: 'FAX 052-000-0000',
+        tel: 'TEL 052-256-9993',
+        fax: 'FAX 052-256-9997',
       },
       {
         companyName: '(주)황지',
