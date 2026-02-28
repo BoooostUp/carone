@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Lnb from './Lnb';
 import LogoIcon from '../../assets/icons/Logo.svg';
 import { GNB_CONTENTS } from '../../constants/GNB_CONTENTS';
 
@@ -91,9 +90,6 @@ const Gnb = ({ company }) => {
           </S.Menu>
         </S.Container>
       </S.Gnb>
-      {/* {isOpen && (
-        <Lnb company={company} onMouseLeave={() => setIsOpen(false)} />
-      )} */}
     </div>
   );
 };
