@@ -4,10 +4,7 @@ import {
   default as ceImage,
   default as sgImage,
 } from '/src/assets/images/map/CE_CARONE_SG.webp';
-import {
-  default as siImage,
-  default as totalImage,
-} from '/src/assets/images/map/TOTAL_SI.webp';
+import totalImage from '/src/assets/images/map/TOTAL_SI.webp';
 
 export const MAP_CONTENTS = Object.freeze({
   CE: {
@@ -23,13 +20,6 @@ export const MAP_CONTENTS = Object.freeze({
     tel: '055. 374. 7784',
     fax: '055. 374. 7786',
     imageSrc: sgImage,
-  },
-  SI: {
-    name: '(주)세명인텍',
-    address: '울산광역시 남구 용연로 98번길 23',
-    tel: '052. 277. 5550',
-    fax: '052. 970. 5800',
-    imageSrc: siImage,
   },
   TOTAL: {
     name: '(주)토탈',

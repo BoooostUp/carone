@@ -13,9 +13,6 @@ import homeLocation from '../assets/images/hero/home/location.webp';
 import homeRecruit from '../assets/images/hero/home/recruit.webp';
 import sg from '../assets/images/hero/sg/sg.webp';
 import sgCeo from '../assets/images/hero/sg/sgCeo.webp';
-import si from '../assets/images/hero/si/si.webp';
-import siAbout from '../assets/images/hero/si/siAbout.webp';
-import siCeo from '../assets/images/hero/si/siCeo.webp';
 import total from '../assets/images/hero/total/total.jpg';
 import totalCeo from '../assets/images/hero/total/totalCeo.webp';
 import hj from '../assets/images/hj/hjBgImage.jpg';
@@ -80,18 +77,6 @@ export const HERO_IMAGES = Object.freeze({
     facilities: about,
     certification: certification,
     patent: certification,
-  },
-  SI: {
-    si: si,
-    ceo: siCeo,
-    history: siCeo,
-    location: siCeo,
-    'business-partner': siCeo,
-    about: siAbout,
-    dredging: siAbout,
-    pipe: siAbout,
-    facilities: facilities,
-    certification: certification,
   },
   //TODO: 에너지스토리 정보 기입
   ES: {

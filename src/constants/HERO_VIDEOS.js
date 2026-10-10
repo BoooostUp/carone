@@ -13,7 +13,6 @@ export const HERO_VIDEOS = Object.freeze({
   CE: {},
   SG: {},
   TOTAL: {},
-  SI: {},
   //TODO: 에너지스토리 정보 기입
   ES: {},
   //TODO: 황지 정보 기입

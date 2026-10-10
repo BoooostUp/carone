@@ -58,7 +58,6 @@ const QnAModal = ({ onClick }) => {
             <option value="CARONE">(주)카원</option>
             <option value="SG">(주)에스지산업</option>
             <option value="TOTAL">(주)토탈</option>
-            <option value="SI">(주)세명인텍</option>
           </S.Select>
         </S.FormBox>
         <S.FormBox>

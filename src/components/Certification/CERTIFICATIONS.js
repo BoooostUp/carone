@@ -47,10 +47,6 @@ export const CERTIFICATIONS = {
       { title: '종합재활용업 허가증' }, // (오타 수정: 종합재활욜업 → 종합재활용업)
     ],
   },
-  SI: {
-    mode: 'list',
-    certifications: [],
-  },
   HJ: {
     mode: 'list',
     certifications: [{ title: '사업자등록증' }],

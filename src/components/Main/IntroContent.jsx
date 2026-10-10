@@ -93,7 +93,6 @@ const IntroContent = () => {
           ))}
         </S.ButtonBox>
       </S.Container>
-      {/* <CompanyCarousel /> */}
     </>
   );
 };

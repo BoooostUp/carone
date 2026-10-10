@@ -83,20 +83,6 @@ export const FOOTER_CONTENTS = {
     ],
   },
 
-  // 7️⃣ 세명인텍
-  SI: {
-    si: '세명인텍',
-    companyName: '(주)세명인텍',
-    subtitle: '국가 자원 절약과 녹색 환경을 선도하는 기업',
-    info: [
-      {
-        address: '울산광역시 남구 용연로 98번길 23',
-        tel: 'TEL 052-277-5550',
-        fax: 'FAX 052-970-5800',
-      },
-    ],
-  },
-
   // 🏠 HOME (그룹 전체)
   HOME: {
     companyName: '',

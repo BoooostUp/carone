@@ -13,7 +13,6 @@ const NAV_ITEMS = [
   { key: 'TOTAL', label: '(주)토탈', variant: 'total', path: '/total' },
   { key: 'HJ', label: '(주)황지', variant: 'hj', path: '/hj' },
   { key: 'SG', label: '(주)에스지산업', variant: 'sg', path: '/sg' },
-  // { key: 'SI', label: '(주)세명인텍', variant: 'si', path: '/si' },
 ];
 
 const pathToKey = (pathname) => {

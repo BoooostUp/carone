@@ -85,16 +85,6 @@ const buttonVariantMap = {
     }
   `,
 
-  si: css`
-    ${({ $status }) =>
-      $status &&
-      css`
-        background-color: ${({ theme }) => theme.color.SI};
-      `}
-    &:hover {
-      background-color: ${({ theme }) => theme.color.SI};
-    }
-  `,
   hj: css`
     ${({ $status }) =>
       $status &&
