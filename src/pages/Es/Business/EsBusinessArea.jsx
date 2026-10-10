@@ -1,5 +1,4 @@
 // src/pages/EnergyStory/Business/EnergyStoryBusinessArea.jsx
-import React from 'react';
 import styled from 'styled-components';
 
 const businessItems = [

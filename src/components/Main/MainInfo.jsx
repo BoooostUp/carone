@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { media } from '../../styles/utils/mediaQuery';
-import mainInfoImage2 from './../../assets/images/home/main_info2.png';
-import mainInfoBg from './../../assets/images/home/main_info.png';
 import { Link as RouterLink } from 'react-router-dom';
+import styled from 'styled-components';
+import mainInfoBg from './../../assets/images/home/main_info.png';
+import mainInfoImage2 from './../../assets/images/home/main_info2.png';
+import { media } from '../../styles/utils/mediaQuery';
 
 const MainInfo = () => {
   return (

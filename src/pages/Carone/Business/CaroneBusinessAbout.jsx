@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import SubCategoryBar from '../../../components/Main/SubCategoryBar';
 import CaroneBusinessArea from './CaroneBusinessArea';
 
 const CaroneBusinessAbout = () => {

@@ -52,14 +52,20 @@ export const MAP_CONTENTS = Object.freeze({
     fax: '055. 384. 0703',
     imageSrc: carone2Image,
   },
-  //TODO: 황지 정보 기입
+  // 토탈과 같은 주소이므로 울산 지도 이미지 사용
   HJ: {
     name: '(주)황지',
     address: '울산광역시 남구 용연로 179번길 18',
     tel: '052. 256. 0207',
     fax: '052. 256. 0209',
-    imageSrc: carone2Image,
+    imageSrc: totalImage,
   },
-  //TODO: 에너지스토리 정보 기입
-  ES: { name: '', address: '', tel: '', fax: '', imageSrc: '' },
+  // 전용 지도 이미지가 없으면 Map 컴포넌트가 주소 기반 지도를 임베드함
+  ES: {
+    name: '(주)에너지스토리',
+    address: '울산광역시 남구 용연로 161번길 45',
+    tel: '052. 256. 9993',
+    fax: '052. 256. 9997',
+    imageSrc: '',
+  },
 });

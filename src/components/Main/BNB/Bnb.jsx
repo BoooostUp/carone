@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { media } from '../../../styles/utils/mediaQuery';
 import BnbButton from './BnbButton';
+import { media } from '../../../styles/utils/mediaQuery';
 import DropDown from '../DropDown';
 
 const NAV_ITEMS = [

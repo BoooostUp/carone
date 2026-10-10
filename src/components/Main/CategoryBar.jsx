@@ -13,6 +13,9 @@ const CategoryBar = ({ company, category, selectedButton, currentPage }) => {
     setActiveCategory(item);
   };
 
+  // HOME 하위 페이지는 '/home' 접두어 없이 루트에 위치함 (예: /recruit/process)
+  const basePath = company === 'HOME' ? '' : `/${company.toLowerCase()}`;
+
   return (
     <S.Container>
       <S.Bar>
@@ -21,7 +24,7 @@ const CategoryBar = ({ company, category, selectedButton, currentPage }) => {
           {category.map((item) => (
             <S.CategoryLink
               key={item.menu}
-              to={`/${company.toLowerCase()}/${currentPage}/${item.link}`}
+              to={`${basePath}/${currentPage}/${item.link}`}
             >
               <S.Category
                 type="button"
@@ -77,7 +80,8 @@ const S = {
 
     @media (max-width: 767px) {
       justify-content: flex-start;
-      gap: ${({ $category }) => ($category.length <= 3 ? '0.65rem' : '0.45rem')};
+      gap: ${({ $category }) =>
+        $category.length <= 3 ? '0.65rem' : '0.45rem'};
       overflow-x: auto;
       padding-bottom: 0.25rem;
       &::-webkit-scrollbar {
@@ -107,17 +111,23 @@ const S = {
       $isActive
         ? `linear-gradient(135deg, ${theme.color[$company]}, ${theme.color[$company]}cc)`
         : '#f7f8fa'};
-    color: ${({ theme, $company, $isActive }) =>
+    color: ${({ theme, $isActive }) =>
       $isActive ? theme.color.white : theme.color.mainGray};
     ${({ theme, $isActive }) =>
       $isActive ? theme.font.FONT16SB : theme.font.FONT16}
 
     box-shadow: ${({ $isActive }) =>
-      $isActive ? '0 12px 28px rgba(0, 0, 0, 0.14)' : '0 8px 18px rgba(0, 0, 0, 0.05)'};
+      $isActive
+        ? '0 12px 28px rgba(0, 0, 0, 0.14)'
+        : '0 8px 18px rgba(0, 0, 0, 0.05)'};
     cursor: pointer;
     position: relative;
-    transition: transform 0.18s ease, box-shadow 0.2s ease, color 0.2s ease,
-      border-color 0.2s ease, background 0.25s ease;
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      background 0.25s ease;
 
     &:hover {
       transform: translateY(-2px);
@@ -134,7 +144,8 @@ const S = {
     }
 
     &:focus-visible {
-      outline: 3px solid ${({ theme, $company }) => `${theme.color[$company]}44`};
+      outline: 3px solid
+        ${({ theme, $company }) => `${theme.color[$company]}44`};
       outline-offset: 3px;
     }
 

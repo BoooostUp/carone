@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import ceoPhoto from '../../../assets/images/home/ceo_photo.jpg'; // 대표 사진 (미사용)
-import signature from '../../../assets/images/home/signature.png'; // 사인 PNG(미사용)
 import Logo from '../../../assets/icons/Logo.svg'; // 회사 로고 (워터마크용)
 
 function EsInfoCeo() {

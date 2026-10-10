@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import SlotCounter from 'react-slot-counter';
 import styled from 'styled-components';
 import LogoIcon from '../../assets/icons/Logo.svg';
 import { media } from '../../styles/utils/mediaQuery';

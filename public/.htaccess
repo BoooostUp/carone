@@ -1,0 +1,14 @@
+# SPA fallback: 실제 파일이 아니면 모두 index.html로 보내 React Router가 처리하도록 함
+# (서브 페이지 직접 접속·새로고침 시 404/403 방지)
+DirectorySlash Off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# mod_rewrite가 꺼져 있는 서버를 위한 대비책
+ErrorDocument 404 /index.html

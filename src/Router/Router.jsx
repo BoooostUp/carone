@@ -1,9 +1,4 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Carone from '../pages/Carone/Carone';
-import Carone2 from '../pages/Carone2/Carone2';
-import Ce from '../pages/Ce/Ce';
-import Es from '../pages/Es/Es';
-import Home from '../pages/Home/Home';
 import { Carone2Routes } from './Carone2Routes';
 import { CaroneRoutes } from './CaroneRoutes';
 import { CeRoutes } from './CeRoutes';
@@ -13,6 +8,11 @@ import { HwangjiRoutes } from './HwangjiRoutes';
 import { SgRoutes } from './SgRoutes';
 import { SiRoutes } from './SiRoutes';
 import { TotalRoutes } from './TotalRoutes';
+import Carone from '../pages/Carone/Carone';
+import Carone2 from '../pages/Carone2/Carone2';
+import Ce from '../pages/Ce/Ce';
+import Es from '../pages/Es/Es';
+import Home from '../pages/Home/Home';
 
 import Hwangji from '../pages/Hwangji/Hwangji';
 import Sg from '../pages/Sg/Sg';

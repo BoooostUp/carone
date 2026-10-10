@@ -1,5 +1,4 @@
 // 📄 src/pages/Ce/Business/CeWasteTargets.jsx
-import React from 'react';
 import styled from 'styled-components';
 
 const generalWaste = [

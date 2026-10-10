@@ -1,4 +1,3 @@
-import processImg from '../../../assets/images/carone2/businessProcess.png';
 import styled from 'styled-components';
 
 const FLOW_STEPS = [

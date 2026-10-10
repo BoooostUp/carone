@@ -1,5 +1,4 @@
 // src/pages/Ce/Info/CeInfoHistory.jsx
-import React from 'react';
 import styled from 'styled-components';
 
 const CeInfoHistory = () => {

@@ -4,8 +4,16 @@ import Logo from '../../assets/icons/Logo.svg';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery.ts';
 
+const QUICK_LINK_PATHS = {
+  home: '/',
+  ceo: '/ceo',
+  business: '/business',
+  location: '/location',
+  process: '/recruit/process',
+};
+
 const Footer = ({ company = 'HOME' }) => {
-  const data = FOOTER_CONTENTS[company];
+  const data = FOOTER_CONTENTS[company] ?? FOOTER_CONTENTS.HOME;
 
   // "회사명 : 주소" 형태일 수 있어서 콜론 뒤만 주소로 사용
   const cleanAddress = (addr) => (addr ? addr.split(':').pop().trim() : '');
@@ -40,7 +48,7 @@ const Footer = ({ company = 'HOME' }) => {
             .filter((k) => data?.[k])
             .map((k) => (
               <li key={k}>
-                <a href={`/${k === 'home' ? '' : k}`} aria-label={data[k]}>
+                <a href={QUICK_LINK_PATHS[k]} aria-label={data[k]}>
                   {data[k]}
                 </a>
               </li>

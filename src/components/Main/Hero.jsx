@@ -1,11 +1,10 @@
 // src/components/Hero/Hero.jsx
-import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
-import WelcomeBox from './WelcomeBox';
+import styled from 'styled-components';
 import { FOOTER_CONTENTS } from '../../constants/FOOTER_CONTENTS';
 import { HERO_CONTENTS } from '../../constants/HERO_CONTENTS';
-import { HERO_VIDEOS } from '../../constants/HERO_VIDEOS';
 import { HERO_IMAGES } from '../../constants/HERO_IMAGES';
+import { HERO_VIDEOS } from '../../constants/HERO_VIDEOS';
 
 export const getAutoHeroSize = ({ company, page, link, fallback = 'lg' }) => {
   const normalizedCompany = (company || '').toUpperCase();
@@ -55,12 +54,11 @@ const Hero = ({
   align = 'center',
   link,
   company = 'HOME',
-  isMain,
   page = 'home',
   showScrollCue = false,
 }) => {
   const location = useLocation();
-  const { raw, cleaned, parts, slug, homeLink } = getPathInfo(location); // ❷ 튼튼한 파싱
+  const { homeLink } = getPathInfo(location); // ❷ 튼튼한 파싱
 
   // HOME 하위 경로로 들어오면 company를 HOME 취급, link 보정
   const effectiveCompany = homeLink ? 'HOME' : company;

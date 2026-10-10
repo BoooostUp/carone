@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import processImg from '../../../assets/images/total/businessAbout.png';
 import styled from 'styled-components';
 import EsBusinessArea from './EsBusinessArea';
 

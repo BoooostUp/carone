@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import CompanyCarousel from './CompanyCarousel';
 import DashBoard from './DashBoard';
 import { INTRO_CONTENT_CONTENTS as C } from '../../constants/INTRO_CONTENT_CONTENTS';
 import { media } from '../../styles/utils/mediaQuery';
