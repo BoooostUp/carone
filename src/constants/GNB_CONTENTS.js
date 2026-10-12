@@ -49,6 +49,11 @@ export const GNB_CONTENTS = Object.freeze({
     subTitle: '',
     link: '/es',
   },
+  NAEIL: {
+    title: '(주)내일넷',
+    subTitle: '지정·사업장폐기물 수집·운반',
+    link: '/naeil',
+  },
 
   HOME_MENU_LIST: [
     {

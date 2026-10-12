@@ -5,6 +5,12 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '오시는 길', link: 'location' },
     { menu: '주요 거래처', link: 'business-partner' },
   ],
+  // 내일넷은 거래처 자료가 없어 '주요 거래처' 메뉴 제외
+  NAEIL_INFO: [
+    { menu: '인사말', link: 'ceo' },
+    { menu: '연혁', link: 'history' },
+    { menu: '오시는 길', link: 'location' },
+  ],
   License: [
     { menu: '인증서', link: 'certification' },
     { menu: '특허', link: 'patent' },
@@ -50,5 +56,9 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '사업 분야', link: 'about' },
     { menu: '영업대상 폐기물', link: 'waste' },
     { menu: '폐기물 처리 Flow', link: 'process' },
+  ],
+  NAEIL: [
+    { menu: '사업 분야', link: 'about' },
+    { menu: '영업대상 폐기물', link: 'waste' },
   ],
 });

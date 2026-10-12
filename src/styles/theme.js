@@ -11,6 +11,7 @@ const theme = Object.freeze({
     HJ: '#ff9900',
     HOME: '#202020',
     ES: '#5BB2FF',
+    NAEIL: '#3B5BDB',
 
     //Gray
     mainGray: '#3E3E43',

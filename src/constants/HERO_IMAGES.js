@@ -16,6 +16,9 @@ import sgCeo from '../assets/images/hero/sg/sgCeo.webp';
 import total from '../assets/images/hero/total/total.jpg';
 import totalCeo from '../assets/images/hero/total/totalCeo.webp';
 import hj from '../assets/images/hj/hjBgImage.jpg';
+import naeilFacilities from '../assets/images/naeil/designated_wingbody.webp';
+import naeil from '../assets/images/naeil/general_dump.webp';
+import naeilOffice from '../assets/images/naeil/office1.webp';
 
 export const HERO_IMAGES = Object.freeze({
   HOME: {
@@ -105,5 +108,15 @@ export const HERO_IMAGES = Object.freeze({
     facilities: about,
     certification: certification,
     patent: certification,
+  },
+  NAEIL: {
+    naeil: naeil,
+    ceo: naeilOffice,
+    history: naeilOffice,
+    location: naeilOffice,
+    about: about,
+    waste: about,
+    facilities: naeilFacilities,
+    certification: certification,
   },
 });

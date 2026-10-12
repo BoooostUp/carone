@@ -38,10 +38,12 @@ const Map = ({ company }) => {
             <S.Th>TEL</S.Th>
             <S.Td>{MAP_CONTENTS[company].tel}</S.Td>
           </S.Tr>
-          <S.Tr>
-            <S.Th>FAX</S.Th>
-            <S.Td>{MAP_CONTENTS[company].fax}</S.Td>
-          </S.Tr>
+          {MAP_CONTENTS[company].fax && (
+            <S.Tr>
+              <S.Th>FAX</S.Th>
+              <S.Td>{MAP_CONTENTS[company].fax}</S.Td>
+            </S.Tr>
+          )}
         </tbody>
       </S.Table>
     </div>

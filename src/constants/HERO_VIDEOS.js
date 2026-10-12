@@ -17,4 +17,5 @@ export const HERO_VIDEOS = Object.freeze({
   ES: {},
   //TODO: 황지 정보 기입
   HJ: {},
+  NAEIL: {},
 });

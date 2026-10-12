@@ -58,4 +58,11 @@ export const MAP_CONTENTS = Object.freeze({
     fax: '052. 256. 9997',
     imageSrc: '',
   },
+  NAEIL: {
+    name: '(주)내일넷',
+    address: '울산광역시 울주군 청량읍 덕하로 33, B동 12호',
+    tel: '052. 923. 0500',
+    fax: '',
+    imageSrc: '',
+  },
 });

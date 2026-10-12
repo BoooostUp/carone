@@ -5,6 +5,7 @@ import { CeRoutes } from './CeRoutes';
 import { EsRoutes } from './EsRoutes';
 import { HomeRoutes } from './HomeRoutes';
 import { HwangjiRoutes } from './HwangjiRoutes';
+import { NaeilRoutes } from './NaeilRoutes';
 import { SgRoutes } from './SgRoutes';
 import { TotalRoutes } from './TotalRoutes';
 import Carone from '../pages/Carone/Carone';
@@ -14,6 +15,7 @@ import Es from '../pages/Es/Es';
 import Home from '../pages/Home/Home';
 
 import Hwangji from '../pages/Hwangji/Hwangji';
+import Naeil from '../pages/Naeil/Naeil';
 import Sg from '../pages/Sg/Sg';
 import Total from '../pages/Total/Total';
 
@@ -57,6 +59,11 @@ const Router = createBrowserRouter([
     path: '/es',
     element: <Es />,
     children: [...EsRoutes],
+  },
+  {
+    path: '/naeil',
+    element: <Naeil />,
+    children: [...NaeilRoutes],
   },
   // 없는 주소(예: 운영 종료된 /si)는 홈으로 이동
   {

@@ -55,6 +55,13 @@ export const CERTIFICATIONS = {
     mode: 'list',
     certifications: [],
   },
+  NAEIL: {
+    mode: 'list',
+    certifications: [
+      { title: '지정폐기물 수집·운반업 허가증 (낙동강유역환경청)' },
+      { title: '사업장배출시설계폐기물 수집·운반업 허가증 (울주군)' },
+    ],
+  },
   PATENTS: {
     mode: 'images', // ★ 특허만 이미지 유지
     certifications: [

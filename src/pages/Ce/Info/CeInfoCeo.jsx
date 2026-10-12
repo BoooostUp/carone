@@ -58,7 +58,7 @@ function CeInfoCeo() {
           <S.Caption>
             <span>
               ㈜자동차환경 · (유)카원 · ㈜에너지스토리 · ㈜토탈 · ㈜황지 ·
-              ㈜에스지산업
+              ㈜에스지산업 · ㈜내일넷
             </span>
             {/* 직함 제거 */}
             <span>회장</span>
