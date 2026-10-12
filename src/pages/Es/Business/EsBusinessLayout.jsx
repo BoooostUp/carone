@@ -41,7 +41,9 @@ const S = {
       padding-bottom: 8rem;
 
       @media (max-width: 767px) {
-        padding: 5rem 3rem;
+        display: block;
+        width: 100%;
+        padding: 5rem 1.25rem;
         min-height: 30rem;
       }
     }

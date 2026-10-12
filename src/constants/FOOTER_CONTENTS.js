@@ -83,6 +83,19 @@ export const FOOTER_CONTENTS = {
     ],
   },
 
+  // 7️⃣ 내일넷
+  NAEIL: {
+    naeil: '내일넷',
+    companyName: '(주)내일넷',
+    subtitle: '지정폐기물·사업장폐기물 수집·운반 전문기업',
+    info: [
+      {
+        address: '울산광역시 울주군 청량읍 덕하로 33, B동 12호',
+        tel: 'TEL 052-923-0500',
+      },
+    ],
+  },
+
   // 🏠 HOME (그룹 전체)
   HOME: {
     companyName: '',
@@ -127,6 +140,11 @@ export const FOOTER_CONTENTS = {
         address: '(주)에스지산업 : 경상남도 양산시 상북면 공원로 403 - 19',
         tel: 'TEL 055-374-7784',
         fax: 'FAX 055-374-7786',
+      },
+      {
+        companyName: '(주)내일넷',
+        address: '(주)내일넷 : 울산광역시 울주군 청량읍 덕하로 33, B동 12호',
+        tel: 'TEL 052-923-0500',
       },
     ],
   },

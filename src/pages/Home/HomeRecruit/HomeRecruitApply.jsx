@@ -30,7 +30,7 @@ const HomeRecruitApply = () => {
           <S.Option value="CARONE">(주)카원</S.Option>
           <S.Option value="SG">(주)에스지산업</S.Option>
           <S.Option value="TOTAL">(주)토탈</S.Option>
-          <S.Option value="SI">(주)세명인텍</S.Option>
+          <S.Option value="NAEIL">(주)내일넷</S.Option>
         </S.Select>
       </S.FormBox>
       <S.FormBox>

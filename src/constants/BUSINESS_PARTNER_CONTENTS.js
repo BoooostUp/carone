@@ -30,11 +30,6 @@ import sg2 from '../assets/images/sg/business_partner2.webp';
 import sg3 from '../assets/images/sg/business_partner3.webp';
 import sg4 from '../assets/images/sg/business_partner4.webp';
 
-import si1 from '../assets/images/si/business_partner1.webp';
-import si2 from '../assets/images/si/business_partner2.webp';
-import si3 from '../assets/images/si/business_partner3.webp';
-import si4 from '../assets/images/si/business_partner4.webp';
-
 import total1 from '../assets/images/total/business_partner1.webp';
 import total2 from '../assets/images/total/business_partner2.webp';
 import total3 from '../assets/images/total/business_partner3.webp';
@@ -104,11 +99,6 @@ export const BUSINESS_PARTNER_CONTENTS = Object.freeze({
     ],
   },
 
-  SI: {
-    id: 7,
-    title: 'POSCO, SK가스, SK FCC 2공장, 태광산업, KPS울산사업소, 울산화력 등',
-    imageAddress: [si1, si2, si3, si4],
-  },
   //TODO: 에너지스토리 정보 기입
   ES: { id: 8, title: '', imageAddress: [] },
 });

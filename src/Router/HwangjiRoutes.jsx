@@ -4,7 +4,6 @@ import HjBusinessLayout from '../pages/Hwangji/Business/HjBusinessLayout';
 import HjBusinessWaste from '../pages/Hwangji/Business/HjBusinessWaste';
 import HjFacilities from '../pages/Hwangji/HjFacilities';
 import HjMain from '../pages/Hwangji/HjMain';
-import HjInfoBusinessPartner from '../pages/Hwangji/Info/HjInfoBusinessPartner';
 import HjInfoCeo from '../pages/Hwangji/Info/HjInfoCeo';
 import HjInfoHistory from '../pages/Hwangji/Info/HjInfoHistory';
 import HjInfoLayout from '../pages/Hwangji/Info/HjInfoLayout';
@@ -32,10 +31,6 @@ export const HwangjiRoutes = [
       {
         path: 'info/location',
         element: <HjInfoLocation />,
-      },
-      {
-        path: 'info/business-partner',
-        element: <HjInfoBusinessPartner />,
       },
     ],
   },

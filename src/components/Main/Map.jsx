@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { MAP_CONTENTS } from '../../constants/MAP_CONTENTS';
 
 const Map = ({ company }) => {
+  const { name, address, imageSrc } = MAP_CONTENTS[company];
+
   return (
     <div
       style={{
@@ -11,7 +13,16 @@ const Map = ({ company }) => {
         justifyContent: 'center',
       }}
     >
-      <S.Img src={MAP_CONTENTS[company].imageSrc} />
+      {imageSrc ? (
+        <S.Img src={imageSrc} alt={`${name} 위치 지도`} />
+      ) : (
+        <S.Frame
+          title={`${name} 위치 지도`}
+          src={`https://maps.google.com/maps?q=${encodeURIComponent(address)}&z=16&output=embed`}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      )}
       <S.CompanyName>{MAP_CONTENTS[company].name}</S.CompanyName>
       <S.Table>
         <colgroup>
@@ -27,10 +38,12 @@ const Map = ({ company }) => {
             <S.Th>TEL</S.Th>
             <S.Td>{MAP_CONTENTS[company].tel}</S.Td>
           </S.Tr>
-          <S.Tr>
-            <S.Th>FAX</S.Th>
-            <S.Td>{MAP_CONTENTS[company].fax}</S.Td>
-          </S.Tr>
+          {MAP_CONTENTS[company].fax && (
+            <S.Tr>
+              <S.Th>FAX</S.Th>
+              <S.Td>{MAP_CONTENTS[company].fax}</S.Td>
+            </S.Tr>
+          )}
         </tbody>
       </S.Table>
     </div>
@@ -46,21 +59,21 @@ const S = {
     }
   `,
   Img: styled.img`
-    width: 50rem;
-
-    @media (max-width: 767px) {
-      width: 27rem;
-    }
+    width: 100%;
+    max-width: 50rem;
+    height: auto;
+  `,
+  Frame: styled.iframe`
+    width: 100%;
+    max-width: 50rem;
+    aspect-ratio: 3 / 2;
+    border: 0;
   `,
   Table: styled.table`
     width: 100%;
     max-width: 50rem;
     border-collapse: collapse;
     border-top: 1px solid #000;
-
-    @media (max-width: 767px) {
-      width: 28rem;
-    }
   `,
   Tr: styled.tr`
     border-bottom: 1px solid ${({ theme }) => theme.color.lightGray};

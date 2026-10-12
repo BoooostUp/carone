@@ -3,14 +3,7 @@ import styled from 'styled-components';
 import { media } from '../../styles/utils/mediaQuery';
 
 const MainArticle = ({ currentCompany = 'HOME', item, index = 0 }) => {
-  const {
-    id,
-    title1,
-    title2 = '',
-    content1,
-    content2 = '',
-    imageAddress,
-  } = item;
+  const { id, title1, content1, imageAddress } = item;
 
   const href =
     typeof id === 'string'

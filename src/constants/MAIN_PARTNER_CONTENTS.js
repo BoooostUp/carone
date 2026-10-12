@@ -6,7 +6,6 @@ import carone2Partner6 from '../assets/images/carone2/business_partner6.webp';
 import ce4 from '../assets/images/ce/business_partner4.webp';
 import ce6 from '../assets/images/ce/business_partner6.webp';
 import sg1 from '../assets/images/sg/business_partner1.webp';
-import si1 from '../assets/images/si/business_partner1.webp';
 import total1 from '../assets/images/total/business_partner1.webp';
 import total3 from '../assets/images/total/business_partner3.webp';
 import total5 from '../assets/images/total/business_partner5.webp';
@@ -35,10 +34,6 @@ export const MAIN_PARTNER_CONTENTS = [
   {
     id: 6,
     img: sg1,
-  },
-  {
-    id: 7,
-    img: si1,
   },
   {
     id: 8,

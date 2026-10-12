@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { media } from '../../../styles/utils/mediaQuery';
 import BnbButton from './BnbButton';
 import DropDown from '../DropDown';
 
@@ -13,7 +12,7 @@ const NAV_ITEMS = [
   { key: 'TOTAL', label: '(주)토탈', variant: 'total', path: '/total' },
   { key: 'HJ', label: '(주)황지', variant: 'hj', path: '/hj' },
   { key: 'SG', label: '(주)에스지산업', variant: 'sg', path: '/sg' },
-  // { key: 'SI', label: '(주)세명인텍', variant: 'si', path: '/si' },
+  { key: 'NAEIL', label: '(주)내일넷', variant: 'naeil', path: '/naeil' },
 ];
 
 const pathToKey = (pathname) => {
@@ -78,12 +77,8 @@ const S = {
   Nav: styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(${NAV_ITEMS.length}, 1fr);
     background: ${({ theme }) => theme.color.black};
     overflow: hidden;
-
-    ${media.desktop`
-      grid-template-columns: repeat(7, 1fr);
-    `}
   `,
 };

@@ -4,7 +4,7 @@ import sgFacilities from '../../assets/images/facilities/sgFacilities.png';
 function SgFacilities() {
   return (
     <S.Container>
-      <S.Image src={sgFacilities} alt="카원 보유 설비" />
+      <S.Image src={sgFacilities} alt="에스지산업 보유 설비" />
     </S.Container>
   );
 }
@@ -22,7 +22,9 @@ const S = {
     padding-top: 8rem;
     padding-bottom: 8rem;
     @media (max-width: 767px) {
-      padding: 5rem 3rem;
+      display: block;
+      width: 100%;
+      padding: 5rem 1.25rem;
       min-height: 30rem;
     }
   `,

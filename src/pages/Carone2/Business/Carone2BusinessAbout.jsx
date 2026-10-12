@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import aboutImg from '../../../assets/images/carone2/businessAbout.png';
 import CaroneBusinessArea from '../../Carone/Business/CaroneBusinessArea';
 
 function Carone2BusinessAbout() {

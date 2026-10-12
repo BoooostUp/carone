@@ -13,7 +13,7 @@ const HjInfoLayout = () => {
     <>
       <CategoryBar
         company="HJ"
-        category={LNB_CONTENTS.INFO}
+        category={LNB_CONTENTS.HJ_INFO}
         selectedButton={selectedCategory}
         currentPage="info"
       />
@@ -43,7 +43,9 @@ const S = {
       padding-bottom: 8rem;
 
       @media (max-width: 767px) {
-        padding: 5rem 3rem;
+        display: block;
+        width: 100%;
+        padding: 5rem 1.25rem;
         min-height: 30rem;
       }
     }

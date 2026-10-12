@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import ceoPhoto from '../../../assets/images/home/ceo_photo.jpg'; // 대표 사진 (미사용)
-import signature from '../../../assets/images/home/signature.png'; // 사인 PNG(미사용)
 import Logo from '../../../assets/icons/Logo.svg'; // 회사 로고 (워터마크용)
 
 function CaroneInfoCeo() {
@@ -60,7 +58,7 @@ function CaroneInfoCeo() {
           <S.Caption>
             <span>
               ㈜자동차환경 · (유)카원 · ㈜에너지스토리 · ㈜토탈 · ㈜황지 ·
-              ㈜에스지산업
+              ㈜에스지산업 · ㈜내일넷
             </span>
             {/* 직함 제거 */}
             <span>회장</span>

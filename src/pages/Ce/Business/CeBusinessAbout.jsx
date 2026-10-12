@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import img from '../../../assets/images/ce/businessAbout.png';
 import CeBusinessArea from './CeBusinessArea';
 
 function CeBusinessAbout() {

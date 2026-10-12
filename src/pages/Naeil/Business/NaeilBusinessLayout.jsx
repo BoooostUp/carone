@@ -1,0 +1,53 @@
+import { Outlet, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+import CategoryBar from '../../../components/Main/CategoryBar';
+import { LNB_CONTENTS } from '../../../constants/LNB_CONTENTS';
+
+const NaeilBusinessLayout = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const parts = currentPath.split('/');
+  const selectedCategory = parts[parts.length - 1];
+
+  return (
+    <div>
+      <CategoryBar
+        company="NAEIL"
+        category={LNB_CONTENTS.NAEIL}
+        selectedButton={selectedCategory}
+        currentPage="business"
+      />
+      <S.Layout>
+        <div className="outletWrapper">
+          <Outlet />
+        </div>
+      </S.Layout>
+    </div>
+  );
+};
+
+const S = {
+  Layout: styled.div`
+    display: flex;
+
+    .outletWrapper {
+      display: flex;
+      align-items: center;
+
+      margin: 0 auto;
+      max-width: 70rem;
+      min-height: 40rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+
+      @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+        padding: 5rem 1.25rem;
+        min-height: 30rem;
+      }
+    }
+  `,
+};
+
+export default NaeilBusinessLayout;

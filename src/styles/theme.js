@@ -8,10 +8,10 @@ const theme = Object.freeze({
     CARONE2: '#F6B436',
     SG: '#00B8D6',
     TOTAL: '#217A54',
-    SI: '#004686',
     HJ: '#ff9900',
     HOME: '#202020',
     ES: '#5BB2FF',
+    NAEIL: '#3B5BDB',
 
     //Gray
     mainGray: '#3E3E43',

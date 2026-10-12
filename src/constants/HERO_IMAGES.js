@@ -13,12 +13,12 @@ import homeLocation from '../assets/images/hero/home/location.webp';
 import homeRecruit from '../assets/images/hero/home/recruit.webp';
 import sg from '../assets/images/hero/sg/sg.webp';
 import sgCeo from '../assets/images/hero/sg/sgCeo.webp';
-import si from '../assets/images/hero/si/si.webp';
-import siAbout from '../assets/images/hero/si/siAbout.webp';
-import siCeo from '../assets/images/hero/si/siCeo.webp';
 import total from '../assets/images/hero/total/total.jpg';
 import totalCeo from '../assets/images/hero/total/totalCeo.webp';
 import hj from '../assets/images/hj/hjBgImage.jpg';
+import naeilFacilities from '../assets/images/naeil/designated_wingbody.webp';
+import naeil from '../assets/images/naeil/general_dump.webp';
+import naeilOffice from '../assets/images/naeil/office1.webp';
 
 export const HERO_IMAGES = Object.freeze({
   HOME: {
@@ -81,18 +81,6 @@ export const HERO_IMAGES = Object.freeze({
     certification: certification,
     patent: certification,
   },
-  SI: {
-    si: si,
-    ceo: siCeo,
-    history: siCeo,
-    location: siCeo,
-    'business-partner': siCeo,
-    about: siAbout,
-    dredging: siAbout,
-    pipe: siAbout,
-    facilities: facilities,
-    certification: certification,
-  },
   //TODO: 에너지스토리 정보 기입
   ES: {
     es: es,
@@ -113,12 +101,21 @@ export const HERO_IMAGES = Object.freeze({
     ceo: totalCeo,
     history: totalCeo,
     location: totalCeo,
-    'business-partner': totalCeo,
     about: about,
     waste: about,
     process: about,
     facilities: about,
     certification: certification,
     patent: certification,
+  },
+  NAEIL: {
+    naeil: naeil,
+    ceo: naeilOffice,
+    history: naeilOffice,
+    location: naeilOffice,
+    about: about,
+    waste: about,
+    facilities: naeilFacilities,
+    certification: certification,
   },
 });

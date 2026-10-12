@@ -1,5 +1,4 @@
 // src/pages/Carone/Business/CaroneWasteFlow.jsx
-import React from 'react';
 import styled from 'styled-components';
 
 const FLOW_STEPS = [

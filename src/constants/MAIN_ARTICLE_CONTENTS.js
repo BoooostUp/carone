@@ -39,6 +39,11 @@ import hgImage1 from '/src/assets/images/hj/hjImage1.png';
 import hgImage2 from '/src/assets/images/hj/hjImage2.png';
 import hgImage3 from '/src/assets/images/hj/hjImage3.png';
 import hgImage4 from '/src/assets/images/hj/hjImage4.png';
+import naeilImage1 from '/src/assets/images/naeil/general_dump.webp';
+import naeilImage2 from '/src/assets/images/naeil/designated_tanklorry.webp';
+import naeilImage3 from '/src/assets/images/naeil/general_hooklift.webp';
+import naeilImage4 from '/src/assets/images/naeil/designated_wingbody.webp';
+import naeilHomeImage from '/src/assets/images/naeil/designated_hooklift.webp';
 
 export const MAIN_ARTICLE_CONTENTS = Object.freeze({
   HOME: [
@@ -90,6 +95,12 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
         
         국가 정책에 부합하는 그린에너지를 실천하는 기업이 되기 위해 더욱더 노력하겠습니다.`,
       imageAddress: homeImage6,
+    },
+    {
+      id: 'NAEIL',
+      title1: '(주)내일넷',
+      content1: `(주)내일넷은 지정폐기물과 사업장배출시설계폐기물을 허가 기준에 맞는 전용 차량으로 안전하게 수집·운반하는 폐기물 수집·운반 전문기업입니다.`,
+      imageAddress: naeilHomeImage,
     },
   ],
   CE: [
@@ -297,6 +308,36 @@ export const MAIN_ARTICLE_CONTENTS = Object.freeze({
       content1: `효율적인 자원 순환과 환경 보호를 위한 기술 개발에 
       앞장섭니다.`,
       imageAddress: esImage4,
+    },
+  ],
+  NAEIL: [
+    {
+      id: 1,
+      title1: '(주)내일넷',
+      content1: `(주)내일넷은 울산광역시 울주군에 위치한 폐기물 수집·운반 전문기업으로,
+    지정폐기물과 사업장배출시설계폐기물을 허가 기준에 맞는 전용 차량으로 안전하게 운반합니다.`,
+      imageAddress: naeilImage1,
+    },
+    {
+      id: 2,
+      title1: '지정폐기물 수집·운반',
+      content1: `낙동강유역환경청 허가를 받아 오니류·분진·폐석면 등 고상 지정폐기물과
+    폐유·폐산·폐알칼리 등 액상 지정폐기물을 수집·운반합니다.`,
+      imageAddress: naeilImage2,
+    },
+    {
+      id: 3,
+      title1: '사업장배출시설계폐기물 수집·운반',
+      content1: `울산광역시 울주군 허가를 받아 사업장배출시설계폐기물(고상)을
+    덤프트럭·암롤트럭 등 전용 차량으로 수집·운반합니다.`,
+      imageAddress: naeilImage3,
+    },
+    {
+      id: 4,
+      title1: '전용 차량 운영',
+      content1: `탱크로리·밀폐형 차량부터 암롤·덤프트럭까지
+    폐기물 성상에 맞는 전용 차량으로 수집·운반합니다.`,
+      imageAddress: naeilImage4,
     },
   ],
 });

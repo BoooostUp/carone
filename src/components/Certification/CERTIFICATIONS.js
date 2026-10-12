@@ -47,10 +47,6 @@ export const CERTIFICATIONS = {
       { title: '종합재활용업 허가증' }, // (오타 수정: 종합재활욜업 → 종합재활용업)
     ],
   },
-  SI: {
-    mode: 'list',
-    certifications: [],
-  },
   HJ: {
     mode: 'list',
     certifications: [{ title: '사업자등록증' }],
@@ -58,6 +54,13 @@ export const CERTIFICATIONS = {
   ES: {
     mode: 'list',
     certifications: [],
+  },
+  NAEIL: {
+    mode: 'list',
+    certifications: [
+      { title: '지정폐기물 수집·운반업 허가증 (낙동강유역환경청)' },
+      { title: '사업장배출시설계폐기물 수집·운반업 허가증 (울주군)' },
+    ],
   },
   PATENTS: {
     mode: 'images', // ★ 특허만 이미지 유지

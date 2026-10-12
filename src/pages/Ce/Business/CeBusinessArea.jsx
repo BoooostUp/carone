@@ -1,7 +1,5 @@
 // 📄 src/pages/Ce/Business/CeBusinessArea.jsx
-import React from 'react';
 import styled from 'styled-components';
-import theme from '../../../styles/theme'; // ✅ theme import 경로 확인 (프로젝트 구조에 맞게 수정)
 
 const businessItems = [
   {

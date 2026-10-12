@@ -76,17 +76,11 @@ const Gnb = ({ company }) => {
                     <li>{item.menu}</li>
                   </Link>
                 ))
-              : company === 'SI'
-                ? GNB_CONTENTS.SI_LIST.map((item, idx) => (
-                    <Link to={item.link} key={idx}>
-                      <li>{item.menu}</li>
-                    </Link>
-                  ))
-                : GNB_CONTENTS.MENU_LIST.map((item, idx) => (
-                    <Link to={item.link} key={idx}>
-                      <li>{item.menu}</li>
-                    </Link>
-                  ))}
+              : GNB_CONTENTS.MENU_LIST.map((item, idx) => (
+                  <Link to={item.link} key={idx}>
+                    <li>{item.menu}</li>
+                  </Link>
+                ))}
           </S.Menu>
         </S.Container>
       </S.Gnb>

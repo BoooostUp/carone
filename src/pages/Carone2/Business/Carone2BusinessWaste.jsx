@@ -1,4 +1,3 @@
-import wasteImg from '../../../assets/images/carone2/businessWaste.png';
 import styled from 'styled-components';
 
 const designatedWaste = [

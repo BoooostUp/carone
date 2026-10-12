@@ -1,22 +1,22 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Carone from '../pages/Carone/Carone';
-import Carone2 from '../pages/Carone2/Carone2';
-import Ce from '../pages/Ce/Ce';
-import Es from '../pages/Es/Es';
-import Home from '../pages/Home/Home';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { Carone2Routes } from './Carone2Routes';
 import { CaroneRoutes } from './CaroneRoutes';
 import { CeRoutes } from './CeRoutes';
 import { EsRoutes } from './EsRoutes';
 import { HomeRoutes } from './HomeRoutes';
 import { HwangjiRoutes } from './HwangjiRoutes';
+import { NaeilRoutes } from './NaeilRoutes';
 import { SgRoutes } from './SgRoutes';
-import { SiRoutes } from './SiRoutes';
 import { TotalRoutes } from './TotalRoutes';
+import Carone from '../pages/Carone/Carone';
+import Carone2 from '../pages/Carone2/Carone2';
+import Ce from '../pages/Ce/Ce';
+import Es from '../pages/Es/Es';
+import Home from '../pages/Home/Home';
 
 import Hwangji from '../pages/Hwangji/Hwangji';
+import Naeil from '../pages/Naeil/Naeil';
 import Sg from '../pages/Sg/Sg';
-import Si from '../pages/Si/Si';
 import Total from '../pages/Total/Total';
 
 const Router = createBrowserRouter([
@@ -51,11 +51,6 @@ const Router = createBrowserRouter([
     children: [...TotalRoutes],
   },
   {
-    path: '/si',
-    element: <Si />,
-    children: [...SiRoutes],
-  },
-  {
     path: '/hj',
     element: <Hwangji />,
     children: [...HwangjiRoutes],
@@ -64,6 +59,16 @@ const Router = createBrowserRouter([
     path: '/es',
     element: <Es />,
     children: [...EsRoutes],
+  },
+  {
+    path: '/naeil',
+    element: <Naeil />,
+    children: [...NaeilRoutes],
+  },
+  // 없는 주소(예: 운영 종료된 /si)는 홈으로 이동
+  {
+    path: '*',
+    element: <Navigate to="/" replace />,
   },
 ]);
 

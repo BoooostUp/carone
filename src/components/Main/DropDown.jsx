@@ -7,7 +7,8 @@ const OPTIONS = [
   { value: 'ES', label: '(주)에너지스토리' }, // ✅ ES를 가운데로
   { value: 'TOTAL', label: '(주)토탈' },
   { value: 'HJ', label: '(주)황지' },
-  { value: 'SG', label: '(주)에스지산업' }, // ✅ SG는 맨 끝
+  { value: 'SG', label: '(주)에스지산업' },
+  { value: 'NAEIL', label: '(주)내일넷' },
 ];
 
 const DropDown = ({ handleClick, buttonStatus }) => {

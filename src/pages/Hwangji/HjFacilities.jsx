@@ -1,11 +1,13 @@
 import styled from 'styled-components';
-import sgFacilities from '../../assets/images/facilities/sgFacilities.png';
 
+// 황지 보유 설비 자료가 준비되면 이미지/내용으로 교체
 function HjFacilities() {
-  //TODO: 황지 정보 기입
   return (
     <S.Container>
-      <S.Image src={sgFacilities} alt="황지 보유 설비" />
+      <S.Empty>
+        <span aria-hidden="true">🏗️</span>
+        <p>보유 설비 정보를 준비 중입니다.</p>
+      </S.Empty>
     </S.Container>
   );
 }
@@ -23,12 +25,26 @@ const S = {
     padding-top: 8rem;
     padding-bottom: 8rem;
     @media (max-width: 767px) {
-      padding: 5rem 3rem;
+      display: block;
+      width: 100%;
+      padding: 5rem 1.25rem;
       min-height: 30rem;
     }
   `,
+  Empty: styled.div`
+    display: grid;
+    justify-items: center;
+    gap: 1.2rem;
+    text-align: center;
+    color: ${({ theme }) => theme.color.deepGray};
 
-  Image: styled.img`
-    width: 100%;
+    span {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
   `,
 };
