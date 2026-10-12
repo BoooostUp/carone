@@ -101,7 +101,6 @@ export const HERO_IMAGES = Object.freeze({
     ceo: totalCeo,
     history: totalCeo,
     location: totalCeo,
-    'business-partner': totalCeo,
     about: about,
     waste: about,
     process: about,

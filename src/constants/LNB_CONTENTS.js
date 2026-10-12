@@ -5,7 +5,12 @@ export const LNB_CONTENTS = Object.freeze({
     { menu: '오시는 길', link: 'location' },
     { menu: '주요 거래처', link: 'business-partner' },
   ],
-  // 내일넷은 거래처 자료가 없어 '주요 거래처' 메뉴 제외
+  // 황지·내일넷은 거래처 자료가 없어 '주요 거래처' 메뉴 제외
+  HJ_INFO: [
+    { menu: '인사말', link: 'ceo' },
+    { menu: '연혁', link: 'history' },
+    { menu: '오시는 길', link: 'location' },
+  ],
   NAEIL_INFO: [
     { menu: '인사말', link: 'ceo' },
     { menu: '연혁', link: 'history' },

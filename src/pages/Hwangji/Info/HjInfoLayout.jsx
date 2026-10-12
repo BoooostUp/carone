@@ -13,7 +13,7 @@ const HjInfoLayout = () => {
     <>
       <CategoryBar
         company="HJ"
-        category={LNB_CONTENTS.INFO}
+        category={LNB_CONTENTS.HJ_INFO}
         selectedButton={selectedCategory}
         currentPage="info"
       />
